@@ -34,14 +34,17 @@ Following PHYS 357, we will use the book "A Modern Approach to Quantum Mechanics
 
 Townsend's book is all you will need to complete the course, but I encourage you to read widely on the topics we will cover. There are many excellent textbooks on quantum mechanics that you can look at. Some suggested readings will be posted as appropriate during the course. 
 
+## Office hours
 
+I will have an office hour on **Wednesday at noon** in my office **ERP 310**. I encourage you to come and talk to me about any questions you have about the course or just generally about quantum topics if you don't have any specific questions in mind. 
 
+The TAs will hold a weekly "debug den" on **TBD**
 
 ## Evaluation
 
-Homeworks 30%, and either (1) midterm 30%, final exam 40% or (2) final exam 70%, whichever gives you the best grade. When calculating the final grade, the lowest scoring homework will be dropped to help your grade.
+Homeworks 30%, and either (1) midterm 30%, final exam 40% or (2) final exam 70%, whichever gives you the best grade. When calculating the final grade, the two lowest scoring homeworks will be dropped to help your grade.
 
-Homeworks will be weekly, due on Tuesday 11:59pm each week. Late submissions will not be accepted. *The homeworks are a key part of learning the material and will prepare you for the exams.* 
+Homeworks will be weekly, due on Tuesday 11:59pm each week.  *The homeworks are a key part of learning the material and will prepare you for the exams.* Late submissions will not be accepted. If you run out of time, please submit whatever you can before the deadline.
 
 The midterm will be held in class on **Tuesday March 12** (this is week after reading week). The final exam will be a 72-hour take home exam during the final exam period. 
 
