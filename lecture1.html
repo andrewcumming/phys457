@@ -1,0 +1,581 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Lecture 1 Jan 4 &#8212; PHYS 457 Quantum Physics 2</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lecture1';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="PHYS 457 Honours Quantum Physics 2: Winter 2024 Course outline" href="outline.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">PHYS 457 Quantum Physics 2</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">About the course</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="outline.html">Course outline</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lecture notes</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 1 Jan 4</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/andrewcumming/phys457" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/andrewcumming/phys457/issues/new?title=Issue%20on%20page%20%2Flecture1.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/lecture1.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Lecture 1 Jan 4</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#postulates-of-quantum-mechanics">Postulates of Quantum Mechanics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#path-integrals">Path integrals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further Reading</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="lecture-1-jan-4">
+<h1>Lecture 1 Jan 4<a class="headerlink" href="#lecture-1-jan-4" title="Permalink to this heading">#</a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
+<p>This course follows on directly from PHYS 357 Quantum Physics I last term where you looked at</p>
+<ul class="simple">
+<li><p>spin 1/2 particles</p></li>
+<li><p>angular momentum in quantum mechanics, including the idea of symmetries &lt;-&gt; conserved quantities</p></li>
+<li><p>time evolution through the Hamiltonian</p></li>
+<li><p>how to deal with 2-particle states (spin singlet and triplet)</p></li>
+<li><p>particles moving in 1D potentials <span class="math notranslate nohighlight">\(V(x)\)</span>, including the harmonic oscillator</p></li>
+</ul>
+<p>as discussed in Chapters 1 to 7 of Townsend’s book. This gives you an excellent grounding in the basic ideas of quantum mechanics. In this course, we will push ahead into the second half of the book. The overall goal is to begin to tackle “real” systems by looking at</p>
+<ul class="simple">
+<li><p>what happens when we go into &gt;1D: the two-body problem, bound states of central potentials, the hydrogen atom</p></li>
+<li><p>problems that we can’t solve exactly: perturbation theory</p></li>
+<li><p>more on multiple-particle systems, and in particular the effects of identical particles</p></li>
+<li><p>scattering</p></li>
+<li><p>interaction of charged particles with electromagnetic radiation</p></li>
+</ul>
+</section>
+<section id="postulates-of-quantum-mechanics">
+<h2>Postulates of Quantum Mechanics<a class="headerlink" href="#postulates-of-quantum-mechanics" title="Permalink to this heading">#</a></h2>
+<p>As a way to get started, let’s discuss the basic “rules” that govern quantum systems. These are often given as the <em>postulates of quantum mechanics</em>.</p>
+<p><strong>Postulate 1.</strong> All the information about the system is contained in the state</p>
+<div class="math notranslate nohighlight">
+\[\ket{\Psi}\]</div>
+<p>Here, <span class="math notranslate nohighlight">\(\ket{\Psi}\)</span> is a normalized vector in Hilbert space, <span class="math notranslate nohighlight">\(\braket{\Psi|\Psi}=1\)</span>.</p>
+<p>[<strong>Aside:</strong> Actually for open systems, things are more complicated. For example, consider a system in contact with a heat bath at some temperature <span class="math notranslate nohighlight">\(T\)</span>. Statistical mechanics (see PHYS 362 this term!) tells us that the probability of finding the system in a state with energy <span class="math notranslate nohighlight">\(E\)</span> is given by a boltzmann factor <span class="math notranslate nohighlight">\(e^{-E/ k_B T }\)</span>. So we have a situation where our system is in a stationary state (not a superposition of states, a definite stationary state), <em>but</em> we don’t necessarily know which of the stationary states <span class="math notranslate nohighlight">\(\ket{n}\)</span> it is, just the probability of each one, <span class="math notranslate nohighlight">\(e^{-E_n/k_BT}\)</span>. In this situation, we say that our system  is in a <strong>mixed state</strong> rather than <strong>pure state</strong>, and we describe the system with a <strong>density matrix <span class="math notranslate nohighlight">\(\rho\)</span></strong>. If you take PHYS 551 you’ll hear more about mixed states, but in this course we’ll focus on pure states only. If you are interested in learning more, you can read about mixed states and the density operator in section 5.7 of Townsend.]</p>
+<p>Often we’ll construct the state by combining Hilbert spaces, e.g. two spin 1/2 particles could be in the triplet state <span class="math notranslate nohighlight">\(\ket{\uparrow\uparrow} = \ket{\uparrow}\ket{\uparrow} = \ket{\uparrow}\otimes\ket{\uparrow}\)</span>. We don’t usually write out the direct product symbol <span class="math notranslate nohighlight">\(\otimes\)</span> explicitly, instead it is  taken implicitly that operators for particle 1 operate in the space corresponding to particle 1 etc. In this course, we’ll construct similar states for electrons in atoms, e.g. <span class="math notranslate nohighlight">\(\ket{n \ell m}\otimes\ket{m_s}\)</span> where <span class="math notranslate nohighlight">\(n, \ell, m\)</span> are the quantum numbers that label the energy, total orbital angular momentum and <span class="math notranslate nohighlight">\(z\)</span>-component of orbital angular momentum, and <span class="math notranslate nohighlight">\(m_s\)</span> is the electron spin.</p>
+<p><strong>Postulate 2.</strong> Observable quantities <span class="math notranslate nohighlight">\(A\)</span> are represented by Hermitian operators <span class="math notranslate nohighlight">\(\hat{A}\)</span>.</p>
+<p>Hermitian <span class="math notranslate nohighlight">\(\Rightarrow\)</span> real eigenvalues, as needed for an observable.</p>
+<p>The eigenstates of the operator can be used as a basis to represent the state <span class="math notranslate nohighlight">\(\ket{\Psi}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\ket{\Psi} = \sum_n \braket{n|\Psi} \ket{n}\]</div>
+<p><span class="math notranslate nohighlight">\(\ket{n}\bra{n}\)</span> acts as a <strong>projection operator</strong>, projecting the state <span class="math notranslate nohighlight">\(\Psi\)</span> onto the “direction” <span class="math notranslate nohighlight">\(\ket{n}\)</span> in Hilbert space.</p>
+<p>Summing these up we get the <strong>identity operator</strong></p>
+<div class="math notranslate nohighlight">
+\[\sum_n \ket{n}\bra{n}\]</div>
+<p>ie.</p>
+<div class="math notranslate nohighlight">
+\[\ket{\Psi} = \sum_n \braket{n|\Psi} \ket{n}= \left(\sum_n \ket{n}\bra{n} \right)\ket{\Psi}=\ket{\Psi}\]</div>
+<p>The list of coefficients <span class="math notranslate nohighlight">\(\braket{n|\Psi}\)</span> specify the state given the basis <span class="math notranslate nohighlight">\(\left\{\ket{n}\right\}\)</span>.</p>
+<div class="admonition-question admonition">
+<p class="admonition-title">Question</p>
+<p>As an example, consider a particle in a 1D box (infinite potential well) in some state <span class="math notranslate nohighlight">\(\Psi\)</span>. What are some ways you could write down the state?</p>
+<p>One answer to this question is that we could use the position eigenstates <span class="math notranslate nohighlight">\(\ket{x}\)</span> to expand the state <span class="math notranslate nohighlight">\(\ket{\Psi}\)</span>. A particle in a position eigenstate <span class="math notranslate nohighlight">\(\ket{x}\)</span> is located exactly at position <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(\hat{x}\ket{x}=x\ket{x}\)</span>. The position eigenstates obey the orthogonality relation <span class="math notranslate nohighlight">\(\braket{x|x^\prime} = \delta(x-x^\prime)\)</span>, where <span class="math notranslate nohighlight">\(\delta(x)\)</span> is the Dirac delta function.</p>
+<p>There are an infinite number of coefficients <span class="math notranslate nohighlight">\(\braket{x|\Psi}\)</span> because <span class="math notranslate nohighlight">\(x\)</span> is a continuous variable. Specifying these coefficients is equivalent to specifying the wavefunction of the particle, ie. the wavefunction is defined as</p>
+<div class="math notranslate nohighlight">
+\[\psi(x) \equiv \braket{x|\Psi}.\]</div>
+<p>Also note that for this case where we have a continuous eigenvalue, the identity operator becomes <span class="math notranslate nohighlight">\(\int dx \ket{x}\bra{x}\)</span>.</p>
+<p>Another basis with a continuous eigenvalue spectrum that we could use is the basis of momentum eigenstates, which satisfy <span class="math notranslate nohighlight">\(\hat{p}\ket{p}=p\ket{p}\)</span>. In this case, the coefficients are <span class="math notranslate nohighlight">\(\phi(p) = \braket{p|\Psi}\)</span> which is the wavefunction in momentum space. [A useful relation is <span class="math notranslate nohighlight">\(\braket{x|p} = e^{ipx/\hbar} / \sqrt{2\pi \hbar}\)</span>. Try using this and the identity operator to prove that <span class="math notranslate nohighlight">\(\Psi(x)\)</span> and <span class="math notranslate nohighlight">\(\phi(p)\)</span> are Fourier transforms of each other.]</p>
+<p>Finally, a third basis that we could use to expand <span class="math notranslate nohighlight">\(\Psi\)</span> is the basis of stationary states <span class="math notranslate nohighlight">\(\ket{n}\)</span> which are eigenstates of the Hamiltonian <span class="math notranslate nohighlight">\(\hat{H}\ket{n} = E_n\ket{n}\)</span>. Again, there are an infinite number of these, but now the eigenvalues are discrete.</p>
+</div>
+<p><strong>Postulate 3.</strong> A measurement of <span class="math notranslate nohighlight">\(A\)</span> <strong>collapses</strong> the state into the eigenstate <span class="math notranslate nohighlight">\(\ket{n}\)</span> corresponding to observed value <span class="math notranslate nohighlight">\(A_n\)</span>. The probability that you measure <span class="math notranslate nohighlight">\(A_n\)</span> is <span class="math notranslate nohighlight">\(|\braket{\Psi|n}|^2\)</span>.</p>
+<p><strong>Postulate 4.</strong> Time evolution of a state is determined by the Hamiltonian</p>
+<div class="math notranslate nohighlight">
+\[-i\hbar {\partial \over \partial t} \ket{\Psi} = \hat{H}\ket{\Psi}\]</div>
+<p>For a time-independent Hamiltonian, we have a time-evolution operator</p>
+<div class="math notranslate nohighlight">
+\[\hat{U}(t) = e^{-i\hat{H}t/\hbar}\]</div>
+<p>such that</p>
+<div class="math notranslate nohighlight">
+\[\ket{\Psi(t)} =  \hat{U}(t) \ket{\Psi(0)} = e^{-i\hat{H}t/\hbar} \ket{\Psi(0)} = \sum \braket{n|\Psi(0)}  e^{-iE_nt/\hbar} \ket{n}.\]</div>
+<p>This describes the idea that to evolve a state <span class="math notranslate nohighlight">\(\ket{\Psi(0)}\)</span> in time, we can first write it as a combination of stationary states <span class="math notranslate nohighlight">\(\ket{n}\)</span>, update each stationary state using <span class="math notranslate nohighlight">\(e^{-iE_nt/\hbar}\)</span> and then sum up to obtain <span class="math notranslate nohighlight">\(\ket{\Psi(t)}\)</span>.</p>
+<p>One of the important quantities we’ll look at a few times in this course is the <strong>transition amplitude</strong>, the amplitude to go from a state <span class="math notranslate nohighlight">\(\ket{m}\)</span> at time <span class="math notranslate nohighlight">\(t^\prime\)</span> to state <span class="math notranslate nohighlight">\(\ket{n}\)</span> at time <span class="math notranslate nohighlight">\(t\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\braket{n,t|m, t^\prime}\]</div>
+</section>
+<section id="path-integrals">
+<h2>Path integrals<a class="headerlink" href="#path-integrals" title="Permalink to this heading">#</a></h2>
+<p>We’re going to start with Chapter 8 of Townsend which is on path integrals. We won’t be using the formalism of path integrals much  (if at all) in the rest of the course, which is why this topic is often left for a more advanced course. However, it teaches us a lot about how to think about quantum mechanics and its relation to classical physics, so I think it’s an interesting topic to look at, with a neat connection to Lagrangian mechanics that you’ll see in PHYS 351 if you are taking it this term.</p>
+<p>To describe the motion of a particle in quantum mechanics, we can look at the amplitude for going from position <span class="math notranslate nohighlight">\(x^\prime\)</span> at time <span class="math notranslate nohighlight">\(t^\prime\)</span> to position <span class="math notranslate nohighlight">\(x\)</span> at time <span class="math notranslate nohighlight">\(t\)</span>. In quantum mechanics language, we need the transition amplitude between the states <span class="math notranslate nohighlight">\(\ket{x^\prime}\)</span> and <span class="math notranslate nohighlight">\(\ket{x}\)</span> over this time, otherwise known as the <strong>propagator</strong></p>
+<div class="math notranslate nohighlight">
+\[K(x,t; x^\prime, t^\prime) = \braket{x|e^{-i\hat{H}(t-t^\prime)/\hbar}|x^\prime}\]</div>
+<p>The path integral is a way of computing the propagator by considering all possible trajectories of the particle between <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(x^\prime\)</span>. For example, as a start we can divide the time period from <span class="math notranslate nohighlight">\(t^\prime\)</span> to <span class="math notranslate nohighlight">\(t\)</span> into two pieces, <span class="math notranslate nohighlight">\(t^\prime\)</span> to <span class="math notranslate nohighlight">\(t^{\prime\prime}\)</span> and then from <span class="math notranslate nohighlight">\(t^{\prime\prime}\)</span> to <span class="math notranslate nohighlight">\(t\)</span>. If we do this, we have to consider all the possible intermediate locations <span class="math notranslate nohighlight">\(x^{\prime\prime}\)</span> that the particle could move to at the intermediate time <span class="math notranslate nohighlight">\(t^{\prime\prime}\)</span>, so we’ll end up doing an integral <span class="math notranslate nohighlight">\(\int dx^{\prime\prime}\)</span> over all those intermediate locations. The path integral is the limit of this process where we divide up the time period <span class="math notranslate nohighlight">\(t^\prime\)</span> to <span class="math notranslate nohighlight">\(t\)</span> into infinitely small time slices, integrating over all possible positions at each of the time slices. This sounds complicated, but we’ll show that the result is</p>
+<div class="math notranslate nohighlight">
+\[K(x,t; x^\prime, t^\prime) \sim \int_\mathrm{paths} e^{iS/\hbar}\]</div>
+<p>where the integral is over all possible space-time paths between <span class="math notranslate nohighlight">\((x^\prime, t^\prime)\)</span> and <span class="math notranslate nohighlight">\((x,t)\)</span>.</p>
+<p>The quantity <span class="math notranslate nohighlight">\(S\)</span> is the <strong>action</strong></p>
+<div class="math notranslate nohighlight">
+\[S = \int dt\ L\]</div>
+<p>where <span class="math notranslate nohighlight">\(L\)</span> is the <strong>Lagrangian</strong></p>
+<div class="math notranslate nohighlight">
+\[ L = (\mathrm{kinetic\ energy} - \mathrm{potential\ energy})\]</div>
+<p>(so a bit like the Hamiltonian but with a minus sign between the two terms).</p>
+<p>In classical mechanics, there is the <strong>principle of least action</strong> which states that the path a particle follows is the path that minimizes the action <span class="math notranslate nohighlight">\(\delta S=0\)</span> (or most correctly extremizes the action, sometimes it’s a maximum). We will see that in quantum mechanics the picture is very different – the particle actually takes all possible paths (!) and the action actually determines the phase contributed by each path (the <span class="math notranslate nohighlight">\(e^{iS/\hbar}\)</span> term in the integral). Near the classical path which has <span class="math notranslate nohighlight">\(\delta S\approx 0\)</span>, the paths all contribute nearly the same phase and so add constructively. Away from the classical path, the phases vary wildly and destructively interfere.</p>
+<p>We will see the details of how to compute the path integral next week!</p>
+</section>
+<section id="further-reading">
+<h2>Further Reading<a class="headerlink" href="#further-reading" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Chapter 8 of Townsend</p></li>
+<li><p><a class="reference external" href="https://www.feynmanlectures.caltech.edu/II_19.html">The Principle of Least Action</a> from Volume 2 of the Feynman Lectures on Physics. See also <a class="reference external" href="https://www.feynmanlectures.caltech.edu/I_26.html">Optics: The Principle of Least Time</a> from Volume 1.</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="outline.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">PHYS 457 Honours Quantum Physics 2: Winter 2024 Course outline</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#postulates-of-quantum-mechanics">Postulates of Quantum Mechanics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#path-integrals">Path integrals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further Reading</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By <a href="https://www.physics.mcgill.ca/~cumming/">Andrew Cumming</a>
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023, CC BY SA 4.0.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
