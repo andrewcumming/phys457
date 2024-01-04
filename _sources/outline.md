@@ -8,6 +8,7 @@ This course follows on from PHYS 357 Honours Quantum Physics 1, covering topics 
 
 Prof. [Andrew Cumming](https://www.physics.mcgill.ca/~cumming/), andrew.cumming@mcgill.ca, Rutherford 310.
 
+TAs: Clément Fortin, Renee Goodman, Ivan Martinez
 
 ## Time and place
 
@@ -18,18 +19,37 @@ The first class is Thursday January 4th.
 
 ## List of topics
 
-We will cover Chapters 8 onwards of Townsend. A list of topics will be posted here soon.
+We will cover Chapters 8 onwards of Townsend, including:
 
+- Path integrals
+- The two-body problem, bound states of central potentials, the H atom
+- Perturbation theory
+- Identical particles
+- Scattering
+- The interaction of matter and electromagnetic radiation
 
 ## Useful books and other resources
 
-We will follow PHYS 357 and use the book "A Modern Approach to Quantum Mechanics" by Townsend.
+Following PHYS 357, we will use the book "A Modern Approach to Quantum Mechanics" by Townsend (2012, second edition).
+
+Townsend's book is all you will need to complete the course, but I encourage you to read widely on the topics we will cover. There are many excellent textbooks on quantum mechanics that you can look at. Some suggested readings will be posted as appropriate during the course. 
 
 
 
-## Assessment and Course Format
 
-Grading scheme is TBD.
+## Evaluation
+
+Homeworks 30%, and either (1) midterm 30%, final exam 40% or (2) final exam 70%, whichever gives you the best grade. When calculating the final grade, the lowest scoring homework will be dropped to help your grade.
+
+Homeworks will be weekly, due on Tuesday 11:59pm each week. Late submissions will not be accepted. *The homeworks are a key part of learning the material and will prepare you for the exams.* 
+
+The midterm will be held in class on **Tuesday March 12** (this is week after reading week). The final exam will be a 72-hour take home exam during the final exam period. 
+
+Course materials such as lecture notes and problem sets will be made available on the course website at 
+
+https://andrewcumming.github.io/phys457/intro.html
+
+Homeworks will be submitted in PDF format on myCourses. Grades will be distributed in myCourses. Questions about the homework grading should first be discussed with the TA who graded that particular problem set.
 
 
 ## McGill policy statements
