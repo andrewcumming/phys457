@@ -1,0 +1,50 @@
+# Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
+
+title: 'PHYS 457 Quantum Physics 2'
+author: <a href="https://www.physics.mcgill.ca/~cumming/">Andrew Cumming</a>
+copyright: '2023, CC BY SA 4.0'
+logo:
+only_build_toc_files: yes
+
+# Force re-execution of notebooks on each build.
+# See https://jupyterbook.org/content/execute.html
+# was set to force
+execute:
+  execute_notebooks: auto
+  exclude_patterns:
+      - 'ml*'
+
+# Define the name of the latex output file for PDF builds
+#latex:
+#  latex_documents:
+#    targetname: book.tex
+
+#parse:
+#  myst_enable_extensions:
+#    - amsmath
+#    - attrs_inline
+#    - colon_fence
+#    - deflist
+#    - dollarmath
+#    - linkify
+#    - smartquotes
+#    - html_admonition
+#    - html_image
+
+# Add a bibtex file so that we can create citations
+#bibtex_bibfiles:
+#  - references.bib
+
+# Information about where the book exists on the web
+repository:
+  url: https://github.com/andrewcumming/phys457  # Online location of your book
+  path_to_book: /  # Optional path to your book, relative to the repository root
+  branch: master  # Which branch of the repository should be used when creating links (optional)
+
+# Add GitHub buttons to your book
+# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+html:
+  use_issues_button: true
+  use_repository_button: true
+  home_page_in_navbar: no
