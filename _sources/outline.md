@@ -42,9 +42,9 @@ The TAs will hold a weekly "debug den" on **TBD**
 
 ## Evaluation
 
-Homeworks 30%, and either (1) midterm 30%, final exam 40% or (2) final exam 70%, whichever gives you the best grade. When calculating the final grade, the two lowest scoring homeworks will be dropped to help your grade.
+Homeworks 30%, and either (1) midterm 30%, final exam 40% or (2) final exam 70%, whichever gives you the best grade. When calculating the homework component of the final grade, each homework will count equally, and the two lowest scoring homeworks will be dropped to help your grade.
 
-Homeworks will be weekly, due on Tuesday 11:59pm each week.  *The homeworks are a key part of learning the material and will prepare you for the exams.* Late submissions will not be accepted. If you run out of time, please submit whatever you can before the deadline.
+Homeworks will be weekly, due on Tuesday 11:59pm each week. The first homework will be released on Tuesday Jan 9th. *The homeworks are a key part of learning the material and will prepare you for the exams.* Late submissions will not be accepted. If you run out of time, please submit whatever you can before the deadline.
 
 The midterm will be held in class on **Tuesday March 12** (this is week after reading week). The final exam will be a 72-hour take home exam during the final exam period. 
 
