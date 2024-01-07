@@ -92,15 +92,15 @@ $$\braket{n,t|m, t^\prime}$$
 
 We're going to start with Chapter 8 of Townsend which is on path integrals. We won't be using the formalism of path integrals much  (if at all) in the rest of the course, which is why this topic is often left for a more advanced course. However, it teaches us a lot about how to think about quantum mechanics and its relation to classical physics, so I think it's an interesting topic to look at, with a neat connection to Lagrangian mechanics that you'll see in PHYS 351 if you are taking it this term. 
 
-To describe the motion of a particle in quantum mechanics, we can look at the amplitude for going from position $x^\prime$ at time $t^\prime$ to position $x$ at time $t$. In quantum mechanics language, we need the transition amplitude between the states $\ket{x^\prime}$ and $\ket{x}$ over this time, otherwise known as the **propagator**
+To describe the motion of a particle in quantum mechanics, we can look at the amplitude for going from position $x_0$ at time $t_0$ to position $x^\prime$ at time $t^\prime$. In quantum mechanics language, we need the transition amplitude between the states $\ket{x_0}$ and $\ket{x^\prime}$ over this time, otherwise known as the **propagator**
 
-$$K(x,t; x^\prime, t^\prime) = \braket{x|e^{-i\hat{H}(t-t^\prime)/\hbar}|x^\prime}$$
+$$\braket{x^\prime,t^\prime | x_0, t_0} = \braket{x^\prime|e^{-i\hat{H}(t^\prime-t_0)/\hbar}|x_0}$$
 
-The path integral is a way of computing the propagator by considering all possible trajectories of the particle between $x$ and $x^\prime$. For example, as a start we can divide the time period from $t^\prime$ to $t$ into two pieces, $t^\prime$ to $t^{\prime\prime}$ and then from $t^{\prime\prime}$ to $t$. If we do this, we have to consider all the possible intermediate locations $x^{\prime\prime}$ that the particle could move to at the intermediate time $t^{\prime\prime}$, so we'll end up doing an integral $\int dx^{\prime\prime}$ over all those intermediate locations. The path integral is the limit of this process where we divide up the time period $t^\prime$ to $t$ into infinitely small time slices, integrating over all possible positions at each of the time slices. This sounds complicated, but we'll show that the result is
+The path integral is a way of computing the propagator by considering all possible trajectories of the particle between $x_0$ and $x^\prime$. For example, as a start we can divide the time period from $t_0$ to $t^\prime$ into two pieces, $t_0$ to $t_1$ and then from $t_1$ to $t^\prime$. If we do this, we have to consider all the possible intermediate locations $x_1$ that the particle could move to at the intermediate time $t_1$, so we'll end up doing an integral $\int dx_1$ over all those intermediate locations. The path integral is the limit of this process where we divide up the time period $t_0$ to $t^\prime$ into infinitely small time slices, integrating over all possible positions at each of the time slices. This sounds complicated, but we'll show that the result is
 
-$$K(x,t; x^\prime, t^\prime) \sim \int_\mathrm{paths} e^{iS/\hbar}$$
+$$\braket{x^\prime,t^\prime; x_0, t_0} \sim \int_\mathrm{paths} e^{iS/\hbar}$$
 
-where the integral is over all possible space-time paths between $(x^\prime, t^\prime)$ and $(x,t)$.
+where the integral is over all possible space-time paths between $(x_0, t_0)$ and $(x^\prime,t^\prime)$.
 
 The quantity $S$ is the **action** 
 
@@ -119,5 +119,5 @@ We will see the details of how to compute the path integral next week!
 
 ## Further Reading
 
-- Chapter 8 of Townsend
+- Section 8.1 of Townsend for the basic idea behind the path integral.
 - [The Principle of Least Action](https://www.feynmanlectures.caltech.edu/II_19.html) from Volume 2 of the Feynman Lectures on Physics. See also [Optics: The Principle of Least Time](https://www.feynmanlectures.caltech.edu/I_26.html) from Volume 1.

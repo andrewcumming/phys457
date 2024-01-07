@@ -32,7 +32,8 @@ We will cover Chapters 8 onwards of Townsend, including:
 
 Following PHYS 357, we will use the book "A Modern Approach to Quantum Mechanics" by Townsend (2012, second edition).
 
-Townsend's book is all you will need to complete the course, but I encourage you to read widely on the topics we will cover. There are many excellent textbooks on quantum mechanics that you can look at. Some suggested readings will be posted as appropriate during the course. 
+Townsend's book is all you will need to complete the course, but I encourage you to read widely on the topics we will cover. Some suggested readings will be posted as appropriate during the course. There are many excellent textbooks on quantum mechanics that you can look at. An excellent book is [The Physics of Quantum Mechanics](https://www-thphys.physics.ox.ac.uk/people/JamesBinney/QBhome.htm) by Binney and Skinner (you'll find a downloadable PDF of an earlier version of the book on their webpage).
+
 
 ## Office hours
 
