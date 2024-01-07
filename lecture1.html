@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,8 +38,9 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -66,6 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'lecture1';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Lecture 2 Jan 9" href="lecture2.html" />
     <link rel="prev" title="PHYS 457 Honours Quantum Physics 2: Winter 2024 Course outline" href="outline.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -77,6 +79,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -138,6 +149,7 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     <p class="title logo__title">PHYS 457 Quantum Physics 2</p>
   
 </a></div>
@@ -150,6 +162,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lecture notes</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 1 Jan 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture2.html">Lecture 2 Jan 9</a></li>
 </ul>
 
     </div>
@@ -305,10 +318,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -316,7 +329,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -430,13 +443,13 @@ document.write(`
 <section id="path-integrals">
 <h2>Path integrals<a class="headerlink" href="#path-integrals" title="Permalink to this heading">#</a></h2>
 <p>We’re going to start with Chapter 8 of Townsend which is on path integrals. We won’t be using the formalism of path integrals much  (if at all) in the rest of the course, which is why this topic is often left for a more advanced course. However, it teaches us a lot about how to think about quantum mechanics and its relation to classical physics, so I think it’s an interesting topic to look at, with a neat connection to Lagrangian mechanics that you’ll see in PHYS 351 if you are taking it this term.</p>
-<p>To describe the motion of a particle in quantum mechanics, we can look at the amplitude for going from position <span class="math notranslate nohighlight">\(x^\prime\)</span> at time <span class="math notranslate nohighlight">\(t^\prime\)</span> to position <span class="math notranslate nohighlight">\(x\)</span> at time <span class="math notranslate nohighlight">\(t\)</span>. In quantum mechanics language, we need the transition amplitude between the states <span class="math notranslate nohighlight">\(\ket{x^\prime}\)</span> and <span class="math notranslate nohighlight">\(\ket{x}\)</span> over this time, otherwise known as the <strong>propagator</strong></p>
+<p>To describe the motion of a particle in quantum mechanics, we can look at the amplitude for going from position <span class="math notranslate nohighlight">\(x_0\)</span> at time <span class="math notranslate nohighlight">\(t_0\)</span> to position <span class="math notranslate nohighlight">\(x^\prime\)</span> at time <span class="math notranslate nohighlight">\(t^\prime\)</span>. In quantum mechanics language, we need the transition amplitude between the states <span class="math notranslate nohighlight">\(\ket{x_0}\)</span> and <span class="math notranslate nohighlight">\(\ket{x^\prime}\)</span> over this time, otherwise known as the <strong>propagator</strong></p>
 <div class="math notranslate nohighlight">
-\[K(x,t; x^\prime, t^\prime) = \braket{x|e^{-i\hat{H}(t-t^\prime)/\hbar}|x^\prime}\]</div>
-<p>The path integral is a way of computing the propagator by considering all possible trajectories of the particle between <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(x^\prime\)</span>. For example, as a start we can divide the time period from <span class="math notranslate nohighlight">\(t^\prime\)</span> to <span class="math notranslate nohighlight">\(t\)</span> into two pieces, <span class="math notranslate nohighlight">\(t^\prime\)</span> to <span class="math notranslate nohighlight">\(t^{\prime\prime}\)</span> and then from <span class="math notranslate nohighlight">\(t^{\prime\prime}\)</span> to <span class="math notranslate nohighlight">\(t\)</span>. If we do this, we have to consider all the possible intermediate locations <span class="math notranslate nohighlight">\(x^{\prime\prime}\)</span> that the particle could move to at the intermediate time <span class="math notranslate nohighlight">\(t^{\prime\prime}\)</span>, so we’ll end up doing an integral <span class="math notranslate nohighlight">\(\int dx^{\prime\prime}\)</span> over all those intermediate locations. The path integral is the limit of this process where we divide up the time period <span class="math notranslate nohighlight">\(t^\prime\)</span> to <span class="math notranslate nohighlight">\(t\)</span> into infinitely small time slices, integrating over all possible positions at each of the time slices. This sounds complicated, but we’ll show that the result is</p>
+\[\braket{x^\prime,t^\prime | x_0, t_0} = \braket{x^\prime|e^{-i\hat{H}(t^\prime-t_0)/\hbar}|x_0}\]</div>
+<p>The path integral is a way of computing the propagator by considering all possible trajectories of the particle between <span class="math notranslate nohighlight">\(x_0\)</span> and <span class="math notranslate nohighlight">\(x^\prime\)</span>. For example, as a start we can divide the time period from <span class="math notranslate nohighlight">\(t_0\)</span> to <span class="math notranslate nohighlight">\(t^\prime\)</span> into two pieces, <span class="math notranslate nohighlight">\(t_0\)</span> to <span class="math notranslate nohighlight">\(t_1\)</span> and then from <span class="math notranslate nohighlight">\(t_1\)</span> to <span class="math notranslate nohighlight">\(t^\prime\)</span>. If we do this, we have to consider all the possible intermediate locations <span class="math notranslate nohighlight">\(x_1\)</span> that the particle could move to at the intermediate time <span class="math notranslate nohighlight">\(t_1\)</span>, so we’ll end up doing an integral <span class="math notranslate nohighlight">\(\int dx_1\)</span> over all those intermediate locations. The path integral is the limit of this process where we divide up the time period <span class="math notranslate nohighlight">\(t_0\)</span> to <span class="math notranslate nohighlight">\(t^\prime\)</span> into infinitely small time slices, integrating over all possible positions at each of the time slices. This sounds complicated, but we’ll show that the result is</p>
 <div class="math notranslate nohighlight">
-\[K(x,t; x^\prime, t^\prime) \sim \int_\mathrm{paths} e^{iS/\hbar}\]</div>
-<p>where the integral is over all possible space-time paths between <span class="math notranslate nohighlight">\((x^\prime, t^\prime)\)</span> and <span class="math notranslate nohighlight">\((x,t)\)</span>.</p>
+\[\braket{x^\prime,t^\prime; x_0, t_0} \sim \int_\mathrm{paths} e^{iS/\hbar}\]</div>
+<p>where the integral is over all possible space-time paths between <span class="math notranslate nohighlight">\((x_0, t_0)\)</span> and <span class="math notranslate nohighlight">\((x^\prime,t^\prime)\)</span>.</p>
 <p>The quantity <span class="math notranslate nohighlight">\(S\)</span> is the <strong>action</strong></p>
 <div class="math notranslate nohighlight">
 \[S = \int dt\ L\]</div>
@@ -450,7 +463,7 @@ document.write(`
 <section id="further-reading">
 <h2>Further Reading<a class="headerlink" href="#further-reading" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Chapter 8 of Townsend</p></li>
+<li><p>Section 8.1 of Townsend for the basic idea behind the path integral.</p></li>
 <li><p><a class="reference external" href="https://www.feynmanlectures.caltech.edu/II_19.html">The Principle of Least Action</a> from Volume 2 of the Feynman Lectures on Physics. See also <a class="reference external" href="https://www.feynmanlectures.caltech.edu/I_26.html">Optics: The Principle of Least Time</a> from Volume 1.</p></li>
 </ul>
 </section>
@@ -481,11 +494,10 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="outline.html"
@@ -496,10 +508,16 @@ document.write(`
         <p class="prev-next-title">PHYS 457 Honours Quantum Physics 2: Winter 2024 Course outline</p>
       </div>
     </a>
-</div></div>
-  
+    <a class="right-next"
+       href="lecture2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Lecture 2 Jan 9</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
-
                 </footer>
               
             </div>
@@ -565,8 +583,8 @@ By <a href="https://www.physics.mcgill.ca/~cumming/">Andrew Cumming</a>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
 
   <footer class="bd-footer">
   </footer>

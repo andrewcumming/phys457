@@ -1,0 +1,591 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Lecture 2 Jan 9 &#8212; PHYS 457 Quantum Physics 2</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lecture2';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Lecture 1 Jan 4" href="lecture1.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">PHYS 457 Quantum Physics 2</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">About the course</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="outline.html">Course outline</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lecture notes</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="lecture1.html">Lecture 1 Jan 4</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 2 Jan 9</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/andrewcumming/phys457" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/andrewcumming/phys457/issues/new?title=Issue%20on%20page%20%2Flecture2.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/lecture2.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Lecture 2 Jan 9</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-propagator-for-a-free-particle">The propagator for a free-particle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivation-of-the-path-integral">Derivation of the path integral</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="lecture-2-jan-9">
+<h1>Lecture 2 Jan 9<a class="headerlink" href="#lecture-2-jan-9" title="Permalink to this heading">#</a></h1>
+<div class="admonition-warm-up-question admonition">
+<p class="admonition-title">Warm-up question</p>
+<p>Does <span class="math notranslate nohighlight">\(\ket{\Psi}\)</span> have units? Does <span class="math notranslate nohighlight">\(\psi(x)\)</span> have units?
+Explain why <span class="math notranslate nohighlight">\(\ket{p} = e^{ipx/\hbar}/\sqrt{2\pi \hbar}\)</span> has that normalization.</p>
+</div>
+<p>Today the goal is to go through the calculation of the propagator using a path integral. We’ll find that the path integral takes the form of an integral of <span class="math notranslate nohighlight">\(\exp(-iS/\hbar)\)</span> over the different possible paths a particle can take, where <span class="math notranslate nohighlight">\(S\)</span> is the action, as discussed at the end of last time.</p>
+<p>Before we start on that, one thing that we forgot to mention last time in our review of operators and observables is the importance of commuting vs non-commuting operators. Commuting operators (<span class="math notranslate nohighlight">\([\hat{A},\hat{B}]=0\)</span>) share a complete set of simultaneous eigenstates, and are <em>compatible observables</em>. We can know the value of both observables at the same time, since the operators have the same eigenstates. Non-commuting operators such as position and momentum are <em>incompatible observables</em>. They have different eigenstates, so that a measurement of one quantity results in some uncertainty in the value of the other. The associated uncertainty relation is</p>
+<div class="math notranslate nohighlight">
+\[\langle(\Delta A)^2\rangle \langle(\Delta B)^2\rangle \geq {1\over 4}\left|  \langle [\hat{A},\hat{B}] \rangle \right|^2.\]</div>
+<p>The canonical example of incompatible observables is position-momentum, for which the commutator is <span class="math notranslate nohighlight">\([\hat{x},\hat{p}_x]=i\hbar\)</span>.</p>
+<section id="the-propagator-for-a-free-particle">
+<h2>The propagator for a free-particle<a class="headerlink" href="#the-propagator-for-a-free-particle" title="Permalink to this heading">#</a></h2>
+<p>We want to derive an expression for the propagator</p>
+<div class="math notranslate nohighlight">
+\[\braket{x^\prime,t^\prime; x_0, t_0} = \braket{x^\prime|e^{-i\hat{H}(t^\prime-t_0)/\hbar}|x_0}.\]</div>
+<p>For a free-particle, <span class="math notranslate nohighlight">\(\hat{H}=\hat{p}^2/2m\)</span>, and so the propagator takes the form</p>
+<div class="math notranslate nohighlight">
+\[\braket{x^\prime|e^{-i\hat{H}(t^\prime-t_0)/\hbar}|x_0} = \braket{x^\prime|e^{-i\hat{p}^2(t^\prime-t_0)/2m\hbar}|x_0}\]</div>
+<p>We can evaluate this by inserting the identity operator <span class="math notranslate nohighlight">\(\int dp \ket{p}\bra{p}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\braket{x^\prime|e^{-i\hat{p}^2(t^\prime-t_0)/2m\hbar}|x_0} = \int dp \braket{x^\prime|p}\braket{p|e^{-i\hat{p}^2(t^\prime-t_0)/2m\hbar}|x_0}\]</div>
+<div class="math notranslate nohighlight">
+\[ = \int dp \braket{x^\prime|p}\braket{p|x_0}e^{-ip^2(t^\prime-t_0)/2m\hbar}\]</div>
+<div class="math notranslate nohighlight">
+\[ = {1\over 2\pi\hbar}\int dp\  e^{ip(x^\prime-x_0)/\hbar}e^{-ip^2(t^\prime-t_0)/2m\hbar}.\]</div>
+<p>We can evaluate this by completing the square</p>
+<div class="math notranslate nohighlight">
+\[-{p^2(t^\prime-t_0)\over 2m\hbar}+{p(x^\prime-x_0)\over\hbar} = 
+-\left({t^\prime-t_0\over 2m\hbar}\right)\left[p^2 - p\left({2m(x^\prime-x_0)\over t^\prime-t_0}\right) \right]\]</div>
+<div class="math notranslate nohighlight">
+\[=-\left({t^\prime-t_0\over 2m\hbar}\right)\left[\left(p - {m(x^\prime-x_0)\over t^\prime-t_0}\right)^2  - \left({m(x^\prime-x_0)\over t^\prime-t_0}\right)^2\right]\]</div>
+<div class="math notranslate nohighlight">
+\[= -q^2 + {m(x^\prime-x_0)^2\over 2\hbar(t^\prime-t_0)},\]</div>
+<p>which defines a new integration variable <span class="math notranslate nohighlight">\(q\)</span>. Then using <span class="math notranslate nohighlight">\(\int^\infty_{-\infty} dq\ e^{-iq^2}=(1-i)\sqrt{\pi/2}=\sqrt{2\pi/i}\)</span> we get the answer</p>
+<div class="math notranslate nohighlight" id="equation-freeparticleprop">
+<span class="eqno">(1)<a class="headerlink" href="#equation-freeparticleprop" title="Permalink to this equation">#</a></span>\[\boxed{\braket{x^\prime,t^\prime; x_0, t_0} = \left({m\over 2\pi\hbar i(t^\prime-t_0)}\right)^{1/2} \exp\left({im(x^\prime-x_0)^2\over 2\hbar(t^\prime-t_0)}\right)}\]</div>
+<p>(this is equation (8.9) of Townsend).</p>
+<p>Notice that this is proportional to <span class="math notranslate nohighlight">\(e^{iS_c/\hbar}\)</span> where <span class="math notranslate nohighlight">\(S_c\)</span> is the classical action, i.e. the action for the classical trajectory in which the particle moves at constant velocity, giving</p>
+<div class="math notranslate nohighlight">
+\[S_c = \int L dt = \int {1\over 2} mv^2\ dt = {m(x^\prime-x_0)^2\over 2(t^\prime-t_0)}.\]</div>
+<p>So we see that for this particular case that we get a propagator related to <span class="math notranslate nohighlight">\(e^{iS/\hbar}\)</span>. Next we want to show this for a particle moving in a general potential <span class="math notranslate nohighlight">\(V(x)\)</span>.</p>
+</section>
+<section id="derivation-of-the-path-integral">
+<h2>Derivation of the path integral<a class="headerlink" href="#derivation-of-the-path-integral" title="Permalink to this heading">#</a></h2>
+<p>In the general case, <span class="math notranslate nohighlight">\(\hat{H} = \hat{p}^2/2m + V(\hat{x})\)</span> which makes evaluating the propagator a lot more tricky. Our approach is going to be to divide the time period <span class="math notranslate nohighlight">\(t^\prime-t_0\)</span> into infinitesimally small steps <span class="math notranslate nohighlight">\(\Delta t= \epsilon(t^\prime-t_0)\)</span> where <span class="math notranslate nohighlight">\(\epsilon\ll 1\)</span> and we’ll eventually take the limit <span class="math notranslate nohighlight">\(\epsilon\rightarrow 0\)</span>. The reason to do this is that we can then factorize the time-evolution operator over one of the small intervals like this:</p>
+<div class="math notranslate nohighlight">
+\[\exp\left(-{i\hat{H}\epsilon(t^\prime-t_0)\over\hbar}\right)\approx \exp\left(-{i\hat{p}^2\epsilon(t^\prime-t_0)\over 2m\hbar}\right)\exp\left(-{iV(\hat{x})\epsilon(t^\prime-t_0)\over \hbar}\right).\]</div>
+<p>We need <span class="math notranslate nohighlight">\(\epsilon\)</span> to be small for this to work because otherwise there are correction terms involving the commutator of the two operators: the <em>Baker-Campbell-Hausdorff formula</em> gives <span class="math notranslate nohighlight">\(\ln e^A e^B = A+B + [A,B]/2 + \dots\)</span> for two operators <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>. In our case, <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> correspond to the kinetic energy and potential energy terms. Because they are both <span class="math notranslate nohighlight">\(\propto \epsilon\)</span> with <span class="math notranslate nohighlight">\(\epsilon\ll 1\)</span>, we can ignore the correction terms because they are of order <span class="math notranslate nohighlight">\(\epsilon^2\)</span> or smaller.</p>
+<p>For the free particle, we made progress by inserting the identity operator <span class="math notranslate nohighlight">\(\int dp \ket{p}\bra{p}\)</span> which allowed us to convert the <span class="math notranslate nohighlight">\(\hat{p}\)</span> operator in the exponent into its eigenvalue <span class="math notranslate nohighlight">\(p\)</span>. We can do the same thing here with both momentum and position by inserting identity operators <span class="math notranslate nohighlight">\(\int dp \ket{p}\bra{p}\)</span> and <span class="math notranslate nohighlight">\(\int dx \ket{x}\bra{x}\)</span>. However, we need to do this <span class="math notranslate nohighlight">\(\approx 1/\epsilon\)</span> times, once for each small timestep.</p>
+<p>Our expression for the propagator then looks like this:</p>
+<div class="math notranslate nohighlight">
+\[\bra{x^\prime}   e^{-i\hat{H}\Delta t/\hbar} e^{-i\hat{H}\Delta t/\hbar}\dots e^{-i\hat{H}\Delta t/\hbar}                \ket{x_0}\]</div>
+<p>Focus on the first intermediate step:</p>
+<div class="math notranslate nohighlight">
+\[ = \bra{x^\prime} \dots   \int dx_1 \ket{x_1} \bra{x_1}  e^{-i\hat{p}^2\Delta t/2m\hbar}e^{-i\hat{V}\Delta t/\hbar}             \int dp_1 \ket{p_1} \braket{p_1|x_0}\]</div>
+<div class="math notranslate nohighlight">
+\[ = \bra{x^\prime} \dots   \int dx_1 \int dp_1\ \ket{x_1} \braket{x_1|p_1}  e^{-ip_1^2\Delta t/2m\hbar}e^{-iV(x_1)\Delta t/\hbar}              \braket{p_1|x_0}\]</div>
+<div class="math notranslate nohighlight">
+\[ = \bra{x^\prime} \dots   \int dx_1 \int dp_1\ \ket{x_1} {1\over 2\pi\hbar} e^{ip_1(x_1-x_0)/\hbar}   e^{-ip_1^2\Delta t/2m\hbar}e^{-iV(x_1)\Delta t/\hbar}  \]</div>
+<div class="math notranslate nohighlight">
+\[ = \bra{x^\prime} \dots   \int dx_1 \int {dp_1\over 2\pi \hbar}\ \ket{x_1} 
+\exp\left({i\Delta t\over \hbar}\left[ p_1{x_1-x_0\over \Delta t} - {p_1^2\over 2m} - V(x_1)      \right]\right)\]</div>
+<p>Now add intermediate step 2:</p>
+<div class="math notranslate nohighlight">
+\[ = \bra{x^\prime} \dots   \int dx_2 \int {dp_2\over 2\pi \hbar} \int dx_1 \int {dp_1\over 2\pi \hbar}\ \ket{x_2}  \times \]</div>
+<div class="math notranslate nohighlight">
+\[\exp\left({i\Delta t\over \hbar}\left[ p_2{x_2-x_1\over \Delta t} - {p_2^2\over 2m} - V(x_2) \right]\right)
+\exp\left({i\Delta t\over \hbar}\left[ p_1{x_1-x_0\over \Delta t} - {p_1^2\over 2m} - V(x_1)      \right]\right)\]</div>
+<p>We can see that filling in the remaining steps will give</p>
+<div class="math notranslate nohighlight">
+\[\boxed{ \braket{x^\prime,t^\prime; x_0, t_0}\approx  \int dx_{N-1}\dots dx_1 \int {dp_N\dots dp_1\over (2\pi \hbar)^N} \exp\left({i\Delta t\over \hbar}\sum_j\left[ p_{j}{x_{j}-x_{j-1}\over \Delta t} - {p_j^2\over 2m} - V(x_j) \right]\right)}\]</div>
+<p>(this is equation (8.22) of Townsend).</p>
+<p>We can do the momentum integrals by completing the square, just as we did when deriving the free particle propagator. Adapting that result gives</p>
+<div class="math notranslate nohighlight">
+\[ {1\over 2\pi\hbar}\int dp_j\  e^{ip_j(x_j-x_{j-1})/\hbar}e^{-ip_j^2\Delta t/2m\hbar} = \left({m\over 2\pi\hbar i\Delta t}\right)^{1/2} \exp\left({im(x_j-x_{j-1})^2\over 2\hbar\Delta t}\right)\]</div>
+<p>and therefore</p>
+<div class="math notranslate nohighlight" id="equation-pathintegral">
+<span class="eqno">(2)<a class="headerlink" href="#equation-pathintegral" title="Permalink to this equation">#</a></span>\[\boxed{ \braket{x^\prime,t^\prime; x_0, t_0}\approx  \left({m\over 2\pi i \hbar \Delta t}\right)^{N/2} \int dx_{N-1}\dots dx_1\ \exp\left({i\Delta t\over \hbar}\sum_j\left[  {m(x_j-x_{j-1})^2\over 2(\Delta t)^2}- V(x_j) \right]\right)}\]</div>
+<p>(this is equation (8.24) of Townsend).</p>
+<p>In the continuum limit <span class="math notranslate nohighlight">\(\epsilon\rightarrow 0\)</span>, these expressions become exact. The term <span class="math notranslate nohighlight">\((x_j-x_{j-1})/\Delta t\rightarrow \dot{x}\)</span>, and the expression in the exponent of either of the boxed equations becomes <span class="math notranslate nohighlight">\(iS/\hbar\)</span>, where <span class="math notranslate nohighlight">\(S\)</span> is the action. In the first case, before integrating over momentum, we have</p>
+<div class="math notranslate nohighlight">
+\[\int dt \left(p\dot{x} - H(x,p)\right) = \int dt\ L(x,\dot{x}) = S\]</div>
+<p>(this is the Legendre transform from classical mechanics relating the Hamiltonian <span class="math notranslate nohighlight">\(H\)</span> and Lagrangian <span class="math notranslate nohighlight">\(L\)</span>). In the second case, we have</p>
+<div class="math notranslate nohighlight">
+\[\braket{x^\prime,t^\prime; x_0, t_0} = \int \mathcal{D}[x(t)] \exp\left({i\over \hbar}\int dt\ \left({1\over 2}m\dot{x}^2 - V(x)\right)\right)\]</div>
+<p>or</p>
+<div class="math notranslate nohighlight">
+\[\braket{x^\prime,t^\prime; x_0, t_0} = \int \mathcal{D}[x(t)] \exp\left({i\over \hbar}\int dt\ L(x, \dot{x})\right)\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{D}[x(t)] = \mathrm{lim}_{N\rightarrow \infty} \int dx_{N-1}\dots dx_1\ \left({m\over 2\pi i \hbar \Delta t}\right)^{N/2}\]</div>
+<p>represents the integral over all possible paths.</p>
+<div class="admonition-exercise admonition">
+<p class="admonition-title">Exercise</p>
+<p>To close the loop, use equation <a class="reference internal" href="#equation-pathintegral">(2)</a> to evaluate the propagator for a free particle (<span class="math notranslate nohighlight">\(V=0\)</span>) and check that your result agrees with equation <a class="reference internal" href="#equation-freeparticleprop">(1)</a>.</p>
+<p>Try it yourself first, but if you get stuck you can look at section 8.5 of Townsend which works through this.</p>
+</div>
+</section>
+<section id="further-reading">
+<h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Sections 8.1-8.5 of Townsend</p></li>
+<li><p>Two of the mathematical results we used: <a class="reference external" href="https://en.wikipedia.org/wiki/Baker%E2%80%93Campbell%E2%80%93Hausdorff_formula">Baker-Campbell-Hausdorff formula</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/Fresnel_integral">Fresnel integrals</a></p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="lecture1.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Lecture 1 Jan 4</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-propagator-for-a-free-particle">The propagator for a free-particle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivation-of-the-path-integral">Derivation of the path integral</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By <a href="https://www.physics.mcgill.ca/~cumming/">Andrew Cumming</a>
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023, CC BY SA 4.0.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
