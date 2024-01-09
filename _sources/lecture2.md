@@ -18,7 +18,7 @@ The canonical example of incompatible observables is position-momentum, for whic
 
 We want to derive an expression for the propagator 
 
-$$\braket{x^\prime,t^\prime; x_0, t_0} = \braket{x^\prime|e^{-i\hat{H}(t^\prime-t_0)/\hbar}|x_0}.$$
+$$\braket{x^\prime,t^\prime|x_0, t_0} = \braket{x^\prime|e^{-i\hat{H}(t^\prime-t_0)/\hbar}|x_0}.$$
 
 For a free-particle, $\hat{H}=\hat{p}^2/2m$, and so the propagator takes the form
 
@@ -41,9 +41,13 @@ $$=-\left({t^\prime-t_0\over 2m\hbar}\right)\left[\left(p - {m(x^\prime-x_0)\ove
 
 $$= -q^2 + {m(x^\prime-x_0)^2\over 2\hbar(t^\prime-t_0)},$$
 
-which defines a new integration variable $q$. Then using $\int^\infty_{-\infty} dq\ e^{-iq^2}=(1-i)\sqrt{\pi/2}=\sqrt{2\pi/i}$ we get the answer
+which defines a new integration variable $q$. The integral becomes 
 
-$$\boxed{\braket{x^\prime,t^\prime; x_0, t_0} = \left({m\over 2\pi\hbar i(t^\prime-t_0)}\right)^{1/2} \exp\left({im(x^\prime-x_0)^2\over 2\hbar(t^\prime-t_0)}\right)}$$ (freeparticleprop)
+$$ {1\over 2\pi\hbar} \left({2m\hbar\over t^\prime-t_0}\right)^{1/2}  \exp\left({im(x^\prime-x_0)^2\over 2\hbar(t^\prime-t_0)}\right) \int dq\  e^{-iq^2}.$$
+
+Using $\int^\infty_{-\infty} dq\ e^{-iq^2}=(1-i)\sqrt{\pi/2}=\sqrt{\pi/i}$ we get the answer
+
+$$\boxed{\braket{x^\prime,t^\prime|x_0, t_0} = \left({m\over 2\pi\hbar i(t^\prime-t_0)}\right)^{1/2} \exp\left({im(x^\prime-x_0)^2\over 2\hbar(t^\prime-t_0)}\right)}$$ (freeparticleprop)
 
 (this is equation (8.9) of Townsend).
 
@@ -88,7 +92,7 @@ $$\exp\left({i\Delta t\over \hbar}\left[ p_2{x_2-x_1\over \Delta t} - {p_2^2\ove
 
 We can see that filling in the remaining steps will give
 
-$$\boxed{ \braket{x^\prime,t^\prime; x_0, t_0}\approx  \int dx_{N-1}\dots dx_1 \int {dp_N\dots dp_1\over (2\pi \hbar)^N} \exp\left({i\Delta t\over \hbar}\sum_j\left[ p_{j}{x_{j}-x_{j-1}\over \Delta t} - {p_j^2\over 2m} - V(x_j) \right]\right)}$$
+$$\boxed{ \braket{x^\prime,t^\prime|x_0, t_0}\approx  \int dx_{N-1}\dots dx_1 \int {dp_N\dots dp_1\over (2\pi \hbar)^N} \exp\left({i\Delta t\over \hbar}\sum_j\left[ p_{j}{x_{j}-x_{j-1}\over \Delta t} - {p_j^2\over 2m} - V(x_j) \right]\right)}$$
 
 (this is equation (8.22) of Townsend).
 
@@ -99,7 +103,7 @@ $$ {1\over 2\pi\hbar}\int dp_j\  e^{ip_j(x_j-x_{j-1})/\hbar}e^{-ip_j^2\Delta t/2
 and therefore
 
 
-$$\boxed{ \braket{x^\prime,t^\prime; x_0, t_0}\approx  \left({m\over 2\pi i \hbar \Delta t}\right)^{N/2} \int dx_{N-1}\dots dx_1\ \exp\left({i\Delta t\over \hbar}\sum_j\left[  {m(x_j-x_{j-1})^2\over 2(\Delta t)^2}- V(x_j) \right]\right)}$$ (pathintegral)
+$$\boxed{ \braket{x^\prime,t^\prime|x_0, t_0}\approx  \left({m\over 2\pi i \hbar \Delta t}\right)^{N/2} \int dx_{N-1}\dots dx_1\ \exp\left({i\Delta t\over \hbar}\sum_j\left[  {m(x_j-x_{j-1})^2\over 2(\Delta t)^2}- V(x_j) \right]\right)}$$ (pathintegral)
 
 (this is equation (8.24) of Townsend).
 
@@ -109,11 +113,11 @@ $$\int dt \left(p\dot{x} - H(x,p)\right) = \int dt\ L(x,\dot{x}) = S$$
 
 (this is the Legendre transform from classical mechanics relating the Hamiltonian $H$ and Lagrangian $L$). In the second case, we have 
 
-$$\braket{x^\prime,t^\prime; x_0, t_0} = \int \mathcal{D}[x(t)] \exp\left({i\over \hbar}\int dt\ \left({1\over 2}m\dot{x}^2 - V(x)\right)\right)$$
+$$\braket{x^\prime,t^\prime|x_0, t_0} = \int \mathcal{D}[x(t)] \exp\left({i\over \hbar}\int dt\ \left({1\over 2}m\dot{x}^2 - V(x)\right)\right)$$
 
 or
 
-$$\braket{x^\prime,t^\prime; x_0, t_0} = \int \mathcal{D}[x(t)] \exp\left({i\over \hbar}\int dt\ L(x, \dot{x})\right)$$
+$$\braket{x^\prime,t^\prime|x_0, t_0} = \int \mathcal{D}[x(t)] \exp\left({i\over \hbar}\int dt\ L(x, \dot{x})\right)$$
 
 where
 

@@ -379,7 +379,7 @@ Explain why <span class="math notranslate nohighlight">\(\ket{p} = e^{ipx/\hbar}
 <h2>The propagator for a free-particle<a class="headerlink" href="#the-propagator-for-a-free-particle" title="Permalink to this heading">#</a></h2>
 <p>We want to derive an expression for the propagator</p>
 <div class="math notranslate nohighlight">
-\[\braket{x^\prime,t^\prime; x_0, t_0} = \braket{x^\prime|e^{-i\hat{H}(t^\prime-t_0)/\hbar}|x_0}.\]</div>
+\[\braket{x^\prime,t^\prime|x_0, t_0} = \braket{x^\prime|e^{-i\hat{H}(t^\prime-t_0)/\hbar}|x_0}.\]</div>
 <p>For a free-particle, <span class="math notranslate nohighlight">\(\hat{H}=\hat{p}^2/2m\)</span>, and so the propagator takes the form</p>
 <div class="math notranslate nohighlight">
 \[\braket{x^\prime|e^{-i\hat{H}(t^\prime-t_0)/\hbar}|x_0} = \braket{x^\prime|e^{-i\hat{p}^2(t^\prime-t_0)/2m\hbar}|x_0}\]</div>
@@ -398,9 +398,12 @@ Explain why <span class="math notranslate nohighlight">\(\ket{p} = e^{ipx/\hbar}
 \[=-\left({t^\prime-t_0\over 2m\hbar}\right)\left[\left(p - {m(x^\prime-x_0)\over t^\prime-t_0}\right)^2  - \left({m(x^\prime-x_0)\over t^\prime-t_0}\right)^2\right]\]</div>
 <div class="math notranslate nohighlight">
 \[= -q^2 + {m(x^\prime-x_0)^2\over 2\hbar(t^\prime-t_0)},\]</div>
-<p>which defines a new integration variable <span class="math notranslate nohighlight">\(q\)</span>. Then using <span class="math notranslate nohighlight">\(\int^\infty_{-\infty} dq\ e^{-iq^2}=(1-i)\sqrt{\pi/2}=\sqrt{2\pi/i}\)</span> we get the answer</p>
+<p>which defines a new integration variable <span class="math notranslate nohighlight">\(q\)</span>. The integral becomes</p>
+<div class="math notranslate nohighlight">
+\[ {1\over 2\pi\hbar} \left({2m\hbar\over t^\prime-t_0}\right)^{1/2}  \exp\left({im(x^\prime-x_0)^2\over 2\hbar(t^\prime-t_0)}\right) \int dq\  e^{-iq^2}.\]</div>
+<p>Using <span class="math notranslate nohighlight">\(\int^\infty_{-\infty} dq\ e^{-iq^2}=(1-i)\sqrt{\pi/2}=\sqrt{\pi/i}\)</span> we get the answer</p>
 <div class="math notranslate nohighlight" id="equation-freeparticleprop">
-<span class="eqno">(1)<a class="headerlink" href="#equation-freeparticleprop" title="Permalink to this equation">#</a></span>\[\boxed{\braket{x^\prime,t^\prime; x_0, t_0} = \left({m\over 2\pi\hbar i(t^\prime-t_0)}\right)^{1/2} \exp\left({im(x^\prime-x_0)^2\over 2\hbar(t^\prime-t_0)}\right)}\]</div>
+<span class="eqno">(1)<a class="headerlink" href="#equation-freeparticleprop" title="Permalink to this equation">#</a></span>\[\boxed{\braket{x^\prime,t^\prime|x_0, t_0} = \left({m\over 2\pi\hbar i(t^\prime-t_0)}\right)^{1/2} \exp\left({im(x^\prime-x_0)^2\over 2\hbar(t^\prime-t_0)}\right)}\]</div>
 <p>(this is equation (8.9) of Townsend).</p>
 <p>Notice that this is proportional to <span class="math notranslate nohighlight">\(e^{iS_c/\hbar}\)</span> where <span class="math notranslate nohighlight">\(S_c\)</span> is the classical action, i.e. the action for the classical trajectory in which the particle moves at constant velocity, giving</p>
 <div class="math notranslate nohighlight">
@@ -435,24 +438,24 @@ Explain why <span class="math notranslate nohighlight">\(\ket{p} = e^{ipx/\hbar}
 \exp\left({i\Delta t\over \hbar}\left[ p_1{x_1-x_0\over \Delta t} - {p_1^2\over 2m} - V(x_1)      \right]\right)\]</div>
 <p>We can see that filling in the remaining steps will give</p>
 <div class="math notranslate nohighlight">
-\[\boxed{ \braket{x^\prime,t^\prime; x_0, t_0}\approx  \int dx_{N-1}\dots dx_1 \int {dp_N\dots dp_1\over (2\pi \hbar)^N} \exp\left({i\Delta t\over \hbar}\sum_j\left[ p_{j}{x_{j}-x_{j-1}\over \Delta t} - {p_j^2\over 2m} - V(x_j) \right]\right)}\]</div>
+\[\boxed{ \braket{x^\prime,t^\prime|x_0, t_0}\approx  \int dx_{N-1}\dots dx_1 \int {dp_N\dots dp_1\over (2\pi \hbar)^N} \exp\left({i\Delta t\over \hbar}\sum_j\left[ p_{j}{x_{j}-x_{j-1}\over \Delta t} - {p_j^2\over 2m} - V(x_j) \right]\right)}\]</div>
 <p>(this is equation (8.22) of Townsend).</p>
 <p>We can do the momentum integrals by completing the square, just as we did when deriving the free particle propagator. Adapting that result gives</p>
 <div class="math notranslate nohighlight">
 \[ {1\over 2\pi\hbar}\int dp_j\  e^{ip_j(x_j-x_{j-1})/\hbar}e^{-ip_j^2\Delta t/2m\hbar} = \left({m\over 2\pi\hbar i\Delta t}\right)^{1/2} \exp\left({im(x_j-x_{j-1})^2\over 2\hbar\Delta t}\right)\]</div>
 <p>and therefore</p>
 <div class="math notranslate nohighlight" id="equation-pathintegral">
-<span class="eqno">(2)<a class="headerlink" href="#equation-pathintegral" title="Permalink to this equation">#</a></span>\[\boxed{ \braket{x^\prime,t^\prime; x_0, t_0}\approx  \left({m\over 2\pi i \hbar \Delta t}\right)^{N/2} \int dx_{N-1}\dots dx_1\ \exp\left({i\Delta t\over \hbar}\sum_j\left[  {m(x_j-x_{j-1})^2\over 2(\Delta t)^2}- V(x_j) \right]\right)}\]</div>
+<span class="eqno">(2)<a class="headerlink" href="#equation-pathintegral" title="Permalink to this equation">#</a></span>\[\boxed{ \braket{x^\prime,t^\prime|x_0, t_0}\approx  \left({m\over 2\pi i \hbar \Delta t}\right)^{N/2} \int dx_{N-1}\dots dx_1\ \exp\left({i\Delta t\over \hbar}\sum_j\left[  {m(x_j-x_{j-1})^2\over 2(\Delta t)^2}- V(x_j) \right]\right)}\]</div>
 <p>(this is equation (8.24) of Townsend).</p>
 <p>In the continuum limit <span class="math notranslate nohighlight">\(\epsilon\rightarrow 0\)</span>, these expressions become exact. The term <span class="math notranslate nohighlight">\((x_j-x_{j-1})/\Delta t\rightarrow \dot{x}\)</span>, and the expression in the exponent of either of the boxed equations becomes <span class="math notranslate nohighlight">\(iS/\hbar\)</span>, where <span class="math notranslate nohighlight">\(S\)</span> is the action. In the first case, before integrating over momentum, we have</p>
 <div class="math notranslate nohighlight">
 \[\int dt \left(p\dot{x} - H(x,p)\right) = \int dt\ L(x,\dot{x}) = S\]</div>
 <p>(this is the Legendre transform from classical mechanics relating the Hamiltonian <span class="math notranslate nohighlight">\(H\)</span> and Lagrangian <span class="math notranslate nohighlight">\(L\)</span>). In the second case, we have</p>
 <div class="math notranslate nohighlight">
-\[\braket{x^\prime,t^\prime; x_0, t_0} = \int \mathcal{D}[x(t)] \exp\left({i\over \hbar}\int dt\ \left({1\over 2}m\dot{x}^2 - V(x)\right)\right)\]</div>
+\[\braket{x^\prime,t^\prime|x_0, t_0} = \int \mathcal{D}[x(t)] \exp\left({i\over \hbar}\int dt\ \left({1\over 2}m\dot{x}^2 - V(x)\right)\right)\]</div>
 <p>or</p>
 <div class="math notranslate nohighlight">
-\[\braket{x^\prime,t^\prime; x_0, t_0} = \int \mathcal{D}[x(t)] \exp\left({i\over \hbar}\int dt\ L(x, \dot{x})\right)\]</div>
+\[\braket{x^\prime,t^\prime|x_0, t_0} = \int \mathcal{D}[x(t)] \exp\left({i\over \hbar}\int dt\ L(x, \dot{x})\right)\]</div>
 <p>where</p>
 <div class="math notranslate nohighlight">
 \[\mathcal{D}[x(t)] = \mathrm{lim}_{N\rightarrow \infty} \int dx_{N-1}\dots dx_1\ \left({m\over 2\pi i \hbar \Delta t}\right)^{N/2}\]</div>
