@@ -121,7 +121,7 @@ $$\braket{x^\prime,t^\prime|x_0, t_0} = \int \mathcal{D}[x(t)] \exp\left({i\over
 
 where
 
-$$\mathcal{D}[x(t)] = \mathrm{lim}_{N\rightarrow \infty} \int dx_{N-1}\dots dx_1\ \left({m\over 2\pi i \hbar \Delta t}\right)^{N/2}$$
+$$\int \mathcal{D}[x(t)] = \mathrm{lim}_{N\rightarrow \infty} \int dx_{N-1}\dots dx_1\ \left({m\over 2\pi i \hbar \Delta t}\right)^{N/2}$$
 
 represents the integral over all possible paths.
 
