@@ -414,7 +414,7 @@ document.write(`
 <p>The <strong>semi-classical approximation</strong> involves expanding <span class="math notranslate nohighlight">\(S\)</span> around the classical value:</p>
 <div class="math notranslate nohighlight">
 \[S[x]\approx S[x_c] + {1\over 2} \int dt \int dt^\prime \delta x(t^\prime) {\delta^2 L\over \delta x(t)\delta x(t^\prime)}  \delta x(t) + \dots\]</div>
-<p>where now we are using the second order functional derivative term (the first order term vanishes for the classical path). We won’t go into the details of this here, but you can see that the propagator will be <span class="math notranslate nohighlight">\(\propto e^{iS[x_c]/\hbar}\)</span> multiplied by a correction term corresponding to the integral over the different trajectories <span class="math notranslate nohighlight">\(\delta x(t)\)</span>. This is what we found for the free particle, and in fact this holds also for Lagrangians that are up to and including quadratic in <span class="math notranslate nohighlight">\(x\)</span> or <span class="math notranslate nohighlight">\(\dot{x}\)</span> (see comment in Townsend section 8.5). This includes the harmonic oscillator (HW 1, question 8.3 from Townsend).</p>
+<p>where now we are using the second order functional derivative term (the first order term vanishes for the classical path). We won’t go into the details of this here, but you can see that the propagator will be <span class="math notranslate nohighlight">\(\propto e^{iS[x_c]/\hbar}\)</span> multiplied by a correction term corresponding to the integral over the different trajectories <span class="math notranslate nohighlight">\(\delta x(t)\)</span>. We found this result (that the propagator is <span class="math notranslate nohighlight">\(\propto e^{iS[x_c]/\hbar}\)</span>) for the free particle, and in fact this holds also for Lagrangians that are up to and including quadratic in <span class="math notranslate nohighlight">\(x\)</span> or <span class="math notranslate nohighlight">\(\dot{x}\)</span> (see comment in Townsend section 8.5). This includes the harmonic oscillator (HW 1, question 8.3 from Townsend).</p>
 </section>
 <section id="interference-experiments-with-gravity-and-magnetic-fields">
 <h3>Interference experiments with gravity and magnetic fields<a class="headerlink" href="#interference-experiments-with-gravity-and-magnetic-fields" title="Permalink to this heading">#</a></h3>
@@ -422,7 +422,12 @@ document.write(`
 <p>Another example is in section 14.1 of Townsend which talks about the <strong>Aharanov-Bohm effect</strong>. We’ll discuss this more later, but a charged particle has a term in the Lagrangian</p>
 <div class="math notranslate nohighlight">
 \[L = {q\over c} \vec{A}\cdot\vec{v}.\]</div>
-<p>This means that a charged particle picks up a phase that depends on the vector potential <span class="math notranslate nohighlight">\(\vec{A}\)</span>, even in a region where the magnetic field <span class="math notranslate nohighlight">\(\vec{B} = \vec{\nabla}\times\vec{A}\)</span> vanishes. Paths that go around a solenoid on different sides have a net phase, even though the magnetic field outside the solenoid vanishes! Classically a particle would have no idea that the solenoid was there, but the quantum particle does!</p>
+<p>This means that a charged particle picks up a phase that depends on the vector potential <span class="math notranslate nohighlight">\(\vec{A}\)</span>, even in a region where the magnetic field <span class="math notranslate nohighlight">\(\vec{B} = \vec{\nabla}\times\vec{A}\)</span> vanishes. Paths that go around a solenoid on different sides have a net phase, even though the magnetic field outside the solenoid vanishes!
+The relative phase is</p>
+<div class="math notranslate nohighlight">
+\[\oint \vec{A}\cdot d\vec{\ell} = \int \vec{B}\cdot \vec{dS} = \Phi,\]</div>
+<p>the total magnetic flux through the solenoid.
+Classically a particle would have no idea that the solenoid was there, but the quantum particle does!</p>
 </section>
 <section id="relation-to-statistical-mechanics">
 <h3>Relation to statistical mechanics<a class="headerlink" href="#relation-to-statistical-mechanics" title="Permalink to this heading">#</a></h3>
@@ -438,13 +443,13 @@ document.write(`
 <p>A similar sum over energies appears in statistical mechanics as the <strong>partition function</strong></p>
 <div class="math notranslate nohighlight">
 \[Z = \sum_n e^{-\beta E_n},\]</div>
-<p>where <span class="math notranslate nohighlight">\(\beta = 1/k_BT\)</span>. The partition function is an important quantity because it can be used to obtain many different thermodynamic properties of a system, e.g. the energy is given by <span class="math notranslate nohighlight">\(E = -\partial \ln Z/\partial \beta\)</span>. You’ll see more of this in your stat mech courses, but for us the important point is that the expression for the partition function can be obtained from equation <a class="reference internal" href="#equation-partition">(3)</a> if we evaluate it at the imaginary time <span class="math notranslate nohighlight">\(it/\hbar\rightarrow \beta\)</span>. This allows the application of path integral techniques to statistical mechanics.</p>
+<p>where <span class="math notranslate nohighlight">\(\beta = 1/k_BT\)</span>. The partition function is an important quantity because it can be used to obtain many different thermodynamic properties of a system, e.g. the energy is given by <span class="math notranslate nohighlight">\(E = -\partial \ln Z/\partial \beta\)</span>. You’ll see more of this in your stat mech courses, but for us the important point is that the expression for the partition function can be obtained from equation <a class="reference internal" href="#equation-partition">(3)</a> if we evaluate it at the imaginary time <span class="math notranslate nohighlight">\(it/\hbar\rightarrow \beta\)</span>. This allows the application of path integral techniques to statistical mechanics. This is beyond the scope of our course, but you will see it in more advanced courses on quantum or condensed matter.</p>
 </section>
 </section>
 <section id="further-reading">
 <h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Sections 8.6 and 8.7 of Townsend. Section 14.1 for the Aharanov-Bohm effect.</p></li>
+<li><p>Section 8.6 of Townsend has a nice discussion of the difference between classical and non-classical paths. Section 8.7 of Townsend discusses the gravity interference experiment, and section 14.1 the Aharanov-Bohm effect.</p></li>
 <li><p><a class="reference external" href="https://arxiv.org/abs/1209.1315v4">Path Integrals in Quantum Physics</a> - a comprehensive set of lectures aimed at graduate students if you want to dive into this topic in more depth, covering path integrals in quantum mechanics and statistical mechanics.</p></li>
 </ul>
 </section>
