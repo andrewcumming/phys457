@@ -62,7 +62,7 @@ The **semi-classical approximation** involves expanding $S$ around the classical
 
 $$S[x]\approx S[x_c] + {1\over 2} \int dt \int dt^\prime \delta x(t^\prime) {\delta^2 L\over \delta x(t)\delta x(t^\prime)}  \delta x(t) + \dots$$
 
-where now we are using the second order functional derivative term (the first order term vanishes for the classical path). We won't go into the details of this here, but you can see that the propagator will be $\propto e^{iS[x_c]/\hbar}$ multiplied by a correction term corresponding to the integral over the different trajectories $\delta x(t)$. This is what we found for the free particle, and in fact this holds also for Lagrangians that are up to and including quadratic in $x$ or $\dot{x}$ (see comment in Townsend section 8.5). This includes the harmonic oscillator (HW 1, question 8.3 from Townsend).
+where now we are using the second order functional derivative term (the first order term vanishes for the classical path). We won't go into the details of this here, but you can see that the propagator will be $\propto e^{iS[x_c]/\hbar}$ multiplied by a correction term corresponding to the integral over the different trajectories $\delta x(t)$. We found this result (that the propagator is $\propto e^{iS[x_c]/\hbar}$) for the free particle, and in fact this holds also for Lagrangians that are up to and including quadratic in $x$ or $\dot{x}$ (see comment in Townsend section 8.5). This includes the harmonic oscillator (HW 1, question 8.3 from Townsend).
 
 ### Interference experiments with gravity and magnetic fields
 
@@ -72,7 +72,13 @@ Another example is in section 14.1 of Townsend which talks about the **Aharanov-
 
 $$L = {q\over c} \vec{A}\cdot\vec{v}.$$
 
-This means that a charged particle picks up a phase that depends on the vector potential $\vec{A}$, even in a region where the magnetic field $\vec{B} = \vec{\nabla}\times\vec{A}$ vanishes. Paths that go around a solenoid on different sides have a net phase, even though the magnetic field outside the solenoid vanishes! Classically a particle would have no idea that the solenoid was there, but the quantum particle does!
+This means that a charged particle picks up a phase that depends on the vector potential $\vec{A}$, even in a region where the magnetic field $\vec{B} = \vec{\nabla}\times\vec{A}$ vanishes. Paths that go around a solenoid on different sides have a net phase, even though the magnetic field outside the solenoid vanishes! 
+The relative phase is
+
+$$\oint \vec{A}\cdot d\vec{\ell} = \int \vec{B}\cdot \vec{dS} = \Phi,$$
+
+the total magnetic flux through the solenoid.
+Classically a particle would have no idea that the solenoid was there, but the quantum particle does!
 
 
 ### Relation to statistical mechanics
@@ -93,14 +99,14 @@ A similar sum over energies appears in statistical mechanics as the **partition 
 
 $$Z = \sum_n e^{-\beta E_n},$$
 
-where $\beta = 1/k_BT$. The partition function is an important quantity because it can be used to obtain many different thermodynamic properties of a system, e.g. the energy is given by $E = -\partial \ln Z/\partial \beta$. You'll see more of this in your stat mech courses, but for us the important point is that the expression for the partition function can be obtained from equation {eq}`partition` if we evaluate it at the imaginary time $it/\hbar\rightarrow \beta$. This allows the application of path integral techniques to statistical mechanics.
+where $\beta = 1/k_BT$. The partition function is an important quantity because it can be used to obtain many different thermodynamic properties of a system, e.g. the energy is given by $E = -\partial \ln Z/\partial \beta$. You'll see more of this in your stat mech courses, but for us the important point is that the expression for the partition function can be obtained from equation {eq}`partition` if we evaluate it at the imaginary time $it/\hbar\rightarrow \beta$. This allows the application of path integral techniques to statistical mechanics. This is beyond the scope of our course, but you will see it in more advanced courses on quantum or condensed matter.
 
 
 
 
 ## Further reading
 
-- Sections 8.6 and 8.7 of Townsend. Section 14.1 for the Aharanov-Bohm effect.
+- Section 8.6 of Townsend has a nice discussion of the difference between classical and non-classical paths. Section 8.7 of Townsend discusses the gravity interference experiment, and section 14.1 the Aharanov-Bohm effect.
 
 - [Path Integrals in Quantum Physics](https://arxiv.org/abs/1209.1315v4) - a comprehensive set of lectures aimed at graduate students if you want to dive into this topic in more depth, covering path integrals in quantum mechanics and statistical mechanics.
 
