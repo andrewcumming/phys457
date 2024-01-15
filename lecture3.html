@@ -383,9 +383,21 @@ document.write(`
 <h1>Lecture 3 Jan 11<a class="headerlink" href="#lecture-3-jan-11" title="Permalink to this heading">#</a></h1>
 <div class="admonition-warm-up-question admonition">
 <p class="admonition-title">Warm-up question</p>
-<p>Derive an expression for the momentum propagator <span class="math notranslate nohighlight">\(\braket{p^\prime, t^\prime | p_0, t_0}\)</span>.</p>
+<p>Derive an expression for the momentum propagator <span class="math notranslate nohighlight">\(\braket{p^\prime, t^\prime | p_0, t_0}\)</span> for a free-particle.</p>
 </div>
-<p>Today, we’ll first finish off the derivation of the path integral from last time. This gives us the result</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">This is straightforward because the momentum eigenstates are also eigenstates of the Hamiltonian for a free particle, so we can write</p>
+<div class="math notranslate nohighlight">
+\[\braket{p^\prime, t^\prime | p_0, t_0}=\bra{p^\prime} e^{-i\hat{H}(t^\prime-t)/\hbar}\ket{p} = 
+\bra{p^\prime} e^{-ip^2(t^\prime-t)/2m\hbar}\ket{p} = \braket{p^\prime|p} e^{-ip^2(t^\prime-t)/2m\hbar} = \delta(p^\prime-p)e^{-ip^2(t^\prime-t)/2m\hbar}.\]</div>
+</div>
+</details><p>Today, we’ll first finish off the derivation of the path integral from last time. This gives us the result</p>
 <div class="math notranslate nohighlight">
 \[\braket{x^\prime,t^\prime|x_0, t_0} = \int \mathcal{D}[x(t)] \exp\left({iS(x(t))\over \hbar}\right)=\int \mathcal{D}[x(t)] \exp\left({i\over \hbar}\int dt\ L(x, \dot{x})\right).\]</div>
 <p>Next, let’s discuss some of the implications and applications of this result.</p>
@@ -411,15 +423,46 @@ document.write(`
 \[{\partial L\over \partial x} - {d\over dt}{\partial L\over \partial \dot{x}}=0,\]</div>
 <p>which is the equation of motion for a particle with Lagrangian <span class="math notranslate nohighlight">\(L\)</span>. You will see this in your classical mechanics course, if not already.</p>
 <p>The significant of this result for us is that the classical trajectory has a special property that it is the trajectory where <span class="math notranslate nohighlight">\(\delta S=0\)</span> for neighbouring paths. This means that the classical trajectory and its neighbours add up in phase with each other when we sum up their contributions <span class="math notranslate nohighlight">\(e^{iS_c/\hbar}\)</span> to the path integral. A trajectory that is far away from the classical path does not have <span class="math notranslate nohighlight">\(\delta S=0\)</span>, so then neighbouring paths contribute different phases and cancel out.</p>
+<div class="admonition-illustration-of-the-relative-phase-shifts admonition">
+<p class="admonition-title">Illustration of the relative phase shifts</p>
 <p>As a simple example of this, consider the propagator from the point <span class="math notranslate nohighlight">\((x,y) = (-1,0)\)</span> to <span class="math notranslate nohighlight">\((1,0)\)</span> and for simplicity let’s consider paths for which the particle travels in a straight line to a point <span class="math notranslate nohighlight">\((0,y)\)</span> in half the time and then from there in a straight line to the endpoint in the remaining half of the time. The action is then</p>
 <div class="math notranslate nohighlight">
 \[S = 2\times {m\over 2}{1 + y^2\over (t^\prime-t_0)/2}  = {2m(1+y^2)\over (t^\prime-t_0)}.\]</div>
 <p>Summing <span class="math notranslate nohighlight">\(e^{iS/\hbar}\)</span> over the different paths taking a discrete set of <span class="math notranslate nohighlight">\(y\)</span> values <span class="math notranslate nohighlight">\(y_n = n\Delta y\)</span>, the path integral is then proportional to</p>
 <div class="math notranslate nohighlight">
 \[\sum_{n=0}^N \exp\left(i(1+(n\Delta y)^2)\right).\]</div>
-<div class="admonition-exercise admonition">
-<p class="admonition-title">Exercise:</p>
-<p>Plot this sum in the complex plane for increasing values of <span class="math notranslate nohighlight">\(N\)</span>, starting at <span class="math notranslate nohighlight">\(N=0\)</span> and increasing to larger values. Which terms in the sum contribute most to the final answer?</p>
+<p>The plot below shows the cumulative value of this sum as a trajectory in the complex plane as we include more and more terms:</p>
+<p><img alt="" src="_images/spiral.png" /></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Code<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">yvec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">10000</span><span class="p">)</span>
+<span class="n">dy</span> <span class="o">=</span> <span class="n">yvec</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">yvec</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="nb">sum</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">yvec</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">complex</span><span class="p">)</span>
+<span class="nb">sum</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">yvec</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+        <span class="nb">sum</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">dy</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mf">1.0</span><span class="n">J</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="nb">sum</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">imag</span><span class="p">(</span><span class="nb">sum</span><span class="p">))</span>
+
+<span class="c1"># Integrate[Exp[I (1 + y^2)], {y, 0, Infinity}]</span>
+<span class="n">prediction</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">1.0</span><span class="n">J</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mf">1.0</span><span class="n">J</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">prediction</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">imag</span><span class="p">(</span><span class="n">prediction</span><span class="p">),</span> <span class="s1">&#39;ro&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details><p>The red dot shows the analytic value of the sum. The blue curve starts at the origin and eventually reaches the red dot once we add in many terms in the sum. However, we see that the terms involving larger and larger <span class="math notranslate nohighlight">\(y\)</span> don’t contribute much to the sum: alternate terms have very different phases and the trajectory goes around in circles. Most of the contributions to the final value are from the initial part of the sum where <span class="math notranslate nohighlight">\(y\)</span> is small and the contributions add in phase. Another way to say this is that the terms with large <span class="math notranslate nohighlight">\(y\)</span> don’t contribute very much to the final value.</p>
 </div>
 <p>For classical particles where <span class="math notranslate nohighlight">\(S\)</span> is large compared to <span class="math notranslate nohighlight">\(\hbar\)</span>, only paths extremely close to the classical path can add in phase, the others cancel. The homework questions will give you a chance to calculate the numerical value of <span class="math notranslate nohighlight">\(S\)</span> for different cases and get a feeling for when we can consider the motion classical (path integral dominated by classical trajectory) or quantum (<span class="math notranslate nohighlight">\(S\)</span> is small enough that even non-classical trajectories can make a significant contribution to the integral).</p>
 <p>The <strong>semi-classical approximation</strong> involves expanding <span class="math notranslate nohighlight">\(S\)</span> around the classical value:</p>
@@ -429,7 +472,7 @@ document.write(`
 </section>
 <section id="interference-experiments-with-gravity-and-magnetic-fields">
 <h3>Interference experiments with gravity and magnetic fields<a class="headerlink" href="#interference-experiments-with-gravity-and-magnetic-fields" title="Permalink to this heading">#</a></h3>
-<p>Section 8.7 of Townsend talks about an interesting experiment that looks for the phase difference between two neutron beams, one of which moves upwards in the Earth’s gravitational field and gets an extra phase shift <span class="math notranslate nohighlight">\(\approx  imgHt/\hbar\)</span>.</p>
+<p>Section 8.7 of Townsend talks about an interesting experiment that looks for the phase difference between two neutron beams, one of takes a path that is vertically above the other, i.e. has a difference value of gravitational potential. This gives the two paths a relative phase shift <span class="math notranslate nohighlight">\(\approx img(\Delta z)t/\hbar\)</span> compared to the other. Figure 8.11 shows the measured interference fringes.</p>
 <p>Another example is in section 14.1 of Townsend which talks about the <strong>Aharanov-Bohm effect</strong>. We’ll discuss this more later, but a charged particle has a term in the Lagrangian</p>
 <div class="math notranslate nohighlight">
 \[L = {q\over c} \vec{A}\cdot\vec{v}.\]</div>
