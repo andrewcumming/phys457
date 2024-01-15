@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,8 +38,9 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -78,6 +79,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -134,6 +144,7 @@ const thebe_selector_output = ".output, .cell_output"
   
 
 <a class="navbar-brand logo" href="intro.html">
+  
   
   
   
@@ -312,10 +323,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -323,7 +334,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -351,7 +362,10 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-propagator-for-a-free-particle">The propagator for a free-particle</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivation-of-the-path-integral">Derivation of the path integral</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivation-of-the-path-integral">Derivation of the path integral</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-continuum-limit">The continuum limit</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a></li>
 </ul>
             </nav>
@@ -369,9 +383,27 @@ document.write(`
 <div class="admonition-warm-up-question admonition">
 <p class="admonition-title">Warm-up question</p>
 <p>Does <span class="math notranslate nohighlight">\(\ket{\Psi}\)</span> have units? Does <span class="math notranslate nohighlight">\(\psi(x)\)</span> have units?
-Explain why <span class="math notranslate nohighlight">\(\ket{p} = e^{ipx/\hbar}/\sqrt{2\pi \hbar}\)</span> has that normalization.</p>
+Explain why <span class="math notranslate nohighlight">\(\braket{x|p} = e^{ipx/\hbar}/\sqrt{2\pi \hbar}\)</span> has that normalization.</p>
 </div>
-<p>Today the goal is to go through the calculation of the propagator using a path integral. We’ll find that the path integral takes the form of an integral of <span class="math notranslate nohighlight">\(\exp(-iS/\hbar)\)</span> over the different possible paths a particle can take, where <span class="math notranslate nohighlight">\(S\)</span> is the action, as discussed at the end of last time.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">You can answer these questions by thinking about the normalization of each. Since we need <span class="math notranslate nohighlight">\(\braket{\Psi|\Psi}=1\)</span>, <span class="math notranslate nohighlight">\(\ket{\Psi}\)</span> is unitless. However, <span class="math notranslate nohighlight">\(\psi(x)=\braket{x|\Psi}\)</span> must satisfy</p>
+<div class="math notranslate nohighlight">
+\[\int dx \left|\psi\right|^2 = 1\]</div>
+<p class="sd-card-text">which tells us that <span class="math notranslate nohighlight">\(\psi(x)\)</span> must have units of <span class="math notranslate nohighlight">\(1/(\mathrm{length})^{1/2}\)</span>.</p>
+<p class="sd-card-text">The normalization of the momentum-eigenstate wavefunction <span class="math notranslate nohighlight">\(\braket{x|p}\)</span> is chosen so that the momentum eigenstates satisfy the orthogonality relation</p>
+<div class="math notranslate nohighlight">
+\[\braket{p|p^\prime} = \delta(p-p^\prime).\]</div>
+<p class="sd-card-text">To see that this is true, insert the identity operator <span class="math notranslate nohighlight">\(\int dx \ket{x}\bra{x}\)</span> and use the result  <span class="math notranslate nohighlight">\(\delta(x)=(1/2\pi)\int dy\ e^{ixy}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\int dx \braket{p|x}\braket{x|p^\prime} = {1\over 2\pi\hbar} \int dx\ e^{ix(p^\prime-p)/\hbar} = \delta(p^\prime-p).\]</div>
+</div>
+</details><p>Today the goal is to go through the calculation of the propagator using a path integral. We’ll find that the path integral takes the form of an integral of <span class="math notranslate nohighlight">\(\exp(-iS/\hbar)\)</span> over the different possible paths a particle can take, where <span class="math notranslate nohighlight">\(S\)</span> is the action, as discussed at the end of last time.</p>
 <p>Before we start on that, one thing that we forgot to mention last time in our review of operators and observables is the importance of commuting vs non-commuting operators. Commuting operators (<span class="math notranslate nohighlight">\([\hat{A},\hat{B}]=0\)</span>) share a complete set of simultaneous eigenstates, and are <em>compatible observables</em>. We can know the value of both observables at the same time, since the operators have the same eigenstates. Non-commuting operators such as position and momentum are <em>incompatible observables</em>. They have different eigenstates, so that a measurement of one quantity results in some uncertainty in the value of the other. The associated uncertainty relation is</p>
 <div class="math notranslate nohighlight">
 \[\langle(\Delta A)^2\rangle \langle(\Delta B)^2\rangle \geq {1\over 4}\left|  \langle [\hat{A},\hat{B}] \rangle \right|^2.\]</div>
@@ -448,13 +480,15 @@ Explain why <span class="math notranslate nohighlight">\(\ket{p} = e^{ipx/\hbar}
 <div class="math notranslate nohighlight" id="equation-pathintegral">
 <span class="eqno">(2)<a class="headerlink" href="#equation-pathintegral" title="Permalink to this equation">#</a></span>\[\boxed{ \braket{x^\prime,t^\prime|x_0, t_0}\approx  \left({m\over 2\pi i \hbar \Delta t}\right)^{N/2} \int dx_{N-1}\dots dx_1\ \exp\left({i\Delta t\over \hbar}\sum_j\left[  {m(x_j-x_{j-1})^2\over 2(\Delta t)^2}- V(x_j) \right]\right)}\]</div>
 <p>(this is equation (8.24) of Townsend).</p>
-<p>In the continuum limit <span class="math notranslate nohighlight">\(\epsilon\rightarrow 0\)</span>, these expressions become exact. The term <span class="math notranslate nohighlight">\((x_j-x_{j-1})/\Delta t\rightarrow \dot{x}\)</span>, and the expression in the exponent of either of the boxed equations becomes <span class="math notranslate nohighlight">\(iS/\hbar\)</span>, where <span class="math notranslate nohighlight">\(S\)</span> is the action. In the first case, before integrating over momentum, we have</p>
+<section id="the-continuum-limit">
+<h3>The continuum limit<a class="headerlink" href="#the-continuum-limit" title="Permalink to this heading">#</a></h3>
+<p>In the continuum limit <span class="math notranslate nohighlight">\(\epsilon\rightarrow 0\)</span>, these expressions become exact. The term <span class="math notranslate nohighlight">\((x_j-x_{j-1})/\Delta t\rightarrow \dot{x}\)</span>, and the expression in the exponent of either of the boxed equations becomes <span class="math notranslate nohighlight">\(iS/\hbar\)</span>, where <span class="math notranslate nohighlight">\(S\)</span> is the action. In the first case, where we have an integral over positions and momenta, the exponent becomes</p>
 <div class="math notranslate nohighlight">
-\[\int dt \left(p\dot{x} - H(x,p)\right) = \int dt\ L(x,\dot{x}) = S\]</div>
-<p>(this is the Legendre transform from classical mechanics relating the Hamiltonian <span class="math notranslate nohighlight">\(H\)</span> and Lagrangian <span class="math notranslate nohighlight">\(L\)</span>). In the second case, we have</p>
+\[{i\over\hbar}\int dt \left(p\dot{x} - H(x,p)\right) = {i\over\hbar}\int dt\ L(x,\dot{x}) = {iS\over \hbar}\]</div>
+<p>(where we’ve used the Legendre transform from classical mechanics relating the Hamiltonian <span class="math notranslate nohighlight">\(H\)</span> and Lagrangian <span class="math notranslate nohighlight">\(L\)</span>: <span class="math notranslate nohighlight">\(p\dot{x}-H=L\)</span>). In the second case, the exponent is</p>
 <div class="math notranslate nohighlight">
-\[\braket{x^\prime,t^\prime|x_0, t_0} = \int \mathcal{D}[x(t)] \exp\left({i\over \hbar}\int dt\ \left({1\over 2}m\dot{x}^2 - V(x)\right)\right)\]</div>
-<p>or</p>
+\[{i\over \hbar}\int dt\ \left({1\over 2}m\dot{x}^2 - V(x)\right) = {i\over\hbar}\int dt\ L(x,\dot{x}) = {iS\over \hbar}.\]</div>
+<p>In both cases, we see that we can write the propagator as an integral over all possible particle paths of <span class="math notranslate nohighlight">\(e^{iS/\hbar}\)</span>. We can represent this by writing equation <a class="reference internal" href="#equation-pathintegral">(2)</a> as</p>
 <div class="math notranslate nohighlight">
 \[\braket{x^\prime,t^\prime|x_0, t_0} = \int \mathcal{D}[x(t)] \exp\left({i\over \hbar}\int dt\ L(x, \dot{x})\right)\]</div>
 <p>where</p>
@@ -466,6 +500,7 @@ Explain why <span class="math notranslate nohighlight">\(\ket{p} = e^{ipx/\hbar}
 <p>To close the loop, use equation <a class="reference internal" href="#equation-pathintegral">(2)</a> to evaluate the propagator for a free particle (<span class="math notranslate nohighlight">\(V=0\)</span>) and check that your result agrees with equation <a class="reference internal" href="#equation-freeparticleprop">(1)</a>.</p>
 <p>Try it yourself first, but if you get stuck you can look at section 8.5 of Townsend which works through this.</p>
 </div>
+</section>
 </section>
 <section id="further-reading">
 <h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this heading">#</a></h2>
@@ -501,11 +536,10 @@ Explain why <span class="math notranslate nohighlight">\(\ket{p} = e^{ipx/\hbar}
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="lecture1.html"
@@ -525,10 +559,7 @@ Explain why <span class="math notranslate nohighlight">\(\ket{p} = e^{ipx/\hbar}
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -544,7 +575,10 @@ Explain why <span class="math notranslate nohighlight">\(\ket{p} = e^{ipx/\hbar}
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-propagator-for-a-free-particle">The propagator for a free-particle</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivation-of-the-path-integral">Derivation of the path integral</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivation-of-the-path-integral">Derivation of the path integral</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-continuum-limit">The continuum limit</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a></li>
 </ul>
   </nav></div>
@@ -593,8 +627,8 @@ By <a href="https://www.physics.mcgill.ca/~cumming/">Andrew Cumming</a>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
 
   <footer class="bd-footer">
   </footer>

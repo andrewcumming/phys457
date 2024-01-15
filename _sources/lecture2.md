@@ -2,7 +2,25 @@
 
 ```{admonition} Warm-up question
 Does $\ket{\Psi}$ have units? Does $\psi(x)$ have units?
-Explain why $\ket{p} = e^{ipx/\hbar}/\sqrt{2\pi \hbar}$ has that normalization.
+Explain why $\braket{x|p} = e^{ipx/\hbar}/\sqrt{2\pi \hbar}$ has that normalization.
+```
+
+```{dropdown} Solution
+
+You can answer these questions by thinking about the normalization of each. Since we need $\braket{\Psi|\Psi}=1$, $\ket{\Psi}$ is unitless. However, $\psi(x)=\braket{x|\Psi}$ must satisfy
+
+$$\int dx \left|\psi\right|^2 = 1$$
+
+which tells us that $\psi(x)$ must have units of $1/(\mathrm{length})^{1/2}$.
+
+The normalization of the momentum-eigenstate wavefunction $\braket{x|p}$ is chosen so that the momentum eigenstates satisfy the orthogonality relation 
+
+$$\braket{p|p^\prime} = \delta(p-p^\prime).$$
+
+To see that this is true, insert the identity operator $\int dx \ket{x}\bra{x}$ and use the result  $\delta(x)=(1/2\pi)\int dy\ e^{ixy}$: 
+
+$$\int dx \braket{p|x}\braket{x|p^\prime} = {1\over 2\pi\hbar} \int dx\ e^{ix(p^\prime-p)/\hbar} = \delta(p^\prime-p).$$
+
 ```
 
 Today the goal is to go through the calculation of the propagator using a path integral. We'll find that the path integral takes the form of an integral of $\exp(-iS/\hbar)$ over the different possible paths a particle can take, where $S$ is the action, as discussed at the end of last time.
@@ -107,15 +125,17 @@ $$\boxed{ \braket{x^\prime,t^\prime|x_0, t_0}\approx  \left({m\over 2\pi i \hbar
 
 (this is equation (8.24) of Townsend).
 
-In the continuum limit $\epsilon\rightarrow 0$, these expressions become exact. The term $(x_j-x_{j-1})/\Delta t\rightarrow \dot{x}$, and the expression in the exponent of either of the boxed equations becomes $iS/\hbar$, where $S$ is the action. In the first case, before integrating over momentum, we have 
+### The continuum limit
 
-$$\int dt \left(p\dot{x} - H(x,p)\right) = \int dt\ L(x,\dot{x}) = S$$
+In the continuum limit $\epsilon\rightarrow 0$, these expressions become exact. The term $(x_j-x_{j-1})/\Delta t\rightarrow \dot{x}$, and the expression in the exponent of either of the boxed equations becomes $iS/\hbar$, where $S$ is the action. In the first case, where we have an integral over positions and momenta, the exponent becomes 
 
-(this is the Legendre transform from classical mechanics relating the Hamiltonian $H$ and Lagrangian $L$). In the second case, we have 
+$${i\over\hbar}\int dt \left(p\dot{x} - H(x,p)\right) = {i\over\hbar}\int dt\ L(x,\dot{x}) = {iS\over \hbar}$$
 
-$$\braket{x^\prime,t^\prime|x_0, t_0} = \int \mathcal{D}[x(t)] \exp\left({i\over \hbar}\int dt\ \left({1\over 2}m\dot{x}^2 - V(x)\right)\right)$$
+(where we've used the Legendre transform from classical mechanics relating the Hamiltonian $H$ and Lagrangian $L$: $p\dot{x}-H=L$). In the second case, the exponent is 
 
-or
+$${i\over \hbar}\int dt\ \left({1\over 2}m\dot{x}^2 - V(x)\right) = {i\over\hbar}\int dt\ L(x,\dot{x}) = {iS\over \hbar}.$$
+
+In both cases, we see that we can write the propagator as an integral over all possible particle paths of $e^{iS/\hbar}$. We can represent this by writing equation {eq}`pathintegral` as 
 
 $$\braket{x^\prime,t^\prime|x_0, t_0} = \int \mathcal{D}[x(t)] \exp\left({i\over \hbar}\int dt\ L(x, \dot{x})\right)$$
 
