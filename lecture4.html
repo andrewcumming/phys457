@@ -67,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'lecture4';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Homework 1" href="hw1.html" />
+    <link rel="next" title="Lecture 5 Jan 18" href="lecture5.html" />
     <link rel="prev" title="Lecture 3 Jan 11" href="lecture3.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -165,6 +165,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="lecture2.html">Lecture 2 Jan 9</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture3.html">Lecture 3 Jan 11</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 4 Jan 16</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture5.html">Lecture 5 Jan 18</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Homework</span></p>
 <ul class="nav bd-sidenav">
@@ -363,8 +364,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#moving-from-1d-to-3d">Moving from 1D to 3D</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-two-body-problem">The two-body problem</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#back-of-the-envelope-hydrogen-atom">Back of the envelope hydrogen atom</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a></li>
 </ul>
@@ -384,61 +383,27 @@ document.write(`
 <p class="admonition-title">Warm-up question</p>
 <p>Given the wavefunction at time <span class="math notranslate nohighlight">\(t=0\)</span>, <span class="math notranslate nohighlight">\(\psi(x,0)\)</span>, how would you use the propagator to calculate the wavefunction at time <span class="math notranslate nohighlight">\(t\)</span>, <span class="math notranslate nohighlight">\(\psi(x,t)\)</span>?</p>
 </div>
-<p>We’ll start today by finishing our discussion of path integrals. Then we’ll move on to Chapter 9 of Townsend, which discusses the two body problem in quantum mechanics. In particular, we’ll see that we can use symmetries of the Hamiltonian to infer a lot about the stationary states of the problem. We’ll apply what we learn to the hydrogen atom in Chapter 10.</p>
-<section id="moving-from-1d-to-3d">
-<h2>Moving from 1D to 3D<a class="headerlink" href="#moving-from-1d-to-3d" title="Permalink to this heading">#</a></h2>
-<p>The position and momentum eigenstates that we have in 1D generalize naturally to 3D:</p>
-<p><strong>Position basis</strong></p>
-<ul class="simple">
-<li><p>Eigenstates: <span class="math notranslate nohighlight">\(\ket{\mathbf{r}} = \ket{x, y, z}\)</span></p></li>
-<li><p>Wavefunction: <span class="math notranslate nohighlight">\(\psi(\mathbf{r}) = \braket{\mathbf{r}|\Psi}\)</span></p></li>
-<li><p>Normalization: <span class="math notranslate nohighlight">\(\int |\psi|^2\,dV = 1\)</span></p></li>
-<li><p>Orthogonality: <span class="math notranslate nohighlight">\(\braket{\mathbf{r}|\mathbf{r}^\prime} = \delta^3(\mathbf{r}-\mathbf{r}^\prime)\)</span></p></li>
-</ul>
-<p><strong>Momentum basis</strong></p>
-<ul class="simple">
-<li><p>Eigenstates: <span class="math notranslate nohighlight">\(\ket{\mathbf{p}} = \ket{p_x, p_y, p_z}\)</span></p></li>
-<li><p>Momentum eigenstates in position basis are plane waves in 3D space :<span class="math notranslate nohighlight">\(\braket{\mathbf{r}|\mathbf{p}} = {1\over (2\pi\hbar)^{3/2}} e^{i\mathbf{p}\cdot\mathbf{r}/\hbar}\)</span></p></li>
-<li><p>Commutation relations: <span class="math notranslate nohighlight">\([\hat{p}_i, \hat{p}_j] = 0\)</span>, <span class="math notranslate nohighlight">\([\hat{x}_i, \hat{p}_j] = i\hbar \delta_{ij}\)</span></p></li>
-<li><p>The momentum operator in position basis is now a 3D gradient:</p></li>
-</ul>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The answer is</p>
 <div class="math notranslate nohighlight">
-\[\braket{\mathbf{r}|\hat{\mathbf{p}}|\Psi} = {\hbar\over i}\mathbf{\nabla} \braket{\mathbf{r}|\Psi}\]</div>
-<p>Note that the position and momentum commutator vanishes when the position and momentum are in different directions. So for example whereas it is not possible to know both <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(p_x\)</span> for a particle at the same time, we can know the precise <span class="math notranslate nohighlight">\(x\)</span>-coordinate and <span class="math notranslate nohighlight">\(y\)</span>-momentum <span class="math notranslate nohighlight">\(p_y\)</span> at the same time.</p>
-</section>
-<section id="the-two-body-problem">
-<h2>The two-body problem<a class="headerlink" href="#the-two-body-problem" title="Permalink to this heading">#</a></h2>
-<p>We want to look at two particles with masses <span class="math notranslate nohighlight">\(m_1\)</span> and <span class="math notranslate nohighlight">\(m_2\)</span> interacting through a potential that depends only on the distance between the two particles:</p>
+\[\psi(x,t) = \int dx^\prime \braket{x, t| x^\prime, 0} \psi(x^\prime, 0).\]</div>
+<p class="sd-card-text">To see this, we can start with <span class="math notranslate nohighlight">\(\ket{\Psi(t)} = e^{-i\hat{H}t/\hbar}\ket{\Psi(0)}\)</span> which gives</p>
 <div class="math notranslate nohighlight">
-\[\hat{H} = {\hat{\mathbf{p}}_1^2\over 2m_1} + {\hat{\mathbf{p}}_2^2\over 2m_2} + V(|\hat{\mathbf{r}}_1-\hat{\mathbf{r}}_2|).\]</div>
-<p>A particular example is the hydrogen atom in which the proton and electron interact through a Coulomb potential</p>
-<div class="math notranslate nohighlight">
-\[\hat{H} = {\hat{\mathbf{p}}_1^2\over 2m_1} + {\hat{\mathbf{p}}_2^2\over 2m_2} - {e^2\over 4\pi \epsilon_0 |\hat{\mathbf{r}}_1-\hat{\mathbf{r}}_2|}.\]</div>
-<p>In general, we can build the state of the system out of two particle states</p>
-<div class="math notranslate nohighlight">
-\[\ket{\mathbf{r}_1,\mathbf{r}_2} = \ket{\mathbf{r}_1}\otimes\ket{\mathbf{r}_2},\]</div>
-<p>with a direct product of the Hilbert spaces for particles 1 and 2. (We’re ignoring the proton and electron spins here, more on that later in the course!)</p>
-<p>In fact, as you’ve probably seen before in classical mechanics, the two-body problem simplifies enormously with a change of coordinates. We work with the relative coordinate between the two particles</p>
-<div class="math notranslate nohighlight">
-\[\mathbf{r} = \mathbf{r}_1 - \mathbf{r}_2,\]</div>
-<p>and the centre of mass location</p>
-<div class="math notranslate nohighlight">
-\[\mathbf{R} = {m_1 \mathbf{r}_1 + m_2\mathbf{r}_2\over m_1+m_2 }.\]</div>
-<p>Also defining the total mass <span class="math notranslate nohighlight">\(M\)</span> and <strong>reduced mass</strong> <span class="math notranslate nohighlight">\(\mu\)</span> by</p>
-<div class="math notranslate nohighlight">
-\[M = m_1+m_2 \ \ ; \hspace{1cm} \mu = {m_1 m_2\over m_1+m_2}\]</div>
-<p>and the total momentum <span class="math notranslate nohighlight">\(\mathbf{P}=\mathbf{p}_1+\mathbf{p}_2\)</span> and relative momentum</p>
-<div class="math notranslate nohighlight">
-\[\mathbf{p} = {m_2 \mathbf{p}_1 - m_1\mathbf{p}_2\over m_1+m_2 },\]</div>
-<p>the Hamiltonian takes the simple form</p>
-<div class="math notranslate nohighlight">
-\[\hat{H} = {\hat{\mathbf{P}}^2\over 2M} + {\hat{\mathbf{p}}^2\over 2\mu} + V(|\hat{\mathbf{r}}|).\]</div>
-<p>(see Townsend problem 9.5 in HW 2).</p>
-<p>We see that the problem separates into two pieces: the motion of the centre of mass and the relative motion. We’ll work in the centre of mass frame where <span class="math notranslate nohighlight">\(\mathbf{P}=0\)</span>, which allows us to consider the relative motion only. Then we can solve the one body problem with a particle of mass <span class="math notranslate nohighlight">\(\mu\)</span> moving in the central potential <span class="math notranslate nohighlight">\(V(r)\)</span>, where <span class="math notranslate nohighlight">\(r\)</span> is the distance from the origin (centre of mass).</p>
-</section>
+\[\braket{x|\Psi(t)} = \braket{x|e^{-i\hat{H}t/\hbar}|\Psi(0)}=\int dx^\prime \braket{x|e^{-i\hat{H}t/\hbar}|x^\prime}\braket{x^\prime|\Psi(0)}\]</div>
+<p class="sd-card-text">where we inserted the identity operator.</p>
+<p class="sd-card-text">This integral expression for <span class="math notranslate nohighlight">\(\psi(x,t)\)</span> shows that you can think of the propagator as a Green’s function for the Schrödinger equation.</p>
+</div>
+</details><p>We’ll start today by finishing our discussion of path integrals. Then we’ll move on to Chapter 9 of Townsend, which discusses the two body problem in quantum mechanics. In particular, we’ll see that we can use symmetries of the Hamiltonian to infer a lot about the stationary states of the problem. We’ll apply what we learn to the hydrogen atom in Chapter 10.</p>
 <section id="back-of-the-envelope-hydrogen-atom">
 <h2>Back of the envelope hydrogen atom<a class="headerlink" href="#back-of-the-envelope-hydrogen-atom" title="Permalink to this heading">#</a></h2>
-<p>Before we do any detailed calculations, we can make some estimates of the expected size of the hydrogen atom and its ground state energy. Imagine that the hydrogen atom  has a size <span class="math notranslate nohighlight">\(a\)</span>. By the uncertainty principle, an electron confined to a distance <span class="math notranslate nohighlight">\(a\)</span> has an uncertainty in its momentum of <span class="math notranslate nohighlight">\(\Delta p\sim \hbar/a\)</span>. We can then estimate the ground state energy as</p>
+<p>Before we do any detailed calculations, we can make some estimates of the expected size of the hydrogen atom and its ground state energy. Imagine that the hydrogen atom  has a size <span class="math notranslate nohighlight">\(a\)</span>. The proton is so heavy we can think of it being fixed and the electron moves around it. By the uncertainty principle, an electron confined to a distance <span class="math notranslate nohighlight">\(a\)</span> has an uncertainty in its momentum of <span class="math notranslate nohighlight">\(\Delta p\sim \hbar/a\)</span>. On average, the electron will have zero momentum, but there will be a non-zero average of <span class="math notranslate nohighlight">\(p^2\)</span> due to its motion. It seems reasonable to estimate the minimum value of <span class="math notranslate nohighlight">\(\langle p^2\rangle\)</span> as <span class="math notranslate nohighlight">\((\Delta p)^2\)</span>.</p>
+<p>We can then estimate the ground state energy as</p>
 <div class="math notranslate nohighlight">
 \[E\sim {\hbar^2\over 2ma^2}  -{e^2\over 4\pi \epsilon_0 a}\]</div>
 <p>where the first term is the (positive) kinetic energy and the second term is the (negative) electrostatic potential energy between the electron and proton. The mass <span class="math notranslate nohighlight">\(m\)</span> is the mass of the electron.</p>
@@ -461,11 +426,20 @@ document.write(`
 <p class="admonition-title">Exercise</p>
 <p>Put in numbers and calculate <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(E\)</span>. For the energy you can use <span class="math notranslate nohighlight">\(mc^2=511\ {\rm keV}\)</span> and calculate the energy in eV.</p>
 </div>
-</section>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The answers are <span class="math notranslate nohighlight">\(E= -13.6\ {\rm eV}\)</span>, which is the actual ground state energy of hydrogen as we’ll see, and <span class="math notranslate nohighlight">\(a = 5.3\times 10^{-11}\ {\rm m}\)</span> (often written as <span class="math notranslate nohighlight">\(0.53\)</span> Angstroms) which is the <a class="reference external" href="https://en.wikipedia.org/wiki/Bohr_radius">Bohr radius</a>.</p>
+</div>
+</details></section>
 <section id="further-reading">
 <h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p>We’ve covered material from Townsend 9.1, 9.3, and 9.4 here. We’ll discuss symmetries and what we can learn from them next time.</p></li>
+<li><p>We’ve covered material from Townsend 9.4 here. We’ll return to the earlier parts of chapter 9 next time.</p></li>
 </ul>
 </section>
 </section>
@@ -510,11 +484,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="hw1.html"
+       href="lecture5.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Homework 1</p>
+        <p class="prev-next-title">Lecture 5 Jan 18</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -533,8 +507,6 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#moving-from-1d-to-3d">Moving from 1D to 3D</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-two-body-problem">The two-body problem</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#back-of-the-envelope-hydrogen-atom">Back of the envelope hydrogen atom</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a></li>
 </ul>

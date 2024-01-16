@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Homework 1 &#8212; PHYS 457 Quantum Physics 2</title>
+    <title>Lecture 5 Jan 18 &#8212; PHYS 457 Quantum Physics 2</title>
   
   
   
@@ -64,11 +64,11 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'hw1';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lecture5';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Homework 2" href="hw2.html" />
-    <link rel="prev" title="Lecture 5 Jan 18" href="lecture5.html" />
+    <link rel="next" title="Homework 1" href="hw1.html" />
+    <link rel="prev" title="Lecture 4 Jan 16" href="lecture4.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -160,16 +160,16 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="outline.html">Course outline</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lecture notes</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="lecture1.html">Lecture 1 Jan 4</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture2.html">Lecture 2 Jan 9</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture3.html">Lecture 3 Jan 11</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture4.html">Lecture 4 Jan 16</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lecture5.html">Lecture 5 Jan 18</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 5 Jan 18</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Homework</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Homework 1</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="hw1.html">Homework 1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hw2.html">Homework 2</a></li>
 </ul>
 
@@ -242,7 +242,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/andrewcumming/phys457/issues/new?title=Issue%20on%20page%20%2Fhw1.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/andrewcumming/phys457/issues/new?title=Issue%20on%20page%20%2Flecture5.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -272,7 +272,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/hw1.md" target="_blank"
+      <li><a href="_sources/lecture5.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -341,7 +341,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -352,11 +354,21 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Homework 1</h1>
+    <h1>Lecture 5 Jan 18</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#moving-from-1d-to-3d">Moving from 1D to 3D</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-two-body-problem">The two-body problem</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -366,21 +378,66 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="homework-1">
-<h1>Homework 1<a class="headerlink" href="#homework-1" title="Permalink to this heading">#</a></h1>
-<p>This homework is due on Tuesday January 16th. You should submit a PDF of your solutions on myCourses.</p>
-<p>Do the following 4 questions on path integrals from Townsend: 8.1, 8.3, 8.4, 8.5.</p>
-<p>In 8.1, make sure you get to the same answer as equation (6.76) in Townsend. In 8.3, comment on the form of your answer.</p>
-<p>Hints:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="lecture-5-jan-18">
+<h1>Lecture 5 Jan 18<a class="headerlink" href="#lecture-5-jan-18" title="Permalink to this heading">#</a></h1>
+<p>Let’s develop the machinery we will need to solve the two-body problem. Then we will get into symmetries and how we can put them to work to learn about the eigenfunctions.</p>
+<section id="moving-from-1d-to-3d">
+<h2>Moving from 1D to 3D<a class="headerlink" href="#moving-from-1d-to-3d" title="Permalink to this heading">#</a></h2>
+<p>The position and momentum eigenstates that we have in 1D generalize naturally to 3D:</p>
+<p><strong>Position basis</strong></p>
 <ul class="simple">
-<li><p>For 8.1, a useful formula is</p></li>
+<li><p>Eigenstates: <span class="math notranslate nohighlight">\(\ket{\mathbf{r}} = \ket{x, y, z}\)</span></p></li>
+<li><p>Wavefunction: <span class="math notranslate nohighlight">\(\psi(\mathbf{r}) = \braket{\mathbf{r}|\Psi}\)</span></p></li>
+<li><p>Normalization: <span class="math notranslate nohighlight">\(\int |\psi|^2\,dV = 1\)</span></p></li>
+<li><p>Orthogonality: <span class="math notranslate nohighlight">\(\braket{\mathbf{r}|\mathbf{r}^\prime} = \delta^3(\mathbf{r}-\mathbf{r}^\prime)\)</span></p></li>
+</ul>
+<p><strong>Momentum basis</strong></p>
+<ul class="simple">
+<li><p>Eigenstates: <span class="math notranslate nohighlight">\(\ket{\mathbf{p}} = \ket{p_x, p_y, p_z}\)</span></p></li>
+<li><p>Momentum eigenstates in position basis are plane waves in 3D space :<span class="math notranslate nohighlight">\(\braket{\mathbf{r}|\mathbf{p}} = {1\over (2\pi\hbar)^{3/2}} e^{i\mathbf{p}\cdot\mathbf{r}/\hbar}\)</span></p></li>
+<li><p>Commutation relations: <span class="math notranslate nohighlight">\([\hat{p}_i, \hat{p}_j] = 0\)</span>, <span class="math notranslate nohighlight">\([\hat{x}_i, \hat{p}_j] = i\hbar \delta_{ij}\)</span></p></li>
+<li><p>The momentum operator in position basis is now a 3D gradient:</p></li>
 </ul>
 <div class="math notranslate nohighlight">
-\[\int_{-\infty}^\infty dx\ e^{-(ax^2+bx)} = \sqrt{\pi\over a} e^{b^2/4a}\]</div>
-<p>(where <span class="math notranslate nohighlight">\(\mathrm{Re}(a)&gt;0\)</span>).</p>
+\[\braket{\mathbf{r}|\hat{\mathbf{p}}|\Psi} = {\hbar\over i}\mathbf{\nabla} \braket{\mathbf{r}|\Psi}\]</div>
+<p>Note that the position and momentum commutator vanishes when the position and momentum are in different directions. So for example whereas it is not possible to know both <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(p_x\)</span> for a particle at the same time, we can know the precise <span class="math notranslate nohighlight">\(x\)</span>-coordinate and <span class="math notranslate nohighlight">\(y\)</span>-momentum <span class="math notranslate nohighlight">\(p_y\)</span> at the same time.</p>
+</section>
+<section id="the-two-body-problem">
+<h2>The two-body problem<a class="headerlink" href="#the-two-body-problem" title="Permalink to this heading">#</a></h2>
+<p>We want to look at two particles with masses <span class="math notranslate nohighlight">\(m_1\)</span> and <span class="math notranslate nohighlight">\(m_2\)</span> interacting through a potential that depends only on the distance between the two particles:</p>
+<div class="math notranslate nohighlight">
+\[\hat{H} = {\hat{\mathbf{p}}_1^2\over 2m_1} + {\hat{\mathbf{p}}_2^2\over 2m_2} + V(|\hat{\mathbf{r}}_1-\hat{\mathbf{r}}_2|).\]</div>
+<p>A particular example is the hydrogen atom in which the proton and electron interact through a Coulomb potential</p>
+<div class="math notranslate nohighlight">
+\[\hat{H} = {\hat{\mathbf{p}}_1^2\over 2m_1} + {\hat{\mathbf{p}}_2^2\over 2m_2} - {e^2\over 4\pi \epsilon_0 |\hat{\mathbf{r}}_1-\hat{\mathbf{r}}_2|}.\]</div>
+<p>In general, we can build the state of the system out of two particle states</p>
+<div class="math notranslate nohighlight">
+\[\ket{\mathbf{r}_1,\mathbf{r}_2} = \ket{\mathbf{r}_1}\otimes\ket{\mathbf{r}_2},\]</div>
+<p>with a direct product of the Hilbert spaces for particles 1 and 2. (We’re ignoring the proton and electron spins here, more on that later in the course!)</p>
+<p>In fact, as you’ve probably seen before in classical mechanics, the two-body problem simplifies enormously with a change of coordinates. We work with the relative coordinate between the two particles</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{r} = \mathbf{r}_1 - \mathbf{r}_2,\]</div>
+<p>and the centre of mass location</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{R} = {m_1 \mathbf{r}_1 + m_2\mathbf{r}_2\over m_1+m_2 }.\]</div>
+<p>Also defining the total mass <span class="math notranslate nohighlight">\(M\)</span> and <strong>reduced mass</strong> <span class="math notranslate nohighlight">\(\mu\)</span> by</p>
+<div class="math notranslate nohighlight">
+\[M = m_1+m_2 \ \ ; \hspace{1cm} \mu = {m_1 m_2\over m_1+m_2}\]</div>
+<p>and the total momentum <span class="math notranslate nohighlight">\(\mathbf{P}=\mathbf{p}_1+\mathbf{p}_2\)</span> and relative momentum</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{p} = {m_2 \mathbf{p}_1 - m_1\mathbf{p}_2\over m_1+m_2 },\]</div>
+<p>the Hamiltonian takes the simple form</p>
+<div class="math notranslate nohighlight">
+\[\hat{H} = {\hat{\mathbf{P}}^2\over 2M} + {\hat{\mathbf{p}}^2\over 2\mu} + V(|\hat{\mathbf{r}}|).\]</div>
+<p>(see Townsend problem 9.5 in HW 2).</p>
+<p>We see that the problem separates into two pieces: the motion of the centre of mass and the relative motion. We’ll work in the centre of mass frame where <span class="math notranslate nohighlight">\(\mathbf{P}=0\)</span>, which allows us to consider the relative motion only. Then we can solve the one body problem with a particle of mass <span class="math notranslate nohighlight">\(\mu\)</span> moving in the central potential <span class="math notranslate nohighlight">\(V(r)\)</span>, where <span class="math notranslate nohighlight">\(r\)</span> is the distance from the origin (centre of mass).</p>
+</section>
+<section id="further-reading">
+<h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p>For 8.3: for a quadratic potential, the propagator is <span class="math notranslate nohighlight">\(\propto e^{iS_c/\hbar}\)</span>, so you just need to determine <span class="math notranslate nohighlight">\(S_c\)</span>, the action corresponding to the classical path <span class="math notranslate nohighlight">\(x_c(t)\)</span>. You could start with the general solution for motion of an oscillator <span class="math notranslate nohighlight">\(x(t) = A\sin\omega t+B\cos\omega t\)</span>.</p></li>
+<li><p>Chapter 9 of Townsend.</p></li>
 </ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -414,20 +471,20 @@ document.write(`
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="lecture5.html"
+       href="lecture4.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Lecture 5 Jan 18</p>
+        <p class="prev-next-title">Lecture 4 Jan 16</p>
       </div>
     </a>
     <a class="right-next"
-       href="hw2.html"
+       href="hw1.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Homework 2</p>
+        <p class="prev-next-title">Homework 1</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -437,6 +494,22 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#moving-from-1d-to-3d">Moving from 1D to 3D</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-two-body-problem">The two-body problem</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
