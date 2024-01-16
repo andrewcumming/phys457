@@ -62,7 +62,7 @@ Put in numbers and calculate $a$ and $E$. For the energy you can use $mc^2=511\ 
 
 ```{dropdown} Solution
 
-The answers are $E= -13.6\ {\rm eV}$, which is the actual ground state energy of hydrogen as we'll see, and $a = 5.3\times 10^{-11}\ {\rm m}$ (often written as $0.53$ Angstroms) which is the [Bohr radius](https://en.wikipedia.org/wiki/Bohr_radius).
+The answers are $E= -13.6\ {\rm eV}$, which is the actual ground state energy of hydrogen as we'll see, and $a = 5.3\times 10^{-11}\ {\rm m}$ (often written in Angstroms as $0.53 \mathring{A}$) which is the [Bohr radius](https://en.wikipedia.org/wiki/Bohr_radius).
 
 ```
 
