@@ -39,7 +39,7 @@ Townsend's book is all you will need to complete the course, but I encourage you
 
 I will have an office hour on **Wednesday at noon** in my office **ERP 310**. I encourage you to come and talk to me about any questions you have about the course or just generally about quantum topics if you don't have any specific questions in mind.  I am also available to answer questions directly after class on Tuesdays or Thursdays.
 
-The TAs will hold a weekly "debug den" on **TBD**
+The TAs will two "debug den" sessions on Fridays 2.30-3.30 and Mondays 10-11am. (Rooms will be announced soon).
 
 ## Evaluation
 
@@ -47,7 +47,7 @@ Homeworks 30%, and either (1) midterm 30%, final exam 40% or (2) final exam 70%,
 
 Homeworks will be weekly, due on Tuesday 11:59pm each week.  *The homeworks are a key part of learning the material and will prepare you for the exams.* Late submissions will not be accepted. If you run out of time, please submit whatever you can before the deadline.
 
-The midterm will be held in class on **Tuesday March 12** (this is week after reading week). The final exam will be a 72-hour take home exam during the final exam period. 
+The midterm will be an open-book take home format exam, given out at the start of class on **Tuesday March 12** (this is week after reading week) and will be due 48 hours later.  The final exam will be a 72-hour take home exam during the final exam period.
 
 Course materials such as lecture notes and problem sets will be made available on the course website at 
 
