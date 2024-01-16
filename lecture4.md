@@ -69,5 +69,5 @@ The answers are $E= -13.6\ {\rm eV}$, which is the actual ground state energy of
 
 ## Further reading
 
-- We've covered material from Townsend 9.1, 9.3, and 9.4 here. We'll discuss symmetries and what we can learn from them next time.
+- We've covered material from Townsend 9.4 here. We'll return to the earlier parts of chapter 9 next time.
 
