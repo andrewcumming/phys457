@@ -1,3 +1,3 @@
 # Homework solutions
 
-[Homework 1 solutions](https://andrewcumming.github.io/phys457/hw1_solutions.pdf)
+[Homework 1 solutions](https://github.com/andrewcumming/phys457/blob/main/hw1_solutions.pdf)
