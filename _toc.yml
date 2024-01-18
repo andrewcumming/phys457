@@ -19,3 +19,5 @@ parts:
       chapters:
         - file: hw1
         - file: hw2
+        - file: homework_solutions
+        
