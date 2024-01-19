@@ -39,7 +39,7 @@ Townsend's book is all you will need to complete the course, but I encourage you
 
 I will have an office hour on **Wednesday at noon** in my office **ERP 310**. I encourage you to come and talk to me about any questions you have about the course or just generally about quantum topics if you don't have any specific questions in mind.  I am also available to answer questions directly after class on Tuesdays or Thursdays.
 
-The TAs will two "debug den" sessions on Fridays 2.30-3.30 and Mondays 10-11am. (Rooms will be announced soon).
+The TAs will two "debug den" sessions on Fridays 2.30-3.30 in the piano room (ERP 211 Piano room) and Mondays 10-11am (ERP 326).
 
 ## Evaluation
 
