@@ -156,4 +156,4 @@ $$[\hat{L}_i, \hat{L}_j] = i\hbar \epsilon_{ijk} \hat{L}_k$$
 
 ## Further reading
 
-- Chapter 9 of Townsend. 
+- Townsend 9.1-9.3, 9.5.
