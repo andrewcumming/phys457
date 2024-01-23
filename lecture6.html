@@ -359,7 +359,6 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reminder-of-angular-momentum-operators">Reminder of angular momentum operators</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#orbital-angular-momentum-has-integer-values">Orbital angular momentum has integer values</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eigenstates-of-orbital-angular-momentum-in-position-space">Eigenstates of orbital angular momentum in position space</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rotational-transitions-of-diatomic-molecules">Rotational transitions of diatomic molecules</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a></li>
 </ul>
             </nav>
@@ -386,9 +385,10 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[{d\langle L_z\rangle\over dt} = {i\over \hbar}\langle[\hat{H},\hat{L}_z]\rangle = 0\]</div>
 <p>Another symmetry is <strong>parity</strong> which takes <span class="math notranslate nohighlight">\(\mathbf{r}\rightarrow -\mathbf{r}\)</span>, i.e. <span class="math notranslate nohighlight">\(\hat{P}\ket{\mathbf{r}} = \ket{-\mathbf{r}}\)</span>. The eigenvalues of <span class="math notranslate nohighlight">\(\hat{P}\)</span> are either +1 or -1 since <span class="math notranslate nohighlight">\(\hat{P}^2\ket{\mathbf{r}} = \ket{\mathbf{r}}\)</span>. We will see that, because <span class="math notranslate nohighlight">\([\hat{H},\hat{P}] = 0\)</span>, the stationary states of the two-body problem have a definite parity.</p>
+<p>Today, we want to focus on the angular momentum eigenstates and in particular derive position-representations of the angular momentum operators and from there obtain the angular wavefunctions.</p>
 <section id="reminder-of-angular-momentum-operators">
 <h2>Reminder of angular momentum operators<a class="headerlink" href="#reminder-of-angular-momentum-operators" title="Permalink to this heading">#</a></h2>
-<p>You’ve already seen angular momentum operators in the context of spin, so we can directly use some of the results from there:</p>
+<p>First some results you will have seen already in the context of spin, but now we can apply them to orbital angular momentum:</p>
 <ul class="simple">
 <li><p><strong>Commutation relations</strong>. Unlike translations, rotations do not commute, so the angular momentum operators in different directions also do not commute:</p></li>
 </ul>
@@ -462,6 +462,7 @@ document.write(`
 <p>which is exactly what we need for the angular momentum eigenstates since the total angular momentum is <span class="math notranslate nohighlight">\(\ell(\ell+1)\hbar^2\)</span>. In addition, the <span class="math notranslate nohighlight">\(\phi\)</span>-dependence is <span class="math notranslate nohighlight">\(Y_{\ell m}\propto e^{im\phi}\)</span> as expected. The angular momentum eigenstates can therefore be written as</p>
 <div class="math notranslate nohighlight">
 \[\braket{\theta,\phi | \ell,m} = Y_{\ell m}(\theta,\phi).\]</div>
+<p>Next time we will have a look at these functions! See below for some code to plot them if you want to have a look.</p>
 <div class="admonition-plotting-the-spherical-harmonics admonition">
 <p class="admonition-title">Plotting the spherical harmonics</p>
 <p>Here is some Python code to plot the spherical harmonics that we can take a look at in class.</p>
@@ -510,9 +511,6 @@ Code<div class="sd-summary-down docutils">
 </div>
 </div>
 </details></div>
-</section>
-<section id="rotational-transitions-of-diatomic-molecules">
-<h2>Rotational transitions of diatomic molecules<a class="headerlink" href="#rotational-transitions-of-diatomic-molecules" title="Permalink to this heading">#</a></h2>
 </section>
 <section id="further-reading">
 <h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this heading">#</a></h2>
@@ -592,7 +590,6 @@ Code<div class="sd-summary-down docutils">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reminder-of-angular-momentum-operators">Reminder of angular momentum operators</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#orbital-angular-momentum-has-integer-values">Orbital angular momentum has integer values</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eigenstates-of-orbital-angular-momentum-in-position-space">Eigenstates of orbital angular momentum in position space</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rotational-transitions-of-diatomic-molecules">Rotational transitions of diatomic molecules</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a></li>
 </ul>
   </nav></div>

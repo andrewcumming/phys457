@@ -10,13 +10,14 @@ $${d\langle{\mathbf{P}}\rangle\over dt} = {i\over \hbar}\langle[\hat{H},\hat{\ma
   
 $${d\langle L_z\rangle\over dt} = {i\over \hbar}\langle[\hat{H},\hat{L}_z]\rangle = 0$$
 
-
 Another symmetry is **parity** which takes $\mathbf{r}\rightarrow -\mathbf{r}$, i.e. $\hat{P}\ket{\mathbf{r}} = \ket{-\mathbf{r}}$. The eigenvalues of $\hat{P}$ are either +1 or -1 since $\hat{P}^2\ket{\mathbf{r}} = \ket{\mathbf{r}}$. We will see that, because $[\hat{H},\hat{P}] = 0$, the stationary states of the two-body problem have a definite parity.
+
+Today, we want to focus on the angular momentum eigenstates and in particular derive position-representations of the angular momentum operators and from there obtain the angular wavefunctions.
 
 
 ## Reminder of angular momentum operators
 
-You've already seen angular momentum operators in the context of spin, so we can directly use some of the results from there:
+First some results you will have seen already in the context of spin, but now we can apply them to orbital angular momentum:
 
 - **Commutation relations**. Unlike translations, rotations do not commute, so the angular momentum operators in different directions also do not commute:
 
@@ -107,6 +108,9 @@ which is exactly what we need for the angular momentum eigenstates since the tot
 $$\braket{\theta,\phi | \ell,m} = Y_{\ell m}(\theta,\phi).$$
 
 
+Next time we will have a look at these functions! See below for some code to plot them if you want to have a look.
+
+
 `````{admonition} Plotting the spherical harmonics
 
 Here is some Python code to plot the spherical harmonics that we can take a look at in class.
@@ -154,7 +158,6 @@ ax.plot_surface(x, y, z, facecolors=cm.cool(frac))
 `````
 
 
-## Rotational transitions of diatomic molecules
 
 
 
