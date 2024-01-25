@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Lecture 4 Jan 16 &#8212; PHYS 457 Quantum Physics 2</title>
+    <title>Lecture 7 Jan 25 &#8212; PHYS 457 Quantum Physics 2</title>
   
   
   
@@ -63,11 +63,11 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'lecture4';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lecture7';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Lecture 5 Jan 18" href="lecture5.html" />
-    <link rel="prev" title="Lecture 3 Jan 11" href="lecture3.html" />
+    <link rel="next" title="Homework 1" href="hw1.html" />
+    <link rel="prev" title="Lecture 6 Jan 23" href="lecture6.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -153,10 +153,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="lecture1.html">Lecture 1 Jan 4</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture2.html">Lecture 2 Jan 9</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture3.html">Lecture 3 Jan 11</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 4 Jan 16</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture4.html">Lecture 4 Jan 16</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture5.html">Lecture 5 Jan 18</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture6.html">Lecture 6 Jan 23</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lecture7.html">Lecture 7 Jan 25</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 7 Jan 25</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Homework</span></p>
 <ul class="nav bd-sidenav">
@@ -235,7 +235,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/andrewcumming/phys457/issues/new?title=Issue%20on%20page%20%2Flecture4.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/andrewcumming/phys457/issues/new?title=Issue%20on%20page%20%2Flecture7.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -265,7 +265,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/lecture4.md" target="_blank"
+      <li><a href="_sources/lecture7.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -347,7 +347,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Lecture 4 Jan 16</h1>
+    <h1>Lecture 7 Jan 25</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -357,7 +357,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#back-of-the-envelope-hydrogen-atom">Back of the envelope hydrogen atom</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-the-spherical-harmonics">Properties of the spherical harmonics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spectroscopy-of-diatomic-molecules">Spectroscopy of diatomic molecules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-radial-part-of-the-two-body-problem">The radial part of the two-body problem</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a></li>
 </ul>
             </nav>
@@ -370,69 +372,108 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="lecture-4-jan-16">
-<h1>Lecture 4 Jan 16<a class="headerlink" href="#lecture-4-jan-16" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="lecture-7-jan-25">
+<h1>Lecture 7 Jan 25<a class="headerlink" href="#lecture-7-jan-25" title="Permalink to this heading">#</a></h1>
 <div class="admonition-warm-up-question admonition">
 <p class="admonition-title">Warm-up question</p>
-<p>Given the wavefunction at time <span class="math notranslate nohighlight">\(t=0\)</span>, <span class="math notranslate nohighlight">\(\psi(x,0)\)</span>, how would you use the propagator to calculate the wavefunction at time <span class="math notranslate nohighlight">\(t\)</span>, <span class="math notranslate nohighlight">\(\psi(x,t)\)</span>?</p>
+<p>Another estimation (back of the envelope) question:  In a finite square well, the energies of the stationary states are <span class="math notranslate nohighlight">\(\propto n^2\)</span>, but in the harmonic oscillator they are <span class="math notranslate nohighlight">\(\propto n\)</span>. Why?</p>
 </div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">The answer is</p>
+<p>Last time, we discussed the orbital angular momentum eigenfunctions <span class="math notranslate nohighlight">\(\ket{\ell, m}\)</span>.</p>
+<p>Recall that <span class="math notranslate nohighlight">\(\hat{L}^2\)</span> commutes with any of the components <span class="math notranslate nohighlight">\(\hat{L}_i\)</span>, so the idea is that we are free to choose one of the components, usually taken to be <span class="math notranslate nohighlight">\(\hat{L}_z\)</span>, and find a simultaneous set of eigenstates of <span class="math notranslate nohighlight">\(\hat{L}^2\)</span> and <span class="math notranslate nohighlight">\(\hat{L}_z\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[\psi(x,t) = \int dx^\prime \braket{x, t| x^\prime, 0} \psi(x^\prime, 0).\]</div>
-<p class="sd-card-text">To see this, we can start with <span class="math notranslate nohighlight">\(\ket{\Psi(t)} = e^{-i\hat{H}t/\hbar}\ket{\Psi(0)}\)</span> which gives</p>
+\[\hat{L}^2 \ket{\ell,m} = \ell (\ell+1) \hbar^2 \ket{\ell, m}\]</div>
 <div class="math notranslate nohighlight">
-\[\braket{x|\Psi(t)} = \braket{x|e^{-i\hat{H}t/\hbar}|\Psi(0)}=\int dx^\prime \braket{x|e^{-i\hat{H}t/\hbar}|x^\prime}\braket{x^\prime|\Psi(0)}\]</div>
-<p class="sd-card-text">where we inserted the identity operator.</p>
-<p class="sd-card-text">This integral expression for <span class="math notranslate nohighlight">\(\psi(x,t)\)</span> shows that you can think of the propagator as a Green’s function for the Schrödinger equation.</p>
-</div>
-</details><p>We’ll start today by finishing our discussion of path integrals. Then we’ll move on to Chapter 9 of Townsend, which discusses the two body problem in quantum mechanics. In particular, we’ll see that we can use symmetries of the Hamiltonian to infer a lot about the stationary states of the problem. We’ll apply what we learn to the hydrogen atom in Chapter 10.</p>
-<section id="back-of-the-envelope-hydrogen-atom">
-<h2>Back of the envelope hydrogen atom<a class="headerlink" href="#back-of-the-envelope-hydrogen-atom" title="Permalink to this heading">#</a></h2>
-<p>Before we do any detailed calculations, we can make some estimates of the expected size of the hydrogen atom and its ground state energy. Imagine that the hydrogen atom  has a size <span class="math notranslate nohighlight">\(a\)</span>. The proton is so heavy we can think of it being fixed and the electron moves around it. By the uncertainty principle, an electron confined to a distance <span class="math notranslate nohighlight">\(a\)</span> has an uncertainty in its momentum of <span class="math notranslate nohighlight">\(\Delta p\sim \hbar/a\)</span>. On average, the electron will have zero momentum, but there will be a non-zero average of <span class="math notranslate nohighlight">\(p^2\)</span> due to its motion. It seems reasonable to estimate the minimum value of <span class="math notranslate nohighlight">\(\langle p^2\rangle\)</span> as <span class="math notranslate nohighlight">\((\Delta p)^2\)</span>.</p>
-<p>We can then estimate the ground state energy as</p>
+\[\hat{L}_z \ket{\ell,m} = m \hbar \ket{\ell, m}.\]</div>
+<p>These are <em>not</em> eigenstates of either <span class="math notranslate nohighlight">\(\hat{L}_x\)</span> or <span class="math notranslate nohighlight">\(\hat{L_y}\)</span> since the different components of angular momentum do not commute. We can see this directly using the ladder operators. For example, since</p>
 <div class="math notranslate nohighlight">
-\[E\sim {\hbar^2\over 2ma^2}  -{e^2\over 4\pi \epsilon_0 a}\]</div>
-<p>where the first term is the (positive) kinetic energy and the second term is the (negative) electrostatic potential energy between the electron and proton. The mass <span class="math notranslate nohighlight">\(m\)</span> is the mass of the electron.</p>
-<p>A useful quantity is</p>
+\[\hat{L}_x = {1\over 2}\left(\hat{L}_+ + \hat{L}_-\right),\]</div>
 <div class="math notranslate nohighlight">
-\[\alpha = {e^2\over 4\pi\epsilon_0} = {1\over 137}\]</div>
-<p>which is the <a class="reference external" href="https://en.wikipedia.org/wiki/Fine-structure_constant">fine structure constant</a>. We can rewrite the second term using <span class="math notranslate nohighlight">\(\alpha\)</span>, giving</p>
+\[\hat{L}_x \ket{\ell,m} = {1\over 2}\sqrt{\ell(\ell+1)-m(m+1)} \ket{\ell, m+1} + {1\over 2}\sqrt{\ell(\ell+1)-m(m-1)} \ket{\ell, m-1}.\]</div>
+<p>We also saw last time how to write these operators in position representation. First,</p>
 <div class="math notranslate nohighlight">
-\[E\sim {\hbar^2\over 2ma^2}  -{\alpha \hbar c\over a}.\]</div>
-<p>The two terms act in opposite directions: the kinetic energy term prefers large separations (to lower the energy) whereas the potential energy term prefers small separations. Minimize with respect to <span class="math notranslate nohighlight">\(a\)</span></p>
+\[\hat{L}_z\rightarrow {\hbar\over i}{\partial \over \partial \phi}\]</div>
+<p>which shows that the eigenstates of <span class="math notranslate nohighlight">\(\hat{L_z}\)</span> are given by</p>
 <div class="math notranslate nohighlight">
-\[{\partial E\over \partial a} = -{\hbar^2\over ma^3} + {\alpha \hbar c\over a^2} = 0\]</div>
+\[\braket{\mathbf{r}|m} \propto e^{im\phi}.\]</div>
+<p>And we also have</p>
 <div class="math notranslate nohighlight">
-\[\Rightarrow a = \alpha^{-1} {\hbar\over m c}.\]</div>
-<p>The lengthscale <span class="math notranslate nohighlight">\(\hbar/mc\)</span> is known as the Compton wavelength of the electron.</p>
-<p>Substituting this value of <span class="math notranslate nohighlight">\(a\)</span> into the energy gives</p>
+\[\hat{L}^2\rightarrow -\hbar^2 r^2 \nabla^2_\perp = -\hbar^2 \left[ {1\over\sin\theta}{\partial\over\partial \theta}\left(\sin\theta {\partial\over\partial \theta}  \right)  + {1\over \sin^2\theta} {\partial^2\over \partial \phi^2}\right],\]</div>
+<p>where the notation <span class="math notranslate nohighlight">\(\nabla^2_\perp\)</span> refers to the non-radial part of the Laplacian operator. The set of functions that obey</p>
 <div class="math notranslate nohighlight">
-\[E = -{1\over 2}\alpha^2 mc^2.\]</div>
-<div class="admonition-exercise admonition">
-<p class="admonition-title">Exercise</p>
-<p>Put in numbers and calculate <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(E\)</span>. For the energy you can use <span class="math notranslate nohighlight">\(mc^2=511\ {\rm keV}\)</span> and calculate the energy in eV.</p>
-</div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">The answers are <span class="math notranslate nohighlight">\(E= -13.6\ {\rm eV}\)</span>, which is the actual ground state energy of hydrogen as we’ll see, and <span class="math notranslate nohighlight">\(a = 5.3\times 10^{-11}\ {\rm m}\)</span> (often written in Angstroms as <span class="math notranslate nohighlight">\(0.53 \mathring{A}\)</span>) which is the <a class="reference external" href="https://en.wikipedia.org/wiki/Bohr_radius">Bohr radius</a>.</p>
-</div>
-</details></section>
+\[r^2\nabla^2 \braket{\mathbf{r}|\ell, m} = -\ell(\ell+1) \braket{\mathbf{r}|\ell, m},\]</div>
+<p>are the <strong>spherical harmonics</strong></p>
+<div class="math notranslate nohighlight">
+\[\braket{\mathbf{r}|\ell, m}=Y_{\ell m}(\theta, \phi).\]</div>
+<p>Note that <span class="math notranslate nohighlight">\(Y_{\ell m}\propto e^{im\phi}\)</span>, so these are also eigenstates of <span class="math notranslate nohighlight">\(\hat{L}_z\)</span> as expected. Let’s take a closer look at these functions.</p>
+<section id="properties-of-the-spherical-harmonics">
+<h2>Properties of the spherical harmonics<a class="headerlink" href="#properties-of-the-spherical-harmonics" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>We can use the code from the end of lecture 6 to plot these functions.</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Table_of_spherical_harmonics">Table of spherical harmonics</a></p></li>
+<li><p>Normalization</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\int_0^\pi \sin\theta\,d\theta \int_0^{2\pi} d\phi \,|Y_{\ell m}(\theta,\phi)|^2 = 1.\]</div>
+<ul class="simple">
+<li><p>They can be written in terms of associated Legendre polynomials <span class="math notranslate nohighlight">\(P^m_\ell(\mu)\)</span></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[Y_{\ell m} \propto e^{im\phi}P^m_\ell(\cos\theta).\]</div>
+</section>
+<section id="spectroscopy-of-diatomic-molecules">
+<h2>Spectroscopy of diatomic molecules<a class="headerlink" href="#spectroscopy-of-diatomic-molecules" title="Permalink to this heading">#</a></h2>
+<p>One application is to rotational transitions of diatomic molecules. If we assume the interatomic spacing <span class="math notranslate nohighlight">\(a\)</span> is fixed, the Hamiltonian is just <span class="math notranslate nohighlight">\(\hat{H} = \hat{L}^2/2\mu a^2\)</span> with energy levels <span class="math notranslate nohighlight">\(E_\ell = \ell(\ell+1) \hbar^2/2\mu a^2\)</span>.</p>
+<p>See Townsend 9.7.</p>
+</section>
+<section id="the-radial-part-of-the-two-body-problem">
+<h2>The radial part of the two-body problem<a class="headerlink" href="#the-radial-part-of-the-two-body-problem" title="Permalink to this heading">#</a></h2>
+<p>We have the angular part of the eigenfunctions of the two body problem now, but we are still missing the radial part. To get this we can use the formula that you derived in HW2:</p>
+<div class="math notranslate nohighlight">
+\[\hat{\mathbf{L}}^2 = \hat{\mathbf{r}}\times \hat{\mathbf{p}}\cdot \hat{\mathbf{r}}\times \hat{\mathbf{p}} = \hat{\mathbf{r}}^2\hat{\mathbf{p}}^2 -(\hat{\mathbf{r}}\cdot\hat{\mathbf{p}})^2 + i\hbar \hat{\mathbf{r}}\cdot\hat{\mathbf{p}},\]</div>
+<p>by looking at the quantity <span class="math notranslate nohighlight">\(\braket{\mathbf{r}|\hat{L}^2|\Psi}\)</span> (this is the argument in Townsend 9.6). The idea is to rewrite the <span class="math notranslate nohighlight">\(\hat{\mathbf{p}}^2\)</span> in the Hamiltonian in terms of <span class="math notranslate nohighlight">\(\hat{\mathbf{L}}^2\)</span> and see what else is left over. We need the three terms:</p>
+<div class="math notranslate nohighlight">
+\[\braket{\mathbf{r}|\hat{\mathbf{r}}^2\hat{\mathbf{p}}^2|\Psi} = r^2 \braket{\mathbf{r}|\hat{\mathbf{p}}^2|\Psi}\]</div>
+<div class="math notranslate nohighlight">
+\[\braket{\mathbf{r}|\hat{\mathbf{r}}\cdot\hat{\mathbf{p}}|\Psi} = \mathbf{r}\cdot {\hbar\over i}\mathbf{\nabla} \braket{\mathbf{r}|\Psi} = {\hbar\over i}r {\partial\over\partial r}\braket{\mathbf{r}|\Psi}\]</div>
+<div class="math notranslate nohighlight">
+\[\braket{\mathbf{r}|(\hat{\mathbf{r}}\cdot\hat{\mathbf{p}})^2|\Psi} = - \hbar^2 r {\partial\over\partial r} \left(r {\partial\over\partial r}\braket{\mathbf{r}|\Psi}\right)\]</div>
+<p>which gives</p>
+<div class="math notranslate nohighlight">
+\[\braket{\mathbf{r}|\hat{\mathbf{p}}^2|\Psi} = - \hbar^2\left({\partial^2\over \partial r^2}  +{2\over r} {\partial\over \partial r}     \right)\braket{\mathbf{r}|\Psi} +  {1\over r^2}\braket{\mathbf{r}|\hat{L}^2|\Psi}.\]</div>
+<p>This is the separation of the kinetic energy term into a radial part and an angular part that we talked about last time. The Laplacian in spherical coordinates is given by</p>
+<div class="math notranslate nohighlight">
+\[\nabla^2 = {1\over r^2}{\partial \over \partial r}\left(r^2{\partial \over \partial r}\right) + 
+{1\over r^2\sin\theta}{\partial\over\partial \theta}\left(\sin\theta {\partial\over\partial \theta}  \right)  + {1\over r^2\sin^2\theta} {\partial^2\over \partial \phi^2}\]</div>
+<p>which has the same radial component! So we see that we just have</p>
+<div class="math notranslate nohighlight">
+\[\braket{\mathbf{r}|\hat{\mathbf{p}}^2|\Psi} = - \hbar^2\nabla^2\braket{\mathbf{r}|\Psi}\]</div>
+<p>which is exactly what we would have expected from the fact that the momentum operator in position representation is <span class="math notranslate nohighlight">\(-i\hbar \mathbf{\nabla}\)</span>! This also justifies what we were saying last time that <span class="math notranslate nohighlight">\(\hat{L}^2\)</span> should correspond to the non-radial part of the Laplacian.</p>
+<p>Now we can look at the full Hamiltonian with kinetic energy and potential energy terms:</p>
+<div class="math notranslate nohighlight">
+\[\braket{\mathbf{r}|\hat{\mathbf{H}}|\Psi} = - {\hbar^2\over 2\mu}\left({\partial^2\over \partial r^2}  +{2\over r} {\partial\over \partial r}     \right)\braket{\mathbf{r}|\Psi} +  {1\over 2\mu r^2}\braket{\mathbf{r}|\hat{L}^2|\Psi} + V(r)\braket{\mathbf{r}|\Psi}.\]</div>
+<p>If we look for stationary states that are simultaneous eigenstates of <span class="math notranslate nohighlight">\(\hat{H}\)</span>, <span class="math notranslate nohighlight">\(\hat{L}^2\)</span> and <span class="math notranslate nohighlight">\(\hat{L}_z\)</span>, we need to solve</p>
+<div class="math notranslate nohighlight">
+\[\left[- {\hbar^2\over 2\mu}\left({\partial^2\over \partial r^2}  +{2\over r} {\partial\over \partial r}     \right)+  {\ell(\ell+1)\hbar^2\over 2\mu r^2} + V(r)\right]\braket{\mathbf{r}|E, \ell, m} = E \braket{\mathbf{r}|E, \ell, m}.\]</div>
+<p>The only derivatives are radial, so we can write the separable solution</p>
+<div class="math notranslate nohighlight">
+\[\braket{\mathbf{r}|E, \ell, m} = R(r) Y_{\ell m}(\theta,\phi)\]</div>
+<p>where the radial function <span class="math notranslate nohighlight">\(R(r)\)</span> obeys</p>
+<div class="math notranslate nohighlight">
+\[\left[- {\hbar^2\over 2\mu}\left({d^2\over d r^2}  +{2\over r} {d\over d r}     \right)+  {\ell(\ell+1)\hbar^2\over 2\mu r^2} + V(r)\right]R(r) = E R(r).\]</div>
+<p>With <span class="math notranslate nohighlight">\(u(r) = rR(r)\)</span>, this becomes</p>
+<div class="math notranslate nohighlight">
+\[\left[- {\hbar^2\over 2\mu}{d^2\over d r^2} +  {\ell(\ell+1)\hbar^2\over 2\mu r^2} + V(r)\right]u(r) = E u(r)\]</div>
+<p>which is the usual 1D Schrödinger equation with an effective potential</p>
+<div class="math notranslate nohighlight">
+\[V_{\rm eff} = V(r) +  {\ell(\ell+1)\hbar^2\over 2\mu r^2}\]</div>
+<p>(i.e. we add a centrifugal term to the potential).</p>
+<p>The symmetries of the Hamiltonian have reduced the 3D problem to a 1D problem that we know how to solve!
+We’ll look at solutions for different <span class="math notranslate nohighlight">\(V(r)\)</span>, including the hydrogen atom, next week!</p>
+</section>
 <section id="further-reading">
 <h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p>We’ve covered material from Townsend 9.4 here. We’ll return to the earlier parts of chapter 9 next time.</p></li>
+<li><p>Keep looking at Townsend Chapter 9</p></li>
 </ul>
 </section>
 </section>
@@ -469,20 +510,20 @@ Solution<div class="sd-summary-down docutils">
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="lecture3.html"
+       href="lecture6.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Lecture 3 Jan 11</p>
+        <p class="prev-next-title">Lecture 6 Jan 23</p>
       </div>
     </a>
     <a class="right-next"
-       href="lecture5.html"
+       href="hw1.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Lecture 5 Jan 18</p>
+        <p class="prev-next-title">Homework 1</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -504,7 +545,9 @@ Solution<div class="sd-summary-down docutils">
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#back-of-the-envelope-hydrogen-atom">Back of the envelope hydrogen atom</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-the-spherical-harmonics">Properties of the spherical harmonics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spectroscopy-of-diatomic-molecules">Spectroscopy of diatomic molecules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-radial-part-of-the-two-body-problem">The radial part of the two-body problem</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a></li>
 </ul>
   </nav></div>
