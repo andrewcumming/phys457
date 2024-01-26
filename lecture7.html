@@ -378,7 +378,18 @@ document.write(`
 <p class="admonition-title">Warm-up question</p>
 <p>Another estimation (back of the envelope) question:  In a finite square well, the energies of the stationary states are <span class="math notranslate nohighlight">\(\propto n^2\)</span>, but in the harmonic oscillator they are <span class="math notranslate nohighlight">\(\propto n\)</span>. Why?</p>
 </div>
-<p>Last time, we discussed the orbital angular momentum eigenfunctions <span class="math notranslate nohighlight">\(\ket{\ell, m}\)</span>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">In the finite square well, the wavefunction is confined to a distance <span class="math notranslate nohighlight">\(a\)</span>, the width of the well. The wavelength of the particle is <span class="math notranslate nohighlight">\(2a/n\)</span> and so the energy of the particle is <span class="math notranslate nohighlight">\(E\propto p^2\propto 1/\lambda^2\propto n^2\)</span>.</p>
+<p class="sd-card-text">In the harmonic oscillator, the spatial extent of the wavefunction depends on the particle energy. We can estimate this using the classical turning points where <span class="math notranslate nohighlight">\(E = V \propto x^2\)</span>, suggesting that we should take <span class="math notranslate nohighlight">\(a\propto E^{1/2}\)</span>. A higher energy state means that the particle moves to larger <span class="math notranslate nohighlight">\(x\)</span> during an oscillation cycle.</p>
+<p class="sd-card-text">Repeating the same argument as for the infinite square well, but now taking <span class="math notranslate nohighlight">\(a\propto E^{1/2}\)</span> gives <span class="math notranslate nohighlight">\(E\propto 1/\lambda^2\propto n^2/a^2\propto n^2/E\Rightarrow E\propto n\)</span>.</p>
+</div>
+</details><p>Last time, we discussed the orbital angular momentum eigenfunctions <span class="math notranslate nohighlight">\(\ket{\ell, m}\)</span>.</p>
 <p>Recall that <span class="math notranslate nohighlight">\(\hat{L}^2\)</span> commutes with any of the components <span class="math notranslate nohighlight">\(\hat{L}_i\)</span>, so the idea is that we are free to choose one of the components, usually taken to be <span class="math notranslate nohighlight">\(\hat{L}_z\)</span>, and find a simultaneous set of eigenstates of <span class="math notranslate nohighlight">\(\hat{L}^2\)</span> and <span class="math notranslate nohighlight">\(\hat{L}_z\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\hat{L}^2 \ket{\ell,m} = \ell (\ell+1) \hbar^2 \ket{\ell, m}\]</div>

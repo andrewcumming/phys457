@@ -6,6 +6,16 @@ Another estimation (back of the envelope) question:  In a finite square well, th
 
 ```
 
+```{dropdown} Solution
+
+In the finite square well, the wavefunction is confined to a distance $a$, the width of the well. The wavelength of the particle is $2a/n$ and so the energy of the particle is $E\propto p^2\propto 1/\lambda^2\propto n^2$.
+
+In the harmonic oscillator, the spatial extent of the wavefunction depends on the particle energy. We can estimate this using the classical turning points where $E = V \propto x^2$, suggesting that we should take $a\propto E^{1/2}$. A higher energy state means that the particle moves to larger $x$ during an oscillation cycle.
+
+Repeating the same argument as for the infinite square well, but now taking $a\propto E^{1/2}$ gives $E\propto 1/\lambda^2\propto n^2/a^2\propto n^2/E\Rightarrow E\propto n$. 
+
+```
+
 Last time, we discussed the orbital angular momentum eigenfunctions $\ket{\ell, m}$.
 
 Recall that $\hat{L}^2$ commutes with any of the components $\hat{L}_i$, so the idea is that we are free to choose one of the components, usually taken to be $\hat{L}_z$, and find a simultaneous set of eigenstates of $\hat{L}^2$ and $\hat{L}_z$:
