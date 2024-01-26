@@ -38,9 +38,9 @@ $m$ ranges from $-\ell$ to $+\ell$ in integer steps.
 
 - **Ladder operators**. $\hat{L}_{+-} = \hat{L}_x\pm i\hat{L}_y$ 
 
-$$\hat{L}_+\ket{\ell,m} = \sqrt{\ell(\ell+1)-m(m+1)}\ket{\ell,m+1}$$
+$$\hat{L}_+\ket{\ell,m} = \hbar\sqrt{\ell(\ell+1)-m(m+1)}\ket{\ell,m+1}$$
 
-$$\hat{L}_-\ket{\ell,m} = \sqrt{\ell(\ell+1)-m(m-1)}\ket{\ell,m-1}$$
+$$\hat{L}_-\ket{\ell,m} = \hbar\sqrt{\ell(\ell+1)-m(m-1)}\ket{\ell,m-1}$$
 
 Note that $\hat{L}_+\ket{\ell, \ell} = 0$ and $\hat{L}_-\ket{\ell, -\ell} = 0$ (why?). These are useful for computing for example $\braket{\hat{L}_x}$ when you know the state in the $\hat{L}_z$ basis because you can express $\hat{L}_x$ in terms of the ladder operators that act on the $\hat{L}_z$ basis states. 
 

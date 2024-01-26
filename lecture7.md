@@ -18,7 +18,7 @@ These are *not* eigenstates of either $\hat{L}_x$ or $\hat{L_y}$ since the diffe
 
 $$\hat{L}_x = {1\over 2}\left(\hat{L}_+ + \hat{L}_-\right),$$ 
 
-$$\hat{L}_x \ket{\ell,m} = {1\over 2}\sqrt{\ell(\ell+1)-m(m+1)} \ket{\ell, m+1} + {1\over 2}\sqrt{\ell(\ell+1)-m(m-1)} \ket{\ell, m-1}.$$
+$$\hat{L}_x \ket{\ell,m} = {\hbar\over 2}\sqrt{\ell(\ell+1)-m(m+1)} \ket{\ell, m+1} + {\hbar\over 2}\sqrt{\ell(\ell+1)-m(m-1)} \ket{\ell, m-1}.$$
 
 We also saw last time how to write these operators in position representation. First, 
 
