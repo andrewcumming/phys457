@@ -9,6 +9,7 @@ parts:
         - file: outline
           title: Course outline
     - caption: Lecture notes
+      expand_sections: True
       chapters:
         - file: lecture1
         - file: lecture2
@@ -17,10 +18,12 @@ parts:
         - file: lecture5
         - file: lecture6
         - file: lecture7
+        - file: lecture8
     - caption: Homework
       chapters:
         - file: hw1
         - file: hw2
         - file: hw3
+        - file: hw4
         - file: homework_solutions
         
