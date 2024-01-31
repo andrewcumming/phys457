@@ -56,7 +56,7 @@ $$n(n-1) = \ell(\ell+1)\Rightarrow n=-\ell, \ell+1.$$
 
 The solution $u\propto r^{-\ell}$ diverges at the origin [for $\ell=0$, $u$ is constant but then $R=u/r$ diverges], so we need the solution
 
-$$u\propto r^{\ell +1}\hspace{1cm} r\rightarrow 0.$$
+$$\boxed{u\propto r^{\ell +1}\hspace{1cm} r\rightarrow 0}$$
 
 For $r\rightarrow \infty$, the second derivative is balanced by the constant term involving $E$, ie.
 
@@ -68,7 +68,7 @@ $$u^{\prime\prime} = +\left({2\mu (-E)\over \hbar^2}\right) u$$
 
 which gives 
 
-$$u\propto \exp\left(-{\sqrt{2\mu(-E)} r\over \hbar} \right)\hspace{1cm} r\rightarrow \infty.$$
+$$\boxed{u\propto \exp\left(-{\sqrt{2\mu(-E)} r\over \hbar} \right)\hspace{1cm} r\rightarrow \infty}$$
 
 (There's also a growing exponential solution, but we discard that one because $u$ would then diverge at large $r$).
 
