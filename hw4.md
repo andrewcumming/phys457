@@ -10,4 +10,4 @@ $$\braket{\mathbf{r}|1,0,0} = {1\over \sqrt{4\pi}} R_{10}(r) = {1\over \sqrt{\pi
 
 where $a_0$ is the Bohr radius and $Z$ is the number of protons in the nucleus, and where the wavefunction is normalized such that 
 
-$$\int d^3\mathbf{r} \, |\Psi|^2 = \int dr\, 4\pi r^2 |R_{10}|^2=1.$$
+$$\int d^3\mathbf{r} \, |\Psi|^2 = \int dr\, r^2 |R_{10}|^2=1.$$
