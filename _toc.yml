@@ -26,5 +26,6 @@ parts:
         - file: hw2
         - file: hw3
         - file: hw4
+        - file: hw5
         - file: homework_solutions
         
