@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Lecture 4 Jan 16 &#8212; PHYS 457 Quantum Physics 2</title>
+    <title>Lecture 10 Feb 6 &#8212; PHYS 457 Quantum Physics 2</title>
   
   
   
@@ -63,11 +63,11 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'lecture4';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lecture10';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Lecture 5 Jan 18" href="lecture5.html" />
-    <link rel="prev" title="Lecture 3 Jan 11" href="lecture3.html" />
+    <link rel="next" title="Homework 1" href="hw1.html" />
+    <link rel="prev" title="Lecture 9 Feb 1" href="lecture9.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -153,13 +153,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="lecture1.html">Lecture 1 Jan 4</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture2.html">Lecture 2 Jan 9</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture3.html">Lecture 3 Jan 11</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 4 Jan 16</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture4.html">Lecture 4 Jan 16</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture5.html">Lecture 5 Jan 18</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture6.html">Lecture 6 Jan 23</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture7.html">Lecture 7 Jan 25</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture8.html">Lecture 8 Jan 30</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture9.html">Lecture 9 Feb 1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lecture10.html">Lecture 10 Feb 6</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 10 Feb 6</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Homework</span></p>
 <ul class="nav bd-sidenav">
@@ -240,7 +240,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/andrewcumming/phys457/issues/new?title=Issue%20on%20page%20%2Flecture4.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/andrewcumming/phys457/issues/new?title=Issue%20on%20page%20%2Flecture10.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -270,7 +270,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/lecture4.md" target="_blank"
+      <li><a href="_sources/lecture10.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -352,7 +352,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Lecture 4 Jan 16</h1>
+    <h1>Lecture 10 Feb 6</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -362,7 +362,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#back-of-the-envelope-hydrogen-atom">Back of the envelope hydrogen atom</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-this-works-mathematically-laguerre-polynomials">How this works mathematically: Laguerre polynomials</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-hydrogen-atom-wavefunctions">Summary: hydrogen atom wavefunctions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a></li>
 </ul>
             </nav>
@@ -375,69 +376,101 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="lecture-4-jan-16">
-<h1>Lecture 4 Jan 16<a class="headerlink" href="#lecture-4-jan-16" title="Permalink to this heading">#</a></h1>
-<div class="admonition-warm-up-question admonition">
-<p class="admonition-title">Warm-up question</p>
-<p>Given the wavefunction at time <span class="math notranslate nohighlight">\(t=0\)</span>, <span class="math notranslate nohighlight">\(\psi(x,0)\)</span>, how would you use the propagator to calculate the wavefunction at time <span class="math notranslate nohighlight">\(t\)</span>, <span class="math notranslate nohighlight">\(\psi(x,t)\)</span>?</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="lecture-10-feb-6">
+<h1>Lecture 10 Feb 6<a class="headerlink" href="#lecture-10-feb-6" title="Permalink to this heading">#</a></h1>
+<p>Today we’ll continue with the discussion of the hydrogen atom wavefunctions and energy levels.</p>
+<section id="how-this-works-mathematically-laguerre-polynomials">
+<h2>How this works mathematically: Laguerre polynomials<a class="headerlink" href="#how-this-works-mathematically-laguerre-polynomials" title="Permalink to this heading">#</a></h2>
+<p>One we make the subsitution <span class="math notranslate nohighlight">\(u(r) = rR(r)\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[\left[- {\hbar^2\over 2\mu}{d^2\over d r^2} +  {\ell(\ell+1)\hbar^2\over 2\mu r^2} -{e^2\over 4\pi \epsilon_0 r}\right]u(r) = E u(r).\]</div>
+<p>It is interesting to develop the analytic solution to this equation and to see where the quantization of energy comes in. We’ll use the notation from Townsend so we match section 10.2 of the book. First, we define</p>
+<div class="math notranslate nohighlight">
+\[\rho = \sqrt{8\mu(-E)\over \hbar^2} r\]</div>
+<p>which gives</p>
+<div class="math notranslate nohighlight">
+\[{d^2 u\over d\rho^2} - {\ell(\ell+1)\over \rho^2} u + \left({\lambda\over \rho} - {1\over 4}\right)u = 0\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[\lambda = {e^2\over 4\pi\epsilon_0\hbar}\sqrt{\mu\over 2(-E)}.\]</div>
+<p>The limiting solutions are then <span class="math notranslate nohighlight">\(\rho^{\ell+1}\)</span> for <span class="math notranslate nohighlight">\(\rho\rightarrow 0\)</span> and <span class="math notranslate nohighlight">\(e^{-\rho/2}\)</span> for <span class="math notranslate nohighlight">\(\rho\rightarrow \infty\)</span>. To incorporate this behaviour, look for a solution</p>
+<div class="math notranslate nohighlight">
+\[\boxed{u(\rho) = \rho^{\ell+1} e^{-\rho/2} F(\rho)}\]</div>
+<p>Substituting this in gives the following equation for <span class="math notranslate nohighlight">\(F(\rho)\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\boxed{{d^2F\over d\rho^2} + \left({2\ell+2\over\rho} -1\right){dF\over d\rho} + {\lambda-\ell-1\over\rho}F = 0}\]</div>
+<p>The solutions to this equation are the <strong>associated Laguerre polynomials</strong>.</p>
+<p>Look for a polynomial solution</p>
+<div class="math notranslate nohighlight">
+\[F(\rho) = \sum_{k=0}^\infty c_k\rho^k,\]</div>
+<div class="math notranslate nohighlight">
+\[\Rightarrow \sum_{k=2}^\infty k(k-1) c_k \rho^{k-2} + 
+\sum_{k=1}^\infty (2\ell+2) k c_k \rho^{k-2} + 
+\sum_{k=0}^\infty \left[-k+\lambda -\ell-1  \right]c_k \rho^{k-1} = 0.\]</div>
+<p>Since we have <span class="math notranslate nohighlight">\(\rho^{k-2}\)</span> in the first two terms and <span class="math notranslate nohighlight">\(\rho^{k-1}\)</span> in  the last term, it is useful to translate the index <span class="math notranslate nohighlight">\(k\)</span> by 1  in the first two terms so that all the terms have a <span class="math notranslate nohighlight">\(\rho^{k-1}\)</span> in them, ie. we write</p>
+<div class="math notranslate nohighlight">
+\[\sum_{k=2}^\infty k(k-1) c_k \rho^{k-2}=\sum_{k=1}^\infty (k+1)k c_{k+1} \rho^{k-1} = \sum_{k=0}^\infty (k+1)k c_{k+1} \rho^{k-1}\]</div>
+<div class="math notranslate nohighlight">
+\[\sum_{k=1}^\infty (2\ell+2) k c_k \rho^{k-2} = \sum_{k=0}^\infty (2\ell+2) (k+1) c_{k+1} \rho^{k-1}\]</div>
+<p>then</p>
+<div class="math notranslate nohighlight">
+\[\sum_{k=0}^\infty \left\{\left[k(k+1)+(2\ell+2)(k+1)\right]c_{k+1} + \left[-k +\lambda-\ell-1\right]c_k \right\}\rho^{k-1} = 0.\]</div>
+<p>Since this must be true for arbitrary values of <span class="math notranslate nohighlight">\(\rho\)</span>, the coefficient has to vanish in every term, giving a <em>recurrence relation</em> for the polynomial</p>
+<div class="math notranslate nohighlight">
+\[{c_{k+1}\over c_k} = {k + \ell + 1 -\lambda\over (k+1)(k+2\ell+2)}.\]</div>
+<p>The key part of the argument is to see that for large <span class="math notranslate nohighlight">\(k\)</span>, this ratio is <span class="math notranslate nohighlight">\(c_{k+1}/c_k\rightarrow 1/k\)</span> which is the same as for an exponential function since</p>
+<div class="math notranslate nohighlight">
+\[e^x = \sum_{k=0}^\infty {x^k\over k!} \Rightarrow {c_{k+1}\over c_k} = {1\over k+1} \approx {1\over k}\]</div>
+<p>for large <span class="math notranslate nohighlight">\(k\)</span>. This suggests that we won’t be able to satisfy the boundary condition that the wavefunction remain finite as <span class="math notranslate nohighlight">\(\rho\rightarrow \infty\)</span>. However, there is a way out when <span class="math notranslate nohighlight">\(\lambda-\ell-1\)</span> is an integer! Then the series will terminate at the term with <span class="math notranslate nohighlight">\(k=n_r\)</span> where</p>
+<div class="math notranslate nohighlight">
+\[n_r = \lambda-\ell-1 = 0, 1, 2,\dots\]</div>
+<p>(it terminates because then <span class="math notranslate nohighlight">\(c_{n_r+1}/c_{n_r}=0\)</span> so the coefficient of the next term and therefore subsequent terms vanishes).</p>
+<p>The fact that <span class="math notranslate nohighlight">\(\lambda\)</span> must be an integer shows that the energy <span class="math notranslate nohighlight">\(E\)</span> must be quantized. We write the integer value of <span class="math notranslate nohighlight">\(\lambda\)</span> as the <strong>principle quantum number</strong> <span class="math notranslate nohighlight">\(n\)</span>, which gives</p>
+<div class="math notranslate nohighlight">
+\[E_n = - {1\over 2}\mu c^2 \left({e^2\over 4\pi\epsilon_0 \hbar c}\right)^2 {1\over n^2} = - {1\over 2} \alpha^2 \mu c^2 {1\over n^2}.\]</div>
+<p>For hydrogen with <span class="math notranslate nohighlight">\(\mu\approx m_e\)</span>, this is <span class="math notranslate nohighlight">\(E_n=-(13.6\ \mathrm{eV})/n^2\)</span>.</p>
+<div class="admonition-exercise-plot-the-radial-wavefunctions admonition">
+<p class="admonition-title">Exercise: plot the radial wavefunctions</p>
+<p>We can use <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.genlaguerre.html#scipy.special.genlaguerre"><code class="docutils literal notranslate"><span class="pre">scipy.special.genlaguerre</span></code></a> to obtain the Laguerre polynomials. The equation given in the documentation for these functions is</p>
+<div class="math notranslate nohighlight">
+\[x{d^2\over dx^2}L_n^\alpha + (\alpha+1-x){d\over dx}L_n^\alpha + n L_n^\alpha =0.\]</div>
+<p>We see that this corresponds to our equation for <span class="math notranslate nohighlight">\(F(\rho)\)</span> if we take <span class="math notranslate nohighlight">\(n\rightarrow n_r\)</span> and <span class="math notranslate nohighlight">\(\alpha\rightarrow 2\ell+1\)</span>.</p>
+<p>Use this to plot the radial functions</p>
+<div class="math notranslate nohighlight">
+\[R(\rho) = \rho^\ell e^{-\rho/2} F(\rho)\]</div>
+<p>for different <span class="math notranslate nohighlight">\(\ell\)</span> and <span class="math notranslate nohighlight">\(n_r\)</span>.</p>
+<p>Note that <span class="math notranslate nohighlight">\(n_r\)</span> determines the number of radial nodes. The relation <span class="math notranslate nohighlight">\(n = n_r + \ell + 1\)</span>  shows the partitioning of energy between radial and angular motion. For a given <span class="math notranslate nohighlight">\(n\)</span> there are <span class="math notranslate nohighlight">\(n^2\)</span> different ways to choose <span class="math notranslate nohighlight">\(n_r\)</span> and <span class="math notranslate nohighlight">\(\ell\)</span>. This is similar to the angular momentum eigenfunctions where <span class="math notranslate nohighlight">\(\ell\)</span> sets the overall wavelength but the number of nodes in <span class="math notranslate nohighlight">\(\theta\)</span> or <span class="math notranslate nohighlight">\(\phi\)</span> depend on the choice of <span class="math notranslate nohighlight">\(m\)</span>.</p>
+<p>Also note that for a given <span class="math notranslate nohighlight">\(n\)</span>, the maximum value of <span class="math notranslate nohighlight">\(\ell\)</span> we can have corresponds to <span class="math notranslate nohighlight">\(n_r=0\)</span>, i.e. <span class="math notranslate nohighlight">\(\ell = 0,\dots n-1\)</span>.</p>
 </div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">The answer is</p>
+</section>
+<section id="summary-hydrogen-atom-wavefunctions">
+<h2>Summary: hydrogen atom wavefunctions<a class="headerlink" href="#summary-hydrogen-atom-wavefunctions" title="Permalink to this heading">#</a></h2>
+<p>To summarize, we can now write the stationary states for the hydrogen atom as</p>
 <div class="math notranslate nohighlight">
-\[\psi(x,t) = \int dx^\prime \braket{x, t| x^\prime, 0} \psi(x^\prime, 0).\]</div>
-<p class="sd-card-text">To see this, we can start with <span class="math notranslate nohighlight">\(\ket{\Psi(t)} = e^{-i\hat{H}t/\hbar}\ket{\Psi(0)}\)</span> which gives</p>
+\[\braket{\mathbf{r}|\Psi} = R_{n,\ell}(r) Y_{\ell m}(\theta,\phi)\]</div>
+<p>where the angular function depends on <span class="math notranslate nohighlight">\(\ell\)</span> and <span class="math notranslate nohighlight">\(m\)</span> and the radial function depends on <span class="math notranslate nohighlight">\(n\)</span> and <span class="math notranslate nohighlight">\(\ell\)</span>. For a given <span class="math notranslate nohighlight">\(n\)</span>, <span class="math notranslate nohighlight">\(\ell\)</span> goes from <span class="math notranslate nohighlight">\(0\)</span> to <span class="math notranslate nohighlight">\(n-1\)</span>, and for a given <span class="math notranslate nohighlight">\(\ell\)</span>, <span class="math notranslate nohighlight">\(m\)</span> goes from <span class="math notranslate nohighlight">\(-\ell\)</span> to <span class="math notranslate nohighlight">\(+\ell\)</span>. In spectroscopic notation, we get the orbitals 1s, 2s, 2p, 3s, 3p, 3d, 4s, 4p, 4d, 4f, etc.</p>
+<p>In terms of <span class="math notranslate nohighlight">\(r\)</span>, the variable <span class="math notranslate nohighlight">\(\rho\)</span> is</p>
 <div class="math notranslate nohighlight">
-\[\braket{x|\Psi(t)} = \braket{x|e^{-i\hat{H}t/\hbar}|\Psi(0)}=\int dx^\prime \braket{x|e^{-i\hat{H}t/\hbar}|x^\prime}\braket{x^\prime|\Psi(0)}\]</div>
-<p class="sd-card-text">where we inserted the identity operator.</p>
-<p class="sd-card-text">This integral expression for <span class="math notranslate nohighlight">\(\psi(x,t)\)</span> shows that you can think of the propagator as a Green’s function for the Schrödinger equation.</p>
+\[\rho = \sqrt{8\mu(-E)\over \hbar^2}r = {2\mu c\alpha r\over \hbar n} = {2r\over na_0}\]</div>
+<p>where <span class="math notranslate nohighlight">\(a_0\)</span> is the Bohr radius. We can then write down the radial functions <span class="math notranslate nohighlight">\(R(r)\)</span>, for example the ground state with <span class="math notranslate nohighlight">\(n_r=0\)</span> has <span class="math notranslate nohighlight">\(F\)</span> constant, giving</p>
+<div class="math notranslate nohighlight">
+\[R_{10} = 2\left({1\over a_0}\right)^{3/2}e^{-r/a_0}.\]</div>
+<p>This also holds for a general hydrogenic (one electron) atom with a nuclear charge <span class="math notranslate nohighlight">\(Z\)</span> if we replace <span class="math notranslate nohighlight">\(a_0\rightarrow a_0/Z\)</span>.</p>
+<p>Here are the <span class="math notranslate nohighlight">\(n=2\)</span> eigenfunctions:</p>
+<div class="math notranslate nohighlight">
+\[R_{20} = 2\left({1\over 2a_0}\right)^{3/2}\left(1-{r\over 2a_0}\right)e^{-r/2a_0}\]</div>
+<div class="math notranslate nohighlight">
+\[R_{21} = {1\over \sqrt{3}}\left({1\over 2a_0}\right)^{3/2}{r\over 2a_0}e^{-r/2a_0}\]</div>
+<p>You can see that the <span class="math notranslate nohighlight">\(\ell=n-1=1\)</span> function has an extra factor of <span class="math notranslate nohighlight">\(r\)</span> compared to <span class="math notranslate nohighlight">\(R_{10}\)</span>, as it must since we need <span class="math notranslate nohighlight">\(R\propto r^\ell\)</span> near the origin. You can also see that <span class="math notranslate nohighlight">\(R_{20}\)</span> with <span class="math notranslate nohighlight">\(\ell=0\)</span> has a radial node (i.e. it will change sign as <span class="math notranslate nohighlight">\(r\)</span> increases), as expected since we now have <span class="math notranslate nohighlight">\(n_r=n-\ell-1=1\)</span>.</p>
+<div class="admonition-exercise-size-of-atom admonition">
+<p class="admonition-title">Exercise: size of atom</p>
+<p>Consider the state with <span class="math notranslate nohighlight">\(\ell = n-1\)</span>, i.e. with maximal angular momentum for a given <span class="math notranslate nohighlight">\(n\)</span>. Explain why this simplifies the form of the radial part of the wavefunction. Compute the radius which maximises the probability density <span class="math notranslate nohighlight">\(r^2|\Psi|^2\)</span> for this state. Write your answer in terms of <span class="math notranslate nohighlight">\(a_0\)</span>, <span class="math notranslate nohighlight">\(Z\)</span> and <span class="math notranslate nohighlight">\(n\)</span>.</p>
 </div>
-</details><p>We’ll start today by finishing our discussion of path integrals. Then we’ll move on to Chapter 9 of Townsend, which discusses the two body problem in quantum mechanics. In particular, we’ll see that we can use symmetries of the Hamiltonian to infer a lot about the stationary states of the problem. We’ll apply what we learn to the hydrogen atom in Chapter 10.</p>
-<section id="back-of-the-envelope-hydrogen-atom">
-<h2>Back of the envelope hydrogen atom<a class="headerlink" href="#back-of-the-envelope-hydrogen-atom" title="Permalink to this heading">#</a></h2>
-<p>Before we do any detailed calculations, we can make some estimates of the expected size of the hydrogen atom and its ground state energy. Imagine that the hydrogen atom  has a size <span class="math notranslate nohighlight">\(a\)</span>. The proton is so heavy we can think of it being fixed and the electron moves around it. By the uncertainty principle, an electron confined to a distance <span class="math notranslate nohighlight">\(a\)</span> has an uncertainty in its momentum of <span class="math notranslate nohighlight">\(\Delta p\sim \hbar/a\)</span>. On average, the electron will have zero momentum, but there will be a non-zero average of <span class="math notranslate nohighlight">\(p^2\)</span> due to its motion. It seems reasonable to estimate the minimum value of <span class="math notranslate nohighlight">\(\langle p^2\rangle\)</span> as <span class="math notranslate nohighlight">\((\Delta p)^2\)</span>.</p>
-<p>We can then estimate the ground state energy as</p>
-<div class="math notranslate nohighlight">
-\[E\sim {\hbar^2\over 2ma^2}  -{e^2\over 4\pi \epsilon_0 a}\]</div>
-<p>where the first term is the (positive) kinetic energy and the second term is the (negative) electrostatic potential energy between the electron and proton. The mass <span class="math notranslate nohighlight">\(m\)</span> is the mass of the electron.</p>
-<p>A useful quantity is</p>
-<div class="math notranslate nohighlight">
-\[\alpha = {e^2\over 4\pi\epsilon_0} = {1\over 137}\]</div>
-<p>which is the <a class="reference external" href="https://en.wikipedia.org/wiki/Fine-structure_constant">fine structure constant</a>. We can rewrite the second term using <span class="math notranslate nohighlight">\(\alpha\)</span>, giving</p>
-<div class="math notranslate nohighlight">
-\[E\sim {\hbar^2\over 2ma^2}  -{\alpha \hbar c\over a}.\]</div>
-<p>The two terms act in opposite directions: the kinetic energy term prefers large separations (to lower the energy) whereas the potential energy term prefers small separations. Minimize with respect to <span class="math notranslate nohighlight">\(a\)</span></p>
-<div class="math notranslate nohighlight">
-\[{\partial E\over \partial a} = -{\hbar^2\over ma^3} + {\alpha \hbar c\over a^2} = 0\]</div>
-<div class="math notranslate nohighlight">
-\[\Rightarrow a = \alpha^{-1} {\hbar\over m c}.\]</div>
-<p>The lengthscale <span class="math notranslate nohighlight">\(\hbar/mc\)</span> is known as the Compton wavelength of the electron.</p>
-<p>Substituting this value of <span class="math notranslate nohighlight">\(a\)</span> into the energy gives</p>
-<div class="math notranslate nohighlight">
-\[E = -{1\over 2}\alpha^2 mc^2.\]</div>
-<div class="admonition-exercise admonition">
-<p class="admonition-title">Exercise</p>
-<p>Put in numbers and calculate <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(E\)</span>. For the energy you can use <span class="math notranslate nohighlight">\(mc^2=511\ {\rm keV}\)</span> and calculate the energy in eV.</p>
-</div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">The answers are <span class="math notranslate nohighlight">\(E= -13.6\ {\rm eV}\)</span>, which is the actual ground state energy of hydrogen as we’ll see, and <span class="math notranslate nohighlight">\(a = 5.3\times 10^{-11}\ {\rm m}\)</span> (often written in Angstroms as <span class="math notranslate nohighlight">\(0.53 \mathring{A}\)</span>) which is the <a class="reference external" href="https://en.wikipedia.org/wiki/Bohr_radius">Bohr radius</a>.</p>
-</div>
-</details></section>
+</section>
 <section id="further-reading">
 <h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p>We’ve covered material from Townsend 9.4 here. We’ll return to the earlier parts of chapter 9 next time.</p></li>
+<li><p>Townsend section 10.2.</p></li>
 </ul>
 </section>
 </section>
@@ -474,20 +507,20 @@ Solution<div class="sd-summary-down docutils">
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="lecture3.html"
+       href="lecture9.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Lecture 3 Jan 11</p>
+        <p class="prev-next-title">Lecture 9 Feb 1</p>
       </div>
     </a>
     <a class="right-next"
-       href="lecture5.html"
+       href="hw1.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Lecture 5 Jan 18</p>
+        <p class="prev-next-title">Homework 1</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -509,7 +542,8 @@ Solution<div class="sd-summary-down docutils">
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#back-of-the-envelope-hydrogen-atom">Back of the envelope hydrogen atom</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-this-works-mathematically-laguerre-polynomials">How this works mathematically: Laguerre polynomials</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-hydrogen-atom-wavefunctions">Summary: hydrogen atom wavefunctions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a></li>
 </ul>
   </nav></div>

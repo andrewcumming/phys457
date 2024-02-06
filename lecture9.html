@@ -66,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'lecture9';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Homework 1" href="hw1.html" />
+    <link rel="next" title="Lecture 10 Feb 6" href="lecture10.html" />
     <link rel="prev" title="Lecture 8 Jan 30" href="lecture8.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -159,6 +159,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="lecture7.html">Lecture 7 Jan 25</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture8.html">Lecture 8 Jan 30</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 9 Feb 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture10.html">Lecture 10 Feb 6</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Homework</span></p>
 <ul class="nav bd-sidenav">
@@ -361,8 +362,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-this-works-mathematically-laguerre-polynomials">How this works mathematically: Laguerre polynomials</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-hydrogen-atom-wavefunctions">Summary: hydrogen atom wavefunctions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a></li>
 </ul>
             </nav>
@@ -377,7 +376,6 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="lecture-9-feb-1">
 <h1>Lecture 9 Feb 1<a class="headerlink" href="#lecture-9-feb-1" title="Permalink to this heading">#</a></h1>
-<p>Today we’ll work through the hydrogen atom wavefunctions and the energy levels:</p>
 <div class="admonition-discussion-wavefunctions-and-energy-levels-of-hydrogen admonition">
 <p class="admonition-title">Discussion: wavefunctions and energy levels of hydrogen</p>
 <p>We know how <span class="math notranslate nohighlight">\(u(r)\)</span> behaves in the <span class="math notranslate nohighlight">\(r\rightarrow 0\)</span> and <span class="math notranslate nohighlight">\(r\rightarrow\infty\)</span> limits. We can use this to sketch the possible radial wavefunctions for different values of <span class="math notranslate nohighlight">\(\ell\)</span>.</p>
@@ -385,94 +383,16 @@ document.write(`
 <p>What about the first excited state (<span class="math notranslate nohighlight">\(n=2\)</span>)? Second excited state (<span class="math notranslate nohighlight">\(n=3\)</span>)?</p>
 <p>What is the degeneracy? (How many states are there as a function of <span class="math notranslate nohighlight">\(n\)</span>?)</p>
 </div>
-<section id="how-this-works-mathematically-laguerre-polynomials">
-<h2>How this works mathematically: Laguerre polynomials<a class="headerlink" href="#how-this-works-mathematically-laguerre-polynomials" title="Permalink to this heading">#</a></h2>
-<p>One we make the subsitution <span class="math notranslate nohighlight">\(u(r) = rR(r)\)</span>, we have</p>
-<div class="math notranslate nohighlight">
-\[\left[- {\hbar^2\over 2\mu}{d^2\over d r^2} +  {\ell(\ell+1)\hbar^2\over 2\mu r^2} -{e^2\over 4\pi \epsilon_0 r}\right]u(r) = E u(r).\]</div>
-<p>It is interesting to develop the analytic solution to this equation and to see where the quantization of energy comes in. We’ll use the notation from Townsend so we match section 10.2 of the book. First, we define</p>
-<div class="math notranslate nohighlight">
-\[\rho = \sqrt{8\mu(-E)\over \hbar^2} r\]</div>
-<p>which gives</p>
-<div class="math notranslate nohighlight">
-\[{d^2 u\over d\rho^2} - {\ell(\ell+1)\over \rho^2} u + \left({\lambda\over \rho} - {1\over 4}\right)u = 0\]</div>
-<p>where</p>
-<div class="math notranslate nohighlight">
-\[\lambda = {e^2\over 4\pi\epsilon_0\hbar}\sqrt{\mu\over 2(-E)}.\]</div>
-<p>The limiting solutions are then <span class="math notranslate nohighlight">\(\rho^{\ell+1}\)</span> for <span class="math notranslate nohighlight">\(\rho\rightarrow 0\)</span> and <span class="math notranslate nohighlight">\(e^{-\rho/2}\)</span> for <span class="math notranslate nohighlight">\(\rho\rightarrow \infty\)</span>. To incorporate this behaviour, look for a solution</p>
-<div class="math notranslate nohighlight">
-\[\boxed{u(\rho) = \rho^{\ell+1} e^{-\rho/2} F(\rho)}\]</div>
-<p>Substituting this in gives the following equation for <span class="math notranslate nohighlight">\(F(\rho)\)</span>,</p>
-<div class="math notranslate nohighlight">
-\[\boxed{{d^2F\over d\rho^2} + \left({2\ell+2\over\rho} -1\right){dF\over d\rho} + {\lambda-\ell-1\over\rho}F = 0}\]</div>
-<p>The solutions to this equation are the <strong>associated Laguerre polynomials</strong>.</p>
-<p>Look for a polynomial solution</p>
-<div class="math notranslate nohighlight">
-\[F(\rho) = \sum_{k=0}^\infty c_k\rho^k,\]</div>
-<div class="math notranslate nohighlight">
-\[\Rightarrow \sum_{k=2}^\infty k(k-1) c_k \rho^{k-2} + 
-\sum_{k=1}^\infty (2\ell+2) k c_k \rho^{k-2} + 
-\sum_{k=0}^\infty \left[-k+\lambda -\ell-1  \right]c_k \rho^{k-1} = 0.\]</div>
-<p>Since we have <span class="math notranslate nohighlight">\(\rho^{k-2}\)</span> in the first two terms and <span class="math notranslate nohighlight">\(\rho^{k-1}\)</span> in  the last term, it is useful to translate the index <span class="math notranslate nohighlight">\(k\)</span> by 1  in the first two terms so that all the terms have a <span class="math notranslate nohighlight">\(\rho^{k-1}\)</span> in them, ie. we write</p>
-<div class="math notranslate nohighlight">
-\[\sum_{k=2}^\infty k(k-1) c_k \rho^{k-2}=\sum_{k=1}^\infty (k+1)k c_{k+1} \rho^{k-1} = \sum_{k=0}^\infty (k+1)k c_{k+1} \rho^{k-1}\]</div>
-<div class="math notranslate nohighlight">
-\[\sum_{k=1}^\infty (2\ell+2) k c_k \rho^{k-2} = \sum_{k=0}^\infty (2\ell+2) (k+1) c_{k+1} \rho^{k-1}\]</div>
-<p>then</p>
-<div class="math notranslate nohighlight">
-\[\sum_{k=0}^\infty \left\{\left[k(k+1)+(2\ell+2)(k+1)\right]c_{k+1} + \left[-k +\lambda-\ell-1\right]c_k \right\}\rho^{k-1} = 0.\]</div>
-<p>Since this must be true for arbitrary values of <span class="math notranslate nohighlight">\(\rho\)</span>, the coefficient has to vanish in every term, giving a <em>recurrence relation</em> for the polynomial</p>
-<div class="math notranslate nohighlight">
-\[{c_{k+1}\over c_k} = {k + \ell + 1 -\lambda\over (k+1)(k+2\ell+2)}.\]</div>
-<p>The key part of the argument is to see that for large <span class="math notranslate nohighlight">\(k\)</span>, this ratio is <span class="math notranslate nohighlight">\(c_{k+1}/c_k\rightarrow 1/k\)</span> which is the same as for an exponential function since</p>
-<div class="math notranslate nohighlight">
-\[e^x = \sum_{k=0}^\infty {x^k\over k!} \Rightarrow {c_{k+1}\over c_k} = {1\over k+1} \approx {1\over k}\]</div>
-<p>for large <span class="math notranslate nohighlight">\(k\)</span>. This suggests that we won’t be able to satisfy the boundary condition that the wavefunction remain finite as <span class="math notranslate nohighlight">\(\rho\rightarrow \infty\)</span>. However, there is a way out when <span class="math notranslate nohighlight">\(\lambda-\ell-1\)</span> is an integer! Then the series will terminate at the term with <span class="math notranslate nohighlight">\(k=n_r\)</span> where</p>
-<div class="math notranslate nohighlight">
-\[n_r = \lambda-\ell-1 = 0, 1, 2,\dots\]</div>
-<p>(it terminates because then <span class="math notranslate nohighlight">\(c_{n_r+1}/c_{n_r}=0\)</span> so the coefficient of the next term and therefore subsequent terms vanishes).</p>
-<p>The fact that <span class="math notranslate nohighlight">\(\lambda\)</span> must be an integer shows that the energy <span class="math notranslate nohighlight">\(E\)</span> must be quantized. We write the integer value of <span class="math notranslate nohighlight">\(\lambda\)</span> as the <strong>principle quantum number</strong> <span class="math notranslate nohighlight">\(n\)</span>, which gives</p>
-<div class="math notranslate nohighlight">
-\[E_n = - {1\over 2}\mu c^2 \left({e^2\over 4\pi\epsilon_0 \hbar c}\right)^2 {1\over n^2} = - {1\over 2} \alpha^2 \mu c^2 {1\over n^2}.\]</div>
-<p>For hydrogen with <span class="math notranslate nohighlight">\(\mu\approx m_e\)</span>, this is <span class="math notranslate nohighlight">\(E_n=-(13.6\ \mathrm{eV})/n^2\)</span>.</p>
-<div class="admonition-exercise-plot-the-radial-wavefunctions admonition">
-<p class="admonition-title">Exercise: plot the radial wavefunctions</p>
-<p>We can use <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.genlaguerre.html#scipy.special.genlaguerre"><code class="docutils literal notranslate"><span class="pre">scipy.special.genlaguerre</span></code></a> to obtain the Laguerre polynomials. The equation given in the documentation for these functions is</p>
-<div class="math notranslate nohighlight">
-\[x{d^2\over dx^2}L_n^\alpha + (\alpha+1-x){d\over dx}L_n^\alpha + n L_n^\alpha =0.\]</div>
-<p>We see that this corresponds to our equation for <span class="math notranslate nohighlight">\(F(\rho)\)</span> if we take <span class="math notranslate nohighlight">\(n\rightarrow n_r\)</span> and <span class="math notranslate nohighlight">\(\alpha\rightarrow 2\ell+1\)</span>.</p>
-<p>Use this to plot the radial functions</p>
-<div class="math notranslate nohighlight">
-\[R(\rho) = \rho^\ell e^{-\rho/2} F(\rho)\]</div>
-<p>for different <span class="math notranslate nohighlight">\(\ell\)</span> and <span class="math notranslate nohighlight">\(n_r\)</span>.</p>
-<p>Note that <span class="math notranslate nohighlight">\(n_r\)</span> determines the number of radial nodes. The relation <span class="math notranslate nohighlight">\(n = n_r + \ell + 1\)</span>  shows the partitioning of energy between radial and angular motion. For a given <span class="math notranslate nohighlight">\(n\)</span> there are <span class="math notranslate nohighlight">\(n^2\)</span> different ways to choose <span class="math notranslate nohighlight">\(n_r\)</span> and <span class="math notranslate nohighlight">\(\ell\)</span>. This is similar to the angular momentum eigenfunctions where <span class="math notranslate nohighlight">\(\ell\)</span> sets the overall wavelength but the number of nodes in <span class="math notranslate nohighlight">\(\theta\)</span> or <span class="math notranslate nohighlight">\(\phi\)</span> depend on the choice of <span class="math notranslate nohighlight">\(m\)</span>.</p>
-<p>Also note that for a given <span class="math notranslate nohighlight">\(n\)</span>, the maximum value of <span class="math notranslate nohighlight">\(\ell\)</span> we can have corresponds to <span class="math notranslate nohighlight">\(n_r=0\)</span>, i.e. <span class="math notranslate nohighlight">\(\ell = 0,\dots n-1\)</span>.</p>
-</div>
-</section>
-<section id="summary-hydrogen-atom-wavefunctions">
-<h2>Summary: hydrogen atom wavefunctions<a class="headerlink" href="#summary-hydrogen-atom-wavefunctions" title="Permalink to this heading">#</a></h2>
-<p>To summarize, we can now write the stationary states for the hydrogen atom as</p>
-<div class="math notranslate nohighlight">
-\[\braket{\mathbf{r}|\Psi} = R_{n,\ell}(r) Y_{\ell m}(\theta,\phi)\]</div>
-<p>where the angular function depends on <span class="math notranslate nohighlight">\(\ell\)</span> and <span class="math notranslate nohighlight">\(m\)</span> and the radial function depends on <span class="math notranslate nohighlight">\(n\)</span> and <span class="math notranslate nohighlight">\(\ell\)</span>. For a given <span class="math notranslate nohighlight">\(n\)</span>, <span class="math notranslate nohighlight">\(\ell\)</span> goes from <span class="math notranslate nohighlight">\(0\)</span> to <span class="math notranslate nohighlight">\(n-1\)</span>, and for a given <span class="math notranslate nohighlight">\(\ell\)</span>, <span class="math notranslate nohighlight">\(m\)</span> goes from <span class="math notranslate nohighlight">\(-\ell\)</span> to <span class="math notranslate nohighlight">\(+\ell\)</span>. In spectroscopic notation, we get the orbitals 1s, 2s, 2p, 3s, 3p, 3d, 4s, 4p, 4d, 4f, etc.</p>
-<p>In terms of <span class="math notranslate nohighlight">\(r\)</span>, the variable <span class="math notranslate nohighlight">\(\rho\)</span> is</p>
-<div class="math notranslate nohighlight">
-\[\rho = \sqrt{8\mu(-E)\over \hbar^2}r = {2\mu c\alpha r\over \hbar n} = {2r\over na_0}\]</div>
-<p>where <span class="math notranslate nohighlight">\(a_0\)</span> is the Bohr radius. We can then write down the radial functions <span class="math notranslate nohighlight">\(R(r)\)</span>, for example the ground state with <span class="math notranslate nohighlight">\(n_r=0\)</span> has <span class="math notranslate nohighlight">\(F\)</span> constant, giving</p>
-<div class="math notranslate nohighlight">
-\[R_{10} = 2\left({1\over a_0}\right)^{3/2}e^{-r/a_0}.\]</div>
-<p>This also holds for a general hydrogenic (one electron) atom with a nuclear charge <span class="math notranslate nohighlight">\(Z\)</span> if we replace <span class="math notranslate nohighlight">\(a_0\rightarrow a_0/Z\)</span>.</p>
-<p>Here are the <span class="math notranslate nohighlight">\(n=2\)</span> eigenfunctions:</p>
-<div class="math notranslate nohighlight">
-\[R_{20} = 2\left({1\over 2a_0}\right)^{3/2}\left(1-{r\over 2a_0}\right)e^{-r/2a_0}\]</div>
-<div class="math notranslate nohighlight">
-\[R_{21} = {1\over \sqrt{3}}\left({1\over 2a_0}\right)^{3/2}{r\over 2a_0}e^{-r/2a_0}\]</div>
-<p>You can see that the <span class="math notranslate nohighlight">\(\ell=n-1=1\)</span> function has an extra factor of <span class="math notranslate nohighlight">\(r\)</span> compared to <span class="math notranslate nohighlight">\(R_{10}\)</span>, as it must since we need <span class="math notranslate nohighlight">\(R\propto r^\ell\)</span> near the origin. You can also see that <span class="math notranslate nohighlight">\(R_{20}\)</span> with <span class="math notranslate nohighlight">\(\ell=0\)</span> has a radial node (i.e. it will change sign as <span class="math notranslate nohighlight">\(r\)</span> increases), as expected since we now have <span class="math notranslate nohighlight">\(n_r=n-\ell-1=1\)</span>.</p>
-<div class="admonition-exercise-size-of-atom admonition">
-<p class="admonition-title">Exercise: size of atom</p>
-<p>Consider the state with <span class="math notranslate nohighlight">\(\ell = n-1\)</span>, i.e. with maximal angular momentum for a given <span class="math notranslate nohighlight">\(n\)</span>. Explain why this simplifies the form of the radial part of the wavefunction. Compute the radius which maximises the probability density <span class="math notranslate nohighlight">\(r^2|\Psi|^2\)</span> for this state. Write your answer in terms of <span class="math notranslate nohighlight">\(a_0\)</span>, <span class="math notranslate nohighlight">\(Z\)</span> and <span class="math notranslate nohighlight">\(n\)</span>.</p>
-</div>
-</section>
+<p>Important points:</p>
+<ul class="simple">
+<li><p>The radial wavefunctions <span class="math notranslate nohighlight">\(R(r)\)</span> start off as <span class="math notranslate nohighlight">\(\propto r^\ell\)</span> at <span class="math notranslate nohighlight">\(r=0\)</span> and then at large <span class="math notranslate nohighlight">\(r\)</span> have to decay exponentially. In between they can have <span class="math notranslate nohighlight">\(n_r=0,1,2,\dots\)</span> radial nodes.</p></li>
+<li><p>The ground state (<span class="math notranslate nohighlight">\(n=1\)</span>) has no radial nodes and <span class="math notranslate nohighlight">\(\ell=0\)</span>, this is the 1s state. The wavefunction <span class="math notranslate nohighlight">\(R(r)\)</span> is just an exponential function of <span class="math notranslate nohighlight">\(r\)</span>.</p></li>
+<li><p>For the first excited state (<span class="math notranslate nohighlight">\(n=2\)</span>), we can either add a node in the angular direction <span class="math notranslate nohighlight">\(\ell=1\)</span> and keep <span class="math notranslate nohighlight">\(n_r=0\)</span>, or we can add a node in the radial direction <span class="math notranslate nohighlight">\(n_r=1\)</span> and keep <span class="math notranslate nohighlight">\(\ell=0\)</span>. These are the 2s and 2p states.</p></li>
+<li><p>For the next excited state (<span class="math notranslate nohighlight">\(n=3\)</span>), we now have two nodes to distribute between the radial and angular directions, so we can have <span class="math notranslate nohighlight">\((n_r,\ell)=(2,0), (1,1)\)</span>, or <span class="math notranslate nohighlight">\((0,2)\)</span>. These are the 3s, 3p, 3d states.</p></li>
+<li><p>Counting up all the possible states (including the <span class="math notranslate nohighlight">\(2\ell+1\)</span> different <span class="math notranslate nohighlight">\(m\)</span> values for each <span class="math notranslate nohighlight">\(\ell\)</span>) gives a total number of states corresponding to each energy level <span class="math notranslate nohighlight">\(n\)</span> of <span class="math notranslate nohighlight">\(n^2\)</span>. (We’re ignoring spin here, once we take spin into account this becomes <span class="math notranslate nohighlight">\(2n^2\)</span> since each state can have either a spin up or spin down electron). There is a high degree of <strong>degeneracy</strong> (which comes from the high degree of symmetry of our Hamiltonian).</p></li>
+<li><p>The effective potential <span class="math notranslate nohighlight">\(V_\mathrm{eff}(r)\)</span> is the sum of the repulsive centrifugal term <span class="math notranslate nohighlight">\(\ell(\ell+1)\hbar^2/2\mu\)</span> and the attractive Coulomb term <span class="math notranslate nohighlight">\(-e^2/4\pi\epsilon_0 r\)</span>. For <span class="math notranslate nohighlight">\(\ell&gt;0\)</span> there is a potential barrier preventing the particle from reaching <span class="math notranslate nohighlight">\(r=0\)</span>, and we see that in the behavior of the wavefunction near the origin, which becomes flatter at <span class="math notranslate nohighlight">\(r=0\)</span> as <span class="math notranslate nohighlight">\(\ell\)</span> increases (<span class="math notranslate nohighlight">\(\propto r^\ell\)</span>).</p></li>
+<li><p>The <strong>classically-forbidden region</strong> is the region where <span class="math notranslate nohighlight">\(E&lt;V(r)\)</span> and the wave cannot propagate (wiggle) and instead evanesces (decays).</p></li>
+</ul>
 <section id="further-reading">
 <h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
@@ -522,11 +442,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="hw1.html"
+       href="lecture10.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Homework 1</p>
+        <p class="prev-next-title">Lecture 10 Feb 6</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -548,8 +468,6 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-this-works-mathematically-laguerre-polynomials">How this works mathematically: Laguerre polynomials</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-hydrogen-atom-wavefunctions">Summary: hydrogen atom wavefunctions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a></li>
 </ul>
   </nav></div>
