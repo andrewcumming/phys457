@@ -442,7 +442,46 @@ document.write(`
 <p>for different <span class="math notranslate nohighlight">\(\ell\)</span> and <span class="math notranslate nohighlight">\(n_r\)</span>.</p>
 <p>Note that <span class="math notranslate nohighlight">\(n_r\)</span> determines the number of radial nodes. The relation <span class="math notranslate nohighlight">\(n = n_r + \ell + 1\)</span>  shows the partitioning of energy between radial and angular motion. For a given <span class="math notranslate nohighlight">\(n\)</span> there are <span class="math notranslate nohighlight">\(n^2\)</span> different ways to choose <span class="math notranslate nohighlight">\(n_r\)</span> and <span class="math notranslate nohighlight">\(\ell\)</span>. This is similar to the angular momentum eigenfunctions where <span class="math notranslate nohighlight">\(\ell\)</span> sets the overall wavelength but the number of nodes in <span class="math notranslate nohighlight">\(\theta\)</span> or <span class="math notranslate nohighlight">\(\phi\)</span> depend on the choice of <span class="math notranslate nohighlight">\(m\)</span>.</p>
 <p>Also note that for a given <span class="math notranslate nohighlight">\(n\)</span>, the maximum value of <span class="math notranslate nohighlight">\(\ell\)</span> we can have corresponds to <span class="math notranslate nohighlight">\(n_r=0\)</span>, i.e. <span class="math notranslate nohighlight">\(\ell = 0,\dots n-1\)</span>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Code<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy.special</span> <span class="kn">import</span> <span class="n">genlaguerre</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">ell</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">1e-3</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="n">rho</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">/</span><span class="n">n</span>  <span class="c1"># convert r-&gt;rho to get the wavefunction</span>
+<span class="n">psi</span> <span class="o">=</span> <span class="n">rho</span><span class="o">**</span><span class="n">ell</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">rho</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">genlaguerre</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="n">ell</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">ell</span><span class="o">+</span><span class="mi">1</span><span class="p">)(</span><span class="n">rho</span><span class="p">)</span>
+<span class="c1">#psi = (x*psi)**2   # if we want the probability density</span>
+<span class="n">psi</span> <span class="o">=</span> <span class="n">psi</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">psi</span><span class="p">))</span>
+
+<span class="c1"># plot the potential</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">ell</span><span class="o">*</span><span class="p">(</span><span class="n">ell</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">2</span><span class="o">/</span><span class="n">x</span><span class="p">,</span> <span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$V_\mathrm</span><span class="si">{eff}</span><span class="s1">(r)$&#39;</span><span class="p">)</span>
+
+<span class="c1"># plot the energies</span>
+<span class="n">E</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.0</span><span class="o">/</span><span class="n">n</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">((</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]),(</span><span class="n">E</span><span class="p">,</span><span class="n">E</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Energy&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">((</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]),(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span><span class="s2">&quot;k:&quot;</span><span class="p">)</span>
+
+<span class="c1"># plot the wavefunction</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">psi</span> <span class="o">+</span> <span class="n">E</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\Psi$&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">((</span><span class="o">-</span><span class="mf">1.2</span><span class="p">,</span><span class="mf">1.2</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\rho$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Energy (Ry)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
 </div>
+</div>
+</details></div>
 </section>
 <section id="summary-hydrogen-atom-wavefunctions">
 <h2>Summary: hydrogen atom wavefunctions<a class="headerlink" href="#summary-hydrogen-atom-wavefunctions" title="Permalink to this heading">#</a></h2>

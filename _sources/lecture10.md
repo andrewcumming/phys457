@@ -69,7 +69,7 @@ $$E_n = - {1\over 2}\mu c^2 \left({e^2\over 4\pi\epsilon_0 \hbar c}\right)^2 {1\
 For hydrogen with $\mu\approx m_e$, this is $E_n=-(13.6\ \mathrm{eV})/n^2$.
 
 
-```{admonition} Exercise: plot the radial wavefunctions
+`````{admonition} Exercise: plot the radial wavefunctions
 
 We can use [`scipy.special.genlaguerre`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.genlaguerre.html#scipy.special.genlaguerre) to obtain the Laguerre polynomials. The equation given in the documentation for these functions is 
 
@@ -87,7 +87,46 @@ Note that $n_r$ determines the number of radial nodes. The relation $n = n_r + \
 
 Also note that for a given $n$, the maximum value of $\ell$ we can have corresponds to $n_r=0$, i.e. $\ell = 0,\dots n-1$.
 
+
+````{dropdown} Code
 ```
+import numpy as np
+from scipy.special import genlaguerre
+import matplotlib.pyplot as plt
+
+n = 2
+ell = 0
+
+x = np.linspace(1e-3, 20, 1000)
+rho = 2*x/n  # convert r->rho to get the wavefunction
+psi = rho**ell * np.exp(-rho/2) * genlaguerre(n-ell-1, 2*ell+1)(rho)
+#psi = (x*psi)**2   # if we want the probability density
+psi = psi / np.max(np.abs(psi))
+
+# plot the potential
+plt.plot(x, ell*(ell+1)/x**2 - 2/x, '--', label=r'$V_\mathrm{eff}(r)$')
+
+# plot the energies
+E = -1.0/n**2
+plt.plot((x[0],x[-1]),(E,E), label='Energy')
+plt.plot((x[0],x[-1]),(0,0),"k:")
+
+# plot the wavefunction
+plt.plot(x, psi + E, label=r'$\Psi$')
+
+plt.ylim((-1.2,1.2))
+plt.xlabel(r'$\rho$')
+plt.ylabel(r'Energy (Ry)')
+plt.legend()
+plt.show()
+```
+````
+
+
+
+
+
+`````
 
 
 
