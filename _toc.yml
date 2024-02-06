@@ -8,6 +8,7 @@ parts:
       chapters:
         - file: outline
           title: Course outline
+        - file: topics
     - caption: Lecture notes
       expand_sections: True
       chapters:
