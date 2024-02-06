@@ -25,7 +25,7 @@ Important points:
 
 - The effective potential $V_\mathrm{eff}(r)$ is the sum of the repulsive centrifugal term $\ell(\ell+1)\hbar^2/2\mu$ and the attractive Coulomb term $-e^2/4\pi\epsilon_0 r$. For $\ell>0$ there is a potential barrier preventing the particle from reaching $r=0$, and we see that in the behavior of the wavefunction near the origin, which becomes flatter at $r=0$ as $\ell$ increases ($\propto r^\ell$).
 
-- The **classically-forbidden region** is the region where $E<V(r)$ and the wave cannot propagate (wiggle) and instead evanesces (decays).
+- The **classically-forbidden region** is the region where $E<V(r)$ and the wave cannot propagate (wiggle) and instead evanesces (decays). (The same as in solutions to the 1D Schrödinger equation, e.g. finite square well).
  
 
 ## Further reading
