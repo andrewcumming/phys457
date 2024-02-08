@@ -22,6 +22,7 @@ parts:
         - file: lecture8
         - file: lecture9
         - file: lecture10
+        - file: lecture11
     - caption: Homework
       chapters:
         - file: hw1
