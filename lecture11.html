@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Lecture 9 Feb 1 &#8212; PHYS 457 Quantum Physics 2</title>
+    <title>Lecture 11 Feb 8 &#8212; PHYS 457 Quantum Physics 2</title>
   
   
   
@@ -64,11 +64,11 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'lecture9';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lecture11';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Lecture 10 Feb 6" href="lecture10.html" />
-    <link rel="prev" title="Lecture 8 Jan 30" href="lecture8.html" />
+    <link rel="next" title="Homework 1" href="hw1.html" />
+    <link rel="prev" title="Lecture 10 Feb 6" href="lecture10.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -170,9 +170,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="lecture6.html">Lecture 6 Jan 23</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture7.html">Lecture 7 Jan 25</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture8.html">Lecture 8 Jan 30</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 9 Feb 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture9.html">Lecture 9 Feb 1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture10.html">Lecture 10 Feb 6</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lecture11.html">Lecture 11 Feb 8</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 11 Feb 8</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Homework</span></p>
 <ul class="nav bd-sidenav">
@@ -253,7 +253,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/andrewcumming/phys457/issues/new?title=Issue%20on%20page%20%2Flecture9.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/andrewcumming/phys457/issues/new?title=Issue%20on%20page%20%2Flecture11.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -283,7 +283,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/lecture9.md" target="_blank"
+      <li><a href="_sources/lecture11.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -365,7 +365,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Lecture 9 Feb 1</h1>
+    <h1>Lecture 11 Feb 8</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -375,6 +375,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-harmonic-oscillator">3D Harmonic Oscillator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-operator-approach-to-the-3d-harmonic-oscillator">An operator approach to the 3D harmonic oscillator</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a></li>
 </ul>
             </nav>
@@ -387,25 +389,93 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="lecture-9-feb-1">
-<h1>Lecture 9 Feb 1<a class="headerlink" href="#lecture-9-feb-1" title="Permalink to this heading">#</a></h1>
-<div class="admonition-discussion-wavefunctions-and-energy-levels-of-hydrogen admonition">
-<p class="admonition-title">Discussion: wavefunctions and energy levels of hydrogen</p>
-<p>We know how <span class="math notranslate nohighlight">\(u(r)\)</span> behaves in the <span class="math notranslate nohighlight">\(r\rightarrow 0\)</span> and <span class="math notranslate nohighlight">\(r\rightarrow\infty\)</span> limits. We can use this to sketch the possible radial wavefunctions for different values of <span class="math notranslate nohighlight">\(\ell\)</span>.</p>
-<p>Now consider the ground state (<span class="math notranslate nohighlight">\(n=1\)</span>). What will the wavefunction look like, ie. what will be the <span class="math notranslate nohighlight">\(\ell\)</span> value and the shape of the radial wavefunction?</p>
-<p>What about the first excited state (<span class="math notranslate nohighlight">\(n=2\)</span>)? Second excited state (<span class="math notranslate nohighlight">\(n=3\)</span>)?</p>
-<p>What is the degeneracy? (How many states are there as a function of <span class="math notranslate nohighlight">\(n\)</span>?)</p>
-</div>
-<p>Important points:</p>
-<ul class="simple">
-<li><p>The radial wavefunctions <span class="math notranslate nohighlight">\(R(r)\)</span> start off as <span class="math notranslate nohighlight">\(\propto r^\ell\)</span> at <span class="math notranslate nohighlight">\(r=0\)</span> and then at large <span class="math notranslate nohighlight">\(r\)</span> have to decay exponentially. In between they can have <span class="math notranslate nohighlight">\(n_r=0,1,2,\dots\)</span> radial nodes.</p></li>
-<li><p>The ground state (<span class="math notranslate nohighlight">\(n=1\)</span>) has no radial nodes and <span class="math notranslate nohighlight">\(\ell=0\)</span>, this is the 1s state. The wavefunction <span class="math notranslate nohighlight">\(R(r)\)</span> is just an exponential function of <span class="math notranslate nohighlight">\(r\)</span>.</p></li>
-<li><p>For the first excited state (<span class="math notranslate nohighlight">\(n=2\)</span>), we can either add a node in the angular direction <span class="math notranslate nohighlight">\(\ell=1\)</span> and keep <span class="math notranslate nohighlight">\(n_r=0\)</span>, or we can add a node in the radial direction <span class="math notranslate nohighlight">\(n_r=1\)</span> and keep <span class="math notranslate nohighlight">\(\ell=0\)</span>. These are the 2s and 2p states.</p></li>
-<li><p>For the next excited state (<span class="math notranslate nohighlight">\(n=3\)</span>), we now have two nodes to distribute between the radial and angular directions, so we can have <span class="math notranslate nohighlight">\((n_r,\ell)=(2,0), (1,1)\)</span>, or <span class="math notranslate nohighlight">\((0,2)\)</span>. These are the 3s, 3p, 3d states.</p></li>
-<li><p>Counting up all the possible states (including the <span class="math notranslate nohighlight">\(2\ell+1\)</span> different <span class="math notranslate nohighlight">\(m\)</span> values for each <span class="math notranslate nohighlight">\(\ell\)</span>) gives a total number of states corresponding to each energy level <span class="math notranslate nohighlight">\(n\)</span> of <span class="math notranslate nohighlight">\(n^2\)</span>. (We’re ignoring spin here, once we take spin into account this becomes <span class="math notranslate nohighlight">\(2n^2\)</span> since each state can have either a spin up or spin down electron). There is a high degree of <strong>degeneracy</strong> (which comes from the high degree of symmetry of our Hamiltonian).</p></li>
-<li><p>The effective potential <span class="math notranslate nohighlight">\(V_\mathrm{eff}(r)\)</span> is the sum of the repulsive centrifugal term <span class="math notranslate nohighlight">\(\ell(\ell+1)\hbar^2/2\mu\)</span> and the attractive Coulomb term <span class="math notranslate nohighlight">\(-e^2/4\pi\epsilon_0 r\)</span>. For <span class="math notranslate nohighlight">\(\ell&gt;0\)</span> there is a potential barrier preventing the particle from reaching <span class="math notranslate nohighlight">\(r=0\)</span>, and we see that in the behavior of the wavefunction near the origin, which becomes flatter at <span class="math notranslate nohighlight">\(r=0\)</span> as <span class="math notranslate nohighlight">\(\ell\)</span> increases (<span class="math notranslate nohighlight">\(\propto r^\ell\)</span>).</p></li>
-<li><p>The <strong>classically-forbidden region</strong> is the region where <span class="math notranslate nohighlight">\(E&lt;V(r)\)</span> and the wave cannot propagate (wiggle) and instead evanesces (decays). (The same as in solutions to the 1D Schrödinger equation, e.g. finite square well).</p></li>
-</ul>
+  <section class="tex2jax_ignore mathjax_ignore" id="lecture-11-feb-8">
+<h1>Lecture 11 Feb 8<a class="headerlink" href="#lecture-11-feb-8" title="Permalink to this heading">#</a></h1>
+<section id="d-harmonic-oscillator">
+<h2>3D Harmonic Oscillator<a class="headerlink" href="#d-harmonic-oscillator" title="Permalink to this heading">#</a></h2>
+<p>The 3D harmonic oscillator refers to a particle moving in a potential <span class="math notranslate nohighlight">\(V(r) = (1/2) m\omega^2 r^2\)</span>, i.e. it experiences a force always directed towards the origin and proportional to the distance to the origin.</p>
+<p><strong>Solution in Cartesian coordinates</strong>. The simplest way to solve this is to recognize that we can split the Hamiltonian into three separate 1D harmonic oscillators if we work in Cartesian coordinates:</p>
+<div class="math notranslate nohighlight">
+\[\hat{H} = {\hat{p_x}^2+\hat{p_y}^2+\hat{p_z}^2\over 2m} + {1\over 2}m\omega^2 (\hat{x}^2+\hat{y}^2+\hat{z}^2)\]</div>
+<div class="math notranslate nohighlight">
+\[= {\hat{p_x}^2\over 2m} + {1\over 2}m\omega^2\hat{x}^2 + {\hat{p_y}^2\over 2m} + {1\over 2}m\omega^2\hat{y}^2 + {\hat{p_z}^2\over 2m} + {1\over 2}m\omega^2\hat{z}^2.\]</div>
+<p>We can write the stationary states as <span class="math notranslate nohighlight">\(\ket{n_x, n_y, n_z}=\ket{n_x}\ket{n_y}\ket{n_z}\)</span>, i.e. a separable solution <span class="math notranslate nohighlight">\(\psi(x,y,z)=X(x)Y(y)Z(z)\)</span> which will have an energy</p>
+<div class="math notranslate nohighlight">
+\[E = \hbar\omega\left(n_x + n_y + n_z+{3\over 2}\right) = \hbar\omega\left(n+{3\over 2}\right)\]</div>
+<p>for <span class="math notranslate nohighlight">\(n_x,n_y,n_z,n=0,1,2,\dots\)</span>. The ground state has energy <span class="math notranslate nohighlight">\((3/2)\hbar\omega\)</span> with <span class="math notranslate nohighlight">\(n_x=n_y=n_z=0\)</span>. The first excited state involves increasing one of the <span class="math notranslate nohighlight">\(n_i\)</span>’s to 1, with three possible ways to do it. The second excited state has either two <span class="math notranslate nohighlight">\(n_i\)</span>’s equal to 1 or one of the <span class="math notranslate nohighlight">\(n_i\)</span>’s equal to 2, with 6 possible states, etc.</p>
+<p><strong>Spherical coordinates</strong>. Now consider solving this problem in spherical coordinates. From the rotational symmetry of the Hamiltonian, we can write the stationary states as <span class="math notranslate nohighlight">\(\ket{E,\ell}\ket{\ell,m}\)</span>, ie. the angular part is given by the angular momentum eigenstates. The radial part then satisfies</p>
+<div class="math notranslate nohighlight">
+\[\hat{H}_\ell \ket{E,\ell} = \left[{\hat{p}_r^2\over 2m} + {\ell(\ell+1)\hbar^2\over 2m \hat{r}^2} + {1\over 2}m\omega^2\hat{r}^2\right]\ket{E,\ell} = E\ket{E,\ell}\]</div>
+<p>for energy <span class="math notranslate nohighlight">\(E\)</span>. Here, we write the radial part of the kinetic energy with a radial momentum operator <span class="math notranslate nohighlight">\(\hat{p}_r\)</span>. In position representation, this is</p>
+<div class="math notranslate nohighlight">
+\[\hat{p}_r\rightarrow {\hbar\over i} \left({\partial\over \partial r}+{1\over r}\right)\]</div>
+<p>which gives the correct form for the radial part of the Laplacian since</p>
+<div class="math notranslate nohighlight">
+\[\hat{p}_r^2\ket{\Psi}\rightarrow -\hbar^2 \left({\partial\over \partial r}+{1\over r}\right)\left({\partial\over \partial r}+{1\over r}\right)\psi= -\hbar^2 \left({\partial^2\over\partial r^2} +  {2\over r}{\partial\over\partial r}\right)\psi = -\hbar^2 \nabla_r^2\psi\]</div>
+<p>where <span class="math notranslate nohighlight">\(\nabla^2_r\)</span> is the radial part of the Laplacian. This operator is introduced in Townsend section 9.6. Two useful commutation relations that you can prove are</p>
+<div class="math notranslate nohighlight">
+\[[\hat{r},\hat{p}_r]=i\hbar;\hspace{1cm}\left[{1\over\hat{r}},\hat{p}_r\right]=-{i\hbar\over \hat{r}^2}.\]</div>
+<p>We’ll use these later.</p>
+<p><strong>Solution to the radial equation</strong>. One approach is to solve the radial equation</p>
+<div class="math notranslate nohighlight">
+\[\left[-{\hbar^2\over 2m}\nabla_r^2 + {\ell(\ell+1)\hbar^2\over 2m r^2} + {1\over 2}m\omega^2 r^2\right]R(r) = E R(r)\]</div>
+<p>just as we did for the hydrogen atom. You will work through this in HW5. Just as with the hydrogen atom, there is a quantization condition that is needed to truncate the polynomial solution,</p>
+<div class="math notranslate nohighlight">
+\[\boxed{n = 2n_r + \ell}\]</div>
+<p>where <span class="math notranslate nohighlight">\(n\)</span> is the principal quantum number and <span class="math notranslate nohighlight">\(n_r\)</span> is the number of radial nodes. The energy is</p>
+<div class="math notranslate nohighlight">
+\[\boxed{E = \hbar\omega \left(n+{3\over 2}\right) = \hbar\omega \left(2n_r +\ell +{3\over 2}\right)}\]</div>
+<p>There’s an interesting difference from hydrogen, which is that the radial nodes contribute twice as much energy compared to increasing <span class="math notranslate nohighlight">\(\ell\)</span>. So the ground state has <span class="math notranslate nohighlight">\(n_r=0, \ell=0\)</span>, same as hydrogen, but there is only one option for the first excited state: <span class="math notranslate nohighlight">\(n_r=0, \ell=1\)</span>. For the second excited state, there is <span class="math notranslate nohighlight">\(n_r=1, \ell=0\)</span> or <span class="math notranslate nohighlight">\(n_r=0, \ell=2\)</span>. You can check that the number of states at each <span class="math notranslate nohighlight">\(n\)</span> matches what we found in Cartesian coordinates.</p>
+</section>
+<section id="an-operator-approach-to-the-3d-harmonic-oscillator">
+<h2>An operator approach to the 3D harmonic oscillator<a class="headerlink" href="#an-operator-approach-to-the-3d-harmonic-oscillator" title="Permalink to this heading">#</a></h2>
+<p><strong>Operator approach in 1D.</strong> First a reminder about what happens in 1D: we try to complete the square in the Hamiltonian</p>
+<div class="math notranslate nohighlight">
+\[\hat{H} = {\hat{p}^2\over 2m} + {1\over 2}m\omega^2\hat{x}^2\]</div>
+<p>by defining operators</p>
+<div class="math notranslate nohighlight">
+\[\hat{a} = {1\over\sqrt{2m\hbar\omega}} \left(i\hat{p} + m\omega\hat{x}\right); \hspace{1cm} \hat{a}^\dagger = {1\over\sqrt{2m\hbar\omega}} \left(-i\hat{p} + m\omega\hat{x}\right).\]</div>
+<p>It is straightforward to show that</p>
+<div class="math notranslate nohighlight">
+\[\hat{H} = \hbar\omega\left(\hat{a}^\dagger\hat{a} + {1\over 2}\right),\]</div>
+<p>and also that <span class="math notranslate nohighlight">\([\hat{a}, \hat{a}^\dagger]=1\)</span> (you will need to use <span class="math notranslate nohighlight">\([\hat{x},\hat{p}]=i\hbar\)</span>).</p>
+<p>Then we can investigate the effect of <span class="math notranslate nohighlight">\(\hat{a}^\dagger\)</span> and <span class="math notranslate nohighlight">\(\hat{a}\)</span> on the eigenstates of <span class="math notranslate nohighlight">\(\hat{H}\)</span>, or equivalently the number operator <span class="math notranslate nohighlight">\(\hat{N}=\hat{a}^\dagger\hat{a}\)</span>. First, the commutator between <span class="math notranslate nohighlight">\(\hat{a}\)</span> and <span class="math notranslate nohighlight">\(\hat{N}\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[[\hat{a},\hat{N}] = \hat{a}\hat{a}^\dagger\hat{a} - \hat{a}^\dagger\hat{a}\hat{a} = [\hat{a},\hat{a}^\dagger]\hat{a} = \hat{a}.\]</div>
+<p>Write the eigenstates of <span class="math notranslate nohighlight">\(\hat{N}\)</span> as <span class="math notranslate nohighlight">\(\ket{n}\)</span> with corresponding eigenvalues <span class="math notranslate nohighlight">\(n\)</span>. Then</p>
+<div class="math notranslate nohighlight">
+\[\hat{a}n\ket{n} = \hat{a}\hat{N}\ket{n} = \hat{N}\hat{a}\ket{n} + \hat{a}\ket{n}\Rightarrow \hat{N}\left(\hat{a}\ket{n}\right)=(n-1)\left(\hat{a}\ket{n}\right)\]</div>
+<p>so we see that <span class="math notranslate nohighlight">\(\hat{a}\ket{n}\)</span> must be <span class="math notranslate nohighlight">\(\propto \ket{n-1}\)</span>, i.e. <span class="math notranslate nohighlight">\(\hat{a}\)</span> is a lowering operator. A similar argument shows that <span class="math notranslate nohighlight">\(\hat{a}^\dagger\)</span> is a raising operator, since <span class="math notranslate nohighlight">\([\hat{a}^\dagger,\hat{N}]=-\hat{a}^\dagger\)</span>. The lowest value of <span class="math notranslate nohighlight">\(n\)</span> is zero since the fact that the ground state is annihilated by the lower operator <span class="math notranslate nohighlight">\(\hat{a}\ket{0}=0\)</span> is then consistent with <span class="math notranslate nohighlight">\(\hat{N}\ket{0} = 0\)</span>. We see then that the states have integer values of <span class="math notranslate nohighlight">\(n=0,1,2,\dots\)</span>, generated by successively applying <span class="math notranslate nohighlight">\(\hat{a}^\dagger\)</span> to the ground state to generate the excited states. The normalizations of the raising and lowering operators are such that <span class="math notranslate nohighlight">\(\hat{a}\ket{n}=\sqrt{n}\ket{n-1}\)</span> and <span class="math notranslate nohighlight">\(\hat{a}^\dagger\ket{n} = \sqrt{n+1}\ket{n+1}\)</span>.</p>
+<p><strong>Operator approach in 3D</strong>. Let’s see if we can use a similar approach in 3D. Let’s find operators that can complete the square in the radial Hamiltonian</p>
+<div class="math notranslate nohighlight">
+\[\hat{H}_\ell = \left[{\hat{p}_r^2\over 2m} + {\ell(\ell+1)\hbar^2\over 2m \hat{r}^2} + {1\over 2}m\omega^2\hat{r}^2\right].\]</div>
+<p>Let’s try</p>
+<div class="math notranslate nohighlight">
+\[\hat{a}_\ell = {1\over \sqrt{2m\hbar\omega}} \left(i\hat{p_r} - {(\ell+1)\hbar\over \hat{r}} + m\omega\hat{r}\right).\]</div>
+<p>Then</p>
+<div class="math notranslate nohighlight">
+\[\hbar\omega \hat{a}_\ell^\dagger\hat{a}_\ell = \hat{H}_\ell + {i\omega\over 2}[\hat{r},\hat{p}_r] - i{(\ell+1)\hbar\over 2m}\left[{1\over \hat{r}}, \hat{p}_r\right] + {(\ell+1)\hbar^2\over 2mr^2}-(\ell+1)\hbar\omega\]</div>
+<p>or</p>
+<div class="math notranslate nohighlight">
+\[\hat{H}_\ell  = \hbar\omega\left(\hat{a}^\dagger_\ell \hat{a}_\ell + \ell + {3\over 2} \right).\]</div>
+<p>A natural next step is to interpret <span class="math notranslate nohighlight">\(\hat{a}_\ell^\dagger\hat{a}_\ell=\hat{N}_\ell\)</span> as a number operator that counts the radial excitations. If we label the eigenstates as <span class="math notranslate nohighlight">\(\ket{k,\ell}\)</span>, where <span class="math notranslate nohighlight">\(\hat{N}_\ell\ket{k,\ell} = k\ket{k,\ell}\)</span>, then we can investigate the effect of <span class="math notranslate nohighlight">\(\hat{a}_\ell\)</span> on <span class="math notranslate nohighlight">\(\ket{k,\ell}\)</span>. Just as in 1D, we will need the commutator <span class="math notranslate nohighlight">\([\hat{a}_\ell^\dagger, \hat{a}_\ell]\)</span>. Using the definition above gives</p>
+<div class="math notranslate nohighlight">
+\[[\hat{a}_\ell, \hat{a}_\ell^\dagger] = 1 + {\hbar(\ell+1)\over m\omega r^2} = 1 + {\hat{H}_{\ell+1}-\hat{H}_\ell\over\hbar\omega} = 2 + \hat{N}_{\ell+1} - \hat{N}_\ell,\]</div>
+<p>so that</p>
+<div class="math notranslate nohighlight">
+\[[\hat{a}_\ell, \hat{N}_\ell] = \hat{a}_\ell\hat{a}_\ell^\dagger\hat{a}_\ell - \hat{a}_\ell^\dagger\hat{a}_\ell\hat{a}_\ell = [\hat{a}_\ell,\hat{a}_\ell^\dagger]\hat{a}_\ell = (2 + \hat{N}_{\ell+1} - \hat{N}_\ell)\hat{a}_\ell\]</div>
+<div class="math notranslate nohighlight">
+\[\Rightarrow \hat{a}_\ell \hat{N}_\ell = 2\hat{a}_\ell + \hat{N}_{\ell+1}\hat{a}_\ell.\]</div>
+<p>Now apply this to the state <span class="math notranslate nohighlight">\(\ket{k, \ell}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\hat{a}_\ell \hat{N}_\ell\ket{k, \ell} = \hat{a}_\ell k\ket{k, \ell} = 2\hat{a}_\ell\ket{k, \ell} + \hat{N}_{\ell+1}\hat{a}_\ell\ket{k, \ell}\]</div>
+<div class="math notranslate nohighlight">
+\[\Rightarrow \hat{N}_{\ell+1} \left(\hat{a}_\ell\ket{k, \ell}\right) = (k-2)\left(\hat{a}_\ell\ket{k, \ell}\right)\]</div>
+<p>which tells us that</p>
+<div class="math notranslate nohighlight">
+\[\hat{a}_\ell\ket{k, \ell} \propto \ket{k-2, \ell+1}\]</div>
+<p>an eigenstate of <span class="math notranslate nohighlight">\(\hat{N}_{\ell+1}\)</span> with eigenvalue <span class="math notranslate nohighlight">\(k-2\)</span>. So we see that <span class="math notranslate nohighlight">\(\hat{a}_\ell\)</span> lowers the radial quantum number by 2 while simultaneously increasing <span class="math notranslate nohighlight">\(\ell\)</span> by 1. You can show in a similar way that   <span class="math notranslate nohighlight">\(\hat{a}_\ell^\dagger\)</span> increases the radial quantum number by 2 while decreasing <span class="math notranslate nohighlight">\(\ell\)</span> by 1. Starting at the ground state with <span class="math notranslate nohighlight">\(k=0\)</span> we can apply <span class="math notranslate nohighlight">\(\hat{a}^\dagger\)</span> to add a radial excitation (while also decreasing <span class="math notranslate nohighlight">\(\ell\)</span> by 1), which will increase <span class="math notranslate nohighlight">\(k\)</span> by 2. We can therefore see that the energies will be <span class="math notranslate nohighlight">\(E = \hbar\omega \left(2n_r +\ell +{3/2}\right)\)</span> with <span class="math notranslate nohighlight">\(n_r=0,1,2,\dots\)</span> and <span class="math notranslate nohighlight">\(\ell=0,1,2,\dots\)</span>, in agreement with the solution above from the radial equation.</p>
+</section>
 <section id="further-reading">
 <h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
@@ -445,20 +515,20 @@ document.write(`
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="lecture8.html"
+       href="lecture10.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Lecture 8 Jan 30</p>
+        <p class="prev-next-title">Lecture 10 Feb 6</p>
       </div>
     </a>
     <a class="right-next"
-       href="lecture10.html"
+       href="hw1.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Lecture 10 Feb 6</p>
+        <p class="prev-next-title">Homework 1</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -477,6 +547,8 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-harmonic-oscillator">3D Harmonic Oscillator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-operator-approach-to-the-3d-harmonic-oscillator">An operator approach to the 3D harmonic oscillator</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a></li>
 </ul>
   </nav></div>
