@@ -23,6 +23,6 @@ where we have written $\psi(r,\theta,\phi) = r^{-1} u(r) Y_{\ell m}$.
 
 $$u = \rho^{\ell+1} e^{-\rho^2/2} f(\rho).$$
 
-(c) Develop a power law solution for $u(\rho)$, derive the recurrence relation for the polynomial coefficients, and explain how it results in quantization of the energy levels of the oscillator.
+(c) Develop a power law solution for $f(\rho)$, derive the recurrence relation for the polynomial coefficients, and explain how it results in quantization of the energy levels of the oscillator.
 
 3. Townsend 10.17 (2D harmonic oscillator with ladder operators)
