@@ -163,6 +163,22 @@ Consider the state with $\ell = n-1$, i.e. with maximal angular momentum for a g
 
 ```
 
+```{dropdown} Solution
+
+When $\ell$ takes its maximum value $n-1$, we maximize the nodes in the angular direction and there are no nodes in the radial direction. This corresponds to the Laguerre polynomial that is just a constant, so the wavefunction is then 
+
+$$R(r)\propto \rho^\ell e^{-\rho/2}  \propto r^{n-1} e^{-Zr/na_0}.$$
+
+Then we can maximize the probability density
+
+$${d\over dr} r^2 |R|^2 \propto \left(2n-{2Zr\over na_0}\right) r^{2n-1}e^{-2Zr/na_0} = 0$$
+
+$$\Rightarrow r = {n^2a_0\over Z}$$
+
+The effective radius of the atom grows quadratically as we move to higher electron energy  $n$. 
+
+```
+
 
 
 
