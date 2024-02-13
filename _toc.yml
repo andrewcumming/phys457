@@ -23,6 +23,7 @@ parts:
         - file: lecture9
         - file: lecture10
         - file: lecture11
+        - file: lecture12
     - caption: Homework
       chapters:
         - file: hw1
@@ -30,5 +31,6 @@ parts:
         - file: hw3
         - file: hw4
         - file: hw5
+        - file: hw6
         - file: homework_solutions
         
