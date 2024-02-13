@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Lecture 8 Jan 30 &#8212; PHYS 457 Quantum Physics 2</title>
+    <title>Lecture 12 Feb 13 &#8212; PHYS 457 Quantum Physics 2</title>
   
   
   
@@ -63,11 +63,11 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'lecture8';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lecture12';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Lecture 9 Feb 1" href="lecture9.html" />
-    <link rel="prev" title="Lecture 7 Jan 25" href="lecture7.html" />
+    <link rel="next" title="Homework 1" href="hw1.html" />
+    <link rel="prev" title="Lecture 11 Feb 8" href="lecture11.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -158,11 +158,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="lecture5.html">Lecture 5 Jan 18</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture6.html">Lecture 6 Jan 23</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture7.html">Lecture 7 Jan 25</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 8 Jan 30</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture8.html">Lecture 8 Jan 30</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture9.html">Lecture 9 Feb 1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture10.html">Lecture 10 Feb 6</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture11.html">Lecture 11 Feb 8</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lecture12.html">Lecture 12 Feb 13</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 12 Feb 13</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Homework</span></p>
 <ul class="nav bd-sidenav">
@@ -244,7 +244,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/andrewcumming/phys457/issues/new?title=Issue%20on%20page%20%2Flecture8.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/andrewcumming/phys457/issues/new?title=Issue%20on%20page%20%2Flecture12.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -274,7 +274,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/lecture8.md" target="_blank"
+      <li><a href="_sources/lecture12.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -356,7 +356,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Lecture 8 Jan 30</h1>
+    <h1>Lecture 12 Feb 13</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -366,8 +366,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diatomic-molecules">Diatomic molecules</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#schrodinger-equation-for-the-radial-part-of-the-hydrogen-atom-wavefunction">Schrödinger equation for the radial part of the hydrogen atom wavefunction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finite-spherical-well">Finite spherical well</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a></li>
 </ul>
             </nav>
@@ -380,67 +379,74 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="lecture-8-jan-30">
-<h1>Lecture 8 Jan 30<a class="headerlink" href="#lecture-8-jan-30" title="Permalink to this heading">#</a></h1>
-<section id="diatomic-molecules">
-<h2>Diatomic molecules<a class="headerlink" href="#diatomic-molecules" title="Permalink to this heading">#</a></h2>
-<p>The rotational and vibrational energy levels of diatomic molecules are discussed in Townsend 9.7. It’s interesting to do some back of the envelope type estimates to see how the vibrational and rotational energies relate to the atomic binding energy of 13.6 eV that we saw for hydrogen.</p>
-<p><strong>Rotation</strong>. First consider rotation. If the reduced mass of the molecule is <span class="math notranslate nohighlight">\(\mu\)</span> and the separation of the two atoms is <span class="math notranslate nohighlight">\(a\)</span>, then we have</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="lecture-12-feb-13">
+<h1>Lecture 12 Feb 13<a class="headerlink" href="#lecture-12-feb-13" title="Permalink to this heading">#</a></h1>
+<p>The first thing today is to finish off the discussion of the 3D harmonic oscillator from last time. Then we’ll move onto two final examples of central potentials: finite and infinite spherical wells which can be used as starting models for the energy levels of neutrons and protons in nuclei.</p>
+<p><strong>Effect of raising operator</strong></p>
+<p>Here is the proof that we discussed in class showing how the raising operator works:</p>
 <div class="math notranslate nohighlight">
-\[E_\mathrm{rot}\approx {\ell(\ell+1) \hbar^2\over 2\mu a^2}.\]</div>
-<p>We’d expect the separation between the two nuclei in a molecule to be of order the Bohr radius, <span class="math notranslate nohighlight">\(a = \alpha^{-1} \hbar/m_ec\)</span>, so we can write</p>
+\[[\hat{a}^\dagger_\ell, \hat{N}_\ell] = \hat{a}^\dagger_\ell\hat{a}_\ell^\dagger\hat{a}_\ell - \hat{a}_\ell^\dagger\hat{a}_\ell\hat{a}^\dagger_\ell = -\hat{a}_\ell^\dagger[\hat{a}_\ell,\hat{a}_\ell^\dagger] = -\hat{a}_\ell^\dagger (2 + \hat{N}_{\ell+1} - \hat{N}_\ell)\]</div>
 <div class="math notranslate nohighlight">
-\[E_\mathrm{rot}\approx {\ell(\ell+1) \hbar^2\over 2\mu}{\alpha^2 m_e^2 c^2\over \hbar^2}\approx \ell(\ell+1)\left[{1\over 2} \alpha^2 m_e c^2\right] \left({m_e\over\mu}\right).\]</div>
-<p>You might recognize the energy <span class="math notranslate nohighlight">\((1/2)\alpha^2m_ec^2 = 13.6\ {\rm eV}\)</span> as the <a class="reference external" href="https://andrewcumming.github.io/phys457/lecture4.html#back-of-the-envelope-hydrogen-atom">binding energy of hydrogen</a>. So we see that the spacing between rotational levels is smaller than this by a factor <span class="math notranslate nohighlight">\(m_e/\mu\sim m_e/m_p\sim 1/2000\)</span>, corresponding to energies <span class="math notranslate nohighlight">\(\sim 7\ {\rm meV}\)</span>. This corresponds to photons in the microwave range.</p>
-<p><strong>Vibrations</strong>. Since Coulomb forces determine the equilibrium separation of the nuclei in the molecule, we’d expect the restoring force resulting from a small perturbation in the spacing <span class="math notranslate nohighlight">\(a\rightarrow a+\Delta a\)</span> to be</p>
+\[\Rightarrow \hat{N}_\ell \hat{a}_\ell^\dagger = 2\hat{a}_\ell^\dagger + \hat{a}_\ell^\dagger\hat{N}_{\ell+1}.\]</div>
+<p>Now apply this to the state <span class="math notranslate nohighlight">\(\ket{k, \ell+1}\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[\mathrm{restoring\ force}\sim -{e^2\over 4\pi \epsilon_0 a^2}{\Delta a\over a}\]</div>
-<p>giving an equation of motion</p>
+\[ \hat{N}_\ell\hat{a}_\ell^\dagger\ket{k, \ell+1} = 2\hat{a}_\ell^\dagger\ket{k, \ell+1} + \hat{a}_\ell^\dagger\hat{N}_{\ell+1}\ket{k, \ell+1} = 2\hat{a}_\ell^\dagger\ket{k, \ell+1} + \hat{a}_\ell^\dagger k\ket{k, \ell+1}\]</div>
 <div class="math notranslate nohighlight">
-\[\mu{d^2\over dt^2}\Delta a \sim -{e^2\over 4\pi \epsilon_0 a^3}\Delta a\]</div>
-<p>and therefore an oscillation frequency given by</p>
+\[\Rightarrow \hat{N}_{\ell} \left(\hat{a}_\ell^\dagger\ket{k, \ell+1}\right) = (k+2)\left(\hat{a}_\ell^\dagger\ket{k, \ell+1}\right)\]</div>
+<p>which tells us that</p>
 <div class="math notranslate nohighlight">
-\[(\hbar\omega)^2 \approx {\hbar^2e^2\over 4\pi \epsilon_0 \mu a^3} \approx  {\alpha\hbar^3c\over \mu a^3}\approx {\alpha\hbar^3c\over\mu} {\alpha^3 (m_e c)^3\over \hbar^3}\approx 
-\alpha^4 m_e^2 c^4 {m_e\over \mu}\]</div>
-<p>giving</p>
+\[\boxed{\hat{a}^\dagger_\ell\ket{k, \ell+1} \propto \ket{k+2, \ell}}\]</div>
+<p>From last time we also had</p>
 <div class="math notranslate nohighlight">
-\[E_\mathrm{vib}\approx \left[\alpha^2 m_e c^2\right] \left({m_e\over\mu}\right)^{1/2}.\]</div>
-<p>We see that vibrational levels lie in between the atomic and rotational energy scales, with <span class="math notranslate nohighlight">\(\hbar\omega\sim 27\ \mathrm{eV} /(2000)^{1/2}\sim 0.6\ \mathrm{eV}\)</span>. In terms of photon energy, these transitions involve infrared photons.</p>
-<p>Townsend shows some examples of photon spectra showing the discrete energies involved in transitions between these different modes of vibration and rotation. We’ll come back to the interaction of radiation and atoms and molecules later in the course.</p>
-</section>
-<section id="schrodinger-equation-for-the-radial-part-of-the-hydrogen-atom-wavefunction">
-<h2>Schrödinger equation for the radial part of the hydrogen atom wavefunction<a class="headerlink" href="#schrodinger-equation-for-the-radial-part-of-the-hydrogen-atom-wavefunction" title="Permalink to this heading">#</a></h2>
-<p><a class="reference external" href="https://andrewcumming.github.io/phys457/lecture7.html#the-radial-part-of-the-two-body-problem">Last time</a>, we ended up with the equation for the radial part of the wavefunction <span class="math notranslate nohighlight">\(R(r)\)</span> written in terms of the function <span class="math notranslate nohighlight">\(u(r) = rR(r)\)</span>, which obeys</p>
+\[\boxed{\hat{a}_\ell\ket{k, \ell} \propto \ket{k-2, \ell+1}}\]</div>
+<p>Apply these one at a time you can show that <span class="math notranslate nohighlight">\(\hat{a}_\ell^\dagger \hat{a}_\ell \ket{k,\ell}\propto \ket{k,\ell}\)</span> as it should since <span class="math notranslate nohighlight">\(\ket{k,\ell}\)</span> is an eigenstate of the number operator.</p>
+<section id="finite-spherical-well">
+<h2>Finite spherical well<a class="headerlink" href="#finite-spherical-well" title="Permalink to this heading">#</a></h2>
+<p>The potentials we’ve looked at so far, <span class="math notranslate nohighlight">\(1/r\)</span> and <span class="math notranslate nohighlight">\(r^2\)</span> have the property that the energies of the stationary states are independent of <span class="math notranslate nohighlight">\(\ell\)</span>. It makes sense that the energy would be independent of <span class="math notranslate nohighlight">\(m\)</span> because of the rotational symmetry - the direction of the angular momentum shouldn’t affect the energy of the state. But these potentials also have the property that the energy is independent of the magnitude of the angular momentum.
+In general, this is not the case, as we will now see for the problem of a spherical well.</p>
+<p>The spherical well is the potential</p>
 <div class="math notranslate nohighlight">
-\[\left[- {\hbar^2\over 2\mu}{d^2\over d r^2} +  {\ell(\ell+1)\hbar^2\over 2\mu r^2} + V(r)\right]u(r) = E u(r).\]</div>
-<p>The problem has reduced to solving the 1D Schrödinger equation! One important difference from the standard 1D problem is that the coordinate <span class="math notranslate nohighlight">\(r\)</span> runs from 0 to <span class="math notranslate nohighlight">\(\infty\)</span> rather than <span class="math notranslate nohighlight">\(\pm \infty\)</span>.</p>
-<p>We can get a feeling for the behaviour of <span class="math notranslate nohighlight">\(u(r)\)</span> by looking at the limits as <span class="math notranslate nohighlight">\(r\rightarrow 0\)</span> and as <span class="math notranslate nohighlight">\(r\rightarrow \infty\)</span>.</p>
-<p>For <span class="math notranslate nohighlight">\(r\rightarrow 0\)</span>, the centrifugal term dominates the terms containing <span class="math notranslate nohighlight">\(V(r)\)</span> and <span class="math notranslate nohighlight">\(E\)</span> which means that the second derivative has to balance the centrifugal term in order for the equation to be satisfied:</p>
+\[\begin{split}V(r) = \begin{cases}
+-V_0 &amp; \text{$r\leq a$}\\
+0 &amp; \text{$r&gt;a$}
+\end{cases}\end{split}\]</div>
+<p>which is the spherically-symmetric 3D equivalent to the square well in 1D. Here <span class="math notranslate nohighlight">\(a\)</span> is the size of the well and <span class="math notranslate nohighlight">\(V_0\)</span> the depth.</p>
+<p>One application of this potential is as a first model of the atomic nucleus. Consider first the deuteron which is a bound state of a neutron and proton (ie. the deuteron is the nucleus of deuterium, heavy hydrogen). The binding energy of deuterium is <span class="math notranslate nohighlight">\(\approx -2.2\ \mathrm{MeV}\)</span>, so it is quite weakly bound. This nucleus plays an important role in nucleosynthesis in stars, being the product of the hydrogen burning <span class="math notranslate nohighlight">\(p+p\rightarrow d + e^+ + \nu_e\)</span> reaction.</p>
+<p>Unlike in 1D, where the finite square well always has a bound state (see HW 2 Q1), the spherical well does not. We can see this by considering the boundary condition at <span class="math notranslate nohighlight">\(r=0\)</span>. The radial wavefunction <span class="math notranslate nohighlight">\(u(r) = rR(r)\)</span> satisfies</p>
 <div class="math notranslate nohighlight">
-\[u^{\prime\prime} = {\ell(\ell+1)u\over r^2}.\]</div>
-<p>If we try a power law solution <span class="math notranslate nohighlight">\(u\propto r^n\)</span>, we get</p>
+\[\left[{-\hbar^2\over 2\mu}{d^2\over d r^2} + {\ell(\ell+1)\hbar^2\over 2\mu r^2} + V(r)\right]u = Eu,\]</div>
+<p>with a boundary condition <span class="math notranslate nohighlight">\(u\propto r^{\ell+1}\)</span> as <span class="math notranslate nohighlight">\(r\rightarrow 0\)</span> so that <span class="math notranslate nohighlight">\(u=0\)</span> at <span class="math notranslate nohighlight">\(r=0\)</span>. Inside the well, <span class="math notranslate nohighlight">\(u\)</span> has to therefore increase from <span class="math notranslate nohighlight">\(u=0\)</span> at the origin to some maximum value before decaying in the classically-forbidden region <span class="math notranslate nohighlight">\(r&gt;a\)</span>. This gives a curvature <span class="math notranslate nohighlight">\(\sim 1/a\)</span> to the wavefunction, and therefore a minimum energy <span class="math notranslate nohighlight">\(\sim \hbar^2/2ma^2\)</span>. If this exceeds the depth of the well <span class="math notranslate nohighlight">\(V_0\)</span>, then a bound state is not possible. The combination <span class="math notranslate nohighlight">\(a^2V_0\)</span> for the deuteron is just large enough to allow a bound state – the depth of the well is <span class="math notranslate nohighlight">\(V_0\approx 35 \ \mathrm{MeV}\)</span>, much larger than the binding energy, so the bound state lies just below the continuum.</p>
+<p>We can solve for the ground state by first setting <span class="math notranslate nohighlight">\(\ell=0\)</span> since we expect the ground state will have zero angular momentum. Then we can write down the solution in each region <span class="math notranslate nohighlight">\(r&lt;a\)</span> and <span class="math notranslate nohighlight">\(r&gt;a\)</span> and use a matching condition to match the two solutions at the boundary:</p>
+<p><strong>Outer solution</strong>. For <span class="math notranslate nohighlight">\(r&gt;a\)</span> we have</p>
 <div class="math notranslate nohighlight">
-\[n(n-1) = \ell(\ell+1)\Rightarrow n=-\ell, \ell+1.\]</div>
-<p>The solution <span class="math notranslate nohighlight">\(u\propto r^{-\ell}\)</span> diverges at the origin [for <span class="math notranslate nohighlight">\(\ell=0\)</span>, <span class="math notranslate nohighlight">\(u\)</span> is constant but then <span class="math notranslate nohighlight">\(R=u/r\)</span> diverges], so we need the solution</p>
+\[-{\hbar^2\over 2\mu}{d^2u\over d r^2} = Eu\]</div>
+<p>which can be written</p>
 <div class="math notranslate nohighlight">
-\[\boxed{u\propto r^{\ell +1}\hspace{1cm} r\rightarrow 0}\]</div>
-<p>For <span class="math notranslate nohighlight">\(r\rightarrow \infty\)</span>, the second derivative is balanced by the constant term involving <span class="math notranslate nohighlight">\(E\)</span>, ie.</p>
+\[{d^2u\over d r^2} = q^2 u\]</div>
 <div class="math notranslate nohighlight">
-\[u^{\prime\prime} = -{2\mu E\over \hbar^2} u.\]</div>
-<p>We are looking for bound states which have <span class="math notranslate nohighlight">\(E&lt;0\)</span>, so it is useful to write</p>
+\[\Rightarrow \boxed{u = C e^{-qr}}\]</div>
+<p>where</p>
 <div class="math notranslate nohighlight">
-\[u^{\prime\prime} = +\left({2\mu (-E)\over \hbar^2}\right) u\]</div>
-<p>which gives</p>
+\[q = \sqrt{2\mu(-E)\over \hbar^2}\]</div>
+<p>and we’ve taken only the exponentially decreasing solution because we need <span class="math notranslate nohighlight">\(u\)</span> to remain finite as <span class="math notranslate nohighlight">\(r\rightarrow\infty\)</span>. As expected, the solution decays in the classically-forbidden region.</p>
+<p><strong>Inner solution</strong>. For <span class="math notranslate nohighlight">\(r&lt;a\)</span> we have</p>
 <div class="math notranslate nohighlight">
-\[\boxed{u\propto \exp\left(-{\sqrt{2\mu(-E)} r\over \hbar} \right)\hspace{1cm} r\rightarrow \infty}\]</div>
-<p>(There’s also a growing exponential solution, but we discard that one because <span class="math notranslate nohighlight">\(u\)</span> would then diverge at large <span class="math notranslate nohighlight">\(r\)</span>).</p>
-<p>With these limits in hand, we can then sketch possible solutions for <span class="math notranslate nohighlight">\(u(r)\)</span> and learn something about the energy levels of the atom. We’ll do this next time.</p>
+\[-{\hbar^2\over 2\mu}{d^2u\over d r^2} = (V_0+E)u\]</div>
+<p>which we can write</p>
+<div class="math notranslate nohighlight">
+\[{d^2u\over d r^2} = -k_0^2 u\]</div>
+<div class="math notranslate nohighlight">
+\[\Rightarrow \boxed{u = A \sin k_0 r}\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[k_0 = \sqrt{2\mu(V_0+E)\over \hbar^2}.\]</div>
+<p>We include the <span class="math notranslate nohighlight">\(\sin\)</span> part of the solution but not the <span class="math notranslate nohighlight">\(\cos\)</span> because we need <span class="math notranslate nohighlight">\(u\)</span> to vanish at <span class="math notranslate nohighlight">\(r=0\)</span>. The solution oscillates in the classically-allowed region.</p>
+<p>We can match the two solutions at <span class="math notranslate nohighlight">\(r=a\)</span> by enforcing continuity of <span class="math notranslate nohighlight">\(u\)</span> and its derivative. We’ll do this next time.</p>
 </section>
 <section id="further-reading">
 <h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Townsend 10.1 on the radial wavefunction</p></li>
-<li><p>Townsend 9.7 on diatomic molecules</p></li>
+<li><p>Townsend section 10.2.</p></li>
 </ul>
 </section>
 </section>
@@ -477,20 +483,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="lecture7.html"
+       href="lecture11.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Lecture 7 Jan 25</p>
+        <p class="prev-next-title">Lecture 11 Feb 8</p>
       </div>
     </a>
     <a class="right-next"
-       href="lecture9.html"
+       href="hw1.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Lecture 9 Feb 1</p>
+        <p class="prev-next-title">Homework 1</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -512,8 +518,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diatomic-molecules">Diatomic molecules</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#schrodinger-equation-for-the-radial-part-of-the-hydrogen-atom-wavefunction">Schrödinger equation for the radial part of the hydrogen atom wavefunction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finite-spherical-well">Finite spherical well</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a></li>
 </ul>
   </nav></div>
