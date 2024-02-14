@@ -24,4 +24,5 @@
     + [Laguerre polynomials](https://andrewcumming.github.io/phys457/lecture10.html#how-this-works-mathematically-laguerre-polynomials)
 - Other examples of central potentials
     + [3D harmonic oscillator](https://andrewcumming.github.io/phys457/lecture11.html#d-harmonic-oscillator) including with [operator methods](https://andrewcumming.github.io/phys457/lecture11.html#an-operator-approach-to-the-3d-harmonic-oscillator)
+    + [Finite spherical well](https://andrewcumming.github.io/phys457/lecture12.html#finite-spherical-well)
     
