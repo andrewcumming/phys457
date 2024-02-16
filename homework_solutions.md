@@ -6,3 +6,5 @@
 
 - [Homework 3 solutions](https://github.com/andrewcumming/phys457/blob/main/hw3_solutions.pdf) (TA: Clément Fortin)
 
+- [Homework 4 solutions](https://github.com/andrewcumming/phys457/blob/main/hw4_solutions.pdf) (TA: Renée Goodman)
+
