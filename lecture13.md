@@ -55,7 +55,7 @@ To implement the boundary condition $R=0$ at $r=a$, we need to choose $k$ and th
  
 $$E_{\ell=0} = {\hbar^2\over 2\mu a^2} (n_r\pi)^2.$$
 
-For other values of $\ell$, you will need to look up or calculate the zeros of the Bessel functions (e.g. in Mathematica you can do `FindRoot[SphericalBesselJ[0, x], {x, 2}]` where you give an initial guess $x=2$ for the location of the root, this will return $\pi$ which is the first root of $j_0$). You can find a useful table in Townsend giving the first few zeros for $\ell$ up to 3. Figure 10.12 shows the energy levels as a funciton of $n_r$ and $\ell$. Unlike the H atom or harmonic oscillator, **there is no accidental degeneracy**: it is not possible to characterize the energy by a single principle quantum number. Instead, the energy depends on both $n_r$ and $\ell$.
+For other values of $\ell$, you will need to look up or calculate the zeros of the Bessel functions (e.g. in Mathematica you can do `FindRoot[SphericalBesselJ[0, x], {x, 2}]` where we give an initial guess $x=2$ for the location of the root, this will return $\pi$ which is the first root of $j_0$). You can find a useful table in Townsend giving the first few zeros for $\ell$ up to 3. Figure 10.12 shows the energy levels as a funciton of $n_r$ and $\ell$. Unlike the H atom or harmonic oscillator, **there is no accidental degeneracy**: it is not possible to characterize the energy by a single principle quantum number. Instead, the energy depends on both $n_r$ and $\ell$.
 
 
  
