@@ -2,7 +2,7 @@
 
 ## The Stark effect in hydrogen and perturbation theory
 
-The Stark effect is the shift in the energy levels of hydrogen when an electric field is applied to the atom. If the electric field is of strength $E$ and points upwards in the $z$-direction, the potential in which the electron moves has an additional term $V=eEz$. You can check the sign here by calculating the force on the electron $-\partial V/\partial dz=-eE$ which is downwards as expected.
+The Stark effect is the shift in the energy levels of hydrogen when an electric field is applied to the atom. If the electric field is of strength $E$ and points upwards in the $z$-direction, the potential in which the electron moves has an additional term $V=eEz$. You can check the sign here by calculating the force on the electron $-\partial V/\partial z=-eE$ which is downwards as expected.
 
 The Hamiltonian therefore has an additional term
 
@@ -100,8 +100,7 @@ $$E_1^{(2)} = \left(eE\right)^2 \sum_{n\neq 1, \ell, m} {|\braket{n,\ell,m|\hat{
 
 where the sum is over all the excited states. Note that the energy correction is quadratic in the electric field, i.e.~$\propto E^2$. This is known as the **quadratic Stark effect**. Physically, what's happening is that the electric field polarizes the ground state, so it develops a dipole moment $\propto E$. The energy of this dipole $\mathbf{p}$ in the electric field $\mathbf{E}$ is $\propto \mathbf{p}\cdot\mathbf{E}\propto E^2$. 
 
-The sum can be evaluated to give the size of the energy shift. Note that because the sum is over all the excited states, there is no problem with the denominator $E_1^{(0)}-E_n^{(0)}$ vanishing. If we instead look at the $n=2$ excited states where there is degeneracy and the denominator does indeed vanish! We'll discuss how to handle that case next time. 
-
+The sum can be evaluated to give the size of the energy shift. Note that because there is only one state with $n=1$, the sum is over all the excited states with $n>2$. There is then no problem with the denominator $E_1^{(0)}-E_n^{(0)}$ vanishing. If we instead look at the $n=2$ excited states where there is degeneracy, the denominator will vanish for some terms in the sum! We'll discuss how to handle that case next time.
 
 ## Further reading
 
