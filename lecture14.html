@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Lecture 2 Jan 9 &#8212; PHYS 457 Quantum Physics 2</title>
+    <title>Lecture 14 Feb 20 &#8212; PHYS 457 Quantum Physics 2</title>
   
   
   
@@ -64,11 +64,11 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'lecture2';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lecture14';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Lecture 3 Jan 11" href="lecture3.html" />
-    <link rel="prev" title="Lecture 1 Jan 4" href="lecture1.html" />
+    <link rel="next" title="Homework 1" href="hw1.html" />
+    <link rel="prev" title="Lecture 13 Feb 15" href="lecture13.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -163,7 +163,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lecture notes</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="lecture1.html">Lecture 1 Jan 4</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 2 Jan 9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture2.html">Lecture 2 Jan 9</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture3.html">Lecture 3 Jan 11</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture4.html">Lecture 4 Jan 16</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture5.html">Lecture 5 Jan 18</a></li>
@@ -175,7 +175,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="lecture11.html">Lecture 11 Feb 8</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture12.html">Lecture 12 Feb 13</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture13.html">Lecture 13 Feb 15</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lecture14.html">Lecture 14 Feb 20</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 14 Feb 20</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Homework</span></p>
 <ul class="nav bd-sidenav">
@@ -258,7 +258,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/andrewcumming/phys457/issues/new?title=Issue%20on%20page%20%2Flecture2.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/andrewcumming/phys457/issues/new?title=Issue%20on%20page%20%2Flecture14.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -288,7 +288,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/lecture2.md" target="_blank"
+      <li><a href="_sources/lecture14.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -370,7 +370,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Lecture 2 Jan 9</h1>
+    <h1>Lecture 14 Feb 20</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -380,11 +380,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-propagator-for-a-free-particle">The propagator for a free-particle</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivation-of-the-path-integral">Derivation of the path integral</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-continuum-limit">The continuum limit</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-stark-effect-in-hydrogen-and-perturbation-theory">The Stark effect in hydrogen and perturbation theory</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a></li>
 </ul>
             </nav>
@@ -397,135 +393,92 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="lecture-2-jan-9">
-<h1>Lecture 2 Jan 9<a class="headerlink" href="#lecture-2-jan-9" title="Permalink to this heading">#</a></h1>
-<div class="admonition-warm-up-question admonition">
-<p class="admonition-title">Warm-up question</p>
-<p>Does <span class="math notranslate nohighlight">\(\ket{\Psi}\)</span> have units? Does <span class="math notranslate nohighlight">\(\psi(x)\)</span> have units?
-Explain why <span class="math notranslate nohighlight">\(\braket{x|p} = e^{ipx/\hbar}/\sqrt{2\pi \hbar}\)</span> has that normalization.</p>
-</div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Solution<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">You can answer these questions by thinking about the normalization of each. Since we need <span class="math notranslate nohighlight">\(\braket{\Psi|\Psi}=1\)</span>, <span class="math notranslate nohighlight">\(\ket{\Psi}\)</span> is unitless. However, <span class="math notranslate nohighlight">\(\psi(x)=\braket{x|\Psi}\)</span> must satisfy</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="lecture-14-feb-20">
+<h1>Lecture 14 Feb 20<a class="headerlink" href="#lecture-14-feb-20" title="Permalink to this heading">#</a></h1>
+<section id="the-stark-effect-in-hydrogen-and-perturbation-theory">
+<h2>The Stark effect in hydrogen and perturbation theory<a class="headerlink" href="#the-stark-effect-in-hydrogen-and-perturbation-theory" title="Permalink to this heading">#</a></h2>
+<p>The Stark effect is the shift in the energy levels of hydrogen when an electric field is applied to the atom. If the electric field is of strength <span class="math notranslate nohighlight">\(E\)</span> and points upwards in the <span class="math notranslate nohighlight">\(z\)</span>-direction, the potential in which the electron moves has an additional term <span class="math notranslate nohighlight">\(V=eEz\)</span>. You can check the sign here by calculating the force on the electron <span class="math notranslate nohighlight">\(-\partial V/\partial dz=-eE\)</span> which is downwards as expected.</p>
+<p>The Hamiltonian therefore has an additional term</p>
 <div class="math notranslate nohighlight">
-\[\int dx \left|\psi\right|^2 = 1\]</div>
-<p class="sd-card-text">which tells us that <span class="math notranslate nohighlight">\(\psi(x)\)</span> must have units of <span class="math notranslate nohighlight">\(1/(\mathrm{length})^{1/2}\)</span>.</p>
-<p class="sd-card-text">The normalization of the momentum-eigenstate wavefunction <span class="math notranslate nohighlight">\(\braket{x|p}\)</span> is chosen so that the momentum eigenstates satisfy the orthogonality relation</p>
+\[\hat{H}_1 = eE\hat{z}.\]</div>
+<p>This extra term in the Hamiltonian will change the energy levels of the atom, but only by a small amount. We can see this because we know that the energy scale of the ground state for instance is <span class="math notranslate nohighlight">\(13.6\ \mathrm{eV}\)</span> which tells us that we would need an electric field <span class="math notranslate nohighlight">\(E\sim 13.6\ \mathrm{V}/a_0\)</span> to make an order unity correction to the energy (here we’ve used the Bohr radius <span class="math notranslate nohighlight">\(a_0\)</span> as a typical value for the separation <span class="math notranslate nohighlight">\(z\)</span>). This is a huge electric field! The maximal electric field you can make in air is the breakdown electric field, which is  <span class="math notranslate nohighlight">\(E\sim 13.6\ \mathrm{V}/\lambda_\mathrm{mfp}\)</span> where <span class="math notranslate nohighlight">\(\lambda_\mathrm{mfp}\)</span> is the mean free path. (This is because an electron or ion that accelerates in the electric field gains enough energy between collisions to ionize further atoms, causing a runaway ionization, and a breakdown of the air.)</p>
+<p>So, we have a situation where we are adding a small additional term to the Hamiltonian. We can write this as</p>
 <div class="math notranslate nohighlight">
-\[\braket{p|p^\prime} = \delta(p-p^\prime).\]</div>
-<p class="sd-card-text">To see that this is true, insert the identity operator <span class="math notranslate nohighlight">\(\int dx \ket{x}\bra{x}\)</span> and use the result  <span class="math notranslate nohighlight">\(\delta(x)=(1/2\pi)\int dy\ e^{ixy}\)</span>:</p>
+\[\hat{H} = \hat{H}_0 + \lambda \hat{H_1}\]</div>
+<p>where we explicitly write a parameter <span class="math notranslate nohighlight">\(\lambda\)</span> that “labels” the small part of the Hamiltonian (we can set it to 1 later). In perturbation theory, the idea is then to look for a solution</p>
 <div class="math notranslate nohighlight">
-\[\int dx \braket{p|x}\braket{x|p^\prime} = {1\over 2\pi\hbar} \int dx\ e^{ix(p^\prime-p)/\hbar} = \delta(p^\prime-p).\]</div>
-</div>
-</details><p>Today the goal is to go through the calculation of the propagator using a path integral. We’ll find that the path integral takes the form of an integral of <span class="math notranslate nohighlight">\(\exp(-iS/\hbar)\)</span> over the different possible paths a particle can take, where <span class="math notranslate nohighlight">\(S\)</span> is the action, as discussed at the end of last time.</p>
-<p>Before we start on that, one thing that we forgot to mention last time in our review of operators and observables is the importance of commuting vs non-commuting operators. Commuting operators (<span class="math notranslate nohighlight">\([\hat{A},\hat{B}]=0\)</span>) share a complete set of simultaneous eigenstates, and are <em>compatible observables</em>. We can know the value of both observables at the same time, since the operators have the same eigenstates. Non-commuting operators such as position and momentum are <em>incompatible observables</em>. They have different eigenstates, so that a measurement of one quantity results in some uncertainty in the value of the other. The associated uncertainty relation is</p>
+\[E_n = E_n^{(0)} + \lambda E_n^{(1)} + \lambda^2 E_n^{(2)} + \dots\]</div>
 <div class="math notranslate nohighlight">
-\[\langle(\Delta A)^2\rangle \langle(\Delta B)^2\rangle \geq {1\over 4}\left|  \langle [\hat{A},\hat{B}] \rangle \right|^2.\]</div>
-<p>The canonical example of incompatible observables is position-momentum, for which the commutator is <span class="math notranslate nohighlight">\([\hat{x},\hat{p}_x]=i\hbar\)</span>.</p>
-<section id="the-propagator-for-a-free-particle">
-<h2>The propagator for a free-particle<a class="headerlink" href="#the-propagator-for-a-free-particle" title="Permalink to this heading">#</a></h2>
-<p>We want to derive an expression for the propagator</p>
+\[\ket{\Psi_n} = \ket{\Psi_n^{(0)}} + \lambda \ket{\Psi_n^{(1)}} + \lambda^2 \ket{\Psi_n^{(2)}} + \dots\]</div>
+<p>where <span class="math notranslate nohighlight">\(E_n\)</span> and <span class="math notranslate nohighlight">\(\ket{\Psi_n}\)</span> are the eigenvalues and eigenstates of the new Hamiltonian that satisfy <span class="math notranslate nohighlight">\(\hat{H}\ket{\Psi_n} = E_n \ket{\Psi_n}\)</span>,  ie.</p>
 <div class="math notranslate nohighlight">
-\[\braket{x^\prime,t^\prime|x_0, t_0} = \braket{x^\prime|e^{-i\hat{H}(t^\prime-t_0)/\hbar}|x_0}.\]</div>
-<p>For a free-particle, <span class="math notranslate nohighlight">\(\hat{H}=\hat{p}^2/2m\)</span>, and so the propagator takes the form</p>
+\[ \left(\hat{H}_0 + \lambda \hat{H_1}\right)\left(\ket{\Psi_n^{(0)}} + \lambda \ket{\Psi_n^{(1)}} + \lambda^2 \ket{\Psi_n^{(2)}} + \dots \right) = \left(E_n^{(0)} + \lambda E_n^{(1)} + \lambda^2 E_n^{(2)} + \dots \right)\left(\ket{\Psi_n^{(0)}} + \lambda \ket{\Psi_n^{(1)}} + \lambda^2 \ket{\Psi_n^{(2)}} + \dots \right)  \]</div>
+<p>Now we can identify terms with different powers of <span class="math notranslate nohighlight">\(\lambda\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[\braket{x^\prime|e^{-i\hat{H}(t^\prime-t_0)/\hbar}|x_0} = \braket{x^\prime|e^{-i\hat{p}^2(t^\prime-t_0)/2m\hbar}|x_0}\]</div>
-<p>We can evaluate this by inserting the identity operator <span class="math notranslate nohighlight">\(\int dp \ket{p}\bra{p}\)</span>:</p>
+\[\lambda^0:\hspace{1cm} \hat{H}_0 \ket{\Psi_n^{(0)}} = E_n^{(0)}\ket{\Psi_n^{(0)}}\]</div>
 <div class="math notranslate nohighlight">
-\[\braket{x^\prime|e^{-i\hat{p}^2(t^\prime-t_0)/2m\hbar}|x_0} = \int dp \braket{x^\prime|p}\braket{p|e^{-i\hat{p}^2(t^\prime-t_0)/2m\hbar}|x_0}\]</div>
+\[\lambda^1:\hspace{1cm} \hat{H}_1 \ket{\Psi_n^{(0)}} + \hat{H}_0 \ket{\Psi_n^{(1)}} = E_n^{(0)}\ket{\Psi_n^{(1)}} + E_n^{(1)}\ket{\Psi_n^{(0)}}\]</div>
 <div class="math notranslate nohighlight">
-\[ = \int dp \braket{x^\prime|p}\braket{p|x_0}e^{-ip^2(t^\prime-t_0)/2m\hbar}\]</div>
+\[\lambda^2:\hspace{1cm} \hat{H}_1 \ket{\Psi_n^{(1)}} + \hat{H}_0 \ket{\Psi_n^{(2)}} = E_n^{(2)}\ket{\Psi_n^{(0)}} + E_n^{(1)}\ket{\Psi_n^{(1)}} + E_n^{(0)}\ket{\Psi_n^{(2)}}\]</div>
+<p>and so on, although we’ll only need up to second order here.</p>
+<p>The first equation tells us that the zeroth order energies and eigenstates are just those of the original Hamiltonian <span class="math notranslate nohighlight">\(\hat{H}_0\)</span>. Looking at the second equation, we can see that we can derive an expression for <span class="math notranslate nohighlight">\(E_n^{(1)}\)</span> if we operate from the left with <span class="math notranslate nohighlight">\(\bra{\Psi_n^{0}}\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[ = {1\over 2\pi\hbar}\int dp\  e^{ip(x^\prime-x_0)/\hbar}e^{-ip^2(t^\prime-t_0)/2m\hbar}.\]</div>
-<p>We can evaluate this by completing the square</p>
+\[\braket{\Psi_n^{(0)}|\hat{H}_1 |\Psi_n^{(0)}} + \braket{\Psi_n^{(0)}|\hat{H}_0 |\Psi_n^{(1)}} = E_n^{(0)}\braket{\Psi_n^{(0)}|\Psi_n^{(1)}} + E_n^{(1)}\braket{\Psi_n^{(0)}|\Psi_n^{(0)}}\]</div>
 <div class="math notranslate nohighlight">
-\[-{p^2(t^\prime-t_0)\over 2m\hbar}+{p(x^\prime-x_0)\over\hbar} = 
--\left({t^\prime-t_0\over 2m\hbar}\right)\left[p^2 - p\left({2m(x^\prime-x_0)\over t^\prime-t_0}\right) \right]\]</div>
+\[\Rightarrow \braket{\Psi_n^{(0)}|\hat{H}_1 |\Psi_n^{(0)}} + E_n^{(0)}\braket{\Psi_n^{(0)}|\Psi_n^{(1)}} = E_n^{(0)}\braket{\Psi_n^{(0)}|\Psi_n^{(1)}} + E_n^{(1)}\]</div>
 <div class="math notranslate nohighlight">
-\[=-\left({t^\prime-t_0\over 2m\hbar}\right)\left[\left(p - {m(x^\prime-x_0)\over t^\prime-t_0}\right)^2  - \left({m(x^\prime-x_0)\over t^\prime-t_0}\right)^2\right]\]</div>
+\[\Rightarrow \boxed{E_n^{(1)} = \braket{\Psi_n^{(0)}|\hat{H}_1 |\Psi_n^{(0)}} }\]</div>
+<p>This tells us that <strong>to find the first order correction to the energy, we just need the zeroth order eigenfunctions</strong>. This is a general pattern: the energy correction at some order only relies on the eigenfunction at the previous order. For example, now operate from the left with <span class="math notranslate nohighlight">\(\bra{\Psi_n^{0}}\)</span> on the third equation:</p>
 <div class="math notranslate nohighlight">
-\[= -q^2 + {m(x^\prime-x_0)^2\over 2\hbar(t^\prime-t_0)},\]</div>
-<p>which defines a new integration variable <span class="math notranslate nohighlight">\(q\)</span>. The integral becomes</p>
+\[\braket{\Psi_n^{(0)}|\hat{H}_1 |\Psi_n^{(1)}} + \braket{\Psi_n^{(0)}|\hat{H}_0|\Psi_n^{(2)}} = E_n^{(2)}\braket{\Psi_n^{(0)}|\Psi_n^{(0)}} + E_n^{(1)}\braket{\Psi_n^{(0)}|\Psi_n^{(1)}} + E_n^{(0)}\braket{\Psi_n^{(0)}|\Psi_n^{(2)}}\]</div>
 <div class="math notranslate nohighlight">
-\[ {1\over 2\pi\hbar} \left({2m\hbar\over t^\prime-t_0}\right)^{1/2}  \exp\left({im(x^\prime-x_0)^2\over 2\hbar(t^\prime-t_0)}\right) \int dq\  e^{-iq^2}.\]</div>
-<p>Using <span class="math notranslate nohighlight">\(\int^\infty_{-\infty} dq\ e^{-iq^2}=(1-i)\sqrt{\pi/2}=\sqrt{\pi/i}\)</span> we get the answer</p>
-<div class="math notranslate nohighlight" id="equation-freeparticleprop">
-<span class="eqno">(1)<a class="headerlink" href="#equation-freeparticleprop" title="Permalink to this equation">#</a></span>\[\boxed{\braket{x^\prime,t^\prime|x_0, t_0} = \left({m\over 2\pi\hbar i(t^\prime-t_0)}\right)^{1/2} \exp\left({im(x^\prime-x_0)^2\over 2\hbar(t^\prime-t_0)}\right)}\]</div>
-<p>(this is equation (8.9) of Townsend).</p>
-<p>Notice that this is proportional to <span class="math notranslate nohighlight">\(e^{iS_c/\hbar}\)</span> where <span class="math notranslate nohighlight">\(S_c\)</span> is the classical action, i.e. the action for the classical trajectory in which the particle moves at constant velocity, giving</p>
+\[\Rightarrow \braket{\Psi_n^{(0)}|\hat{H}_1 |\Psi_n^{(1)}} + E_n^{(0)}\braket{\Psi_n^{(0)}|\Psi_n^{(2)}} = E_n^{(2)} + E_n^{(1)}\braket{\Psi_n^{(0)}|\Psi_n^{(1)}} + E_n^{(0)}\braket{\Psi_n^{(0)}|\Psi_n^{(2)}}\]</div>
 <div class="math notranslate nohighlight">
-\[S_c = \int L dt = \int {1\over 2} mv^2\ dt = {m(x^\prime-x_0)^2\over 2(t^\prime-t_0)}.\]</div>
-<p>So we see that for this particular case that we get a propagator related to <span class="math notranslate nohighlight">\(e^{iS/\hbar}\)</span>. Next we want to show this for a particle moving in a general potential <span class="math notranslate nohighlight">\(V(x)\)</span>.</p>
-</section>
-<section id="derivation-of-the-path-integral">
-<h2>Derivation of the path integral<a class="headerlink" href="#derivation-of-the-path-integral" title="Permalink to this heading">#</a></h2>
-<p>In the general case, <span class="math notranslate nohighlight">\(\hat{H} = \hat{p}^2/2m + V(\hat{x})\)</span> which makes evaluating the propagator a lot more tricky. Our approach is going to be to divide the time period <span class="math notranslate nohighlight">\(t^\prime-t_0\)</span> into infinitesimally small steps <span class="math notranslate nohighlight">\(\Delta t= \epsilon(t^\prime-t_0)\)</span> where <span class="math notranslate nohighlight">\(\epsilon\ll 1\)</span> and we’ll eventually take the limit <span class="math notranslate nohighlight">\(\epsilon\rightarrow 0\)</span>. The reason to do this is that we can then factorize the time-evolution operator over one of the small intervals like this:</p>
+\[\Rightarrow \boxed{E_n^{(2)} =  \braket{\Psi_n^{(0)}|\hat{H}_1 |\Psi_n^{(1)}} - E_n^{(1)}\braket{\Psi_n^{(0)}|\Psi_n^{(1)}} }\]</div>
+<p>which shows that we need <span class="math notranslate nohighlight">\(\ket{\Psi_n^{(1)}}\)</span> in order to calculate <span class="math notranslate nohighlight">\(E_n^{(2)}\)</span>.</p>
+<p>We can use the original eigenstates <span class="math notranslate nohighlight">\(\ket{\Psi_n^{(0)}}\)</span> as a basis for <span class="math notranslate nohighlight">\(\ket{\Psi_n^{(1)}}\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[\exp\left(-{i\hat{H}\epsilon(t^\prime-t_0)\over\hbar}\right)\approx \exp\left(-{i\hat{p}^2\epsilon(t^\prime-t_0)\over 2m\hbar}\right)\exp\left(-{iV(\hat{x})\epsilon(t^\prime-t_0)\over \hbar}\right).\]</div>
-<p>We need <span class="math notranslate nohighlight">\(\epsilon\)</span> to be small for this to work because otherwise there are correction terms involving the commutator of the two operators: the <em>Baker-Campbell-Hausdorff formula</em> gives <span class="math notranslate nohighlight">\(\ln e^A e^B = A+B + [A,B]/2 + \dots\)</span> for two operators <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>. In our case, <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> correspond to the kinetic energy and potential energy terms. Because they are both <span class="math notranslate nohighlight">\(\propto \epsilon\)</span> with <span class="math notranslate nohighlight">\(\epsilon\ll 1\)</span>, we can ignore the correction terms because they are of order <span class="math notranslate nohighlight">\(\epsilon^2\)</span> or smaller.</p>
-<p>For the free particle, we made progress by inserting the identity operator <span class="math notranslate nohighlight">\(\int dp \ket{p}\bra{p}\)</span> which allowed us to convert the <span class="math notranslate nohighlight">\(\hat{p}\)</span> operator in the exponent into its eigenvalue <span class="math notranslate nohighlight">\(p\)</span>. We can do the same thing here with both momentum and position by inserting identity operators <span class="math notranslate nohighlight">\(\int dp \ket{p}\bra{p}\)</span> and <span class="math notranslate nohighlight">\(\int dx \ket{x}\bra{x}\)</span>. However, we need to do this <span class="math notranslate nohighlight">\(\approx 1/\epsilon\)</span> times, once for each small timestep.</p>
-<p>Our expression for the propagator then looks like this:</p>
+\[\ket{\Psi_n^{(1)}} = \sum_k c_k \ket{\Psi_k^{(0)}}\]</div>
+<p>where the coefficients are</p>
 <div class="math notranslate nohighlight">
-\[\bra{x^\prime}   e^{-i\hat{H}\Delta t/\hbar} e^{-i\hat{H}\Delta t/\hbar}\dots e^{-i\hat{H}\Delta t/\hbar}                \ket{x_0}\]</div>
-<p>Focus on the first intermediate step:</p>
+\[c_k = \braket{\Psi_k^{(0)}|\Psi_n^{(1)}}.\]</div>
+<p>To find the <span class="math notranslate nohighlight">\(c_k\)</span>’s, we can operate on the <span class="math notranslate nohighlight">\(\lambda^1\)</span> equation with <span class="math notranslate nohighlight">\(\bra{\Psi_k^{0}}\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[ = \bra{x^\prime} \dots   \int dx_1 \ket{x_1} \bra{x_1}  e^{-i\hat{p}^2\Delta t/2m\hbar}e^{-i\hat{V}\Delta t/\hbar}             \int dp_1 \ket{p_1} \braket{p_1|x_0}\]</div>
+\[\braket{\Psi_k^{(0)}|\hat{H}_1 |\Psi_n^{(0)}} + \braket{\Psi_k^{(0)}|\hat{H}_0 |\Psi_n^{(1)}} = E_n^{(0)}\braket{\Psi_k^{(0)}|\Psi_n^{(1)}} + E_n^{(1)}\braket{\Psi_k^{(0)}|\Psi_n^{(0)}}\]</div>
 <div class="math notranslate nohighlight">
-\[ = \bra{x^\prime} \dots   \int dx_1 \int dp_1\ \ket{x_1} \braket{x_1|p_1}  e^{-ip_1^2\Delta t/2m\hbar}e^{-iV(x_1)\Delta t/\hbar}              \braket{p_1|x_0}\]</div>
+\[\Rightarrow\braket{\Psi_k^{(0)}|\hat{H}_1 |\Psi_n^{(0)}} + E_k^{(0)}c_k = E_n^{(0)}c_k + E_n^{(1)}\delta_{kn}.\]</div>
+<p>For <span class="math notranslate nohighlight">\(k=n\)</span>, we get the result from above for <span class="math notranslate nohighlight">\(E_n^{(1)}\)</span>, but for <span class="math notranslate nohighlight">\(k\neq n\)</span>, we get:</p>
 <div class="math notranslate nohighlight">
-\[ = \bra{x^\prime} \dots   \int dx_1 \int dp_1\ \ket{x_1} {1\over 2\pi\hbar} e^{ip_1(x_1-x_0)/\hbar}   e^{-ip_1^2\Delta t/2m\hbar}e^{-iV(x_1)\Delta t/\hbar}  \]</div>
+\[\boxed{c_k = {\braket{\Psi_k^{(0)}|\hat{H}_1 |\Psi_n^{(0)}}\over E_n^{(0)}-E_k^{(0)}}}.\]</div>
+<p>This gives us all the coefficients except <span class="math notranslate nohighlight">\(c_n\)</span>. We can get a constraint on that one by looking at the overall normalization:</p>
 <div class="math notranslate nohighlight">
-\[ = \bra{x^\prime} \dots   \int dx_1 \int {dp_1\over 2\pi \hbar}\ \ket{x_1} 
-\exp\left({i\Delta t\over \hbar}\left[ p_1{x_1-x_0\over \Delta t} - {p_1^2\over 2m} - V(x_1)      \right]\right)\]</div>
-<p>Now add intermediate step 2:</p>
+\[\braket{\Psi_n|\Psi_n} = \braket{\Psi_n^{(0)}|\Psi_n^{(0)}} + \lambda \left(\braket{\Psi_n^{(0)}|\Psi_n^{(1)}}+\braket{\Psi_n^{(1)}|\Psi_n^{(0)}}\right) + \dots\]</div>
 <div class="math notranslate nohighlight">
-\[ = \bra{x^\prime} \dots   \int dx_2 \int {dp_2\over 2\pi \hbar} \int dx_1 \int {dp_1\over 2\pi \hbar}\ \ket{x_2}  \times \]</div>
+\[\Rightarrow \braket{\Psi_n|\Psi_n} = 1 + \lambda \left(c_n + c_n^\star\right) + {\mathcal O}(\lambda^2).\]</div>
+<p>This shows that the new state will be normalized to first order in <span class="math notranslate nohighlight">\(\lambda\)</span> if <span class="math notranslate nohighlight">\(c_n + c_n^\star = \mathrm{Re}(c_n)=0\)</span>, i.e. if <span class="math notranslate nohighlight">\(c_n\)</span> is pure imaginary. But adding an imaginary <span class="math notranslate nohighlight">\(c_n = ia\)</span> is equivalent to changing the overall phase of the wavefunction to first order:</p>
 <div class="math notranslate nohighlight">
-\[\exp\left({i\Delta t\over \hbar}\left[ p_2{x_2-x_1\over \Delta t} - {p_2^2\over 2m} - V(x_2) \right]\right)
-\exp\left({i\Delta t\over \hbar}\left[ p_1{x_1-x_0\over \Delta t} - {p_1^2\over 2m} - V(x_1)      \right]\right)\]</div>
-<p>We can see that filling in the remaining steps will give</p>
+\[\ket{\Psi_n} = (1+ i \lambda a)\ket{\Psi_n^{(0)}} + \lambda \sum_{k\neq n} c_k \ket{\Psi_k^{(0)}}  + {\mathcal O}(\lambda^2)\]</div>
 <div class="math notranslate nohighlight">
-\[\boxed{ \braket{x^\prime,t^\prime|x_0, t_0}\approx  \int dx_{N-1}\dots dx_1 \int {dp_N\dots dp_1\over (2\pi \hbar)^N} \exp\left({i\Delta t\over \hbar}\sum_j\left[ p_{j}{x_{j}-x_{j-1}\over \Delta t} - {p_j^2\over 2m} - V(x_j) \right]\right)}\]</div>
-<p>(this is equation (8.22) of Townsend).</p>
-<p>We can do the momentum integrals by completing the square, just as we did when deriving the free particle propagator. Adapting that result gives</p>
+\[\Rightarrow \ket{\Psi_n} = e^{i\lambda a}\left[\ket{\Psi_n^{(0)}} + \lambda \sum_{k\neq n} c_k \ket{\Psi_k^{(0)}}\right]  + {\mathcal O}(\lambda^2)\]</div>
+<p>so for simplicity it makes sense to choose <span class="math notranslate nohighlight">\(a=0\)</span> and therefore <span class="math notranslate nohighlight">\(c_n=0\)</span>. The perturbation changes the state in an orthogonal way, i.e. it changes the direction of the state in Hilbert space, but not the magnitude. The same thing happens in 3D space if you rotate a vector by a small amount – to first order in the angle, the rotation corresponds to adding a perpendicular vector to the original vector.</p>
+<p>We therefore arrive at the results:</p>
 <div class="math notranslate nohighlight">
-\[ {1\over 2\pi\hbar}\int dp_j\  e^{ip_j(x_j-x_{j-1})/\hbar}e^{-ip_j^2\Delta t/2m\hbar} = \left({m\over 2\pi\hbar i\Delta t}\right)^{1/2} \exp\left({im(x_j-x_{j-1})^2\over 2\hbar\Delta t}\right)\]</div>
-<p>and therefore</p>
-<div class="math notranslate nohighlight" id="equation-pathintegral">
-<span class="eqno">(2)<a class="headerlink" href="#equation-pathintegral" title="Permalink to this equation">#</a></span>\[\boxed{ \braket{x^\prime,t^\prime|x_0, t_0}\approx  \left({m\over 2\pi i \hbar \Delta t}\right)^{N/2} \int dx_{N-1}\dots dx_1\ \exp\left({i\Delta t\over \hbar}\sum_j\left[  {m(x_j-x_{j-1})^2\over 2(\Delta t)^2}- V(x_j) \right]\right)}\]</div>
-<p>(this is equation (8.24) of Townsend).</p>
-<section id="the-continuum-limit">
-<h3>The continuum limit<a class="headerlink" href="#the-continuum-limit" title="Permalink to this heading">#</a></h3>
-<p>In the continuum limit <span class="math notranslate nohighlight">\(\epsilon\rightarrow 0\)</span>, these expressions become exact. The term <span class="math notranslate nohighlight">\((x_j-x_{j-1})/\Delta t\rightarrow \dot{x}\)</span>, and the expression in the exponent of either of the boxed equations becomes <span class="math notranslate nohighlight">\(iS/\hbar\)</span>, where <span class="math notranslate nohighlight">\(S\)</span> is the action. In the first case, where we have an integral over positions and momenta, the exponent becomes</p>
+\[\boxed{\ket{\Psi_n^{(1)}} =  \sum_{k\neq n} {\braket{\Psi_k^{(0)}|\hat{H}_1 |\Psi_n^{(0)}}\over E_n^{(0)}-E_k^{(0)}} \ket{\Psi_k^{(0)}} }\]</div>
 <div class="math notranslate nohighlight">
-\[{i\over\hbar}\int dt \left(p\dot{x} - H(x,p)\right) = {i\over\hbar}\int dt\ L(x,\dot{x}) = {iS\over \hbar}\]</div>
-<p>(where we’ve used the Legendre transform from classical mechanics relating the Hamiltonian <span class="math notranslate nohighlight">\(H\)</span> and Lagrangian <span class="math notranslate nohighlight">\(L\)</span>: <span class="math notranslate nohighlight">\(p\dot{x}-H=L\)</span>). In the second case, the exponent is</p>
+\[\boxed{E_n^{(2)} =  \sum_{k\neq n} {|\braket{\Psi_k^{(0)}|\hat{H}_1 |\Psi_n^{(0)}}|^2\over E_n^{(0)}-E_k^{(0)}}}\]</div>
+<p><strong>Application to the Stark effect in the ground state of hydrogen</strong>: For the ground state of hydrogen, <span class="math notranslate nohighlight">\(\ket{n,\ell,m}=\ket{1,0,0}\)</span>, with <span class="math notranslate nohighlight">\(\hat{H_1}= eE\hat{z}\)</span>, we get the first order energy shift</p>
 <div class="math notranslate nohighlight">
-\[{i\over \hbar}\int dt\ \left({1\over 2}m\dot{x}^2 - V(x)\right) = {i\over\hbar}\int dt\ L(x,\dot{x}) = {iS\over \hbar}.\]</div>
-<p>In both cases, we see that we can write the propagator as an integral over all possible particle paths of <span class="math notranslate nohighlight">\(e^{iS/\hbar}\)</span>. We can represent this by writing equation <a class="reference internal" href="#equation-pathintegral">(2)</a> as</p>
+\[E_1^{(1)} = eE \braket{1,0,0|\hat{z}|1,0,0}.\]</div>
+<p>But the state <span class="math notranslate nohighlight">\(\ket{1,0,0}\)</span> is independent of angle (<span class="math notranslate nohighlight">\(Y_{00}\)</span> is constant) and therefore even parity, whereas <span class="math notranslate nohighlight">\(\hat{z}\)</span> had odd parity, so the integral vanishes! There is no correction to the energy to first order! We need to go to second order:</p>
 <div class="math notranslate nohighlight">
-\[\braket{x^\prime,t^\prime|x_0, t_0} = \int \mathcal{D}[x(t)] \exp\left({i\over \hbar}\int dt\ L(x, \dot{x})\right)\]</div>
-<p>where</p>
-<div class="math notranslate nohighlight">
-\[\int \mathcal{D}[x(t)] = \mathrm{lim}_{N\rightarrow \infty} \int dx_{N-1}\dots dx_1\ \left({m\over 2\pi i \hbar \Delta t}\right)^{N/2}\]</div>
-<p>represents the integral over all possible paths.</p>
-<div class="admonition-exercise admonition">
-<p class="admonition-title">Exercise</p>
-<p>To close the loop, use equation <a class="reference internal" href="#equation-pathintegral">(2)</a> to evaluate the propagator for a free particle (<span class="math notranslate nohighlight">\(V=0\)</span>) and check that your result agrees with equation <a class="reference internal" href="#equation-freeparticleprop">(1)</a>.</p>
-<p>Try it yourself first, but if you get stuck you can look at section 8.5 of Townsend which works through this.</p>
-</div>
-</section>
+\[E_1^{(2)} = \left(eE\right)^2 \sum_{n\neq 1, \ell, m} {|\braket{n,\ell,m|\hat{z}|1,0,0}|^2\over E_1^{(0)}-E_n^{(0)}}\]</div>
+<p>where the sum is over all the excited states. Note that the energy correction is quadratic in the electric field, i.e.~<span class="math notranslate nohighlight">\(\propto E^2\)</span>. This is known as the <strong>quadratic Stark effect</strong>. Physically, what’s happening is that the electric field polarizes the ground state, so it develops a dipole moment <span class="math notranslate nohighlight">\(\propto E\)</span>. The energy of this dipole <span class="math notranslate nohighlight">\(\mathbf{p}\)</span> in the electric field <span class="math notranslate nohighlight">\(\mathbf{E}\)</span> is <span class="math notranslate nohighlight">\(\propto \mathbf{p}\cdot\mathbf{E}\propto E^2\)</span>.</p>
+<p>The sum can be evaluated to give the size of the energy shift. Note that because the sum is over all the excited states, there is no problem with the denominator <span class="math notranslate nohighlight">\(E_1^{(0)}-E_n^{(0)}\)</span> vanishing. If we instead look at the <span class="math notranslate nohighlight">\(n=2\)</span> excited states where there is degeneracy and the denominator does indeed vanish! We’ll discuss how to handle that case next time.</p>
 </section>
 <section id="further-reading">
 <h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Sections 8.1-8.5 of Townsend</p></li>
-<li><p>Two of the mathematical results we used: <a class="reference external" href="https://en.wikipedia.org/wiki/Baker%E2%80%93Campbell%E2%80%93Hausdorff_formula">Baker-Campbell-Hausdorff formula</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/Fresnel_integral">Fresnel integrals</a></p></li>
+<li><p>Townsend 11.1 goes through the derivation of the first and second order corrections in perturbation theory, and 11.4 applies this to the Stark effect.</p></li>
 </ul>
 </section>
 </section>
@@ -561,20 +514,20 @@ Solution<div class="sd-summary-down docutils">
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="lecture1.html"
+       href="lecture13.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Lecture 1 Jan 4</p>
+        <p class="prev-next-title">Lecture 13 Feb 15</p>
       </div>
     </a>
     <a class="right-next"
-       href="lecture3.html"
+       href="hw1.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Lecture 3 Jan 11</p>
+        <p class="prev-next-title">Homework 1</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -593,11 +546,7 @@ Solution<div class="sd-summary-down docutils">
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-propagator-for-a-free-particle">The propagator for a free-particle</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivation-of-the-path-integral">Derivation of the path integral</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-continuum-limit">The continuum limit</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-stark-effect-in-hydrogen-and-perturbation-theory">The Stark effect in hydrogen and perturbation theory</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a></li>
 </ul>
   </nav></div>
