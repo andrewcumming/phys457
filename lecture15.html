@@ -434,7 +434,39 @@ document.write(`
 </section>
 <section id="the-first-excited-state-degenerate-perturbation-theory">
 <h2>The first excited state: degenerate perturbation theory<a class="headerlink" href="#the-first-excited-state-degenerate-perturbation-theory" title="Permalink to this heading">#</a></h2>
-<p>Now imagine doing the same calculation but for one of the excited states with <span class="math notranslate nohighlight">\(n=2\)</span>. There are 4 states with <span class="math notranslate nohighlight">\(n=2\)</span>: <span class="math notranslate nohighlight">\(\ket{2,0,0}\)</span>,  <span class="math notranslate nohighlight">\(\ket{2,1,0}\)</span>,  <span class="math notranslate nohighlight">\(\ket{2,1,1}\)</span>,  <span class="math notranslate nohighlight">\(\ket{2,1,-1}\)</span>, all with the same energy.</p>
+<p>Now imagine doing the same calculation but for one of the excited states with <span class="math notranslate nohighlight">\(n=2\)</span>. There are 4 states with <span class="math notranslate nohighlight">\(n=2\)</span>: <span class="math notranslate nohighlight">\(\ket{2,0,0}\)</span>,  <span class="math notranslate nohighlight">\(\ket{2,1,0}\)</span>,  <span class="math notranslate nohighlight">\(\ket{2,1,1}\)</span>,  <span class="math notranslate nohighlight">\(\ket{2,1,-1}\)</span>, all with the same energy. This means that we have a lot of freedom in choosing our unperturbed basis <span class="math notranslate nohighlight">\(\ket{\Psi_n^{(0)}}\)</span> because any linear combination of the four <span class="math notranslate nohighlight">\(n=2\)</span> states is also an eigenstate of the Hamiltonian with the same energy. We say that the <span class="math notranslate nohighlight">\(n=2\)</span> states span a <strong>degenerate subspace</strong>. Which linear combinations should we choose? Even more of a problem is that when we try to calculate the first order correction to the eigenstate <span class="math notranslate nohighlight">\(\ket{\Psi^{(1)}_n}\)</span>, the denominator <span class="math notranslate nohighlight">\(E_n^{(0)}-E_k^{(0)}\)</span> will vanish for any pair of degenerate states. This is a signal that unless we are careful in choosing our basis states, the degenerate basis states do not have a small correction term.</p>
+<p>One way to think of this is as a singular limit – imagine if we could solve the new Hamiltonian exactly and find the new states <span class="math notranslate nohighlight">\(\ket{\Psi_n}\)</span>. As we reduce the electric field strength to zero, these new states should continuously evolve into the unperturbed states <span class="math notranslate nohighlight">\(\ket{\Psi_n^{(0)}}\)</span>. Usually the perturbation breaks the symmetry of the original Hamiltonian that lead to the degeneracy, so there is a preferred basis for the degenerate subspace that reflects this symmetry-breaking.</p>
+<p>We can see mathematically that we can solve the problem of the degeneracy in the denominator if we could make the numerator <span class="math notranslate nohighlight">\(\braket{\Psi_n^{0}|\hat{H}_1|\Psi_k^{0}}\)</span> also vanish. This is saying that we should choose the basis states for the degenerate subspace so that the off-diagonal matrix elements vanish: i.e. the basis states we need are the states that diagonalize <span class="math notranslate nohighlight">\(\hat{H}_1\)</span>. Since we have four <span class="math notranslate nohighlight">\(n=2\)</span> states, there are in principle 16 different matrix elements that we need to calculate. However, the selection rules <span class="math notranslate nohighlight">\(\Delta m=0\)</span> and <span class="math notranslate nohighlight">\(\Delta \ell=\pm 1\)</span> mean that there are actually only 2 non-vanishing matrix elements:</p>
+<div class="math notranslate nohighlight">
+\[\braket{2,0,0|\hat{z}|2,1,0}\hspace{1cm} \mathrm{and}\hspace{1cm} \braket{2,1,0|\hat{z}|2,0,0}\]</div>
+<p>Using the hydrogen atom wavefunctions you can show that</p>
+<div class="math notranslate nohighlight">
+\[\braket{2,0,0|\hat{z}|2,1,0} = \int dV R^\star_{20}Y^\star_{00}\ r \cos\theta\ R_{21}Y_{10} = -3a_0\]</div>
+<p>so the matrix representation of <span class="math notranslate nohighlight">\(\hat{H}_1\)</span> in the basis (<span class="math notranslate nohighlight">\(\ket{2,0,0}\)</span>,  <span class="math notranslate nohighlight">\(\ket{2,1,0}\)</span>,  <span class="math notranslate nohighlight">\(\ket{2,1,1}\)</span>,  <span class="math notranslate nohighlight">\(\ket{2,1,-1}\)</span>) is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix} 0 &amp; -3a_0 &amp; 0 &amp; 0\\ -3a_0 &amp; 0 &amp; 0 &amp; 0\\0 &amp; 0 &amp; 0 &amp; 0\\0 &amp; 0 &amp; 0 &amp; 0  \end{pmatrix}\end{split}\]</div>
+<p>The eigenvectors and eigenvalues of this matrix are:</p>
+<div class="math notranslate nohighlight">
+\[\ket{2,1,1}\hspace{1cm} 0\]</div>
+<div class="math notranslate nohighlight">
+\[\ket{2,1,-1}\hspace{1cm} 0\]</div>
+<div class="math notranslate nohighlight">
+\[\ket{+} = {1\over\sqrt{2}}\left(\ket{2,0,0}-\ket{2,1,0}\right)\hspace{1cm} +3a_0\]</div>
+<div class="math notranslate nohighlight">
+\[\ket{-} = {1\over\sqrt{2}}\left(\ket{2,0,0}+\ket{2,1,0}\right)\hspace{1cm} -3a_0\]</div>
+<p>So now the idea is that we can adopt the basis <span class="math notranslate nohighlight">\((\ket{2,1,1},\ket{2,1,-1},\ket{+}, \ket{-})\)</span> for the <span class="math notranslate nohighlight">\(n=2\)</span> zeroth order eigenstates. The first order energy shift for these 4 states
+are</p>
+<div class="math notranslate nohighlight">
+\[\braket{2,1,1|\hat{H}_1|2,1,1} = 0\]</div>
+<div class="math notranslate nohighlight">
+\[\braket{2,1,-1|\hat{H}_1|2,1,-1} = 0\]</div>
+<div class="math notranslate nohighlight">
+\[\braket{+|\hat{H}_1|+} = 3eEa_0\]</div>
+<div class="math notranslate nohighlight">
+\[\braket{-|\hat{H}_1|-} = -3eEa_0\]</div>
+<p>The perturbing electric field breaks the degeneracy of the <span class="math notranslate nohighlight">\(n=2\)</span> states: two of the states stay at the same energy, one state increases and one decreases in energy. Note that the corrections are linear in the electric field – this is the <strong>linear Stark effect</strong>.</p>
+<p>Also note that when we calculate the second order correction to energy or the first order correction to the states, the terms with the zero denominators now vanish because we are using the new basis that diagonalizes <span class="math notranslate nohighlight">\(\hat{H}_1\)</span> in the degnerate subspace. (The other terms involving higher order states will still be there and lead to higher order corrections).</p>
+<p>The particular combinations <span class="math notranslate nohighlight">\(\ket{+}\)</span> and <span class="math notranslate nohighlight">\(\ket{-}\)</span> are selected out by the perturbation because they have a permanent dipole moment. This existing dipole moment then interacts with the electric field to give a linear dependence of the energy on electric field.</p>
 </section>
 <section id="further-reading">
 <h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this heading">#</a></h2>
