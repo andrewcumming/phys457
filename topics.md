@@ -24,5 +24,7 @@
     + [Laguerre polynomials](https://andrewcumming.github.io/phys457/lecture10.html#how-this-works-mathematically-laguerre-polynomials)
 - Other examples of central potentials
     + [3D harmonic oscillator](https://andrewcumming.github.io/phys457/lecture11.html#d-harmonic-oscillator) including with [operator methods](https://andrewcumming.github.io/phys457/lecture11.html#an-operator-approach-to-the-3d-harmonic-oscillator)
-    + [Finite spherical well](https://andrewcumming.github.io/phys457/lecture12.html#finite-spherical-well)
-    
+    + Finite spherical well: [Part 1](https://andrewcumming.github.io/phys457/lecture12.html#finite-spherical-well), [Part 2](https://andrewcumming.github.io/phys457/lecture13.html#finite-spherical-well)
+    + [Infinite spherical well](https://andrewcumming.github.io/phys457/lecture13.html#infinite-spherical-well)
+- Perturbation theory
+    + Non-degenerate and degenerate perturbation theory and application to the Stark effect in hydrogen: [Part 1](https://andrewcumming.github.io/phys457/lecture14.html#the-stark-effect-in-hydrogen-and-perturbation-theory) and [Part 2](https://andrewcumming.github.io/phys457/lecture15.html)
