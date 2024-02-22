@@ -64,6 +64,7 @@ This is quite close to the actual answer ($16/3=5.33$ compared with $9/2=4.5$).
 
 ## The first excited state: degenerate perturbation theory
 
+Now imagine doing the same calculation but for one of the excited states with $n=2$. There are 4 states with $n=2$: $\ket{2,0,0}$,  $\ket{2,1,0}$,  $\ket{2,1,1}$,  $\ket{2,1,-1}$, all with the same energy. So when we try to compute the corrections for each of these states, we'll end up with 
 
 
 
