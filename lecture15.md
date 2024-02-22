@@ -64,8 +64,48 @@ This is quite close to the actual answer ($16/3=5.33$ compared with $9/2=4.5$).
 
 ## The first excited state: degenerate perturbation theory
 
-Now imagine doing the same calculation but for one of the excited states with $n=2$. There are 4 states with $n=2$: $\ket{2,0,0}$,  $\ket{2,1,0}$,  $\ket{2,1,1}$,  $\ket{2,1,-1}$, all with the same energy. So when we try to compute the corrections for each of these states, we'll end up with 
+Now imagine doing the same calculation but for one of the excited states with $n=2$. There are 4 states with $n=2$: $\ket{2,0,0}$,  $\ket{2,1,0}$,  $\ket{2,1,1}$,  $\ket{2,1,-1}$, all with the same energy. This means that we have a lot of freedom in choosing our unperturbed basis $\ket{\Psi_n^{(0)}}$ because any linear combination of the four $n=2$ states is also an eigenstate of the Hamiltonian with the same energy. We say that the $n=2$ states span a **degenerate subspace**. Which linear combinations should we choose? Even more of a problem is that when we try to calculate the first order correction to the eigenstate $\ket{\Psi^{(1)}_n}$, the denominator $E_n^{(0)}-E_k^{(0)}$ will vanish for any pair of degenerate states. This is a signal that unless we are careful in choosing our basis states, the degenerate basis states do not have a small correction term. 
 
+One way to think of this is as a singular limit -- imagine if we could solve the new Hamiltonian exactly and find the new states $\ket{\Psi_n}$. As we reduce the electric field strength to zero, these new states should continuously evolve into the unperturbed states $\ket{\Psi_n^{(0)}}$. Usually the perturbation breaks the symmetry of the original Hamiltonian that lead to the degeneracy, so there is a preferred basis for the degenerate subspace that reflects this symmetry-breaking.
+
+We can see mathematically that we can solve the problem of the degeneracy in the denominator if we could make the numerator $\braket{\Psi_n^{0}|\hat{H}_1|\Psi_k^{0}}$ also vanish. This is saying that we should choose the basis states for the degenerate subspace so that the off-diagonal matrix elements vanish: i.e. the basis states we need are the states that diagonalize $\hat{H}_1$. Since we have four $n=2$ states, there are in principle 16 different matrix elements that we need to calculate. However, the selection rules $\Delta m=0$ and $\Delta \ell=\pm 1$ mean that there are actually only 2 non-vanishing matrix elements:
+
+$$\braket{2,0,0|\hat{z}|2,1,0}\hspace{1cm} \mathrm{and}\hspace{1cm} \braket{2,1,0|\hat{z}|2,0,0}$$
+
+Using the hydrogen atom wavefunctions you can show that 
+
+$$\braket{2,0,0|\hat{z}|2,1,0} = \int dV R^\star_{20}Y^\star_{00}\ r \cos\theta\ R_{21}Y_{10} = -3a_0$$
+
+so the matrix representation of $\hat{H}_1$ in the basis ($\ket{2,0,0}$,  $\ket{2,1,0}$,  $\ket{2,1,1}$,  $\ket{2,1,-1}$) is
+
+$$\begin{pmatrix} 0 & -3a_0 & 0 & 0\\ -3a_0 & 0 & 0 & 0\\0 & 0 & 0 & 0\\0 & 0 & 0 & 0  \end{pmatrix}$$
+
+The eigenvectors and eigenvalues of this matrix are:
+
+$$\ket{2,1,1}\hspace{1cm} 0$$
+
+$$\ket{2,1,-1}\hspace{1cm} 0$$
+
+$$\ket{+} = {1\over\sqrt{2}}\left(\ket{2,0,0}-\ket{2,1,0}\right)\hspace{1cm} +3a_0$$
+
+$$\ket{-} = {1\over\sqrt{2}}\left(\ket{2,0,0}+\ket{2,1,0}\right)\hspace{1cm} -3a_0$$
+
+So now the idea is that we can adopt the basis $(\ket{2,1,1},\ket{2,1,-1},\ket{+}, \ket{-})$ for the $n=2$ zeroth order eigenstates. The first order energy shift for these 4 states
+are
+
+$$\braket{2,1,1|\hat{H}_1|2,1,1} = 0$$
+
+$$\braket{2,1,-1|\hat{H}_1|2,1,-1} = 0$$
+
+$$\braket{+|\hat{H}_1|+} = 3eEa_0$$
+
+$$\braket{-|\hat{H}_1|-} = -3eEa_0$$
+
+The perturbing electric field breaks the degeneracy of the $n=2$ states: two of the states stay at the same energy, one state increases and one decreases in energy. Note that the corrections are linear in the electric field -- this is the **linear Stark effect**.
+
+Also note that when we calculate the second order correction to energy or the first order correction to the states, the terms with the zero denominators now vanish because we are using the new basis that diagonalizes $\hat{H}_1$ in the degnerate subspace. (The other terms involving higher order states will still be there and lead to higher order corrections).
+
+The particular combinations $\ket{+}$ and $\ket{-}$ are selected out by the perturbation because they have a permanent dipole moment. This existing dipole moment then interacts with the electric field to give a linear dependence of the energy on electric field.
 
 
 
