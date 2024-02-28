@@ -27,10 +27,20 @@ Now we can look at the two different orderings of $\mu_e|\mathbf{E}|$ and $A$ (b
 
 $$E = E_0 \pm \sqrt{(\mu_e|\mathbf{E}|)^2 + A^2}\approx  E_0\pm A \left(1 + {1\over 2}\left({\mu_e|\mathbf{E}|\over A}\right)^2 + \dots\right)$$
 
-There is a quadratic correction to the energy $\propto |\mathbf{E}|^2$: this is exactly what you would find using non-degenerate perturbation theory treating the electric field as a perturbation. It makes sense because the two energy levels are non-degenerate, and the corresponding stationary states do not have a dipole moment since they are eigenvectors of the parity operator and respect the symmetry of the Hamiltonian.
+There is a quadratic correction to the energy $\propto |\mathbf{E}|^2$: this is exactly what you would find using non-degenerate perturbation theory using the $\ket{I}$, $\ket{II}$ basis and treating the electric field as a perturbation. It makes sense because the two energy levels are non-degenerate, and the corresponding stationary states do not have a dipole moment since they are eigenvectors of the parity operator and respect the symmetry of the Hamiltonian.
 
 
-2. $\mu_e|\mathbf{E}|\gg 2A$. The energy is 
+2. $\mu_e|\mathbf{E}|\gg 2A$. The energy associated with the electric field now is much larger than the splitting between the unperturbed energy levels. The energy is
+
+$$E = E_0 \pm \sqrt{(\mu_e|\mathbf{E}|)^2 + A^2}\approx  E_0\pm \mu_e|\mathbf{E}|\left(1 + {1\over 2}\left({A\over \mu_e|\mathbf{E}|}\right)^2 + \dots\right)$$
+
+We now see a linear Stark effect, as we would find with degenerate perturbation theory where we move to a basis in which $\hat{H}_1$ is diagonal, i.e. $\ket{1}$, $\ket{2}$. 
+
+The important point about non-degenerate perturbation theory is that we need the terms $\propto \braket{\Psi_n|\hat{H}_1|\Psi_k}/(E_n^{(0)}-E_k^{(0)})$ to remain small. In this problem, that corresponds to the ratio $\mu_e|\mathbf{E}|/2A$. Once this ratio becomes large, we should use degenerate perturbation theory instead.
+
+You can see more of the details of the perturbation theory in each limit worked out in Townsend section 11.4.
+
+
 
 
 
