@@ -61,6 +61,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'lecture17';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -388,6 +390,29 @@ document.write(`
 <h1>Lecture 17 Feb 29<a class="headerlink" href="#lecture-17-feb-29" title="Permalink to this heading">#</a></h1>
 <section id="more-on-the-ammonia-molecule">
 <h2>More on the ammonia molecule<a class="headerlink" href="#more-on-the-ammonia-molecule" title="Permalink to this heading">#</a></h2>
+<p>The example of ammonia that we discussed last time is interesting because it can be solved exactly and compared to the perturbation theory result.</p>
+<p>If we use the <span class="math notranslate nohighlight">\(\ket{1}\)</span> and <span class="math notranslate nohighlight">\(\ket{2}\)</span> states as a basis – i.e. the states with the nitrogen molecule either above or below the plane – the Hamiltonian can be written</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\hat{H} = \begin{pmatrix}
+E_0+\mu_e|\mathbf{E}| &amp; -A \\
+-A &amp; E_0-\mu_e|\mathbf{E}| 
+\end{pmatrix}
+\end{split}\]</div>
+<p>The off-diagonal <span class="math notranslate nohighlight">\(-A\)</span> terms are there because we know that the <span class="math notranslate nohighlight">\(\ket{1}\)</span> and <span class="math notranslate nohighlight">\(\ket{2}\)</span> states are not stationary states (because they do not respect the symmetry of the Hamiltonian), so <span class="math notranslate nohighlight">\(\ket{1}\)</span> and <span class="math notranslate nohighlight">\(\ket{2}\)</span> do not diagonalize the Hamiltonian. However, the electric field couples to the dipole moment of the <span class="math notranslate nohighlight">\(\ket{1}\)</span> and <span class="math notranslate nohighlight">\(\ket{2}\)</span> states, so the part of the Hamiltonian associated with the electric field is diagonal in this basis.</p>
+<p>It is straighforward to find the eigenvalues of <span class="math notranslate nohighlight">\(\hat{H}\)</span>. They are</p>
+<div class="math notranslate nohighlight">
+\[E = E_0 \pm \sqrt{(\mu_e|\mathbf{E}|)^2 + A^2}.\]</div>
+<p>If there is no applied electric field, the energies are <span class="math notranslate nohighlight">\(E_0\mp A\)</span> with corresponding stationary states <span class="math notranslate nohighlight">\((\ket{1}\pm \ket{2})\sqrt{2}\)</span> (denoted <span class="math notranslate nohighlight">\(\ket{I}\)</span> and <span class="math notranslate nohighlight">\(\ket{II}\)</span> in Townsend).</p>
+<p>Now we can look at the two cases:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\mu_e|\mathbf{E}|\ll 2A\)</span>. In this case the electric field is a small perturbation compared to the energy splitting <span class="math notranslate nohighlight">\(2A\)</span> between the stationary states. The energies are then</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[E = E_0 \pm \sqrt{(\mu_e|\mathbf{E}|)^2 + A^2}\approx  E_0\pm A \left(1 + {1\over 2}\left({\mu_e|\mathbf{E}|\over A}\right)^2 + \dots\right)\]</div>
+<p>There is a quadratic correction to the energy <span class="math notranslate nohighlight">\(\propto |\mathbf{E}|^2\)</span>: this is exactly what you would find using non-degenerate perturbation theory treating the electric field as a perturbation. It makes sense because the two energy levels are non-degenerate, and the corresponding stationary states do not have a dipole moment since they are eigenvectors of the parity operator and respect the symmetry of the Hamiltonian.</p>
+<ol class="arabic simple" start="2">
+<li><p><span class="math notranslate nohighlight">\(\mu_e|\mathbf{E}|\gg 2A\)</span></p></li>
+</ol>
 </section>
 <section id="the-real-hydrogen-atom-fine-structure">
 <h2>The “real” hydrogen atom: fine structure<a class="headerlink" href="#the-real-hydrogen-atom-fine-structure" title="Permalink to this heading">#</a></h2>
@@ -396,6 +421,7 @@ document.write(`
 <h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Townsend Chapter 11.</p></li>
+<li><p>Section 4.5 of Townsend discusses the ammonia molecule (this was covered in the Quantum 1 course).</p></li>
 </ul>
 </section>
 </section>
@@ -493,7 +519,7 @@ By <a href="https://www.physics.mcgill.ca/~cumming/">Andrew Cumming</a>
     
   <p class="copyright">
     
-      © Copyright 2023, CC BY SA 4.0.
+      © Copyright 2024, CC BY SA 4.0.
       <br/>
     
   </p>
