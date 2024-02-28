@@ -403,16 +403,21 @@ E_0+\mu_e|\mathbf{E}| &amp; -A \\
 <div class="math notranslate nohighlight">
 \[E = E_0 \pm \sqrt{(\mu_e|\mathbf{E}|)^2 + A^2}.\]</div>
 <p>If there is no applied electric field, the energies are <span class="math notranslate nohighlight">\(E_0\mp A\)</span> with corresponding stationary states <span class="math notranslate nohighlight">\((\ket{1}\pm \ket{2})\sqrt{2}\)</span> (denoted <span class="math notranslate nohighlight">\(\ket{I}\)</span> and <span class="math notranslate nohighlight">\(\ket{II}\)</span> in Townsend).</p>
-<p>Now we can look at the two cases:</p>
+<p>Now we can look at the two different orderings of <span class="math notranslate nohighlight">\(\mu_e|\mathbf{E}|\)</span> and <span class="math notranslate nohighlight">\(A\)</span> (both assumed to be <span class="math notranslate nohighlight">\(\ll E_0\)</span>):</p>
 <ol class="arabic simple">
 <li><p><span class="math notranslate nohighlight">\(\mu_e|\mathbf{E}|\ll 2A\)</span>. In this case the electric field is a small perturbation compared to the energy splitting <span class="math notranslate nohighlight">\(2A\)</span> between the stationary states. The energies are then</p></li>
 </ol>
 <div class="math notranslate nohighlight">
 \[E = E_0 \pm \sqrt{(\mu_e|\mathbf{E}|)^2 + A^2}\approx  E_0\pm A \left(1 + {1\over 2}\left({\mu_e|\mathbf{E}|\over A}\right)^2 + \dots\right)\]</div>
-<p>There is a quadratic correction to the energy <span class="math notranslate nohighlight">\(\propto |\mathbf{E}|^2\)</span>: this is exactly what you would find using non-degenerate perturbation theory treating the electric field as a perturbation. It makes sense because the two energy levels are non-degenerate, and the corresponding stationary states do not have a dipole moment since they are eigenvectors of the parity operator and respect the symmetry of the Hamiltonian.</p>
+<p>There is a quadratic correction to the energy <span class="math notranslate nohighlight">\(\propto |\mathbf{E}|^2\)</span>: this is exactly what you would find using non-degenerate perturbation theory using the <span class="math notranslate nohighlight">\(\ket{I}\)</span>, <span class="math notranslate nohighlight">\(\ket{II}\)</span> basis and treating the electric field as a perturbation. It makes sense because the two energy levels are non-degenerate, and the corresponding stationary states do not have a dipole moment since they are eigenvectors of the parity operator and respect the symmetry of the Hamiltonian.</p>
 <ol class="arabic simple" start="2">
-<li><p><span class="math notranslate nohighlight">\(\mu_e|\mathbf{E}|\gg 2A\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\mu_e|\mathbf{E}|\gg 2A\)</span>. The energy associated with the electric field now is much larger than the splitting between the unperturbed energy levels. The energy is</p></li>
 </ol>
+<div class="math notranslate nohighlight">
+\[E = E_0 \pm \sqrt{(\mu_e|\mathbf{E}|)^2 + A^2}\approx  E_0\pm \mu_e|\mathbf{E}|\left(1 + {1\over 2}\left({A\over \mu_e|\mathbf{E}|}\right)^2 + \dots\right)\]</div>
+<p>We now see a linear Stark effect, as we would find with degenerate perturbation theory where we move to a basis in which <span class="math notranslate nohighlight">\(\hat{H}_1\)</span> is diagonal, i.e. <span class="math notranslate nohighlight">\(\ket{1}\)</span>, <span class="math notranslate nohighlight">\(\ket{2}\)</span>.</p>
+<p>The important point about non-degenerate perturbation theory is that we need the terms <span class="math notranslate nohighlight">\(\propto \braket{\Psi_n|\hat{H}_1|\Psi_k}/(E_n^{(0)}-E_k^{(0)})\)</span> to remain small. In this problem, that corresponds to the ratio <span class="math notranslate nohighlight">\(\mu_e|\mathbf{E}|/2A\)</span>. Once this ratio becomes large, we should use degenerate perturbation theory instead.</p>
+<p>You can see more of the details of the perturbation theory in each limit worked out in Townsend section 11.4.</p>
 </section>
 <section id="the-real-hydrogen-atom-fine-structure">
 <h2>The “real” hydrogen atom: fine structure<a class="headerlink" href="#the-real-hydrogen-atom-fine-structure" title="Permalink to this heading">#</a></h2>
