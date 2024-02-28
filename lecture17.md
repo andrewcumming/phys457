@@ -21,7 +21,7 @@ $$E = E_0 \pm \sqrt{(\mu_e|\mathbf{E}|)^2 + A^2}.$$
 
 If there is no applied electric field, the energies are $E_0\mp A$ with corresponding stationary states $(\ket{1}\pm \ket{2})\sqrt{2}$ (denoted $\ket{I}$ and $\ket{II}$ in Townsend).
 
-Now we can look at the two cases:
+Now we can look at the two different orderings of $\mu_e|\mathbf{E}|$ and $A$ (both assumed to be $\ll E_0$):
 
 1. $\mu_e|\mathbf{E}|\ll 2A$. In this case the electric field is a small perturbation compared to the energy splitting $2A$ between the stationary states. The energies are then
 
@@ -30,7 +30,7 @@ $$E = E_0 \pm \sqrt{(\mu_e|\mathbf{E}|)^2 + A^2}\approx  E_0\pm A \left(1 + {1\o
 There is a quadratic correction to the energy $\propto |\mathbf{E}|^2$: this is exactly what you would find using non-degenerate perturbation theory treating the electric field as a perturbation. It makes sense because the two energy levels are non-degenerate, and the corresponding stationary states do not have a dipole moment since they are eigenvectors of the parity operator and respect the symmetry of the Hamiltonian.
 
 
-2. $\mu_e|\mathbf{E}|\gg 2A$
+2. $\mu_e|\mathbf{E}|\gg 2A$. The energy is 
 
 
 
