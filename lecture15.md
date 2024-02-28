@@ -105,8 +105,7 @@ The perturbing electric field breaks the degeneracy of the $n=2$ states: two of 
 
 Also note that when we calculate the second order correction to energy or the first order correction to the states, the terms with the zero denominators now vanish because we are using the new basis that diagonalizes $\hat{H}_1$ in the degnerate subspace. (The other terms involving higher order states will still be there and lead to higher order corrections).
 
-The particular combinations $\ket{+}$ and $\ket{-}$ are selected out by the perturbation because they have a permanent dipole moment. This existing dipole moment then interacts with the electric field to give a linear dependence of the energy on electric field.
-
+The particular combinations $\ket{+}$ and $\ket{-}$ are selected out by the perturbation because they have a dipole moment. This dipole moment then interacts with the electric field to give a linear dependence of the energy on electric field. We'll discuss this more next time.
 
 
 ## Further reading
