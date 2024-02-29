@@ -432,6 +432,40 @@ E_0+\mu_e|\mathbf{E}| &amp; -A \\
 <div class="math notranslate nohighlight">
 \[\mathbf{B} = {eZ\over 4\pi\epsilon_0 m_e c^2 r^3}\mathbf{r}\times \mathbf{p} = {eZ\over 4\pi\epsilon_0 m_e c^2 r^3}\mathbf{L}.\]</div>
 <p>[Question to think about: where is the <span class="math notranslate nohighlight">\(\mu_0\)</span> in this formula?]</p>
+<p>The magnetic moment of the electron is</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{\mu} = - g \mu_B {\mathbf{S}\over \hbar}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mu_B=e\hbar/2m_e\)</span> is the Bohr magneton and <span class="math notranslate nohighlight">\(g=2\)</span> for the electron, and <span class="math notranslate nohighlight">\(\mathbf{S}\)</span> is the electron spin. The interaction energy is</p>
+<div class="math notranslate nohighlight">
+\[\hat{H}_1 = -\mathbf{\mu}\cdot \mathbf{B},\]</div>
+<p>ie. the magnetic moment wants to align with the magnetic field. Putting together our expressions for <span class="math notranslate nohighlight">\(\mathbf{\mu}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{B}\)</span> gives</p>
+<div class="math notranslate nohighlight">
+\[\hat{H}_1 = {1\over 2} {Ze^2\over 4\pi\epsilon_0}{1\over m_e^2 c^2 r^3}{\mathbf{L}\cdot\mathbf{S}},\]</div>
+<p>where I’ve also included an extra factor of <span class="math notranslate nohighlight">\(1/2\)</span> in the prefactor which comes from a full relativistic treatment of the H atom (this comes from an effect known as Thomas precession and also comes from the non-relativistic expansion of the Dirac equation which is the relativistic version of the Schrödinger equation).</p>
+<p>If you make the substitution <span class="math notranslate nohighlight">\(e^2/4\pi\epsilon_0=\alpha \hbar c\)</span> and use the Bohr radius <span class="math notranslate nohighlight">\(a_0=\hbar/\alpha m_e c\)</span>, then you can show that this can be rewritten as</p>
+<div class="math notranslate nohighlight">
+\[\hat{H}_1 = Z^2\alpha^2 \left({a_0\over Zr}\right)^3 {\hat{\mathbf{L}}\cdot\hat{\mathbf{S}}\over \hbar^2} {1\over 2}\alpha^2 Z^2 m_e c^2 \]</div>
+<p>which shows that this term is of order <span class="math notranslate nohighlight">\((Z\alpha)^2\)</span> compared to the hydrogen atom ground state energy.</p>
+<p>Now that we are including the spin of the electron, so we have stationary states</p>
+<div class="math notranslate nohighlight">
+\[\ket{n,\ell, m, s, m_s}\]</div>
+<p>i.e. we specify the state with <span class="math notranslate nohighlight">\(n,\ell\)</span> and <span class="math notranslate nohighlight">\(m\)</span> as before but now we also need to add the electron spin <span class="math notranslate nohighlight">\(s\)</span> and <span class="math notranslate nohighlight">\(z\)</span>-component of the spin <span class="math notranslate nohighlight">\(m_s\)</span>. Since we are dealing with a single electron, we always have <span class="math notranslate nohighlight">\(s=1/2\)</span>, so we could drop <span class="math notranslate nohighlight">\(s\)</span> from the list if we wanted.</p>
+<p>It is straightforward to show that the operator <span class="math notranslate nohighlight">\(\hat{\mathbf{L}}\cdot\hat{\mathbf{S}}\)</span> is not diagonal in this basis. A way to see this is to use the angular momentum ladder operators to write</p>
+<div class="math notranslate nohighlight">
+\[\hat{\mathbf{L}}\cdot\hat{\mathbf{S}} = {1\over 2}\left(\hat{L}_+\hat{S}_- +\hat{L}_-\hat{S}_+ \right) + \hat{L}_z\hat{S}_z.\]</div>
+<p>This shows that <span class="math notranslate nohighlight">\(\hat{\mathbf{L}}\cdot\hat{\mathbf{S}}\)</span> will couple a state with <span class="math notranslate nohighlight">\(m, m_s\)</span> for example with another state that has <span class="math notranslate nohighlight">\(m+1, m_s-1\)</span>, i.e. the off-diagonal matrix elements will not vanish. This means that we will have to find the linear combinations of states that diagonalize <span class="math notranslate nohighlight">\(\hat{H}_1\)</span> and then we can use degenerate perturbation theory to calculate the corrections to the energies that come from the <span class="math notranslate nohighlight">\(\hat{\mathbf{L}}\cdot\hat{\mathbf{S}}\)</span> term.</p>
+<p>What are these linear combinations? There is a clue in the fact that <span class="math notranslate nohighlight">\(m\)</span> and <span class="math notranslate nohighlight">\(m_s\)</span> are changed by the ladder operators, but always in opposite directions. In other words, if we form a total angular momentum operator</p>
+<div class="math notranslate nohighlight">
+\[\hat{\mathbf{J}} = \hat{\mathbf{L}} + \hat{\mathbf{S}}\]</div>
+<p>the <span class="math notranslate nohighlight">\(z\)</span>-component <span class="math notranslate nohighlight">\(m_j = m + m_s\)</span> (ie. the eigenvalue of <span class="math notranslate nohighlight">\(\hat{J}_z\)</span>) is conserved by <span class="math notranslate nohighlight">\(\hat{\mathbf{L}}\cdot\hat{\mathbf{S}}\)</span>. Furthermore, we can see that the product <span class="math notranslate nohighlight">\(\mathbf{L}\cdot\mathbf{S}\)</span> is not changed if we perform a rotation on both the <span class="math notranslate nohighlight">\(\mathbf{L}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{S}\)</span> vectors together. So the Hamiltonian keeps a rotational symmetry but only if we rotate both, ie. with the generator of rotations <span class="math notranslate nohighlight">\(\mathbf{J}\)</span>. If we write</p>
+<div class="math notranslate nohighlight">
+\[2\hat{\mathbf{L}}\cdot\hat{\mathbf{S}} = \hat{\mathbf{J}}^2 - \hat{\mathbf{L}}^2 -\hat{\mathbf{S}}^2\]</div>
+<p>then we can see that <span class="math notranslate nohighlight">\([\hat{H},\hat{J}^2]=0\)</span> which also shows that we can write the stationary states in terms of eigenstates of <span class="math notranslate nohighlight">\(\hat{\mathbf{J}}\)</span>.</p>
+<p>This suggests then that the new basis we need to diagonalize <span class="math notranslate nohighlight">\(\hat{H}_1\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\ket{n,\ell, s, j, m_j},\]</div>
+<p>i.e. we replace <span class="math notranslate nohighlight">\(m\)</span> and <span class="math notranslate nohighlight">\(m_s\)</span> by <span class="math notranslate nohighlight">\(j\)</span> and <span class="math notranslate nohighlight">\(m_j\)</span>. The physical reason for this is that the interaction between the magnetic moment of the electron and the magnetic field tries to align the dipole moment with the field, but because the dipole moment is created by the electron spin the result is that the spin precesses rather than aligns. The angular momentum directions change, so that <span class="math notranslate nohighlight">\(m\)</span> and <span class="math notranslate nohighlight">\(m_s\)</span> are no longer good quantum numbers. The magnitudes are not changed by precession, so <span class="math notranslate nohighlight">\(\ell\)</span> is still a good quantum number for example.</p>
+<p>We’ll look in more detail at these states next time. We can use them to evaluate the corrections to the energy due to the <span class="math notranslate nohighlight">\(\hat{\mathbf{L}}\cdot\hat{\mathbf{S}}\)</span> term and we’ll see that the energy levels are split, now depending on both <span class="math notranslate nohighlight">\(n\)</span> and <span class="math notranslate nohighlight">\(j\)</span> rather than <span class="math notranslate nohighlight">\(n\)</span> only in the unperturbed H atom.</p>
 </section>
 <section id="further-reading">
 <h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this heading">#</a></h2>

@@ -59,10 +59,55 @@ $$\mathbf{B} = {eZ\over 4\pi\epsilon_0 m_e c^2 r^3}\mathbf{r}\times \mathbf{p} =
 
 [Question to think about: where is the $\mu_0$ in this formula?]
 
+The magnetic moment of the electron is 
 
+$$\mathbf{\mu} = - g \mu_B {\mathbf{S}\over \hbar}$$
 
+where $\mu_B=e\hbar/2m_e$ is the Bohr magneton and $g=2$ for the electron, and $\mathbf{S}$ is the electron spin. The interaction energy is 
 
+$$\hat{H}_1 = -\mathbf{\mu}\cdot \mathbf{B},$$
 
+ie. the magnetic moment wants to align with the magnetic field. Putting together our expressions for $\mathbf{\mu}$ and $\mathbf{B}$ gives
+
+$$\hat{H}_1 = {1\over 2} {Ze^2\over 4\pi\epsilon_0}{1\over m_e^2 c^2 r^3}{\mathbf{L}\cdot\mathbf{S}},$$
+
+where I've also included an extra factor of $1/2$ in the prefactor which comes from a full relativistic treatment of the H atom (this comes from an effect known as Thomas precession and also comes from the non-relativistic expansion of the Dirac equation which is the relativistic version of the Schrödinger equation).
+
+If you make the substitution $e^2/4\pi\epsilon_0=\alpha \hbar c$ and use the Bohr radius $a_0=\hbar/\alpha m_e c$, then you can show that this can be rewritten as
+
+$$\hat{H}_1 = Z^2\alpha^2 \left({a_0\over Zr}\right)^3 {\hat{\mathbf{L}}\cdot\hat{\mathbf{S}}\over \hbar^2} {1\over 2}\alpha^2 Z^2 m_e c^2 $$
+
+which shows that this term is of order $(Z\alpha)^2$ compared to the hydrogen atom ground state energy.
+
+Now that we are including the spin of the electron, so we have stationary states 
+
+$$\ket{n,\ell, m, s, m_s}$$
+
+i.e. we specify the state with $n,\ell$ and $m$ as before but now we also need to add the electron spin $s$ and $z$-component of the spin $m_s$. Since we are dealing with a single electron, we always have $s=1/2$, so we could drop $s$ from the list if we wanted.
+
+It is straightforward to show that the operator $\hat{\mathbf{L}}\cdot\hat{\mathbf{S}}$ is not diagonal in this basis. A way to see this is to use the angular momentum ladder operators to write
+
+$$\hat{\mathbf{L}}\cdot\hat{\mathbf{S}} = {1\over 2}\left(\hat{L}_+\hat{S}_- +\hat{L}_-\hat{S}_+ \right) + \hat{L}_z\hat{S}_z.$$
+
+This shows that $\hat{\mathbf{L}}\cdot\hat{\mathbf{S}}$ will couple a state with $m, m_s$ for example with another state that has $m+1, m_s-1$, i.e. the off-diagonal matrix elements will not vanish. This means that we will have to find the linear combinations of states that diagonalize $\hat{H}_1$ and then we can use degenerate perturbation theory to calculate the corrections to the energies that come from the $\hat{\mathbf{L}}\cdot\hat{\mathbf{S}}$ term.
+
+What are these linear combinations? There is a clue in the fact that $m$ and $m_s$ are changed by the ladder operators, but always in opposite directions. In other words, if we form a total angular momentum operator
+
+$$\hat{\mathbf{J}} = \hat{\mathbf{L}} + \hat{\mathbf{S}}$$
+
+the $z$-component $m_j = m + m_s$ (ie. the eigenvalue of $\hat{J}_z$) is conserved by $\hat{\mathbf{L}}\cdot\hat{\mathbf{S}}$. Furthermore, we can see that the product $\mathbf{L}\cdot\mathbf{S}$ is not changed if we perform a rotation on both the $\mathbf{L}$ and $\mathbf{S}$ vectors together. So the Hamiltonian keeps a rotational symmetry but only if we rotate both, ie. with the generator of rotations $\mathbf{J}$. If we write 
+
+$$2\hat{\mathbf{L}}\cdot\hat{\mathbf{S}} = \hat{\mathbf{J}}^2 - \hat{\mathbf{L}}^2 -\hat{\mathbf{S}}^2$$
+
+then we can see that $[\hat{H},\hat{J}^2]=0$ which also shows that we can write the stationary states in terms of eigenstates of $\hat{\mathbf{J}}$.
+
+This suggests then that the new basis we need to diagonalize $\hat{H}_1$ is
+
+$$\ket{n,\ell, s, j, m_j},$$
+
+i.e. we replace $m$ and $m_s$ by $j$ and $m_j$. The physical reason for this is that the interaction between the magnetic moment of the electron and the magnetic field tries to align the dipole moment with the field, but because the dipole moment is created by the electron spin the result is that the spin precesses rather than aligns. The angular momentum directions change, so that $m$ and $m_s$ are no longer good quantum numbers. The magnitudes are not changed by precession, so $\ell$ is still a good quantum number for example.
+
+We'll look in more detail at these states next time. We can use them to evaluate the corrections to the energy due to the $\hat{\mathbf{L}}\cdot\hat{\mathbf{S}}$ term and we'll see that the energy levels are split, now depending on both $n$ and $j$ rather than $n$ only in the unperturbed H atom.
 
 
 ## Further reading
