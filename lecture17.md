@@ -47,7 +47,19 @@ We saw that there are $n^2$ degenerate states in each energy level of the hydrog
 
 $$\left({v_e\over c}\right)^2 \approx {2E\over m_e c^2}\approx (Z\alpha)^2\approx 5\times 10^{-5} Z^2.$$
 
-These small shifts are known as the *fine structure*. There are three contributions (see Townsend section 11.5): (i) the correction from using the relativistic expression for energy rather than non-relativistic, (ii) the spin-orbit interaction, and (iii) the Darwin term. The first is straightforward to deal with, and the third requires relativistic quantum mechanics to derive. We'll focus on the spin-orbit correction, which is a further example of finding the correct basis to diagonalize the perturbation to the Hamiltonian.
+These small shifts are known as the *fine structure*. There are three contributions (see Townsend section 11.5): (i) the correction from using the relativistic expression for energy rather than non-relativistic, (ii) the spin-orbit interaction, and (iii) the Darwin term. The first is straightforward to deal with, and the third requires relativistic quantum mechanics to derive. We'll focus on the spin-orbit correction, which is a another example of a situation where we have to find the correct basis to diagonalize the perturbation.
+
+First, let's derive the spin-orbit coupling term. The idea is that in the rest frame of the electron there is a magnetic field 
+
+$$\mathbf{B} = -{\mathbf{v}\times \mathbf{E}\over c^2}$$
+
+which comes from the Lorentz transformation into the electron rest frame. The electric field of the proton is $\mathbf{E} = (eZ/4\pi \epsilon_0 r^3)\mathbf{r}$ and also writing $\mathbf{v} = \mathbf{p}/m_e$ gives
+
+$$\mathbf{B} = {eZ\over 4\pi\epsilon_0 m_e c^2 r^3}\mathbf{r}\times \mathbf{p} = {eZ\over 4\pi\epsilon_0 m_e c^2 r^3}\mathbf{L}.$$
+
+[Question to think about: where is the $\mu_0$ in this formula?]
+
+
 
 
 
