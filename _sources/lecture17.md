@@ -41,10 +41,14 @@ The important point about non-degenerate perturbation theory is that we need the
 You can see more of the details of the perturbation theory in each limit worked out in Townsend section 11.4.
 
 
-
-
-
 ## The "real" hydrogen atom: fine structure
+
+We saw that there are $n^2$ degenerate states in each energy level of the hydrogen atom, or actually $2n^2$ once we include the electron spin. In fact there are relativistic effects that break this degeneracy at the level 
+
+$$\left({v_e\over c}\right)^2 \approx {2E\over m_e c^2}\approx (Z\alpha)^2\approx 5\times 10^{-5} Z^2.$$
+
+These small shifts are known as the *fine structure*. There are three contributions (see Townsend section 11.5): (i) the correction from using the relativistic expression for energy rather than non-relativistic, (ii) the spin-orbit interaction, and (iii) the Darwin term. The first is straightforward to deal with, and the third requires relativistic quantum mechanics to derive. We'll focus on the spin-orbit correction, which is a further example of finding the correct basis to diagonalize the perturbation to the Hamiltonian.
+
 
 
 
