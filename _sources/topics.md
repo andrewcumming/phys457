@@ -28,3 +28,6 @@
     + [Infinite spherical well](https://andrewcumming.github.io/phys457/lecture13.html#infinite-spherical-well)
 - Perturbation theory
     + Non-degenerate and degenerate perturbation theory and application to the Stark effect in hydrogen: [Part 1](https://andrewcumming.github.io/phys457/lecture14.html#the-stark-effect-in-hydrogen-and-perturbation-theory) and [Part 2](https://andrewcumming.github.io/phys457/lecture15.html)
+    + The role of [Symmetry breaking](https://andrewcumming.github.io/phys457/lecture16.html) in degenerate perturbation theory. 
+    + The [ammonia molecule](https://andrewcumming.github.io/phys457/lecture17.html#more-on-the-ammonia-molecule) as an example system that transitions from non-degnerate to degenerate perturbation theory. 
+    + The [spin-orbit interaction](https://andrewcumming.github.io/phys457/lecture17.html#the-real-hydrogen-atom-fine-structure) in hydrogen.
