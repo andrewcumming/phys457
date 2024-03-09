@@ -12,3 +12,5 @@
 
 - [Homework 6 solutions](https://github.com/andrewcumming/phys457/blob/main/hw6_solutions.pdf) (TA: Clément Fortin)
 
+- [Homework 7 solutions](https://github.com/andrewcumming/phys457/blob/main/hw7_solutions.pdf) (TA: Renée Goodman)
+
