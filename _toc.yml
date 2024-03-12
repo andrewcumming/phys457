@@ -38,5 +38,6 @@ parts:
         - file: hw5
         - file: hw6
         - file: hw7
+        - file: hw8
         - file: homework_solutions
         
