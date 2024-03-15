@@ -39,5 +39,6 @@ parts:
         - file: hw6
         - file: hw7
         - file: hw8
+        - file: mt_sols
         - file: homework_solutions
         
