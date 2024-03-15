@@ -46,7 +46,7 @@ Plot[{psi0[x], psi1[x, 3], psi0[x] + psi1[x, 3]}, {x, 0, 1},
 
 ![plot](MT_Q1_fig1.jpg)
 
-We've set $\epsilon=3$ to be able to clearly see the effect of the perturbation, and I stop the sum at . The perturbed wavefunction is flatter in the center and pushed out towards the edges of the box. Physically, this makes sense because the perturbing potential corresponds to a force that pushes the particle away from $x=0$, increasing the probability of finding the particle closer to the edges of the box. You can also think of this in terms of the wavelength: at the center of the box, the potential has increased and so the kinetic energy is smaller, corresponding to a longer wavelength, and so the wavefunction is less curved at the center.
+We've set $\epsilon=3$ to be able to clearly see the effect of the perturbation, and I stop the sum at $k=7$ (the contribution from the higher order terms drops off rapidly with increasing $k$). The perturbed wavefunction is flatter in the center and pushed out towards the edges of the box. Physically, this makes sense because the perturbing potential corresponds to a force that pushes the particle away from $x=0$, increasing the probability of finding the particle closer to the edges of the box. You can also think of this in terms of the wavelength: at the center of the box, the potential has increased and so the kinetic energy is smaller, corresponding to a longer wavelength, and so the wavefunction is less curved at the center.
  
 
 **Question 2.** (a) By writing the lowering operator for the 3D harmonic oscillator
@@ -114,6 +114,12 @@ $$\begin{pmatrix}
 $$
 
 This matrix has 3 eigenvalues: $0$ with eigenvector $(-\sqrt{1/3}, 0, \sqrt{2/3})$, and $\pm 9$ with eigenvectors $(1/\sqrt{3}, \mp 1/\sqrt{2}, 1/\sqrt{6})$.
+To find the eigenvalues and eigenvectors in Mathematica you can use
+
+```
+Eigensystem[{{0, -3  Sqrt[6], 0}, {-3  Sqrt[6], 
+   0, -3 Sqrt[3]}, {0, -3 Sqrt[3], 0}}]
+```
 
 Finally, the two pairs of states ($\ket{3,1,1}$ and $\ket{3,2,1}$) and ($\ket{3,1,-1}$ and $\ket{3,2,-1}$) are each coupled with matrix
 
