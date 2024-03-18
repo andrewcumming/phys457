@@ -1,4 +1,4 @@
-# Lecture 18 Mar 15
+# Lecture 18 Mar 14
 
 ## More on the H atom fine structure
 
