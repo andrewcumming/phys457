@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="./" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Lecture 19 Mar 19 &#8212; PHYS 457 Quantum Physics 2</title>
   
@@ -19,54 +18,51 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'lecture19';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Homework 1" href="hw1.html" />
+    <link rel="next" title="Lecture 20 Mar 21" href="lecture20.html" />
     <link rel="prev" title="Lecture 18 Mar 14" href="lecture18.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -77,7 +73,15 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -112,11 +116,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -131,6 +138,7 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="intro.html">
@@ -139,10 +147,22 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     <p class="title logo__title">PHYS 457 Quantum Physics 2</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">About the course</span></p>
 <ul class="nav bd-sidenav">
@@ -170,6 +190,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="lecture17.html">Lecture 17 Feb 29</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture18.html">Lecture 18 Mar 14</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 19 Mar 19</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture20.html">Lecture 20 Mar 21</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Homework</span></p>
 <ul class="nav bd-sidenav">
@@ -337,20 +358,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -377,6 +400,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#helium-atom">Helium atom</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perturbation-theory-approach">Perturbation theory approach</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a></li>
 </ul>
             </nav>
@@ -387,10 +414,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="lecture-19-mar-19">
-<h1>Lecture 19 Mar 19<a class="headerlink" href="#lecture-19-mar-19" title="Permalink to this heading">#</a></h1>
+<h1>Lecture 19 Mar 19<a class="headerlink" href="#lecture-19-mar-19" title="Link to this heading">#</a></h1>
 <p>Last time, we discussed:</p>
 <ul class="simple">
 <li><p>multiparticle states, e.g. <span class="math notranslate nohighlight">\(\ket{\uparrow\downarrow}\)</span> describes a state in which particle 1 is in a spin-up state and particle 2 is spin-down</p></li>
@@ -399,8 +426,96 @@ document.write(`
 <li><p>The <em>spin-statistics theorem</em> tells us that identical fermions have  antisymmetric states with respect to particle interchange, whereas bosons have symmetric states.</p></li>
 </ul>
 <p>Today we’ll apply these ideas to the helium atom.</p>
+<section id="helium-atom">
+<h2>Helium atom<a class="headerlink" href="#helium-atom" title="Link to this heading">#</a></h2>
+<p>The Hamiltonian for the helium atom is</p>
+<div class="math notranslate nohighlight">
+\[\hat{H} = {\hat{p}_1^2\over 2m_e} + {\hat{p}_2^2\over 2m_e} - {Ze^2\over 4\pi \epsilon_0 r_1} - {Ze^2\over 4\pi \epsilon_0 r_2} + {e^2\over 4\pi \epsilon_0 |\mathbf{r}_2-\mathbf{r}_1|}\]</div>
+<p>where we identify the position and momentum of each electron with subscripts <span class="math notranslate nohighlight">\(1\)</span> and <span class="math notranslate nohighlight">\(2\)</span> respectively, and <span class="math notranslate nohighlight">\(Z=2\)</span> is the number of protons in the nucleus. We’ve also ignored any motion of the nucleus (so we use <span class="math notranslate nohighlight">\(m_e\)</span> in the denominator of the kinetic energy terms rather than the reduced mass). We see that the Hamiltonian can be written as</p>
+<div class="math notranslate nohighlight">
+\[\hat{H} = \hat{H}_1 + \hat{H}_2 + \hat{H}_\mathrm{int}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\hat{H}_1\)</span> and <span class="math notranslate nohighlight">\(\hat{H}_2\)</span> are two copies of the Hamiltonian for hydrogen-like atoms and</p>
+<div class="math notranslate nohighlight">
+\[H_\mathrm{int} = {e^2\over 4\pi \epsilon_0 |\mathbf{r}_2-\mathbf{r}_1|}\]</div>
+<p>represents the Coulomb repulsion between the two electrons.</p>
+<p>This problem doesn’t have exact analytic solutions, but there are two approaches we can use to find approximate solutions. The first is to treat the interaction term in the Hamiltonian as a perturbation and use perturbation theory. The second is the variational method, in which we guess the ground state wavefunction and use it to derive an upper limit on the ground state energy.</p>
+<section id="perturbation-theory-approach">
+<h3>Perturbation theory approach<a class="headerlink" href="#perturbation-theory-approach" title="Link to this heading">#</a></h3>
+<p>If we ignore the Coulomb repulsion between the electrons (i.e. set <span class="math notranslate nohighlight">\(\hat{H}_\mathrm{int}=0\)</span>), we can construct stationary states using the one-electron states <span class="math notranslate nohighlight">\(\psi_{n\ell m}(\mathbf{r})\ket{\uparrow}\)</span> or <span class="math notranslate nohighlight">\(\psi_{n\ell m}(\mathbf{r})\ket{\downarrow}\)</span> for each electron. Because we are dealing with two identical fermions, we need to make the state antisymmetric with respect to particle interchange.</p>
+<p><strong>Ground state</strong>. Consider first the ground state. To get the lowest energy, we can put each electron into the <span class="math notranslate nohighlight">\(n=1\)</span> state, ie.</p>
+<div class="math notranslate nohighlight">
+\[\psi(\mathbf{r}_1,\mathbf{r}_2) \propto \psi_{100}(\mathbf{r}_1)\psi_{100}(\mathbf{r}_2)\]</div>
+<p>with a corresponding energy <span class="math notranslate nohighlight">\(E = -2\times Z^2\times 13.6\ \mathrm{eV} = 108.8\ \mathrm{eV}\)</span>. Since the spatial part is symmetric with respect to particle interchange, we need the spin part to be antisymmetric, so there is only one choice – singlet – for the spin state. The ground state is therefore</p>
+<div class="math notranslate nohighlight">
+\[\psi(\mathbf{r}_1,\mathbf{r}_2) = \psi_{100}(\mathbf{r}_1)\psi_{100}(\mathbf{r}_2){1\over \sqrt{2}}\left(\ket{\uparrow\downarrow} - \ket{\downarrow\uparrow}\right).\]</div>
+<p>(I’m using a different notation here than in Townsend, with the spatial part written in terms of wavefunctions (position representation) because I find it simpler to write out, see Townsend 12.15 for the equivalent state written out in terms of kets only).</p>
+<p>Note that the two-particle wavefunction is normalized such that</p>
+<div class="math notranslate nohighlight">
+\[\int d^3\mathbf{r_1}d^3\mathbf{r_2}\, \psi(\mathbf{r}_1,\mathbf{r}_2) = 1.\]</div>
+<p>Now if we treat <span class="math notranslate nohighlight">\(\hat{H}_\mathrm{int}\)</span> as a perturbation, then we can calculate the correction to the ground state energy as</p>
+<div class="math notranslate nohighlight">
+\[E^{(1)}_1 = \braket{\Psi^{(0)}_1|\hat{H}_\mathrm{int}|\Psi^{(0)}_1}\]</div>
+<div class="math notranslate nohighlight">
+\[= \int d^3\mathbf{r_1}d^3\mathbf{r_2}\, \psi^\star_{100}(\mathbf{r}_1)\psi^\star_{100}(\mathbf{r}_2) {e^2\over 4\pi\epsilon_0 |\mathbf{r}_2-\mathbf{r}_1|}\psi_{100}(\mathbf{r}_1)\psi_{100}(\mathbf{r}_2)\]</div>
+<p>(since the perturbation doesn’t couple to the spin part of the state, the spin parts of the matrix element can be ignored, they give a factor of unity).</p>
+<p>This integral can be evaluated analytically, it’s a bit tricky so I will include that proof separately, but the result is, for <span class="math notranslate nohighlight">\(\psi_{100}\propto e^{-Zr/a_0}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[E^{(1)}_1 = {e^2\over 4\pi\epsilon_0} \left\langle {1\over |\mathbf{r}_2-\mathbf{r}_1|} \right\rangle = {e^2\over 4\pi\epsilon_0} {5Z\over 8a_0}\]</div>
+<div class="math notranslate nohighlight">
+\[= {5\over 8} Z{\alpha \hbar c\over a_0} = {5\over 4}Z{1\over 2}\alpha^2 m_e c^2 = {5\over 2}\times 13.6\ \mathrm{eV} = 34\ \mathrm{eV}.\]</div>
+<p>This gives the ground state energy as</p>
+<div class="math notranslate nohighlight">
+\[E_0 = (-108.8+34)\ \mathrm{eV} = -74.8\ \mathrm{eV}.\]</div>
+<p>Not too far off the true ionization energy of helium which is <span class="math notranslate nohighlight">\(\approx 79\ \mathrm{eV}\)</span>, but it is also not very accurate. We shouldn’t be too surprised by this because the perturbation term in the Hamiltonian is not that small compared to the other terms, so perturbation theory shouldn’t be expected to work too well.</p>
+<p><strong>Excited states</strong>. Now let’s think about the first excited state. This will involve promoting one of the electrons to the <span class="math notranslate nohighlight">\(n=2\)</span> level. In this case where we have different spatial states for each electron, we can construct either symmetric or antisymmetric spatial states</p>
+<div class="math notranslate nohighlight">
+\[\psi_s(\mathbf{r}_1,\mathbf{r}_2) = {1\over \sqrt{2}} \left( \psi_{100}(\mathbf{r}_1)\psi_{2\ell m}(\mathbf{r}_2) + \psi_{2\ell m}(\mathbf{r}_1)\psi_{100}(\mathbf{r}_2)\right)\]</div>
+<div class="math notranslate nohighlight">
+\[\psi_a(\mathbf{r}_1,\mathbf{r}_2) = {1\over \sqrt{2}} \left( \psi_{100}(\mathbf{r}_1)\psi_{2\ell m}(\mathbf{r}_2) - \psi_{2\ell m}(\mathbf{r}_1)\psi_{100}(\mathbf{r}_2)\right).\]</div>
+<p>These need to paired with either antisymmetric or symmetric spin states to make an overall antisymmetric wavefunction. The possible states are therefore the spin singlet state</p>
+<div class="math notranslate nohighlight">
+\[\psi(\mathbf{r}_1,\mathbf{r}_2) = {1\over \sqrt{2}} \psi_s(\mathbf{r}_1,\mathbf{r}_2)\left(\ket{\uparrow\downarrow} - \ket{\downarrow\uparrow}\right)\]</div>
+<p>or the triplet states</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\psi(\mathbf{r}_1,\mathbf{r}_2) = \psi_a(\mathbf{r}_1,\mathbf{r}_2)\times \begin{cases}
+\ket{\uparrow\uparrow}\\
+{1\over \sqrt{2}} \left(\ket{\uparrow\downarrow} + \ket{\downarrow\uparrow}\right)\\
+\ket{\downarrow\downarrow}
+\end{cases}.\end{split}\]</div>
+<p>With the four possible combinations <span class="math notranslate nohighlight">\((\ell, m) = (0,0), (1,-1), (1,0), (1,1)\)</span> and the four possible spin states (one singlet, three triplet), we end up with 16 possible wavefunctions.</p>
+<p>The wavefunctions <span class="math notranslate nohighlight">\(\psi_s\)</span> and <span class="math notranslate nohighlight">\(\psi_a\)</span> have an important difference: the antisymmetric wavefunction <span class="math notranslate nohighlight">\(\psi_a\)</span> vanishes when <span class="math notranslate nohighlight">\(\mathbf{r}_1=\mathbf{r}_2\)</span>, the symmetric one does not. In the antisymmetric state, the two electrons avoid each other. This is sometimes described as an <em>exchange interaction</em> or <em>exchange force</em> that keeps the particles apart. It is a purely quantum mechanical effect that arises directly from the need to have an antisymmetric state for fermions.</p>
+<p>This difference has a direct impact on the energies of the singlet vs triplet states.  The first order correction to the energy of the triplet states is</p>
+<div class="math notranslate nohighlight">
+\[\Delta E = {1\over 2}\int d^3\mathbf{r_1} d^3\mathbf{r}_2\  \psi^\ast_{100}(\mathbf{r}_1)\psi^\ast_{2\ell m}(\mathbf{r}_2){e^2\over 4\pi\epsilon_0|\mathbf{r_2}-\mathbf{r_1}|}\psi_{100}(\mathbf{r}_1)\psi_{2\ell m}(\mathbf{r}_2)\]</div>
+<div class="math notranslate nohighlight">
+\[+ {1\over 2}\int d^3\mathbf{r_1} d^3\mathbf{r}_2\  \psi^\ast_{100}(\mathbf{r}_1)\psi^\ast_{2\ell m}(\mathbf{r}_2){e^2\over 4\pi\epsilon_0|\mathbf{r_2}-\mathbf{r_1}|}\psi_{2\ell m}(\mathbf{r}_1)\psi_{100}(\mathbf{r}_2)\]</div>
+<div class="math notranslate nohighlight">
+\[+ {1\over 2}\int d^3\mathbf{r_1} d^3\mathbf{r}_2\  \psi^\ast_{2\ell m}(\mathbf{r}_1)\psi^\ast_{100}(\mathbf{r}_2){e^2\over 4\pi\epsilon_0|\mathbf{r_2}-\mathbf{r_1}|}\psi_{100}(\mathbf{r}_1)\psi_{2\ell m}(\mathbf{r}_2)\]</div>
+<div class="math notranslate nohighlight">
+\[+ {1\over 2}\int d^3\mathbf{r_1} d^3\mathbf{r}_2\  \psi^\ast_{2\ell m}(\mathbf{r}_1)\psi^\ast_{100}(\mathbf{r}_2){e^2\over 4\pi\epsilon_0|\mathbf{r_2}-\mathbf{r_1}|}\psi_{2\ell m}(\mathbf{r}_1)\psi_{100}(\mathbf{r}_2)\]</div>
+<p>We can write this as <span class="math notranslate nohighlight">\(\Delta E = J + K\)</span> with</p>
+<div class="math notranslate nohighlight">
+\[ J = \int d^3\mathbf{r_1} d^3\mathbf{r}_2\  |\psi_{100}(\mathbf{r}_1)|^2 |\psi_{2\ell m}(\mathbf{r}_2)|^2{e^2\over 4\pi\epsilon_0|\mathbf{r_2}-\mathbf{r_1}|}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[K = \int d^3\mathbf{r_1}\int d^3\mathbf{r}_2\  \psi^\ast_{100}(\mathbf{r}_1)\psi^\ast_{2\ell m}(\mathbf{r}_2){e^2\over 4\pi\epsilon_0|\mathbf{r_2}-\mathbf{r_1}|}\psi_{2\ell m}(\mathbf{r}_1)\psi_{100}(\mathbf{r}_2).\]</div>
+<div class="admonition-question admonition">
+<p class="admonition-title">Question</p>
+<p>The integral <span class="math notranslate nohighlight">\(J\)</span> has a simple physical interpretation: what is it?</p>
+</div>
+<p>If we instead used <span class="math notranslate nohighlight">\(\psi_a\)</span>, corresponding to the spin triplet state, we would find the energy shift is <span class="math notranslate nohighlight">\(\Delta E = J - K\)</span>. <strong>The spin triplet state has a lower energy than the spin singlet state, even though there is no spin term in the Hamiltonian!</strong> The symmetry of the spin state introduces (anti) correlations in the positions of the two electrons. When the spin state is symmetric, the spatial wavefunction is antisymmetric, giving a low probability that the electrons will be found close together. This leads to less repulsion between the electrons, lowering the overall energy.</p>
+<p>Here is an energy level diagram for helium, taken from Sakurai and Napolitano. The terms <em>para</em> and <em>ortho</em> helium refer to whether the electrons are in a spin singlet or triplet state respectively.</p>
+<p><img alt="" src="_images/heliumlevels.png" /></p>
+<div class="admonition-question admonition">
+<p class="admonition-title">Question:</p>
+<p>Look carefully at the diagram. Does it make sense given what we have discussed? What do the labels for each level mean?</p>
+<p>Notice that the overall shift depends on the choice of <span class="math notranslate nohighlight">\(\ell\)</span> for the second electron, but not on <span class="math notranslate nohighlight">\(m\)</span> – can you see why looking at the integrals?</p>
+<p>Count the number of states at each level. Does it make sense?</p>
+</div>
+</section>
+</section>
 <section id="further-reading">
-<h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this heading">#</a></h2>
+<h2>Further reading<a class="headerlink" href="#further-reading" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Townsend Chapter 12.</p></li>
 </ul>
@@ -432,11 +547,10 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="lecture18.html"
@@ -448,18 +562,15 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="hw1.html"
+       href="lecture20.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Homework 1</p>
+        <p class="prev-next-title">Lecture 20 Mar 21</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -468,12 +579,17 @@ document.write(`
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#helium-atom">Helium atom</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perturbation-theory-approach">Perturbation theory approach</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a></li>
 </ul>
   </nav></div>
@@ -496,6 +612,7 @@ By <a href="https://www.physics.mcgill.ca/~cumming/">Andrew Cumming</a>
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2024, CC BY SA 4.0.
@@ -522,8 +639,8 @@ By <a href="https://www.physics.mcgill.ca/~cumming/">Andrew Cumming</a>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

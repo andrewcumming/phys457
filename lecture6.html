@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="./" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Lecture 6 Jan 23 &#8212; PHYS 457 Quantum Physics 2</title>
   
@@ -19,48 +18,45 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'lecture6';</script>
@@ -77,7 +73,15 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -112,11 +116,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -131,6 +138,7 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="intro.html">
@@ -139,10 +147,22 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     <p class="title logo__title">PHYS 457 Quantum Physics 2</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">About the course</span></p>
 <ul class="nav bd-sidenav">
@@ -170,6 +190,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="lecture17.html">Lecture 17 Feb 29</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture18.html">Lecture 18 Mar 14</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture19.html">Lecture 19 Mar 19</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture20.html">Lecture 20 Mar 21</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Homework</span></p>
 <ul class="nav bd-sidenav">
@@ -337,20 +358,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -390,10 +413,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="lecture-6-jan-23">
-<h1>Lecture 6 Jan 23<a class="headerlink" href="#lecture-6-jan-23" title="Permalink to this heading">#</a></h1>
+<h1>Lecture 6 Jan 23<a class="headerlink" href="#lecture-6-jan-23" title="Link to this heading">#</a></h1>
 <p>Last time we discussed the symmetries of the two-body Hamiltonian:</p>
 <ul class="simple">
 <li><p><strong>translational symmetry</strong> when we move both particles together. The generator is the total momentum <span class="math notranslate nohighlight">\(\hat{\mathbf{P}}\)</span>. The total momentum is conserved</p></li>
@@ -408,7 +431,7 @@ document.write(`
 <p>Another symmetry is <strong>parity</strong> which takes <span class="math notranslate nohighlight">\(\mathbf{r}\rightarrow -\mathbf{r}\)</span>, i.e. <span class="math notranslate nohighlight">\(\hat{P}\ket{\mathbf{r}} = \ket{-\mathbf{r}}\)</span>. The eigenvalues of <span class="math notranslate nohighlight">\(\hat{P}\)</span> are either +1 or -1 since <span class="math notranslate nohighlight">\(\hat{P}^2\ket{\mathbf{r}} = \ket{\mathbf{r}}\)</span>. We will see that, because <span class="math notranslate nohighlight">\([\hat{H},\hat{P}] = 0\)</span>, the stationary states of the two-body problem have a definite parity.</p>
 <p>Today, we want to focus on the angular momentum eigenstates and in particular derive position-representations of the angular momentum operators and from there obtain the angular wavefunctions.</p>
 <section id="reminder-of-angular-momentum-operators">
-<h2>Reminder of angular momentum operators<a class="headerlink" href="#reminder-of-angular-momentum-operators" title="Permalink to this heading">#</a></h2>
+<h2>Reminder of angular momentum operators<a class="headerlink" href="#reminder-of-angular-momentum-operators" title="Link to this heading">#</a></h2>
 <p>First some results you will have seen already in the context of spin, but now we can apply them to orbital angular momentum:</p>
 <ul class="simple">
 <li><p><strong>Commutation relations</strong>. Unlike translations, rotations do not commute, so the angular momentum operators in different directions also do not commute:</p></li>
@@ -437,7 +460,7 @@ document.write(`
 <p>Note that <span class="math notranslate nohighlight">\(\hat{L}_+\ket{\ell, \ell} = 0\)</span> and <span class="math notranslate nohighlight">\(\hat{L}_-\ket{\ell, -\ell} = 0\)</span> (why?). These are useful for computing for example <span class="math notranslate nohighlight">\(\braket{\hat{L}_x}\)</span> when you know the state in the <span class="math notranslate nohighlight">\(\hat{L}_z\)</span> basis because you can express <span class="math notranslate nohighlight">\(\hat{L}_x\)</span> in terms of the ladder operators that act on the <span class="math notranslate nohighlight">\(\hat{L}_z\)</span> basis states.</p>
 </section>
 <section id="orbital-angular-momentum-has-integer-values">
-<h2>Orbital angular momentum has integer values<a class="headerlink" href="#orbital-angular-momentum-has-integer-values" title="Permalink to this heading">#</a></h2>
+<h2>Orbital angular momentum has integer values<a class="headerlink" href="#orbital-angular-momentum-has-integer-values" title="Link to this heading">#</a></h2>
 <p>One important difference between spin angular momentum and orbital angular momentum is that <strong><span class="math notranslate nohighlight">\(m\)</span> can take only integer values for orbital angular momentum</strong>; half-integer values are not allowed. To see this (this argument is from Townsend 9.8), go back to the rotation operator <span class="math notranslate nohighlight">\(\hat{R}(d\phi\,\mathbf{k})\)</span> and write the position eigenstates now in spherical coordinates, so</p>
 <div class="math notranslate nohighlight">
 \[\hat{R}(d\phi\,\mathbf{k})\, \ket{r, \theta, \phi} = \ket{r, \theta, \phi+d\phi}\]</div>
@@ -470,7 +493,7 @@ document.write(`
 <p>Since <span class="math notranslate nohighlight">\(m\)</span> ranges from <span class="math notranslate nohighlight">\(-\ell\)</span> to <span class="math notranslate nohighlight">\(+\ell\)</span>, it follows that <span class="math notranslate nohighlight">\(\ell\)</span> is also integer. The half-integral values are not allowed because we are dealing with orbital angular momentum which involves real space rotations.</p>
 </section>
 <section id="eigenstates-of-orbital-angular-momentum-in-position-space">
-<h2>Eigenstates of orbital angular momentum in position space<a class="headerlink" href="#eigenstates-of-orbital-angular-momentum-in-position-space" title="Permalink to this heading">#</a></h2>
+<h2>Eigenstates of orbital angular momentum in position space<a class="headerlink" href="#eigenstates-of-orbital-angular-momentum-in-position-space" title="Link to this heading">#</a></h2>
 <p>To get the full picture of the eigenstates of orbital angular momentum, we also need the variation in the <span class="math notranslate nohighlight">\(\theta\)</span> direction. There a couple of ways to get this. One is to write out the components of <span class="math notranslate nohighlight">\(\hat{\mathbf{L}} = \hat{\mathbf{r}}\times\hat{\mathbf{p}}\)</span> in spherical coordinates and compute <span class="math notranslate nohighlight">\(\hat{L}^2\)</span>. This is covered in Townsend 9.8 (see eqs. 9.125-9.129). The other thing we can do is go back to the two-body Hamiltonian and recognize that the non-radial kinetic energy must be <span class="math notranslate nohighlight">\(L^2/2\mu r^2\)</span>, ie. <span class="math notranslate nohighlight">\((1/2)L^2/I = (1/2)I\Omega^2\)</span> (we’ll see this more formally next time). Since <span class="math notranslate nohighlight">\(\hat{p}^2\rightarrow -(\hbar^2/2\mu)\nabla^2\)</span>, we can make the identification</p>
 <div class="math notranslate nohighlight">
 \[\hat{L}^2\rightarrow -\hbar^2 r^2 \nabla^2_\perp\]</div>
@@ -534,7 +557,7 @@ Code<div class="sd-summary-down docutils">
 </details></div>
 </section>
 <section id="further-reading">
-<h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this heading">#</a></h2>
+<h2>Further reading<a class="headerlink" href="#further-reading" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Townsend 9.6-9.9.</p></li>
 </ul>
@@ -566,11 +589,10 @@ Code<div class="sd-summary-down docutils">
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="lecture5.html"
@@ -590,10 +612,7 @@ Code<div class="sd-summary-down docutils">
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -601,6 +620,7 @@ Code<div class="sd-summary-down docutils">
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -633,6 +653,7 @@ By <a href="https://www.physics.mcgill.ca/~cumming/">Andrew Cumming</a>
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2024, CC BY SA 4.0.
@@ -659,8 +680,8 @@ By <a href="https://www.physics.mcgill.ca/~cumming/">Andrew Cumming</a>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>
