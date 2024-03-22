@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
@@ -479,6 +479,40 @@ I=\int d^3\mathbf{r}_1\int 2\pi r_2^2dr_2\ e^{-2\beta(r_1+r_2)/a_0}\int \sin\the
 <p class="sd-card-text">Therefore</p>
 <div class="math notranslate nohighlight">
 \[\left\langle {1\over r_{12}}  \right\rangle = {5\over 8}{\beta\over a_0}.\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">We need to evaluate the expectation value of the full Hamiltonian for helium using the trial wavefunction <span class="math notranslate nohighlight">\(\psi(r_1,r_2)\propto e^{-Z_\mathrm{eff} (r_1+r_2)/a_0}\)</span>.</p>
+<p class="sd-card-text">The Coulomb terms are straightforward using the integrals given. They are</p>
+<div class="math notranslate nohighlight">
+\[-2\times {Ze^2\over 4\pi \epsilon_0}\left\langle {1\over r_1} \right\rangle + {e^2\over 4\pi\epsilon_0}\left\langle {1\over r_{12}} \right\rangle = {e^2\over 4\pi\epsilon_0 a_0}\left[-2Z_\mathrm{eff}Z + {5Z_\mathrm{eff}\over 8}\right]\]</div>
+<p class="sd-card-text">We have to be a bit more careful with the kinetic energy term. Since the two kinetic energy terms give equal contributions, we can write the total kinetic energy as</p>
+<div class="math notranslate nohighlight">
+\[2\times -{\hbar^2\over 2m_e}\int r_1^2 dr_1\ \psi(r_1) \nabla_r^2 \psi(r_1)\]</div>
+<div class="math notranslate nohighlight">
+\[= -{\hbar^2\over m_e}\int r_1^2 dr_1\ \psi(r_1) {1\over r_1^2}{\partial \over \partial r_1}\left(r_1^2 {\partial \psi(r_1)\over\partial r_1}\right)\]</div>
+<div class="math notranslate nohighlight">
+\[= -{\hbar^2\over m_e}\int r_1^2 dr_1\ \psi(r_1) \left[{\partial^2 \psi(r_1)\over\partial r_1^2} +{2\over r_1}{\partial \psi(r_1)\over\partial r_1}\right]\]</div>
+<div class="math notranslate nohighlight">
+\[= -{\hbar^2\over m_e} \left\langle {\partial^2\over\partial r_1^2} \right\rangle + {\hbar^2\over 2m_e}{2Z_\mathrm{eff}\over a_0}\left\langle {1\over r_1} \right\rangle\]</div>
+<div class="math notranslate nohighlight">
+\[={\hbar^2\over m_e a_0^2}\left[-Z_\mathrm{eff}^2 + 2Z_\mathrm{eff}^2    \right] = {\alpha \hbar c\over a_0}Z_\mathrm{eff}^2 = {e^2\over 4\pi\epsilon_0 a_0}Z_\mathrm{eff}^2\]</div>
+<p class="sd-card-text">(so we get a positive kinetic energy term, which makes sense).</p>
+<p class="sd-card-text">Adding all terms, we have</p>
+<div class="math notranslate nohighlight">
+\[E(Z_\mathrm{eff}) = {e^2\over 4\pi\epsilon_0 a_0}\left[Z_\mathrm{eff}^2-2Z_\mathrm{eff}Z + {5Z_\mathrm{eff}\over 8}\right].\]</div>
+<p class="sd-card-text">Minimizing with respect to <span class="math notranslate nohighlight">\(Z_{\rm eff}\)</span>, ie. setting <span class="math notranslate nohighlight">\(dE/dZ_{\rm eff}=0\)</span> gives</p>
+<div class="math notranslate nohighlight">
+\[Z_{\rm eff} = Z-{5\over 16} = 2-{5\over 16} = 1.6875\]</div>
+<p class="sd-card-text">and</p>
+<div class="math notranslate nohighlight">
+\[E = 2\times 13.6\ {\rm eV}\times  Z_{\rm eff}\left[Z_{\rm eff} - 4 + {5\over 8} \right]= -2Z_{\rm eff}^2 \times 13.6\ {\rm eV}= - 77.5\ {\rm eV}.\]</div>
+<p class="sd-card-text">This is closer to the correct answer than perturbation theory.</p>
 </div>
 </details></section>
 <section id="further-reading">
