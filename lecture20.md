@@ -123,3 +123,5 @@ This is closer to the correct answer than perturbation theory.
 ## Further reading
 
 - Townsend Chapter 12.
+
+- See [Kinoshota (1957)](https://journals.aps.org/pr/abstract/10.1103/PhysRev.105.1490) for a more sophisticated 39-parameter estimate of the helium ground state energy. 
