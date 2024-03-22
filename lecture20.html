@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
@@ -429,7 +429,58 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\left\langle {\partial^2\over\partial r_i^2}\right\rangle = {\beta^2\over a_0^2}, \hspace{1cm}\left\langle {1\over r_i}\right\rangle = {\beta\over a_0}, \hspace{1cm}\left\langle {1\over r_{12}}\right\rangle = {5\beta\over 8a_0}.\]</div>
 </div>
-</section>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Derivation of these expectation values<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Let’s do first <span class="math notranslate nohighlight">\(\langle 1/r_1\rangle\)</span>. The full integration we need to do is</p>
+<div class="math notranslate nohighlight">
+\[\left\langle {1\over r_1} \right\rangle = \int d^3\mathbf{r}_1 \int d^3\mathbf{r}_2 \psi^\star(r_1, r_2) {1\over |\mathbf{r_1}|} \psi(r_1, r_2)\Bigg/\int d^3\mathbf{r}_1 \int d^3\mathbf{r}_2 |\psi(r_1, r_2)|^2  ,\]</div>
+<p class="sd-card-text">where the trial wavefunction depends only on <span class="math notranslate nohighlight">\(r_1\)</span> and <span class="math notranslate nohighlight">\(r_2\)</span>, not on the angles <span class="math notranslate nohighlight">\(\theta_1\)</span>, <span class="math notranslate nohighlight">\(\phi_1\)</span>, <span class="math notranslate nohighlight">\(\theta_2\)</span> or <span class="math notranslate nohighlight">\(\phi_2\)</span>, and I’ve explicitly included the normalization factor. Since the quantity we’re averaging depends only on <span class="math notranslate nohighlight">\(r_1\)</span>, the integrals cancel except for the <span class="math notranslate nohighlight">\(r_1\)</span> integration, giving</p>
+<div class="math notranslate nohighlight">
+\[\left\langle {1\over r_1} \right\rangle = \int_0^\infty r_1^2 dr_1 {1\over r_1} e^{-2\beta r_1/a_0} \Bigg/ \int_0^\infty r_1^2 dr_1 e^{-2\beta r_1/a_0}\]</div>
+<div class="math notranslate nohighlight">
+\[= \int_0^\infty r_1 dr_1 e^{-2\beta r_1/a_0} \Bigg/ \int_0^\infty r_1^2 dr_1 e^{-2\beta r_1/a_0} ={\beta\over a_0}.\]</div>
+<p class="sd-card-text">The answer is the same for <span class="math notranslate nohighlight">\(\langle 1/r_2\rangle\)</span>.</p>
+<p class="sd-card-text">Similarly,</p>
+<div class="math notranslate nohighlight">
+\[\left\langle {\partial^2\over\partial r_1^2} \right\rangle = \int_0^\infty r_1^2 dr_1  e^{-\beta r_1/a_0} {\partial^2\over\partial r_1^2} e^{-\beta r_1/a_0} \Bigg/ \int_0^\infty r_1^2 dr_1 e^{-2\beta r_1/a_0} = {\beta^2\over a_0^2}\]</div>
+<p class="sd-card-text">and the same for <span class="math notranslate nohighlight">\(r_2\)</span>.</p>
+<p class="sd-card-text">The last one is more tricky.
+We want</p>
+<div class="math notranslate nohighlight">
+\[I = \int d^3\mathbf{r}_1\int d^3\mathbf{r}_2\ e^{-2\beta(r_1+r_2)/a_0}{1\over |\mathbf{r}_2-\mathbf{r}_1|}\]</div>
+<p class="sd-card-text">Choose coordinates such that the <span class="math notranslate nohighlight">\(z\)</span>-axis lies along <span class="math notranslate nohighlight">\(\mathbf{r}_1\)</span>. Then <span class="math notranslate nohighlight">\(\mathbf{r}_1\cdot\mathbf{r}_2 = r_1r_2\cos\theta\)</span> and we can write the integral as</p>
+<div class="math notranslate nohighlight">
+\[
+I=\int d^3\mathbf{r}_1\int 2\pi r_2^2dr_2\ e^{-2\beta(r_1+r_2)/a_0}\int \sin\theta d\theta {1\over \sqrt{r_1^2+r_2^2-2r_1r_2\cos\theta}}\]</div>
+<p class="sd-card-text">The angular part is</p>
+<div class="math notranslate nohighlight">
+\[\int_{-1}^{1} d\mu {1\over \sqrt{r_1^2+r_2^2-2r_1r_2\mu}} = {r_1+r_2 - |r_2-r_1|\over r_1r_2}\]</div>
+<p class="sd-card-text">giving</p>
+<div class="math notranslate nohighlight">
+\[I=\int_0^\infty 4\pi r_1^2dr_1 \left[\int_0^{r_1} 2\pi r_2^2dr_2\ e^{-2\beta(r_1+r_2)/a_0} {2\over r_1} + \int_{r_1}^\infty 2\pi r_2^2dr_2\ e^{-2\beta(r_1+r_2)/a_0} {2\over r_2} \right]\]</div>
+<div class="math notranslate nohighlight">
+\[=16\pi^2 \int_0^\infty r_1 dr_1  e^{-2\beta r_1/a_0} \left[ \int_0^{r_1} r_2^2dr_2\ e^{-2\beta r_2/a_0} +  \int_{r_1}^\infty r_1r_2\,dr_2\ e^{-2\beta r_2/a_0}\right]\]</div>
+<div class="math notranslate nohighlight">
+\[= 16\pi^2 {a_0^3\over 4\beta^3} \int_0^\infty r_1 dr_1  e^{-4\beta r_1/a_0} \left( e^{2\beta r_1/a_0} - 1 - {\beta r_1\over a_0}\right)\]</div>
+<div class="math notranslate nohighlight">
+\[= 16\pi^2 {a_0^3\over 4\beta^3} \left[ {a_0^2\over 4\beta^2} - {a_0^2\over 16\beta^2} - {\beta\over a_0}{2a_0^3\over 64\beta^3}\right]\]</div>
+<div class="math notranslate nohighlight">
+\[= 16\pi^2 {a_0^5\over 16 \beta^5} \left[1 - {1\over 4} - {1\over 8}\right]\]</div>
+<div class="math notranslate nohighlight">
+\[= 16\pi^2 {a_0^5\over 16 \beta^5} {5\over 8}.\]</div>
+<p class="sd-card-text">The normalization factor is</p>
+<div class="math notranslate nohighlight">
+\[\int d^3\mathbf{r}_1\int d^3\mathbf{r}_2\ e^{-2\beta(r_1+r_2)/a_0}=16\pi^2 \int r_1^2 dr_1 r_2^2 dr_2 e^{-2\beta(r_1+r_2)/a_0} = 16\pi^2 {a_0^6\over 16\beta^6}.\]</div>
+<p class="sd-card-text">Therefore</p>
+<div class="math notranslate nohighlight">
+\[\left\langle {1\over r_{12}}  \right\rangle = {5\over 8}{\beta\over a_0}.\]</div>
+</div>
+</details></section>
 <section id="further-reading">
 <h2>Further reading<a class="headerlink" href="#further-reading" title="Link to this heading">#</a></h2>
 <ul class="simple">
