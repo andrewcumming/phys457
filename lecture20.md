@@ -79,6 +79,47 @@ $$\left\langle {1\over r_{12}}  \right\rangle = {5\over 8}{\beta\over a_0}.$$
 ```
 
 
+```{dropdown} Solution
+
+We need to evaluate the expectation value of the full Hamiltonian for helium using the trial wavefunction $\psi(r_1,r_2)\propto e^{-Z_\mathrm{eff} (r_1+r_2)/a_0}$.
+
+The Coulomb terms are straightforward using the integrals given. They are
+
+$$-2\times {Ze^2\over 4\pi \epsilon_0}\left\langle {1\over r_1} \right\rangle + {e^2\over 4\pi\epsilon_0}\left\langle {1\over r_{12}} \right\rangle = {e^2\over 4\pi\epsilon_0 a_0}\left[-2Z_\mathrm{eff}Z + {5Z_\mathrm{eff}\over 8}\right]$$
+
+We have to be a bit more careful with the kinetic energy term. Since the two kinetic energy terms give equal contributions, we can write the total kinetic energy as 
+
+$$2\times -{\hbar^2\over 2m_e}\int r_1^2 dr_1\ \psi(r_1) \nabla_r^2 \psi(r_1)$$
+
+$$= -{\hbar^2\over m_e}\int r_1^2 dr_1\ \psi(r_1) {1\over r_1^2}{\partial \over \partial r_1}\left(r_1^2 {\partial \psi(r_1)\over\partial r_1}\right)$$
+
+$$= -{\hbar^2\over m_e}\int r_1^2 dr_1\ \psi(r_1) \left[{\partial^2 \psi(r_1)\over\partial r_1^2} +{2\over r_1}{\partial \psi(r_1)\over\partial r_1}\right]$$
+
+$$= -{\hbar^2\over m_e} \left\langle {\partial^2\over\partial r_1^2} \right\rangle + {\hbar^2\over 2m_e}{2Z_\mathrm{eff}\over a_0}\left\langle {1\over r_1} \right\rangle$$
+
+$$={\hbar^2\over m_e a_0^2}\left[-Z_\mathrm{eff}^2 + 2Z_\mathrm{eff}^2    \right] = {\alpha \hbar c\over a_0}Z_\mathrm{eff}^2 = {e^2\over 4\pi\epsilon_0 a_0}Z_\mathrm{eff}^2$$
+
+(so we get a positive kinetic energy term, which makes sense). 
+
+Adding all terms, we have 
+
+$$E(Z_\mathrm{eff}) = {e^2\over 4\pi\epsilon_0 a_0}\left[Z_\mathrm{eff}^2-2Z_\mathrm{eff}Z + {5Z_\mathrm{eff}\over 8}\right].$$
+
+Minimizing with respect to $Z_{\rm eff}$, ie. setting $dE/dZ_{\rm eff}=0$ gives 
+
+$$Z_{\rm eff} = Z-{5\over 16} = 2-{5\over 16} = 1.6875$$
+
+and
+ 
+$$E = 2\times 13.6\ {\rm eV}\times  Z_{\rm eff}\left[Z_{\rm eff} - 4 + {5\over 8} \right]= -2Z_{\rm eff}^2 \times 13.6\ {\rm eV}= - 77.5\ {\rm eV}.$$ 
+
+This is closer to the correct answer than perturbation theory.
+
+```
+
+
+
+
 ## Further reading
 
 - Townsend Chapter 12.
