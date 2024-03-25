@@ -122,6 +122,8 @@ This is closer to the correct answer than perturbation theory.
 
 ## Further reading
 
-- Townsend Chapter 12.
+- Townsend Chapter 12.2 discusses the helium atom.
+
+- We're going to move on to Chapter 13 next week, but if you are interested you can look at 12.3 which talks about the filling of shells in multi-electron atoms, and section 12.4 on the H$_2^+$ molecule, which has an interesting analogy to the double square well and ammonia problems that we looked at earlier in the course.
 
 - See [Kinoshota (1957)](https://journals.aps.org/pr/abstract/10.1103/PhysRev.105.1490) for a more sophisticated 39-parameter estimate of the helium ground state energy. 

@@ -93,4 +93,5 @@ The **spin-statistics** theorem states that **fermions** (half-integer spin part
 ## Further reading
 
 - Townsend 11.5 and 11.6 has a lot more detail on fine structure if you are interested.
-- We're starting Townsend Chapter 12 and will talk about the helium atom next time.
+- We're starting Townsend Chapter 12 and will talk about the helium atom next time. Section 12.1 goes through the idea of exchange symmetry for identical particles.
+
