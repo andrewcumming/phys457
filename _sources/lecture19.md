@@ -131,4 +131,4 @@ Count the number of states at each level. Does it make sense?
 
 ## Further reading
 
-- Townsend Chapter 12.
+- Townsend Chapter 12.2 covers the helium atom.
