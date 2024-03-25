@@ -31,3 +31,7 @@
     + The role of [Symmetry breaking](https://andrewcumming.github.io/phys457/lecture16.html) in degenerate perturbation theory. 
     + The [ammonia molecule](https://andrewcumming.github.io/phys457/lecture17.html#more-on-the-ammonia-molecule) as an example system that transitions from non-degnerate to degenerate perturbation theory. 
     + The [spin-orbit interaction](https://andrewcumming.github.io/phys457/lecture17.html#the-real-hydrogen-atom-fine-structure) in hydrogen.
+- Identical particles
+    + [Exchange symmetry and spin-statistics theorem](https://andrewcumming.github.io/phys457/lecture18.html#multi-particle-states-and-spin-statistics)
+    + The helium atom: [ground state, first excited state and perturbation theory approach](https://andrewcumming.github.io/phys457/lecture19.html#helium-atom)
+    + [The variational method applied to helium](https://andrewcumming.github.io/phys457/lecture20.html#variational-method-applied-to-helium)
