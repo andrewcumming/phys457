@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
@@ -510,12 +510,12 @@ document.write(`
 <p>We see that there is an outgoing spherical wave on the right hand side! The scattering amplitude is</p>
 <div class="math notranslate nohighlight">
 \[f(\theta,\phi) =  - {\mu\over 2\pi\hbar^2} \int d^3\mathbf{r}^\prime \, e^{-ik\hat{\mathbf{r}}\cdot\mathbf{r}^\prime} V(\mathbf{r}^\prime)e^{ikz^\prime}.\]</div>
-<p>To get this into a simpler form, we use the fact that we are looking at a stationary state, so we are consider an elastic scattering where the particle has incoming momentum <span class="math notranslate nohighlight">\(\mathbf{k}_i\)</span> and outgoing momentum <span class="math notranslate nohighlight">\(\mathbf{k}_f\)</span> which have the same magnitude but different directions. We’re assuming <span class="math notranslate nohighlight">\(\mathbf{k}_i\)</span> is in the <span class="math notranslate nohighlight">\(z\)</span>-direction, so we can write <span class="math notranslate nohighlight">\(e^{ikz^\prime}=e^{i\mathbf{k}_i\cdot\mathbf{r}^\prime}\)</span> in the integral. Similarly <span class="math notranslate nohighlight">\(\mathbf{k}_f\)</span> is in the radial direction, so <span class="math notranslate nohighlight">\(e^{-ik\hat{\mathbf{r}}\cdot\mathbf{r}^\prime}=e^{-i\mathbf{k}_f\cdot\mathbf{r}^\prime}\)</span>. In terms of the <strong>momentum transfer</strong>, defined as</p>
+<p><strong>Momentum transfer</strong>. To get this into a simpler form, we use the fact that we are looking at a stationary state, so we are consider an elastic scattering where the particle has incoming momentum <span class="math notranslate nohighlight">\(\mathbf{k}_i\)</span> and outgoing momentum <span class="math notranslate nohighlight">\(\mathbf{k}_f\)</span> which have the same magnitude but different directions. We’re assuming <span class="math notranslate nohighlight">\(\mathbf{k}_i\)</span> is in the <span class="math notranslate nohighlight">\(z\)</span>-direction, so we can write <span class="math notranslate nohighlight">\(e^{ikz^\prime}=e^{i\mathbf{k}_i\cdot\mathbf{r}^\prime}\)</span> in the integral. Similarly <span class="math notranslate nohighlight">\(\mathbf{k}_f\)</span> is in the radial direction, so <span class="math notranslate nohighlight">\(e^{-ik\hat{\mathbf{r}}\cdot\mathbf{r}^\prime}=e^{-i\mathbf{k}_f\cdot\mathbf{r}^\prime}\)</span>. In terms of the <strong>momentum transfer</strong>, defined as</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{q} = \mathbf{k}_i - \mathbf{k}_f,\]</div>
 <p>we obtain</p>
 <div class="math notranslate nohighlight">
-\[f(\theta,\phi) =  - {\mu\over 2\pi\hbar^2} \int d^3\mathbf{r}^\prime \, e^{i\mathbf{q}\cdot\mathbf{r}^\prime} V(\mathbf{r}^\prime).\]</div>
+\[\boxed{f(\theta,\phi) =  - {\mu\over 2\pi\hbar^2} \int d^3\mathbf{r}^\prime \, e^{i\mathbf{q}\cdot\mathbf{r}^\prime} V(\mathbf{r}^\prime)}\]</div>
 <p>We see that the scattering amplitude is related to a Fourier transform of the potential. This shows explicitly the idea that by measuring the angular distribution of the outgoing particles, we can learn about the spatial distribution of the scattering potential.</p>
 <p>To see the relation between <span class="math notranslate nohighlight">\(\mathbf{q}\)</span> and the angles <span class="math notranslate nohighlight">\(\theta\)</span> and <span class="math notranslate nohighlight">\(\phi\)</span>:</p>
 <div class="math notranslate nohighlight">

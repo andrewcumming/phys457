@@ -57,6 +57,8 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'lecture22';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -400,6 +402,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#born-approximation-continued">Born approximation continued</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#partial-wave-expansion">Partial wave expansion</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a></li>
 </ul>
@@ -415,6 +418,23 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="lecture-22-mar-28">
 <h1>Lecture 22 Mar 28<a class="headerlink" href="#lecture-22-mar-28" title="Link to this heading">#</a></h1>
+<section id="born-approximation-continued">
+<h2>Born approximation continued<a class="headerlink" href="#born-approximation-continued" title="Link to this heading">#</a></h2>
+<p><strong>General properties</strong>. We can look at the limits of</p>
+<div class="math notranslate nohighlight">
+\[f(\theta,\phi) =  - {\mu\over 2\pi\hbar^2} \int d^3\mathbf{r}^\prime \, e^{i\mathbf{q}\cdot\mathbf{r}^\prime} V(\mathbf{r}^\prime)\]</div>
+<p>at low and high energy. For low energy <span class="math notranslate nohighlight">\(q\rightarrow 0\)</span>, the scattering becomes <strong>isotropic</strong></p>
+<div class="math notranslate nohighlight">
+\[f(\theta,\phi) \xrightarrow[q\rightarrow 0]{}  - {\mu\over 2\pi\hbar^2} \int d^3\mathbf{r}^\prime \, V(\mathbf{r}^\prime)\sim -{\mu V_0 a^3\over \hbar^2}\hspace{1cm}\mathrm{independent\ of\ angle}\]</div>
+<p>where <span class="math notranslate nohighlight">\(a\)</span> is the range of the potential.</p>
+<p>For large <span class="math notranslate nohighlight">\(q\)</span>, high energy, the phase <span class="math notranslate nohighlight">\(\mathbf{q}\cdot\mathbf{r}^\prime\)</span> oscillates rapidly in the exponent, so most of the integrand will cancel. The only coherent contribution is from the region where <span class="math notranslate nohighlight">\(\mathbf{q}\cdot\mathbf{r}^\prime\lesssim \pi\)</span> which corresponds to small angles where <span class="math notranslate nohighlight">\(k a\theta\lesssim \pi\)</span>. This implies <strong>forward scattering</strong> at high energies.</p>
+<p><strong>Spherically-symmetric potential</strong>. With a spherically-symmetric potential <span class="math notranslate nohighlight">\(V(r)\)</span>, we can do the angular integration.</p>
+<p><strong>Yukawa potential and Rutherford scattering</strong>.</p>
+<p><strong>Validity of Born approximation.</strong> The conditions for the validity of the Born approximation are discussion at the end of section 13.2 of Townsend and in problem 13.3 which is on Homework 10. The assumption we made was that the scattered wave is small compared to the incident wave in the volume covered by the scattering potential. For a finite spherical well of depth <span class="math notranslate nohighlight">\(V_0\)</span> and radius <span class="math notranslate nohighlight">\(a\)</span>, the condition is</p>
+<div class="math notranslate nohighlight">
+\[{\mu V_0 a^2\over \hbar^2} \ll 1.\]</div>
+<p>The physical interpretation of this condition is that the potential well must be too shallow to have any bound states (compare with our earlier “back of the envelope” estimates for potential wells).</p>
+</section>
 <section id="partial-wave-expansion">
 <h2>Partial wave expansion<a class="headerlink" href="#partial-wave-expansion" title="Link to this heading">#</a></h2>
 <p>Coming soon…</p>
@@ -491,6 +511,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#born-approximation-continued">Born approximation continued</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#partial-wave-expansion">Partial wave expansion</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a></li>
 </ul>
