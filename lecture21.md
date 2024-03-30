@@ -121,13 +121,13 @@ We see that there is an outgoing spherical wave on the right hand side! The scat
 
 $$f(\theta,\phi) =  - {\mu\over 2\pi\hbar^2} \int d^3\mathbf{r}^\prime \, e^{-ik\hat{\mathbf{r}}\cdot\mathbf{r}^\prime} V(\mathbf{r}^\prime)e^{ikz^\prime}.$$ 
 
-To get this into a simpler form, we use the fact that we are looking at a stationary state, so we are consider an elastic scattering where the particle has incoming momentum $\mathbf{k}_i$ and outgoing momentum $\mathbf{k}_f$ which have the same magnitude but different directions. We're assuming $\mathbf{k}_i$ is in the $z$-direction, so we can write $e^{ikz^\prime}=e^{i\mathbf{k}_i\cdot\mathbf{r}^\prime}$ in the integral. Similarly $\mathbf{k}_f$ is in the radial direction, so $e^{-ik\hat{\mathbf{r}}\cdot\mathbf{r}^\prime}=e^{-i\mathbf{k}_f\cdot\mathbf{r}^\prime}$. In terms of the **momentum transfer**, defined as
+**Momentum transfer**. To get this into a simpler form, we use the fact that we are looking at a stationary state, so we are consider an elastic scattering where the particle has incoming momentum $\mathbf{k}_i$ and outgoing momentum $\mathbf{k}_f$ which have the same magnitude but different directions. We're assuming $\mathbf{k}_i$ is in the $z$-direction, so we can write $e^{ikz^\prime}=e^{i\mathbf{k}_i\cdot\mathbf{r}^\prime}$ in the integral. Similarly $\mathbf{k}_f$ is in the radial direction, so $e^{-ik\hat{\mathbf{r}}\cdot\mathbf{r}^\prime}=e^{-i\mathbf{k}_f\cdot\mathbf{r}^\prime}$. In terms of the **momentum transfer**, defined as
 
 $$\mathbf{q} = \mathbf{k}_i - \mathbf{k}_f,$$
 
 we obtain 
 
-$$f(\theta,\phi) =  - {\mu\over 2\pi\hbar^2} \int d^3\mathbf{r}^\prime \, e^{i\mathbf{q}\cdot\mathbf{r}^\prime} V(\mathbf{r}^\prime).$$ 
+$$\boxed{f(\theta,\phi) =  - {\mu\over 2\pi\hbar^2} \int d^3\mathbf{r}^\prime \, e^{i\mathbf{q}\cdot\mathbf{r}^\prime} V(\mathbf{r}^\prime)}$$ 
 
 We see that the scattering amplitude is related to a Fourier transform of the potential. This shows explicitly the idea that by measuring the angular distribution of the outgoing particles, we can learn about the spatial distribution of the scattering potential. 
 
