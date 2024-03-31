@@ -47,11 +47,11 @@ where $E=(\hbar k)^2/2\mu$ is the particle energy. Note that $\hbar$ doesn't app
 
 If you try $\int d\Omega$ to get the total cross-section, you'll find that it diverges in the limit $m_0\rightarrow 0$. This is because the Coulomb force is long range, so small-angle scattering occurs even for large impact parameters. In reality, there is always a some kind of cutoff or screening that sets a limit to how large an impact parameter can contribute to the integral.
 
-**Validity of Born approximation.** The conditions for the validity of the Born approximation are discussed at the end of section 13.2 of Townsend and in problem 13.3 which is on Homework 10. The assumption we made was that the scattered wave is small compared to the incident wave in the volume covered by the scattering potential. For a finite spherical well of depth $V_0$ and radius $a$, the condition is 
+**Validity of Born approximation.** The conditions for the validity of the Born approximation are discussed at the end of section 13.2 of Townsend and in problem 13.3 which is on Homework 10. The assumption we made was that the scattered wave is small compared to the incident wave in the volume covered by the scattering potential. For a finite spherical well of depth $V_0$ and radius $a$, and for low energy particles, the condition is 
 
 $${\mu V_0 a^2\over \hbar^2} \ll 1.$$ 
 
-The physical interpretation of this condition is that the potential well must be too shallow to have any bound states (compare with our earlier "back of the envelope" estimates for potential wells).
+The physical interpretation of this condition is that the potential well must be too shallow to have any bound states (compare with our earlier "back of the envelope" estimates for potential wells). For high energy particles, the condition becomes $V_0/E\ll 1$. 
 
 ## Partial wave expansion
 
