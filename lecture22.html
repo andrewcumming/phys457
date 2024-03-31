@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
@@ -451,14 +451,76 @@ document.write(`
 \[{d\sigma\over d\Omega} = \left({Z_1Z_2e^2\over 4\pi\epsilon_0} \right)^2 {1\over 16 E^2 \sin^4 (\theta/2)}\]</div>
 <p>where <span class="math notranslate nohighlight">\(E=(\hbar k)^2/2\mu\)</span> is the particle energy. Note that <span class="math notranslate nohighlight">\(\hbar\)</span> doesn’t appear in this formula: in fact it can be derived classically.</p>
 <p>If you try <span class="math notranslate nohighlight">\(\int d\Omega\)</span> to get the total cross-section, you’ll find that it diverges in the limit <span class="math notranslate nohighlight">\(m_0\rightarrow 0\)</span>. This is because the Coulomb force is long range, so small-angle scattering occurs even for large impact parameters. In reality, there is always a some kind of cutoff or screening that sets a limit to how large an impact parameter can contribute to the integral.</p>
-<p><strong>Validity of Born approximation.</strong> The conditions for the validity of the Born approximation are discussion at the end of section 13.2 of Townsend and in problem 13.3 which is on Homework 10. The assumption we made was that the scattered wave is small compared to the incident wave in the volume covered by the scattering potential. For a finite spherical well of depth <span class="math notranslate nohighlight">\(V_0\)</span> and radius <span class="math notranslate nohighlight">\(a\)</span>, the condition is</p>
+<p><strong>Validity of Born approximation.</strong> The conditions for the validity of the Born approximation are discussed at the end of section 13.2 of Townsend and in problem 13.3 which is on Homework 10. The assumption we made was that the scattered wave is small compared to the incident wave in the volume covered by the scattering potential. For a finite spherical well of depth <span class="math notranslate nohighlight">\(V_0\)</span> and radius <span class="math notranslate nohighlight">\(a\)</span>, the condition is</p>
 <div class="math notranslate nohighlight">
 \[{\mu V_0 a^2\over \hbar^2} \ll 1.\]</div>
 <p>The physical interpretation of this condition is that the potential well must be too shallow to have any bound states (compare with our earlier “back of the envelope” estimates for potential wells).</p>
 </section>
 <section id="partial-wave-expansion">
 <h2>Partial wave expansion<a class="headerlink" href="#partial-wave-expansion" title="Link to this heading">#</a></h2>
-<p>Coming soon…</p>
+<p>We saw already in the Born approximation the idea that low energy leads to isotropic scattering and high energy to forward scattering. So there is a connection between the energy and the angular distribution of the outgoing particles.</p>
+<p>One way to think about this is in terms of the angular momentum components that can interact with the potential. If the potential has a finite range <span class="math notranslate nohighlight">\(a\)</span>, then the largest impact parameter that can interact with the potential is also <span class="math notranslate nohighlight">\(\sim a\)</span>, with corresponding angular momentum <span class="math notranslate nohighlight">\(\mathbf{r}\times\mathbf{p}\sim a \hbar k\)</span>. If we write this maximum angular momentum as <span class="math notranslate nohighlight">\(\ell_\mathrm{max}\hbar\)</span> we see that</p>
+<div class="math notranslate nohighlight">
+\[\boxed{\ell_\mathrm{max}\sim ka}\]</div>
+<p>As the energy increases, higher angular momentum states are present in the outgoing wave, which implies more angular structure. For a spherically-symmetric potential in particular it makes sense to expand in angular momentum components because the potential conserves angular momentum and we can consider the scattering of each component separately.</p>
+<p>The incoming plane wave can be written as</p>
+<div class="math notranslate nohighlight">
+\[e^{ikz} = e^{ikr\cos\theta} = \sum_{\ell=0}^\infty i^\ell (2\ell+1) j_\ell(kr) P_\ell (\cos\theta)\]</div>
+<p>You can look at problem 13.8 in Townsend if you want to prove / get more of a feeling for this, otherwise, note that the expansion is in terms of Legendre polynomials <span class="math notranslate nohighlight">\(P_\ell\)</span> which makes sense because we have axisymmetry around the beam direction (so <span class="math notranslate nohighlight">\(m=0\)</span>), and spherical Bessel functions <span class="math notranslate nohighlight">\(j_\ell\)</span> which we have already seen come up in the solution of the radial equation for spherical symmetry (look back at our discussion of the <a class="reference external" href="https://andrewcumming.github.io/phys457/lecture13.html#infinite-spherical-well">infinite spherical well</a>).</p>
+<p>The expansion of the incoming wave includes only the spherical Bessel functions <span class="math notranslate nohighlight">\(j_\ell\)</span> and not the spherical Neumann functions <span class="math notranslate nohighlight">\(\eta_\ell\)</span> because we need it to be finite at the origin. At large distance from the origin, where we expect to have an outgoing spherical wave, we have the possibility of both components, so we expand</p>
+<div class="math notranslate nohighlight">
+\[\psi\xrightarrow[r\rightarrow\infty]{} \sum_\ell \left[A_\ell j_\ell(kr)+B_\ell \eta_\ell(kr)\right]P_\ell(\cos\theta).\]</div>
+<p>For <span class="math notranslate nohighlight">\(r\rightarrow\infty\)</span>, we can make use of the asymptotic forms</p>
+<div class="math notranslate nohighlight">
+\[j_\ell(kr)\xrightarrow[r\rightarrow\infty]{}{\sin(kr-\ell\pi/2)\over kr};\hspace{1cm}\eta_\ell(kr)\xrightarrow[r\rightarrow\infty]{}-{\cos(kr-\ell\pi/2)\over kr}\]</div>
+<p>Whereas the incoming wave only contains the <span class="math notranslate nohighlight">\(\sin\)</span> component (<span class="math notranslate nohighlight">\(j_\ell\)</span>), the outgoing wave also has a <span class="math notranslate nohighlight">\(\cos\)</span> component (<span class="math notranslate nohighlight">\(\eta_\ell\)</span>) <span class="math notranslate nohighlight">\(\Rightarrow\)</span> the outgoing wave has a <strong>phase shift</strong></p>
+<div class="math notranslate nohighlight">
+\[e^{ikz} \underset{r\rightarrow\infty}{=} \ \sum_{\ell=0}^\infty i^\ell (2\ell+1) {\sin(kr-\ell\pi/2)\over kr} P_\ell (\cos\theta)\]</div>
+<div class="math notranslate nohighlight">
+\[\psi \underset{r\rightarrow\infty}{=} \ \sum_{\ell=0}^\infty C_\ell {\sin(kr-\ell\pi/2 + \delta_\ell(k))\over kr} P_\ell (\cos\theta)\]</div>
+<p>Here <span class="math notranslate nohighlight">\(\psi\)</span> is the <em>total</em> wavefunction; to identify the scattered component, we can subtract off the incident plane wave</p>
+<div class="math notranslate nohighlight">
+\[\psi_{sc} \underset{r\rightarrow\infty}{=} \ \sum_{\ell=0}^\infty {P_\ell (\cos\theta)\over kr}\left[C_\ell \sin(kr-\ell\pi/2 + \delta_\ell(k))- i^\ell (2\ell+1) \sin(kr-\ell\pi/2)\right].\]</div>
+<p>Each term in this expression has an incoming wave component – i.e. if you write the <span class="math notranslate nohighlight">\(\sin\)</span> in terms of exponentials, there are terms <span class="math notranslate nohighlight">\(\propto e^{-ikr}\)</span>. To match the boundary condition that we have an outgoing wave only at <span class="math notranslate nohighlight">\(r\rightarrow\infty\)</span>, we need to choose <span class="math notranslate nohighlight">\(C_\ell\)</span> so that the incoming wave pieces of each term cancel. This means we need to choose</p>
+<div class="math notranslate nohighlight">
+\[C_\ell = i^\ell (2\ell+1)  e^{i\delta_\ell}.\]</div>
+<p>Making this subsitution gives</p>
+<div class="math notranslate nohighlight">
+\[\psi_{sc} \underset{r\rightarrow\infty}{=} \ \sum_{\ell=0}^\infty {P_\ell (\cos\theta)\over kr}{i^\ell(2\ell+1)\over 2i}\left[
+\left(e^{ikr - i\ell\pi/2 + i\delta_\ell}-e^{-ikr+i\ell\pi/2-i\delta_\ell}   \right)e^{i\delta_\ell} - \left(e^{ikr - i\ell\pi/2}-e^{-ikr+i\ell\pi/2}\right)\right]\]</div>
+<div class="math notranslate nohighlight">
+\[=\sum_{\ell=0}^\infty {P_\ell (\cos\theta)\over kr}{(2\ell+1)\over 2i}\left[e^{ikr}\left(e^{2i\delta_\ell}-1\right)\right]\]</div>
+<div class="math notranslate nohighlight">
+\[={e^{ikr}\over r} \sum_{\ell=0}^\infty (2\ell+1) {e^{i\delta_\ell}\sin\delta_\ell\over k} P_\ell(\cos\theta)\]</div>
+<p>Once again we have a spherical outgoing wave with</p>
+<div class="math notranslate nohighlight">
+\[\boxed{f(\theta)= \sum_{\ell=0}^\infty (2\ell+1) {e^{i\delta_\ell}\sin\delta_\ell\over k} P_\ell(\cos\theta)}\]</div>
+<p>The total cross-section is <span class="math notranslate nohighlight">\(\sigma=\int d\Omega |f|^2\)</span> which gives</p>
+<div class="math notranslate nohighlight">
+\[\boxed{\sigma = {4\pi\over k^2} \sum_{\ell=0}^\infty (2\ell+1) \sin^2\delta_\ell}\]</div>
+<p>where we’ve used the orthogonality relation for the Legendre polynomials,</p>
+<div class="math notranslate nohighlight">
+\[\int^1_{-1} P_\ell(\mu) P_{\ell^\prime}(\mu) d\mu = {2\over 2\ell+1}\delta_{\ell,\ell^\prime}.\]</div>
+<p><strong>General strategy</strong>. This gives us a way to determine cross-sections. The general strategy is:</p>
+<ul class="simple">
+<li><p>solve the Schrödinger equation for <span class="math notranslate nohighlight">\(u(r) = rR(r)\)</span> given <span class="math notranslate nohighlight">\(V(r)\)</span></p></li>
+<li><p>match the asymptotic form <span class="math notranslate nohighlight">\(u\sin(kr + \delta_\ell)\)</span> to obtain <span class="math notranslate nohighlight">\(\delta_\ell\)</span></p></li>
+</ul>
+<p><strong>Example: hard sphere</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}V(r) = \begin{cases} \infty &amp; \text{$r&lt;a$} \\
+0 &amp; \text{$r&gt;a$}
+\end{cases}\end{split}\]</div>
+<p>At low energies, <span class="math notranslate nohighlight">\(\ell=0\)</span> dominates, so we write the solution at <span class="math notranslate nohighlight">\(r&gt;a\)</span> as  <span class="math notranslate nohighlight">\(u=C\sin(kr+\delta_0)\)</span>. Applying the boundary condition <span class="math notranslate nohighlight">\(u=0\)</span> at <span class="math notranslate nohighlight">\(r=a\)</span> gives</p>
+<div class="math notranslate nohighlight">
+\[\delta_0 = -ka.\]</div>
+<p>Therefore</p>
+<div class="math notranslate nohighlight">
+\[\sigma_{\ell=0} = {4\pi\over k^2} \sin^2 ka.\]</div>
+<p>At low energies, <span class="math notranslate nohighlight">\(ka\rightarrow 0\)</span>, we have therefore</p>
+<div class="math notranslate nohighlight">
+\[\sigma\rightarrow (4\pi/k^2) (ka)^2=4\pi a^2.\]</div>
+<p>We see that this gives us a sensible answer for the cross-section – it is related to the geometric cross-section for the hard sphere <span class="math notranslate nohighlight">\(\pi a^2\)</span>, but is actually 4 times larger. We’ll discuss this more next time.</p>
 </section>
 <section id="further-reading">
 <h2>Further reading<a class="headerlink" href="#further-reading" title="Link to this heading">#</a></h2>
