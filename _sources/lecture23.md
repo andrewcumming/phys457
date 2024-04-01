@@ -1,8 +1,10 @@
 # Lecture 23 Apr 2
 
+We'll start by continuing our discussion of the partial wave expansion, in particular the effect of attractive/repulsive potentials on the phase shift, and what happens when there is a resonance. Then we'll go onto consider time-dependent perturbation theory, another way to get the Born approximation expression for the scattering amplitude:
+
 ## Time-dependent perturbation theory
 
-Let's go back to pertubation theory but this time how states evolve in time when a perturbation is applied to the Hamiltonian $\hat{H} = \hat{H}_0 + \hat{H_1}$. Write the eigenstates of the unperturbed Hamiltonian as $\ket{n}$ with $\hat{H}_0\ket{n} = E_n\ket{n}$.
+Let's go back to pertubation theory but this time we're going to look at how states evolve in time when a perturbation is applied to the Hamiltonian $\hat{H} = \hat{H}_0 + \hat{H_1}$. Write the eigenstates of the unperturbed Hamiltonian as $\ket{n}$ with $\hat{H}_0\ket{n} = E_n\ket{n}$.
 Then we can expand 
 
 $$\ket{\Psi(t)} = \sum_n c_n(t) e^{-iE_nt/\hbar}\ket{n},$$
