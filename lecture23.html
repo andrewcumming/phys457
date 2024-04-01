@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Lecture 8 Jan 30 &#8212; PHYS 457 Quantum Physics 2</title>
+    <title>Lecture 23 Apr 2 &#8212; PHYS 457 Quantum Physics 2</title>
   
   
   
@@ -59,11 +59,11 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'lecture8';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lecture23';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Lecture 9 Feb 1" href="lecture9.html" />
-    <link rel="prev" title="Lecture 7 Jan 25" href="lecture7.html" />
+    <link rel="next" title="Homework 1" href="hw1.html" />
+    <link rel="prev" title="Lecture 22 Mar 28" href="lecture22.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -178,7 +178,7 @@
 <li class="toctree-l1"><a class="reference internal" href="lecture5.html">Lecture 5 Jan 18</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture6.html">Lecture 6 Jan 23</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture7.html">Lecture 7 Jan 25</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 8 Jan 30</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture8.html">Lecture 8 Jan 30</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture9.html">Lecture 9 Feb 1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture10.html">Lecture 10 Feb 6</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture11.html">Lecture 11 Feb 8</a></li>
@@ -193,7 +193,7 @@
 <li class="toctree-l1"><a class="reference internal" href="lecture20.html">Lecture 20 Mar 21</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture21.html">Lecture 21 Mar 26</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture22.html">Lecture 22 Mar 28</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lecture23.html">Lecture 23 Apr 2</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 23 Apr 2</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Homework</span></p>
 <ul class="nav bd-sidenav">
@@ -280,7 +280,7 @@
       
       
       
-      <li><a href="https://github.com/andrewcumming/phys457/issues/new?title=Issue%20on%20page%20%2Flecture8.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/andrewcumming/phys457/issues/new?title=Issue%20on%20page%20%2Flecture23.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -310,7 +310,7 @@
       
       
       
-      <li><a href="_sources/lecture8.md" target="_blank"
+      <li><a href="_sources/lecture23.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -394,7 +394,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Lecture 8 Jan 30</h1>
+    <h1>Lecture 23 Apr 2</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -404,8 +404,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diatomic-molecules">Diatomic molecules</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#schrodinger-equation-for-the-radial-part-of-the-hydrogen-atom-wavefunction">Schrödinger equation for the radial part of the hydrogen atom wavefunction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-dependent-perturbation-theory">Time-dependent perturbation theory</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a></li>
 </ul>
             </nav>
@@ -418,67 +417,72 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="lecture-8-jan-30">
-<h1>Lecture 8 Jan 30<a class="headerlink" href="#lecture-8-jan-30" title="Link to this heading">#</a></h1>
-<section id="diatomic-molecules">
-<h2>Diatomic molecules<a class="headerlink" href="#diatomic-molecules" title="Link to this heading">#</a></h2>
-<p>The rotational and vibrational energy levels of diatomic molecules are discussed in Townsend 9.7. It’s interesting to do some back of the envelope type estimates to see how the vibrational and rotational energies relate to the atomic binding energy of 13.6 eV that we saw for hydrogen.</p>
-<p><strong>Rotation</strong>. First consider rotation. If the reduced mass of the molecule is <span class="math notranslate nohighlight">\(\mu\)</span> and the separation of the two atoms is <span class="math notranslate nohighlight">\(a\)</span>, then we have</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="lecture-23-apr-2">
+<h1>Lecture 23 Apr 2<a class="headerlink" href="#lecture-23-apr-2" title="Link to this heading">#</a></h1>
+<section id="time-dependent-perturbation-theory">
+<h2>Time-dependent perturbation theory<a class="headerlink" href="#time-dependent-perturbation-theory" title="Link to this heading">#</a></h2>
+<p>Let’s go back to pertubation theory but this time how states evolve in time when a perturbation is applied to the Hamiltonian <span class="math notranslate nohighlight">\(\hat{H} = \hat{H}_0 + \hat{H_1}\)</span>. Write the eigenstates of the unperturbed Hamiltonian as <span class="math notranslate nohighlight">\(\ket{n}\)</span> with <span class="math notranslate nohighlight">\(\hat{H}_0\ket{n} = E_n\ket{n}\)</span>.
+Then we can expand</p>
 <div class="math notranslate nohighlight">
-\[E_\mathrm{rot}\approx {\ell(\ell+1) \hbar^2\over 2\mu a^2}.\]</div>
-<p>We’d expect the separation between the two nuclei in a molecule to be of order the Bohr radius, <span class="math notranslate nohighlight">\(a = \alpha^{-1} \hbar/m_ec\)</span>, so we can write</p>
+\[\ket{\Psi(t)} = \sum_n c_n(t) e^{-iE_nt/\hbar}\ket{n},\]</div>
+<p>where we write the time-dependence under the unperturbed Hamiltonian explicitly and then put the remaining time-dependence from the perturbation into the coefficients <span class="math notranslate nohighlight">\(c_n\)</span>. We are effectively expanding the state at any given time in terms of the time-evolved eigenstates of <span class="math notranslate nohighlight">\(\hat{H}_0\)</span>; this is known as the <strong>interaction picture</strong>.</p>
+<p>Substituting the expansion for <span class="math notranslate nohighlight">\(\ket{\Psi}\)</span> into the time-dependent Schrödinger equation gives</p>
 <div class="math notranslate nohighlight">
-\[E_\mathrm{rot}\approx {\ell(\ell+1) \hbar^2\over 2\mu}{\alpha^2 m_e^2 c^2\over \hbar^2}\approx \ell(\ell+1)\left[{1\over 2} \alpha^2 m_e c^2\right] \left({m_e\over\mu}\right).\]</div>
-<p>You might recognize the energy <span class="math notranslate nohighlight">\((1/2)\alpha^2m_ec^2 = 13.6\ {\rm eV}\)</span> as the <a class="reference external" href="https://andrewcumming.github.io/phys457/lecture4.html#back-of-the-envelope-hydrogen-atom">binding energy of hydrogen</a>. So we see that the spacing between rotational levels is smaller than this by a factor <span class="math notranslate nohighlight">\(m_e/\mu\sim m_e/m_p\sim 1/2000\)</span>, corresponding to energies <span class="math notranslate nohighlight">\(\sim 7\ {\rm meV}\)</span>. This corresponds to photons in the microwave range.</p>
-<p><strong>Vibrations</strong>. Since Coulomb forces determine the equilibrium separation of the nuclei in the molecule, we’d expect the restoring force resulting from a small perturbation in the spacing <span class="math notranslate nohighlight">\(a\rightarrow a+\Delta a\)</span> to be</p>
+\[i\hbar{\partial\ket{\Psi}\over \partial t} = (\hat{H}_0+\hat{H}_1)\ket{\Psi}\]</div>
 <div class="math notranslate nohighlight">
-\[\mathrm{restoring\ force}\sim -{e^2\over 4\pi \epsilon_0 a^2}{\Delta a\over a}\]</div>
-<p>giving an equation of motion</p>
+\[\Rightarrow i\hbar \sum_n \left[ \dot{c}_n - {iE_n\over \hbar}c_n\right] e^{-iE_nt/\hbar}\ket{n} = \sum_n c_n e^{-iE_nt/\hbar}\left[E_n\ket{n} + \hat{H}_1\ket{n}\right]\]</div>
 <div class="math notranslate nohighlight">
-\[\mu{d^2\over dt^2}\Delta a \sim -{e^2\over 4\pi \epsilon_0 a^3}\Delta a\]</div>
-<p>and therefore an oscillation frequency given by</p>
+\[\Rightarrow i\hbar \sum_n \dot{c}_n e^{-iE_nt/\hbar}\ket{n} = \sum_n c_n e^{-iE_nt/\hbar}\hat{H}_1\ket{n}\]</div>
 <div class="math notranslate nohighlight">
-\[(\hbar\omega)^2 \approx {\hbar^2e^2\over 4\pi \epsilon_0 \mu a^3} \approx  {\alpha\hbar^3c\over \mu a^3}\approx {\alpha\hbar^3c\over\mu} {\alpha^3 (m_e c)^3\over \hbar^3}\approx 
-\alpha^4 m_e^2 c^4 {m_e\over \mu}\]</div>
-<p>giving</p>
+\[\Rightarrow \boxed{\dot{c}_k = -{i\over\hbar}\sum_n c_n e^{-i(E_n-E_k)t/\hbar}\braket{k|\hat{H}_1|n}}.\]</div>
+<p>This is a set of coupled ODEs that we could solve to determine the evolution of any initial state under the action of the full Hamiltonian <span class="math notranslate nohighlight">\(\hat{H}\)</span>.</p>
+<p>Now we want to consider the case that we are initially in an eigenstate of <span class="math notranslate nohighlight">\(\hat{H}_0\)</span>, e.g. <span class="math notranslate nohighlight">\(\ket{\Psi(0)}=\ket{N}\)</span>, in which case <span class="math notranslate nohighlight">\(c_N=1\)</span> initially and all the other <span class="math notranslate nohighlight">\(c_n\)</span>’s are zero initially. If the perturbation <span class="math notranslate nohighlight">\(\hat{H}_1\)</span> couples <span class="math notranslate nohighlight">\(\ket{N}\)</span> to other states, their coefficients will become non-zero, in other words the perturbation will mix the initial state and the other stationary states. As long as the perturbation is small and we evolve for only a short time, the term with <span class="math notranslate nohighlight">\(n=N\)</span> will dominate the right hand side and we can set <span class="math notranslate nohighlight">\(c_N\approx 1\)</span>, giving</p>
 <div class="math notranslate nohighlight">
-\[E_\mathrm{vib}\approx \left[\alpha^2 m_e c^2\right] \left({m_e\over\mu}\right)^{1/2}.\]</div>
-<p>We see that vibrational levels lie in between the atomic and rotational energy scales, with <span class="math notranslate nohighlight">\(\hbar\omega\sim 27\ \mathrm{eV} /(2000)^{1/2}\sim 0.6\ \mathrm{eV}\)</span>. In terms of photon energy, these transitions involve infrared photons.</p>
-<p>Townsend shows some examples of photon spectra showing the discrete energies involved in transitions between these different modes of vibration and rotation. We’ll come back to the interaction of radiation and atoms and molecules later in the course.</p>
-</section>
-<section id="schrodinger-equation-for-the-radial-part-of-the-hydrogen-atom-wavefunction">
-<h2>Schrödinger equation for the radial part of the hydrogen atom wavefunction<a class="headerlink" href="#schrodinger-equation-for-the-radial-part-of-the-hydrogen-atom-wavefunction" title="Link to this heading">#</a></h2>
-<p><a class="reference external" href="https://andrewcumming.github.io/phys457/lecture7.html#the-radial-part-of-the-two-body-problem">Last time</a>, we ended up with the equation for the radial part of the wavefunction <span class="math notranslate nohighlight">\(R(r)\)</span> written in terms of the function <span class="math notranslate nohighlight">\(u(r) = rR(r)\)</span>, which obeys</p>
+\[{dc_k\over dt} \approx -{i\over \hbar} e^{-i(E_N-E_k)t/\hbar}\braket{k|\hat{H}_1|N}.\]</div>
+<p>In general, <span class="math notranslate nohighlight">\(\hat{H}_1\)</span> will have some time-dependence. We can consider one Fourier-mode by writing <span class="math notranslate nohighlight">\(\hat{H}_1 = \hat{V} e^{-i\omega t}\)</span>. Using this and integrating in time gives</p>
 <div class="math notranslate nohighlight">
-\[\left[- {\hbar^2\over 2\mu}{d^2\over d r^2} +  {\ell(\ell+1)\hbar^2\over 2\mu r^2} + V(r)\right]u(r) = E u(r).\]</div>
-<p>The problem has reduced to solving the 1D Schrödinger equation! One important difference from the standard 1D problem is that the coordinate <span class="math notranslate nohighlight">\(r\)</span> runs from 0 to <span class="math notranslate nohighlight">\(\infty\)</span> rather than <span class="math notranslate nohighlight">\(\pm \infty\)</span>.</p>
-<p>We can get a feeling for the behaviour of <span class="math notranslate nohighlight">\(u(r)\)</span> by looking at the limits as <span class="math notranslate nohighlight">\(r\rightarrow 0\)</span> and as <span class="math notranslate nohighlight">\(r\rightarrow \infty\)</span>.</p>
-<p>For <span class="math notranslate nohighlight">\(r\rightarrow 0\)</span>, the centrifugal term dominates the terms containing <span class="math notranslate nohighlight">\(V(r)\)</span> and <span class="math notranslate nohighlight">\(E\)</span> which means that the second derivative has to balance the centrifugal term in order for the equation to be satisfied:</p>
+\[c_k(t) = {\braket{k|\hat{V}|n}\over E_N-E_k+\hbar\omega}\left[e^{-i(E_N-E_k+\hbar\omega)t/\hbar}-1\right].\]</div>
+<p>This means that after a time <span class="math notranslate nohighlight">\(t\)</span> the probability that the system will be found in the state <span class="math notranslate nohighlight">\(\ket{k}\)</span> is</p>
 <div class="math notranslate nohighlight">
-\[u^{\prime\prime} = {\ell(\ell+1)u\over r^2}.\]</div>
-<p>If we try a power law solution <span class="math notranslate nohighlight">\(u\propto r^n\)</span>, we get</p>
+\[P_k(t) = |c_k|^2 = {|\braket{k|\hat{V}|n}|^2\over (E_N-E_k+\hbar\omega)^2}\left[2 - 2\cos\left({(E_N-E_k+\hbar\omega)t\over \hbar}\right)\right]\]</div>
 <div class="math notranslate nohighlight">
-\[n(n-1) = \ell(\ell+1)\Rightarrow n=-\ell, \ell+1.\]</div>
-<p>The solution <span class="math notranslate nohighlight">\(u\propto r^{-\ell}\)</span> diverges at the origin [for <span class="math notranslate nohighlight">\(\ell=0\)</span>, <span class="math notranslate nohighlight">\(u\)</span> is constant but then <span class="math notranslate nohighlight">\(R=u/r\)</span> diverges], so we need the solution</p>
+\[=4|\braket{k|\hat{V}|n}|^2 {\sin^2\left({(E_N-E_k+\hbar\omega)t\over 2\hbar}\right)\over (E_N-E_k+\hbar\omega)^2}.\]</div>
+<p>At very small times this grows <span class="math notranslate nohighlight">\(\propto t^2\)</span>, but then oscillates.</p>
+<p><strong>Fermi’s Golden Rule</strong>. In general we will be in a situation in which there are many possible end states. In the scattering problem we were looking at for example, there are many outgoing states depending on the scattering angle. We can sum over these possible end states using the density of states <span class="math notranslate nohighlight">\(g(E)\)</span>, where there are <span class="math notranslate nohighlight">\(g(E)dE\)</span> possible states with energy between <span class="math notranslate nohighlight">\(E\)</span> and <span class="math notranslate nohighlight">\(E+dE\)</span>. The transition probability is</p>
 <div class="math notranslate nohighlight">
-\[\boxed{u\propto r^{\ell +1}\hspace{1cm} r\rightarrow 0}\]</div>
-<p>For <span class="math notranslate nohighlight">\(r\rightarrow \infty\)</span>, the second derivative is balanced by the constant term involving <span class="math notranslate nohighlight">\(E\)</span>, ie.</p>
+\[P(t) = 4\int dE_k\, g(E_k) \,|\braket{k|\hat{V}|N}|^2{\sin^2\left({(E_N-E_k+\hbar\omega)t\over 2\hbar}\right)\over (E_N-E_k+\hbar\omega)^2}.\]</div>
+<p>Now define a new integration variable <span class="math notranslate nohighlight">\(x = (E_N-E_k+\hbar\omega)/2\hbar\)</span>, or <span class="math notranslate nohighlight">\(E_k = E_N +\hbar\omega - 2\hbar x.\)</span> Then the integral becomes</p>
 <div class="math notranslate nohighlight">
-\[u^{\prime\prime} = -{2\mu E\over \hbar^2} u.\]</div>
-<p>We are looking for bound states which have <span class="math notranslate nohighlight">\(E&lt;0\)</span>, so it is useful to write</p>
+\[{2\over \hbar}\int dx\, g(E_N +\hbar\omega - 2\hbar x) \,|\braket{k|\hat{V}|N}|^2{\sin^2(xt)\over x^2}.\]</div>
+<p>The function <span class="math notranslate nohighlight">\(\sin^2(xt) / x^2\)</span> has a peak <span class="math notranslate nohighlight">\(\propto t^2\)</span> and central peak width <span class="math notranslate nohighlight">\(\propto 1/t\)</span>. So as <span class="math notranslate nohighlight">\(t\)</span> grows, it becomes more and more peaked near <span class="math notranslate nohighlight">\(x\approx 0\)</span>, i.e. final states with <span class="math notranslate nohighlight">\(E_k\approx E_N+\hbar\omega\)</span> are preferred. The area is therefore linear in <span class="math notranslate nohighlight">\(t\)</span>, so the transition probability is linear in <span class="math notranslate nohighlight">\(t\)</span>. As <span class="math notranslate nohighlight">\(t\)</span> becomes large,</p>
 <div class="math notranslate nohighlight">
-\[u^{\prime\prime} = +\left({2\mu (-E)\over \hbar^2}\right) u\]</div>
-<p>which gives</p>
+\[{\sin^2(xt)\over x^2}\xrightarrow[t\rightarrow\infty]{} \pi t\delta(x),\]</div>
+<p>which we can use to do the integral:</p>
 <div class="math notranslate nohighlight">
-\[\boxed{u\propto \exp\left(-{\sqrt{2\mu(-E)} r\over \hbar} \right)\hspace{1cm} r\rightarrow \infty}\]</div>
-<p>(There’s also a growing exponential solution, but we discard that one because <span class="math notranslate nohighlight">\(u\)</span> would then diverge at large <span class="math notranslate nohighlight">\(r\)</span>).</p>
-<p>With these limits in hand, we can then sketch possible solutions for <span class="math notranslate nohighlight">\(u(r)\)</span> and learn something about the energy levels of the atom. We’ll do this next time.</p>
+\[P(t) = {2\pi t\over \hbar} g(E_N+\hbar\omega) |\braket{k|V|N}|^2.\]</div>
+<p>A linear growth of <span class="math notranslate nohighlight">\(P\)</span> with time means a constant transition rate <span class="math notranslate nohighlight">\(dP/dt\)</span>. Writing the initial and final states as <span class="math notranslate nohighlight">\(\ket{i}\)</span> and <span class="math notranslate nohighlight">\(\ket{f}\)</span> respectively and <span class="math notranslate nohighlight">\(E_f\)</span> as the final energy we obtain <strong>Fermi’s Golden Rule</strong></p>
+<div class="math notranslate nohighlight">
+\[\boxed{\Gamma = {2\pi\over \hbar} |\braket{f|V|i}|^2 g(E_f)}.\]</div>
+<p><strong>Application to scattering</strong>. Let’s apply Fermi’s Golden rule to scattering. The initial state is <span class="math notranslate nohighlight">\(\ket{\mathbf{k}_i}\)</span> and we need to consider a range of final states <span class="math notranslate nohighlight">\(\ket{\mathbf{k}_f}\)</span> with <span class="math notranslate nohighlight">\(k_f^2=k_i^2\)</span>. The density of states in a volume <span class="math notranslate nohighlight">\(V\)</span> is  given by (this is derived in section 14.6 of Townsend if you haven’t yet seen this in your statistical mechanics class)</p>
+<div class="math notranslate nohighlight">
+\[{V d^3\mathbf{p}\over h^3} = {V p^2 dp\, d\Omega\over h^3} = {V p \mu\, d\Omega\over h^3} dE \Rightarrow g(E) = {V\over (2\pi \hbar)^3} \mu\, \hbar k\, d\Omega\]</div>
+<p>(where we used <span class="math notranslate nohighlight">\(E=p^2/2\mu \Rightarrow dE = p dp/\mu\)</span>). Therefore the transition rate into <span class="math notranslate nohighlight">\(d\Omega\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[{2\pi\over \hbar} {1\over (2\pi\hbar)^3} \mu \,\hbar k\, d\Omega\,  
+V |A|^4 \left[\int d^3\mathbf{r} \, e^{-i\mathbf{k}_i\cdot\mathbf{r}}V(\mathbf{r})e^{i\mathbf{k}_f\cdot\mathbf{r}}\right]^2,\]</div>
+<p>where <span class="math notranslate nohighlight">\(A=1/V^{1/2}\)</span> is the normalization of the plane wave.</p>
+<p>If we divide by the incident flux</p>
+<div class="math notranslate nohighlight">
+\[j_\mathrm{inc} = {\hbar k\over \mu} |A|^2,\]</div>
+<p>we find</p>
+<div class="math notranslate nohighlight">
+\[{d\sigma\over d\Omega} = {\mu^2\over (2\pi)^2\hbar^4} \left[\int d^3\mathbf{r} \, e^{-i\mathbf{k}_i\cdot\mathbf{r}}V(\mathbf{r})e^{i\mathbf{k}_f\cdot\mathbf{r}}\right]^2\]</div>
+<p>which agrees with our expression from the Born approximation.</p>
 </section>
 <section id="further-reading">
 <h2>Further reading<a class="headerlink" href="#further-reading" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Townsend 10.1 on the radial wavefunction</p></li>
-<li><p>Townsend 9.7 on diatomic molecules</p></li>
+<li><p>There is more on time-dependent perturbation theory and Fermi’s Golden rule in Townsend Chapter 14.</p></li>
 </ul>
 </section>
 </section>
@@ -514,20 +518,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="lecture7.html"
+       href="lecture22.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Lecture 7 Jan 25</p>
+        <p class="prev-next-title">Lecture 22 Mar 28</p>
       </div>
     </a>
     <a class="right-next"
-       href="lecture9.html"
+       href="hw1.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Lecture 9 Feb 1</p>
+        <p class="prev-next-title">Homework 1</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -547,8 +551,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diatomic-molecules">Diatomic molecules</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#schrodinger-equation-for-the-radial-part-of-the-hydrogen-atom-wavefunction">Schrödinger equation for the radial part of the hydrogen atom wavefunction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-dependent-perturbation-theory">Time-dependent perturbation theory</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a></li>
 </ul>
   </nav></div>
