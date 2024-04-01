@@ -35,3 +35,7 @@
     + [Exchange symmetry and spin-statistics theorem](https://andrewcumming.github.io/phys457/lecture18.html#multi-particle-states-and-spin-statistics)
     + The helium atom: [ground state, first excited state and perturbation theory approach](https://andrewcumming.github.io/phys457/lecture19.html#helium-atom)
     + [The variational method applied to helium](https://andrewcumming.github.io/phys457/lecture20.html#variational-method-applied-to-helium)
+- Scattering
+    + [Overview](https://andrewcumming.github.io/phys457/lecture21.html#overview-of-scattering): scattering amplitude, differential cross-section
+    + Born approximation: [Part 1](https://andrewcumming.github.io/phys457/lecture21.html#born-approximation) and [Part 2](https://andrewcumming.github.io/phys457/lecture22.html#born-approximation-continued)
+    + [Partial wave expansion](https://andrewcumming.github.io/phys457/lecture22.html#partial-wave-expansion)
