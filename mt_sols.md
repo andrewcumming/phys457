@@ -2,7 +2,9 @@
 
 **Question 1.** A particle in an infinite square well between $x=0$ and $x=a$ is subject to a perturbing potential $V(x) = \epsilon E_1^{(0)}\sin(\pi x/a)$, where $\epsilon$ is small and $E_1^{(0)}$ is the unperturbed ground state energy. Use perturbation theory to (a) compute the first order energy shift for all states and (b) compute the first order correction to the ground state wavefunction. Plot the new ground state wavefunction on top of the unperturbed ground state wavefunction and compare them (choose the value of $\epsilon$ so that the differences are large enough to see on your plot). Explain whether the difference makes sense physically.
 
-**Solution**. This question is similar to the question in homework 7, but is more straighforward because the well extends from $x=0$ to $x=a$ so we can write all the wavefunctions in terms of $\sin$ functions. The unperturbed wavefunctions are 
+````{dropdown} Solution
+
+This question is similar to the question in homework 7, but is more straighforward because the well extends from $x=0$ to $x=a$ so we can write all the wavefunctions in terms of $\sin$ functions. The unperturbed wavefunctions are 
 
 $$\psi^{(0)}(x) = \sqrt{2\over a} \sin\left(\frac{n\pi x}{a}\right)$$
 
@@ -48,6 +50,7 @@ Plot[{psi0[x], psi1[x, 3], psi0[x] + psi1[x, 3]}, {x, 0, 1},
 
 We've set $\epsilon=3$ to be able to clearly see the effect of the perturbation, and I stop the sum at $k=7$ (the contribution from the higher order terms drops off rapidly with increasing $k$). The perturbed wavefunction is flatter in the center and pushed out towards the edges of the box. Physically, this makes sense because the perturbing potential corresponds to a force that pushes the particle away from $x=0$, increasing the probability of finding the particle closer to the edges of the box. You can also think of this in terms of the wavelength: at the center of the box, the potential has increased and so the kinetic energy is smaller, corresponding to a longer wavelength, and so the wavefunction is less curved at the center.
  
+````
 
 **Question 2.** (a) By writing the lowering operator for the 3D harmonic oscillator
 
@@ -61,8 +64,9 @@ You should make sure that your wavefunction is correctly normalized.
 
 (b) Does this state correspond to the lowest energy state at a given $\ell$? Explain why or why not.
 
+````{dropdown} Solution
 
-**Solution**. Writing $\psi(r,\theta,\phi)=Y_{\ell,m}(\theta,\phi)R(r)$ and the operator $\hat{a}_\ell$ in position representation with the help of the formula sheet, we have to solve
+Writing $\psi(r,\theta,\phi)=Y_{\ell,m}(\theta,\phi)R(r)$ and the operator $\hat{a}_\ell$ in position representation with the help of the formula sheet, we have to solve
 
 $${1\over \sqrt{2m\hbar\omega}}\left(\hbar{\partial\over\partial r} + {\hbar\over r}-{(\ell+1)\hbar\over r}+m\omega r\right)R(r)=0$$
 
@@ -81,10 +85,13 @@ with $a=m\omega/\hbar$. Using the integral from the formula sheet, we get
 $$A = \left({m\omega\over \hbar}\right)^{(2\ell+3)/4} \left[{1\over 2}\Gamma\left({2\ell+3\over 2}\right)\right]^{-1/2}.$$
 
 This state does indeed correspond to the lowest energy for a given value of $\ell$. This is not necessarily obvious because remember that the energy levels of the 3D harmonic oscillator are given by $(2n_r + \ell + 3/2)\hbar\omega$ and the effect of $a_\ell$ is to move to the state with one less radial node but with $\ell$ increased by one. However, if you look at the energy level diagram in Figure 10.14 of Townsend, the effect of $\hat{a}_\ell$ is to move down and to the right in this diagram. We can then see that if there is no state to move to then we must be at the lowest energy for that value of $\ell$. Another way to see this is to note that there are no radial nodes in the wavefunction we've derived here, so with $\ell$ fixed it is not possible to remove a radial node and move to a lower energy state.
+````
 
 **Question 3.** Calculate the first order energy splittings and eigenstates for the $n=3$ Stark effect in hydrogen. For the energies, you can give your answer in units of $ea_0E$.
 
-**Solution.** For $n=3$ there are $n^2=9$ possible states:
+````{dropdown} Solution
+
+For $n=3$ there are $n^2=9$ possible states:
 
 $$\ket{3 0 0},$$
 
@@ -139,3 +146,4 @@ $${1\over \sqrt{2}}\left(\ket{3,1,1}\pm \ket{3,2,1}\right),  {1\over \sqrt{2}}\l
 
 $${1\over\sqrt{3}}\ket{3,0,0} \pm {1\over \sqrt{2}}\ket{3,1,0} + {1\over \sqrt{6}}\ket{3,2,0}\hspace{1cm}\Delta E = \mp 9 eEa_0\ (\mathrm{2\ states})$$
 
+````
