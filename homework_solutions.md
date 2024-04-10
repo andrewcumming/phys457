@@ -81,11 +81,21 @@ $$E \leq {3\over 2} \left({\hbar^2a^2\over 2\pi m}\right)^{1/3}.$$
 
 ```{dropdown} Question 3
 
-**Townsend 12.3**. Estimate the singlet-triplet splitting of the two electrons in helium due to a direct spin-spin interaction. 
+**Townsend 12.3**. *Estimate the singlet-triplet splitting of the two electrons in helium due to a direct spin-spin interaction.*
 
 The magnetic moment of the electron due to its spin is $\mu= (e/m_e)\times \hat{S}$ (see spin-orbit coupling in lecture 17). Since the magnetic moment is $\propto 1/m$ it should be 2000 times larger for an electron compared to a proton. So we can take the hyperfine splitting discussed in section 5.2 of Townsend and multiply by 2000.
 
-The size of the hyperfine splitting is the energy of a 21cm photon, so $\sim hc/\lambda \approx 6\mu\mathrm{eV}$. Multiplying by 2000 gives $\approx $meV energy.
+We can get the size of the hyperfine splitting from the energy of a 21cm photon (this is the photon involved in the hyperfine transition), $hc/\lambda \approx 6\mu\mathrm{eV}$. Multiplying by 2000 gives an estimate for the energy of the electron-electron interaction of $\boxed{\approx 10^{-3}\ \mathrm{eV}}$.
+
+We could also estimate the energy from first principles by writing down the energy associated with the magnetic dipole of one of the electrons in the magnetic field of the other, $\mu B$. The magnetic field of a dipole is $B\sim \mu_0 \mu / 4\pi r^3$, and we could take a typical distance between the electrons of $r\sim a_0$ (the Bohr radius). The energy is then
+
+$$\mu B\sim {\mu_0 \mu^2\over 4\pi a_0^3} \sim {\mu_0\over 4\pi a_0^3} \left({e\over m_e}{\hbar\over 2}\right)^2 = {e^2\hbar^2\over 16\pi\epsilon_0 c^2a_0^2m_e^2}.$$
+
+Then simplify using $a_0 = \alpha^{-1}(\hbar/m_ec)$ to get
+
+$${1\over 4} \alpha^4 m_e c^2 =  {\alpha^2\over 2} \times \left({1\over 2}\alpha^2 m_e c^2 \right) = \alpha^2 \times {13.6\ \mathrm{eV}\over 2} = 4\times 10^{-4}\ \mathrm{eV},$$
+
+the same order of magnitude as the previous estimate.
 
 ```
 
