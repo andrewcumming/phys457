@@ -66,7 +66,7 @@ You should make sure that your wavefunction is correctly normalized.
 
 ````{dropdown} Solution
 
-Writing $\psi(r,\theta,\phi)=Y_{\ell,m}(\theta,\phi)R(r)$ and the operator $\hat{a}_\ell$ in position representation with the help of the formula sheet, we have to solve
+(a) Writing $\psi(r,\theta,\phi)=Y_{\ell,m}(\theta,\phi)R(r)$ and the operator $\hat{a}_\ell$ in position representation with the help of the formula sheet, we have to solve
 
 $${1\over \sqrt{2m\hbar\omega}}\left(\hbar{\partial\over\partial r} + {\hbar\over r}-{(\ell+1)\hbar\over r}+m\omega r\right)R(r)=0$$
 
@@ -84,7 +84,12 @@ with $a=m\omega/\hbar$. Using the integral from the formula sheet, we get
 
 $$A = \left({m\omega\over \hbar}\right)^{(2\ell+3)/4} \left[{1\over 2}\Gamma\left({2\ell+3\over 2}\right)\right]^{-1/2}.$$
 
-This state does indeed correspond to the lowest energy for a given value of $\ell$. This is not necessarily obvious because remember that the energy levels of the 3D harmonic oscillator are given by $(2n_r + \ell + 3/2)\hbar\omega$ and the effect of $a_\ell$ is to move to the state with one less radial node but with $\ell$ increased by one. However, if you look at the energy level diagram in Figure 10.14 of Townsend, the effect of $\hat{a}_\ell$ is to move down and to the right in this diagram. We can then see that if there is no state to move to then we must be at the lowest energy for that value of $\ell$. Another way to see this is to note that there are no radial nodes in the wavefunction we've derived here, so with $\ell$ fixed it is not possible to remove a radial node and move to a lower energy state.
+(b) This state does indeed correspond to the lowest energy for a given value of $\ell$. This is not necessarily obvious because remember that the energy levels of the 3D harmonic oscillator are given by $(2n_r + \ell + 3/2)\hbar\omega$ and the effect of $a_\ell$ is to move to the state with one less radial node but with $\ell$ increased by one. However, if you look at the energy level diagram in Figure 10.14 of Townsend, the effect of $\hat{a}_\ell$ is to move down and to the right in this diagram. We can then see that if there is no state to move to then we must be at the lowest energy for that value of $\ell$. Another way to see this is to note that there are no radial nodes in the wavefunction we've derived here, so with $\ell$ fixed it is not possible to remove a radial node and move to a lower energy state. Finally, you can also operate $\hat{H}$ for the 3D harmonic oscillator on this state to determine its energy:
+
+$$\hat{H}\ket{\Psi} = \hbar\omega \left(\hat{a}_\ell^\dagger\hat{a}_\ell + \ell + {3\over 2}\right)\ket{\Psi} = \hbar\omega \left(\ell + {3\over 2}\right)\ket{\Psi},$$
+
+where we use the fact that $\hat{a}\ket{\Psi}=0$. This shows explicitly that for a given $\ell$, we have the lowest energy because the first term that counts the radial excitations vanishes.
+
 ````
 
 **Question 3.** Calculate the first order energy splittings and eigenstates for the $n=3$ Stark effect in hydrogen. For the energies, you can give your answer in units of $ea_0E$.
