@@ -473,9 +473,16 @@ Question 3<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text"><strong>Townsend 12.3</strong>. Estimate the singlet-triplet splitting of the two electrons in helium due to a direct spin-spin interaction.</p>
+<p class="sd-card-text"><strong>Townsend 12.3</strong>. <em>Estimate the singlet-triplet splitting of the two electrons in helium due to a direct spin-spin interaction.</em></p>
 <p class="sd-card-text">The magnetic moment of the electron due to its spin is <span class="math notranslate nohighlight">\(\mu= (e/m_e)\times \hat{S}\)</span> (see spin-orbit coupling in lecture 17). Since the magnetic moment is <span class="math notranslate nohighlight">\(\propto 1/m\)</span> it should be 2000 times larger for an electron compared to a proton. So we can take the hyperfine splitting discussed in section 5.2 of Townsend and multiply by 2000.</p>
-<p class="sd-card-text">The size of the hyperfine splitting is the energy of a 21cm photon, so <span class="math notranslate nohighlight">\(\sim hc/\lambda \approx 6\mu\mathrm{eV}\)</span>. Multiplying by 2000 gives <span class="math notranslate nohighlight">\(\approx \)</span>meV energy.</p>
+<p class="sd-card-text">We can get the size of the hyperfine splitting from the energy of a 21cm photon (this is the photon involved in the hyperfine transition), <span class="math notranslate nohighlight">\(hc/\lambda \approx 6\mu\mathrm{eV}\)</span>. Multiplying by 2000 gives an estimate for the energy of the electron-electron interaction of <span class="math notranslate nohighlight">\(\boxed{\approx 10^{-3}\ \mathrm{eV}}\)</span>.</p>
+<p class="sd-card-text">We could also estimate the energy from first principles by writing down the energy associated with the magnetic dipole of one of the electrons in the magnetic field of the other, <span class="math notranslate nohighlight">\(\mu B\)</span>. The magnetic field of a dipole is <span class="math notranslate nohighlight">\(B\sim \mu_0 \mu / 4\pi r^3\)</span>, and we could take a typical distance between the electrons of <span class="math notranslate nohighlight">\(r\sim a_0\)</span> (the Bohr radius). The energy is then</p>
+<div class="math notranslate nohighlight">
+\[\mu B\sim {\mu_0 \mu^2\over 4\pi a_0^3} \sim {\mu_0\over 4\pi a_0^3} \left({e\over m_e}{\hbar\over 2}\right)^2 = {e^2\hbar^2\over 16\pi\epsilon_0 c^2a_0^2m_e^2}.\]</div>
+<p class="sd-card-text">Then simplify using <span class="math notranslate nohighlight">\(a_0 = \alpha^{-1}(\hbar/m_ec)\)</span> to get</p>
+<div class="math notranslate nohighlight">
+\[{1\over 4} \alpha^4 m_e c^2 =  {\alpha^2\over 2} \times \left({1\over 2}\alpha^2 m_e c^2 \right) = \alpha^2 \times {13.6\ \mathrm{eV}\over 2} = 4\times 10^{-4}\ \mathrm{eV},\]</div>
+<p class="sd-card-text">the same order of magnitude as the previous estimate.</p>
 </div>
 </details></section>
 </section>
