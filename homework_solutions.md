@@ -18,7 +18,7 @@
 
 ### Homework 9
 
-```{dropdown} Question 1
+```{dropdown} Question 1: the singlet and triplet states as spin eigenstates
 
 The $S_z$ operator is straightforward because we can write $\hat{S}_z = \hat{S}_{1,z} + \hat{S}_{2,z}$. Applying this to the triplet states you will find that they are eigenstates with eigenvalues $m_s\hbar=(1,0,-1)\times \hbar$, while the singlet state has eigenvalue 0. For $\hat{S}^2 = \hat{S}_1^2 + \hat{S}_2^2 + 2\hat{\mathbf{S}}_1\cdot \hat{\mathbf{S}}_2$, we can use Townsend equation (5.10) which gives
 
@@ -45,7 +45,7 @@ $$ = 2\hbar^2 \ket{\uparrow\downarrow}$$
 and the same for $\ket{\downarrow\uparrow}$. This means that the $m_s=0$ triplet state (symmetric) has $s=1$ whereas the $m_s=0$ singlet state (antisymmetric) has $s=0$. 
 ```
 
-```{dropdown} Question 2
+```{dropdown} Question 2: variational principle estimate of the ground state energy
 
 **Townsend 12.7**. We have a potential $V(x) = a|x|$ and want to estimate the ground state energy with the trial wavefunction $\psi(x) = (b/\pi)^{1/4} e^{-bx^2/2}$. The contribution of the potential term in the Hamiltonian is
 
@@ -79,7 +79,7 @@ $$E \leq {3\over 2} \left({\hbar^2a^2\over 2\pi m}\right)^{1/3}.$$
 ```
 
 
-```{dropdown} Question 3
+```{dropdown} Question 3: spin-spin interaction between electrons
 
 **Townsend 12.3**. *Estimate the singlet-triplet splitting of the two electrons in helium due to a direct spin-spin interaction.*
 
