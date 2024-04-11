@@ -10,7 +10,25 @@ Today we discussed:
 - this approach gives us another way to write down multi-particle states of identical particles, known as **second quantization**. Instead of writing down linear combinations of single particle states and making sure they have the correct particle-exchange symmetry (symmetric for bosons and anti-symmetric for fermions), we instead keep track of how many particles we have placed in each single-particle state, and the nature of the particle is imposed by the quantization condition. For bosons such as the photons in the electromagnetic field, this is the commutator $[\hat{a},\hat{a}^\dagger]=1$. 
 - second quantization of fermions is similar except that instead of a commutator, we use an anti-commutator:
 
-$$\left\{\hat{a},\hat{a}^\dagger\right\}=1.$$
+$$\left\{\hat{a},\hat{a}^\dagger\right\}=\hat{a}\hat{a}^\dagger + \hat{a}^\dagger\hat{a} = 1.$$
+
+To see that this gives the right properties for the ladder operators, we can act the number operator on the state $\hat{a}^\dagger\ket{n}$, where $\ket{n}$ is the state with $n$ particles:
+
+$$\hat{N} \hat{a}^\dagger\ket{n} = \hat{a}^\dagger\hat{a} \hat{a}^\dagger \ket{n} = \hat{a}^\dagger(1-\hat{a}^\dagger\hat{a}) \ket{n} = (1-n) \hat{a}^\dagger\ket{n}$$
+
+(in the second step we used the anti-commutator).  This shows that $\hat{a}^\dagger\ket{n}$ is an eigenstate of the number operator with eigenvalue $1-n$, i.e.
+
+$$\hat{a}^\dagger\ket{n}\propto \ket{1-n}.$$
+
+If we start with the vacuum $\ket{0}$, we have 
+
+$$\hat{a}^\dagger\ket{0}\propto \ket{1}$$
+
+but
+
+$$\hat{a}^\dagger\ket{1}\propto \ket{0}.$$
+
+We can add at most one particle! This is exactly what we need for fermions.
 
 
 
