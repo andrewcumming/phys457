@@ -39,3 +39,8 @@
     + [Overview](https://andrewcumming.github.io/phys457/lecture21.html#overview-of-scattering): scattering amplitude, differential cross-section
     + Born approximation: [Part 1](https://andrewcumming.github.io/phys457/lecture21.html#born-approximation) and [Part 2](https://andrewcumming.github.io/phys457/lecture22.html#born-approximation-continued)
     + [Partial wave expansion](https://andrewcumming.github.io/phys457/lecture22.html#partial-wave-expansion)
+- Time-dependent perturbation theory and atomic transitions
+    + [Time-dependent perturbation theory and Fermi's Golden Rule](https://andrewcumming.github.io/phys457/lecture23.html#time-dependent-perturbation-theory)
+    + [The electromagnetic field in quantum mechanics](https://andrewcumming.github.io/phys457/lecture24.html#the-electromagnetic-field-in-quantum-mechanics)
+    + [Second quantization](https://andrewcumming.github.io/phys457/lecture25.html#second-quantization)
+    + [Decay rate of the 2p-state in hydrogen](https://andrewcumming.github.io/phys457/lecture25.html#decay-rate-of-the-2p-state-in-hydrogen)
