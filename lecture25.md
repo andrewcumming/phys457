@@ -85,9 +85,8 @@ Here we use the notation $\ket{0}$ to represent the electromagnetic field vacuum
 
 Putting this together gives the following expression for the rate:
 
-$$d\Gamma = {2\pi\over \hbar}\left({V\omega^2d\Omega\over 8\pi^3c^3\hbar}\right) {e^2\over\mu^2} {\hbar\over 2\epsilon_0\omega V}\left|\braket{1|\hat{a}^\dagger|0}\right|^2\left|\braket{2p|e^{i\mathbf{k}\cdot\mathbf{r}}\mathbf{\epsilon}\cdot\hat{\mathbf{p}}|1s}\right|^2,$$
+$$d\Gamma = {2\pi\over \hbar}\left({V\omega^2d\Omega\over 8\pi^3c^3\hbar}\right) {e^2\over\mu^2} {\hbar\over 2\epsilon_0\omega V}\left|\braket{1|\hat{a}^\dagger|0}\right|^2\left|\braket{2p|e^{i\mathbf{k}\cdot\mathbf{r}}\mathbf{\epsilon}\cdot\hat{\mathbf{p}}|1s}\right|^2.$$
 
-where the sum is over the polarization of the outgoing photon.
 We write $d\Gamma$ because we are looking at the rate going into a particular direction and solid angle $d\Omega$.
 
 For the part of the matrix element involving the H atom wavefunctions, we first note that the wavelength of the transition is much larger than the size of the atom: the Ly-$\alpha$ photon wavelength is 1215 Angstroms compared to about 1 Angstrom for the atom. Therefore we can set $e^{i\mathbf{k}\cdot\mathbf{r}}\approx 1$ in the integral. Then with a few manipulations we can get the matrix element into a more familiar form:
