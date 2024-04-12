@@ -4,7 +4,7 @@
 
 As we discussed at the end of last time, we quantize the electromagnetic field by turning the coefficients $c_{k,s}$ in the expansion of $\mathbf{A}$ into *creation* and *annihiliation* operators $\hat{a}^\dagger_{\mathbf{k},s}$ and $\hat{a}_{\mathbf{k},s}$. The Hamiltonian can then be written as
 
-$$\hat{H}_\mathrm{EM} = \sum_{\mathbf{k},s} \hbar \omega \left(\hat{a}^\dagger_{\mathbf{k},s}\hat{a}_{\mathbf{k},s}\right).$$
+$$\hat{H}_\mathrm{EM} = \sum_{\mathbf{k},s} \hbar \omega \left(\hat{a}^\dagger_{\mathbf{k},s}\hat{a}_{\mathbf{k},s} + {1\over 2}\right).$$
 
 The creation and annihiliation operators obey the commutation relation $[\hat{a}_{\mathbf{k},s},\hat{a}_{\mathbf{k},s}^\dagger]=1$ that we know from the harmonic oscillator. We interpret the action of these operators as creating or destroying photons with wavelength given by $2\pi/k$ or frequency $\omega=ck$ and polarization given by $s$. 
 
