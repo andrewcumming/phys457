@@ -57,25 +57,27 @@ $$P(t) = {2\pi t\over \hbar} g(E_N+\hbar\omega) |\braket{k|V|N}|^2.$$
 
 A linear growth of $P$ with time means a constant transition rate $dP/dt$. Writing the initial and final states as $\ket{i}$ and $\ket{f}$ respectively and $E_f$ as the final energy we obtain **Fermi's Golden Rule**
 
-$$\boxed{\Gamma = {2\pi\over \hbar} |\braket{f|V|i}|^2 g(E_f)}.$$
+$$\boxed{\Gamma = {2\pi\over \hbar} |\braket{f|\hat{V}|i}|^2 g(E_f)}.$$
 
 
 **Application to scattering**. Let's apply Fermi's Golden rule to scattering. The initial state is $\ket{\mathbf{k}_i}$ and we need to consider a range of final states $\ket{\mathbf{k}_f}$ with $k_f^2=k_i^2$. The density of states in a volume $V$ is  given by (this is derived in section 14.6 of Townsend if you haven't yet seen this in your statistical mechanics class)
 
 $${V d^3\mathbf{p}\over h^3} = {V p^2 dp\, d\Omega\over h^3} = {V p \mu\, d\Omega\over h^3} dE \Rightarrow g(E) = {V\over (2\pi \hbar)^3} \mu\, \hbar k\, d\Omega$$
 
-(where we used $E=p^2/2\mu \Rightarrow dE = p dp/\mu$). Therefore the transition rate into $d\Omega$ is
+(where we used $E=p^2/2\mu \Rightarrow dE = p dp/\mu$). Since we are counting the states in a definite volume $V$, we need to normalize the momentum eigenstates as
 
-$${2\pi\over \hbar} {1\over (2\pi\hbar)^3} \mu \,\hbar k\, d\Omega\,  
-V |A|^4 \left[\int d^3\mathbf{r} \, e^{-i\mathbf{k}_i\cdot\mathbf{r}}V(\mathbf{r})e^{i\mathbf{k}_f\cdot\mathbf{r}}\right]^2,$$
+$$\psi(\mathbf{r}) = {1\over \sqrt{V}} e^{i\mathbf{k}\cdot\mathbf{r}}\Rightarrow \int d^3\mathbf{r} |\psi|^2 = 1.$$
 
-where $A=1/V^{1/2}$ is the normalization of the plane wave.
+Putting these pieces together into Fermi's Golden Rule gives the transition rate into $d\Omega$
 
-If we divide by the incident flux
+$$d\Gamma = {2\pi\over \hbar} {1\over (2\pi\hbar)^3} \mu \,\hbar k\, d\Omega\,  
+V \left[\int d^3\mathbf{r} \, {e^{-i\mathbf{k}_i\cdot\mathbf{r}}\over \sqrt{V}}V(\mathbf{r}){e^{i\mathbf{k}_f\cdot\mathbf{r}}\over\sqrt{V}}\right]^2.$$
 
-$$j_\mathrm{inc} = {\hbar k\over \mu} |A|^2,$$
+Notice that the factors of volume have cancelled out. If we divide by the incident flux
 
-we find
+$$j_\mathrm{inc} = {\hbar k\over \mu} {1\over V}$$
+
+(this comes from the probability flux associated with a plane wave, velocity x amplitude-squared), we find
 
 $${d\sigma\over d\Omega} = {\mu^2\over (2\pi)^2\hbar^4} \left[\int d^3\mathbf{r} \, e^{-i\mathbf{k}_i\cdot\mathbf{r}}V(\mathbf{r})e^{i\mathbf{k}_f\cdot\mathbf{r}}\right]^2$$
 

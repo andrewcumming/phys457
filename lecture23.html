@@ -443,19 +443,21 @@ Then we can expand</p>
 \[P(t) = {2\pi t\over \hbar} g(E_N+\hbar\omega) |\braket{k|V|N}|^2.\]</div>
 <p>A linear growth of <span class="math notranslate nohighlight">\(P\)</span> with time means a constant transition rate <span class="math notranslate nohighlight">\(dP/dt\)</span>. Writing the initial and final states as <span class="math notranslate nohighlight">\(\ket{i}\)</span> and <span class="math notranslate nohighlight">\(\ket{f}\)</span> respectively and <span class="math notranslate nohighlight">\(E_f\)</span> as the final energy we obtain <strong>Fermi’s Golden Rule</strong></p>
 <div class="math notranslate nohighlight">
-\[\boxed{\Gamma = {2\pi\over \hbar} |\braket{f|V|i}|^2 g(E_f)}.\]</div>
+\[\boxed{\Gamma = {2\pi\over \hbar} |\braket{f|\hat{V}|i}|^2 g(E_f)}.\]</div>
 <p><strong>Application to scattering</strong>. Let’s apply Fermi’s Golden rule to scattering. The initial state is <span class="math notranslate nohighlight">\(\ket{\mathbf{k}_i}\)</span> and we need to consider a range of final states <span class="math notranslate nohighlight">\(\ket{\mathbf{k}_f}\)</span> with <span class="math notranslate nohighlight">\(k_f^2=k_i^2\)</span>. The density of states in a volume <span class="math notranslate nohighlight">\(V\)</span> is  given by (this is derived in section 14.6 of Townsend if you haven’t yet seen this in your statistical mechanics class)</p>
 <div class="math notranslate nohighlight">
 \[{V d^3\mathbf{p}\over h^3} = {V p^2 dp\, d\Omega\over h^3} = {V p \mu\, d\Omega\over h^3} dE \Rightarrow g(E) = {V\over (2\pi \hbar)^3} \mu\, \hbar k\, d\Omega\]</div>
-<p>(where we used <span class="math notranslate nohighlight">\(E=p^2/2\mu \Rightarrow dE = p dp/\mu\)</span>). Therefore the transition rate into <span class="math notranslate nohighlight">\(d\Omega\)</span> is</p>
+<p>(where we used <span class="math notranslate nohighlight">\(E=p^2/2\mu \Rightarrow dE = p dp/\mu\)</span>). Since we are counting the states in a definite volume <span class="math notranslate nohighlight">\(V\)</span>, we need to normalize the momentum eigenstates as</p>
 <div class="math notranslate nohighlight">
-\[{2\pi\over \hbar} {1\over (2\pi\hbar)^3} \mu \,\hbar k\, d\Omega\,  
-V |A|^4 \left[\int d^3\mathbf{r} \, e^{-i\mathbf{k}_i\cdot\mathbf{r}}V(\mathbf{r})e^{i\mathbf{k}_f\cdot\mathbf{r}}\right]^2,\]</div>
-<p>where <span class="math notranslate nohighlight">\(A=1/V^{1/2}\)</span> is the normalization of the plane wave.</p>
-<p>If we divide by the incident flux</p>
+\[\psi(\mathbf{r}) = {1\over \sqrt{V}} e^{i\mathbf{k}\cdot\mathbf{r}}\Rightarrow \int d^3\mathbf{r} |\psi|^2 = 1.\]</div>
+<p>Putting these pieces together into Fermi’s Golden Rule gives the transition rate into <span class="math notranslate nohighlight">\(d\Omega\)</span></p>
 <div class="math notranslate nohighlight">
-\[j_\mathrm{inc} = {\hbar k\over \mu} |A|^2,\]</div>
-<p>we find</p>
+\[d\Gamma = {2\pi\over \hbar} {1\over (2\pi\hbar)^3} \mu \,\hbar k\, d\Omega\,  
+V \left[\int d^3\mathbf{r} \, {e^{-i\mathbf{k}_i\cdot\mathbf{r}}\over \sqrt{V}}V(\mathbf{r}){e^{i\mathbf{k}_f\cdot\mathbf{r}}\over\sqrt{V}}\right]^2.\]</div>
+<p>Notice that the factors of volume have cancelled out. If we divide by the incident flux</p>
+<div class="math notranslate nohighlight">
+\[j_\mathrm{inc} = {\hbar k\over \mu} {1\over V}\]</div>
+<p>(this comes from the probability flux associated with a plane wave, velocity x amplitude-squared), we find</p>
 <div class="math notranslate nohighlight">
 \[{d\sigma\over d\Omega} = {\mu^2\over (2\pi)^2\hbar^4} \left[\int d^3\mathbf{r} \, e^{-i\mathbf{k}_i\cdot\mathbf{r}}V(\mathbf{r})e^{i\mathbf{k}_f\cdot\mathbf{r}}\right]^2\]</div>
 <p>which agrees with our expression from the Born approximation.</p>
