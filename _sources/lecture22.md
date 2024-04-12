@@ -116,7 +116,7 @@ $$\int^1_{-1} P_\ell(\mu) P_{\ell^\prime}(\mu) d\mu = {2\over 2\ell+1}\delta_{\e
 
 + solve the Schrödinger equation for a given $\ell$ to obtain $u(r) = rR(r)$ given $V(r)$
 
-+ match the asymptotic form $u\sin(kr -\ell \pi /2 + \delta_\ell)$ to obtain $\delta_\ell$
++ match the asymptotic form $u\propto \sin(kr -\ell \pi /2 + \delta_\ell)$ to obtain $\delta_\ell$
 
 + do this for different $\ell$'s and then sum over the $\ell$ components to obtain the total cross-section
 
