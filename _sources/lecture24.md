@@ -81,5 +81,5 @@ We interpret the operators $\hat{a}^\dagger_{\mathbf{k},s}$ and $\hat{a}_{\mathb
 
 ## Further reading
 
-- There is more on time-dependent perturbation theory and Fermi's Golden rule in Townsend Chapter 14.
+- Townsend 14.2 and 14.3 cover the quantization of the electromagnetic field.
 
