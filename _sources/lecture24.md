@@ -66,7 +66,7 @@ $$c_{\mathbf{k},s} \rightarrow  \hat{a}_{\mathbf{k},s} \left({\hbar\over 2\epsil
 
 then we get
 
-$$\hat{H}_\mathrm{EM} = \sum_{\mathbf{k}, s} {\hbar\omega\over 2} \left( \hat{a}^\dagger_{\mathbf{k},s} \hat{a}_{\mathbf{k},s} + \hat{a}_{\mathbf{k},s}\hat{a}^\star_{\mathbf{k},s}\right).$$
+$$\hat{H}_\mathrm{EM} = \sum_{\mathbf{k}, s} {\hbar\omega\over 2} \left( \hat{a}^\dagger_{\mathbf{k},s} \hat{a}_{\mathbf{k},s} + \hat{a}_{\mathbf{k},s}\hat{a}^\dagger_{\mathbf{k},s}\right).$$
 
 With a commutation relation 
 
