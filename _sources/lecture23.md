@@ -71,7 +71,7 @@ $$\psi(\mathbf{r}) = {1\over \sqrt{V}} e^{i\mathbf{k}\cdot\mathbf{r}}\Rightarrow
 Putting these pieces together into Fermi's Golden Rule gives the transition rate into $d\Omega$
 
 $$d\Gamma = {2\pi\over \hbar} {1\over (2\pi\hbar)^3} \mu \,\hbar k\, d\Omega\,  
-V \left[\int d^3\mathbf{r} \, {e^{-i\mathbf{k}_i\cdot\mathbf{r}}\over \sqrt{V}}V(\mathbf{r}){e^{i\mathbf{k}_f\cdot\mathbf{r}}\over\sqrt{V}}\right]^2.$$
+V \left|\int d^3\mathbf{r} \, {e^{-i\mathbf{k}_i\cdot\mathbf{r}}\over \sqrt{V}}V(\mathbf{r}){e^{i\mathbf{k}_f\cdot\mathbf{r}}\over\sqrt{V}}\right|^2.$$
 
 Notice that the factors of volume have cancelled out. If we divide by the incident flux
 
@@ -79,7 +79,7 @@ $$j_\mathrm{inc} = {\hbar k\over \mu} {1\over V}$$
 
 (this comes from the probability flux associated with a plane wave, velocity x amplitude-squared), we find
 
-$${d\sigma\over d\Omega} = {\mu^2\over (2\pi)^2\hbar^4} \left[\int d^3\mathbf{r} \, e^{-i\mathbf{k}_i\cdot\mathbf{r}}V(\mathbf{r})e^{i\mathbf{k}_f\cdot\mathbf{r}}\right]^2$$
+$${d\sigma\over d\Omega} = {\mu^2\over (2\pi)^2\hbar^4} \left|\int d^3\mathbf{r} \, e^{-i\mathbf{k}_i\cdot\mathbf{r}}V(\mathbf{r})e^{i\mathbf{k}_f\cdot\mathbf{r}}\right|^2$$
 
 which agrees with our expression from the Born approximation.
 

@@ -61,6 +61,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'lecture24';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -382,6 +384,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-electromagnetic-field-in-quantum-mechanics">The electromagnetic field in quantum mechanics</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a></li>
 </ul>
             </nav>
@@ -396,7 +399,64 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="lecture-24-apr-4">
 <h1>Lecture 24 Apr 4<a class="headerlink" href="#lecture-24-apr-4" title="Permalink to this heading">#</a></h1>
-<p>(Still work in progress)</p>
+<p>Last time, we looked at time-dependent perturbation theory and in particular <em>Fermi’s Golden Rule</em> which gives the transition rate between two different stationary states of the unperturbed Hamiltonian. We applied Fermi’s Golden Rule to calculate the transition rate between incoming and outgoing momentum eigenstates due to a scattering potential, and found that it reproduced the Born approximation for the scattering cross-section.</p>
+<p>We’re going to end the course by looking at transitions in atoms. For example, an atom in an excited state can decay to the ground state, releasing a photon that carries away the excess energy. In order to do so, we need to discuss how we can treat the electromagnetic field in quantum mechanics.</p>
+<section id="the-electromagnetic-field-in-quantum-mechanics">
+<h2>The electromagnetic field in quantum mechanics<a class="headerlink" href="#the-electromagnetic-field-in-quantum-mechanics" title="Permalink to this heading">#</a></h2>
+<p><strong>Wave equation for the vector potential</strong>. Consider an electromagnetic field with no charges or currents. We first write the magnetic field in terms of a time-dependent vector potential <span class="math notranslate nohighlight">\(\mathbf{A}(\mathbf{r},t)\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{B} = \nabla\times\mathbf{A},\]</div>
+<p>which then automatically satisfies <span class="math notranslate nohighlight">\(\mathbf{\nabla}\cdot\mathbf{B}=0\)</span>. The magnetic field <span class="math notranslate nohighlight">\(\mathbf{B}\)</span> doesn’t change if we make a gauge transformation <span class="math notranslate nohighlight">\(\mathbf{A}\rightarrow \mathbf{A} + \mathbf{\nabla}\lambda\)</span> where <span class="math notranslate nohighlight">\(\lambda\)</span> is a scalar field; this is known as <em>gauge freedom</em>. Another way to say this is that while <span class="math notranslate nohighlight">\(\nabla\times\mathbf{A}\)</span> has to correspond to the physical field, we are free to choose <span class="math notranslate nohighlight">\(\mathbf{\nabla}\cdot\mathbf{A}\)</span>. Here, we’ll set <span class="math notranslate nohighlight">\(\mathbf{\nabla}\cdot\mathbf{A}=0\)</span>, which is the <em>Coulomb gauge</em>.</p>
+<p>With <span class="math notranslate nohighlight">\(\mathbf{\nabla}\cdot\mathbf{A}=0\)</span> and also <span class="math notranslate nohighlight">\(\mathbf{\nabla}\cdot\mathbf{E}=0\)</span> since we assume we are in vacuum, Faraday’s law gives</p>
+<div class="math notranslate nohighlight">
+\[{\partial\mathbf{B}\over\partial t} = \nabla\times{\partial \mathbf{A}\over\partial t} = -\nabla\times \mathbf{E}\Rightarrow \mathbf{E} = -{\partial\mathbf{A}\over\partial t}.\]</div>
+<p>Ampere’s law with no currents gives</p>
+<div class="math notranslate nohighlight">
+\[{1\over c^2}{\partial \mathbf{E}\over \partial t} = -{1\over c^2}{\partial^2 \mathbf{A}\over \partial t^2}= \nabla\times\mathbf{B} = -\nabla^2\mathbf{A},\]</div>
+<p>where again in the last step we used <span class="math notranslate nohighlight">\(\mathbf{\nabla}\cdot\mathbf{A}=0\)</span>. We’ve arrived at a wave equation for <span class="math notranslate nohighlight">\(\mathbf{A}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[{1\over c^2}{\partial^2 \mathbf{A}\over \partial t^2} = \nabla^2\mathbf{A}\]</div>
+<p>with wave speed <span class="math notranslate nohighlight">\(c = 1/\sqrt{\epsilon_0\mu_0}\)</span> equal to the speed of light. This equation has plane wave solutions</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{A}\propto e^{i(\mathbf{k}\cdot\mathbf{r}-\omega t)}\]</div>
+<p>with dispersion relation <span class="math notranslate nohighlight">\(\omega(k) = ck\)</span>. The waves are transverse, since <span class="math notranslate nohighlight">\(\mathbf{\nabla}\cdot\mathbf{A}=0\Rightarrow \mathbf{k}\cdot\mathbf{A} =0\)</span>; the direction of <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> is perpendicular to the propagation direction of the wave.</p>
+<p>Because we’re dealing with a linear equation, we can write <span class="math notranslate nohighlight">\(\mathbf{A}(\mathbf{r},t)\)</span> as a sum over these plane wave solutions</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{A}(\mathbf{r},t) = \sum_{\mathbf{k},s} \left[c_{\mathbf{k},s} \epsilon_{\mathbf{k},s} {e^{i(\mathbf{k}\cdot\mathbf{r}-\omega t)}\over \sqrt{V}} + c^\star_{\mathbf{k},s} \epsilon^\star_{\mathbf{k},s} {e^{-i(\mathbf{k}\cdot\mathbf{r}-\omega t)}\over\sqrt{V}} \right].\]</div>
+<p>The second term inside the sum is the complex conjugate of the first; this ensures that the vector potential <span class="math notranslate nohighlight">\(\mathbf{A}\)</span> is real. Note that we are using the <span class="math notranslate nohighlight">\(1/\sqrt{V}\)</span> normalization from last time; this means that the wave spectrum is discrete and so we sum over discrete <span class="math notranslate nohighlight">\(\mathbf{k}\)</span> values. As <span class="math notranslate nohighlight">\(V\)</span> becomes large, this sum goes to an integral over a continuous spectrum. The sum over <span class="math notranslate nohighlight">\(s\)</span> sums over polarizations of each wave: the polarization <span class="math notranslate nohighlight">\(\epsilon_{\mathbf{k},s}\)</span> is a unit vector that specifies the polarization direction, with <span class="math notranslate nohighlight">\(\mathbf{k}\cdot\mathbf{\epsilon}_{\mathbf{k},s}=0\)</span>. We assume that there are two polarization vectors <span class="math notranslate nohighlight">\(\epsilon_{\mathbf{k},1}\)</span> and <span class="math notranslate nohighlight">\(\epsilon_{\mathbf{k},2}\)</span>, chosen so that <span class="math notranslate nohighlight">\(\epsilon^\star_{\mathbf{k},s}\cdot\epsilon_{\mathbf{k},s^\prime}=\delta_{s,s^\prime}\)</span>, ie. orthogonal to each other as well as to the propagation direction.</p>
+<p><strong>Energy in the field</strong>. The next step is to derive an expression for the energy of the electromagnetic field,</p>
+<div class="math notranslate nohighlight">
+\[E_\mathrm{EM} = \int d^3\mathbf{r} \left[{1\over 2} \epsilon_0 E^2 +  {B^2\over 2\mu_0}  \right]\]</div>
+<div class="math notranslate nohighlight">
+\[= {\epsilon_0\over 2} \int d^3\mathbf{r} \left[ \left(-{\partial \mathbf{A}\over \partial t}\right)^2 +  c^2 \left(\nabla\times \mathbf{A}  \right)^2\right].\]</div>
+<p>This involves quite a lot of algebra, e.g. consider the electric field term. The electric field is</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{E} = i \sum_{\mathbf{k},s} \omega(k) \left[c_{\mathbf{k},s} \epsilon_{\mathbf{k},s} {e^{i(\mathbf{k}\cdot\mathbf{r}-\omega t)}\over \sqrt{V}} - c^\star_{\mathbf{k},s} \epsilon^\star_{\mathbf{k},s} {e^{-i(\mathbf{k}\cdot\mathbf{r}-\omega t)}\over\sqrt{V}} \right]\]</div>
+<div class="math notranslate nohighlight">
+\[\Rightarrow E^2 = - \sum_{\mathbf{k},s}\sum_{\mathbf{k^\prime},s^\prime} \omega(k)\omega(k^\prime)\left[c_{\mathbf{k},s} \epsilon_{\mathbf{k},s} {e^{i(\mathbf{k}\cdot\mathbf{r}-\omega t)}\over \sqrt{V}} - c^\star_{\mathbf{k},s} \epsilon^\star_{\mathbf{k},s} {e^{-i(\mathbf{k}\cdot\mathbf{r}-\omega t)}\over\sqrt{V}} \right]\cdot \left[c_{\mathbf{k^\prime},s^\prime} \epsilon_{\mathbf{k^\prime},s^\prime} {e^{i(\mathbf{k^\prime}\cdot\mathbf{r}-\omega t)}\over \sqrt{V}} - c^\star_{\mathbf{k^\prime},s^\prime} \epsilon^\star_{\mathbf{k^\prime},s^\prime} {e^{-i(\mathbf{k^\prime}\cdot\mathbf{r}-\omega t)}\over\sqrt{V}} \right].\]</div>
+<p>This looks complicated but simplifies dramatically because of the orthogonality of the polarization vectors and the plane waves,</p>
+<div class="math notranslate nohighlight">
+\[\int d^3\mathbf{r} {e^{-i\mathbf{k^\prime}\cdot\mathbf{r}}\over \sqrt{V}} {e^{i\mathbf{k}\cdot\mathbf{r}}\over \sqrt{V}}  = \delta_{\mathbf{k}^\prime,\mathbf{k}}.\]</div>
+<p>The cross-terms with opposite signs in the exponent cancel between the electric field and magnetic field terms in the integral. The final result is</p>
+<div class="math notranslate nohighlight">
+\[E_\mathrm{EM} = \epsilon_0 \sum_{\mathbf{k}, s} \omega(k)^2 \left( c^\star_{\mathbf{k},s} c_{\mathbf{k},s} + c_{\mathbf{k},s}c^\star_{\mathbf{k},s}\right).\]</div>
+<p>We’ve kept the relative ordering of the <span class="math notranslate nohighlight">\(c^\star\)</span> and <span class="math notranslate nohighlight">\(c\)</span> coefficients because we will soon turn them into operators in quantum mechanics and then will have to be careful about whether they commute.</p>
+<p><strong>Quantization of the field</strong>. The appearance of the term <span class="math notranslate nohighlight">\(c^\star_{\mathbf{k},s} c_{\mathbf{k},s}\)</span> in the energy suggests a number operator, and indeed if we use the expression for the energy <span class="math notranslate nohighlight">\(E_\mathrm{EM}\)</span> to define a Hamiltonian by taking</p>
+<div class="math notranslate nohighlight">
+\[c^\star_{\mathbf{k},s} \rightarrow  \hat{a}^\dagger_{\mathbf{k},s} \left({\hbar\over 2\epsilon_0\omega}\right)^{1/2}\]</div>
+<div class="math notranslate nohighlight">
+\[c_{\mathbf{k},s} \rightarrow  \hat{a}_{\mathbf{k},s} \left({\hbar\over 2\epsilon_0\omega}\right)^{1/2}\]</div>
+<p>then we get</p>
+<div class="math notranslate nohighlight">
+\[\hat{H}_\mathrm{EM} = \sum_{\mathbf{k}, s} {\hbar\omega\over 2} \left( \hat{a}^\dagger_{\mathbf{k},s} \hat{a}_{\mathbf{k},s} + \hat{a}_{\mathbf{k},s}\hat{a}^\star_{\mathbf{k},s}\right).\]</div>
+<p>With a commutation relation</p>
+<div class="math notranslate nohighlight">
+\[[\hat{a}_{\mathbf{k},s},\hat{a}^\dagger_{\mathbf{k},s}]=1\]</div>
+<p>we get</p>
+<div class="math notranslate nohighlight">
+\[\hat{H}_\mathrm{EM} = \sum_{\mathbf{k}, s} \hbar\omega \left( \hat{a}^\dagger_{\mathbf{k},s} \hat{a}_{\mathbf{k},s} + {1\over 2}\right).\]</div>
+<p>We interpret the operators <span class="math notranslate nohighlight">\(\hat{a}^\dagger_{\mathbf{k},s}\)</span> and <span class="math notranslate nohighlight">\(\hat{a}_{\mathbf{k},s}\)</span> as <strong>creation</strong> and <strong>annhilation</strong> operators respectively. They create or destroy photons at each <span class="math notranslate nohighlight">\(\mathbf{k}\)</span> and <span class="math notranslate nohighlight">\(s\)</span> with corresponding energy <span class="math notranslate nohighlight">\(\hbar\omega\)</span>. Just as with the harmonic oscillator, we can keep adding photons with a given wavelength by successively applying the creation operator. This is consistent with the idea that photons are bosons and so we can have more than one photon in the same single particle state. We’ll develop this idea further next time.</p>
+</section>
 <section id="further-reading">
 <h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
@@ -472,6 +532,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-electromagnetic-field-in-quantum-mechanics">The electromagnetic field in quantum mechanics</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a></li>
 </ul>
   </nav></div>
