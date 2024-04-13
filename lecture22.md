@@ -114,7 +114,7 @@ $$\int^1_{-1} P_\ell(\mu) P_{\ell^\prime}(\mu) d\mu = {2\over 2\ell+1}\delta_{\e
 
 **General strategy**. This gives us a way to determine cross-sections. The general strategy is:
 
-+ solve the Schrödinger equation for a given $\ell$ to obtain $u(r) = rR(r)$ given $V(r)$
++ solve the Schrödinger equation (eq. {eq}`radialSchr`) for a given $\ell$ to obtain $u(r) = rR(r)$ given $V(r)$
 
 + match the asymptotic form $u\propto \sin(kr -\ell \pi /2 + \delta_\ell)$ to obtain $\delta_\ell$
 
@@ -126,7 +126,7 @@ $$V(r) = \begin{cases} \infty & \text{$r<a$} \\
 0 & \text{$r>a$}
 \end{cases}$$
 
-At low energies, $\ell=0$ dominates. In that case, the Schrödinger equation has a solution that is already of the form we are looking for as $r\rightarrow\infty$: we can write the solution at $r>a$ as $u=C\sin(kr+\delta_0)$. We just have to apply the boundary condition to get the phase shift. Setting $u=0$ at $r=a$ gives 
+At low energies, $\ell=0$ dominates. In that case, the Schrödinger equation (eq. {eq}`radialSchr`) has a solution that is already of the form we are looking for as $r\rightarrow\infty$: we can write the solution at $r>a$ as $u=C\sin(kr+\delta_0)$. We just have to apply the boundary condition to get the phase shift. Setting $u=0$ at $r=a$ gives 
 
 $$\delta_0 = -ka.$$
 
