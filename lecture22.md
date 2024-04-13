@@ -126,7 +126,7 @@ $$V(r) = \begin{cases} \infty & \text{$r<a$} \\
 0 & \text{$r>a$}
 \end{cases}$$
 
-At low energies, $\ell=0$ dominates, so we write the solution at $r>a$ as  $u=C\sin(kr+\delta_0)$. Applying the boundary condition $u=0$ at $r=a$ gives 
+At low energies, $\ell=0$ dominates. In that case, the Schrödinger equation has a solution that is already of the form we are looking for as $r\rightarrow\infty$: we can write the solution at $r>a$ as $u=C\sin(kr+\delta_0)$. We just have to apply the boundary condition to get the phase shift. Setting $u=0$ at $r=a$ gives 
 
 $$\delta_0 = -ka.$$
 

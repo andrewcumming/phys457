@@ -52,7 +52,7 @@ This looks complicated but simplifies dramatically because of the orthogonality 
 
 $$\int d^3\mathbf{r} {e^{-i\mathbf{k^\prime}\cdot\mathbf{r}}\over \sqrt{V}} {e^{i\mathbf{k}\cdot\mathbf{r}}\over \sqrt{V}}  = \delta_{\mathbf{k}^\prime,\mathbf{k}}.$$
 
-The cross-terms with opposite signs in the exponent cancel between the electric field and magnetic field terms in the integral. The final result is
+The cross-terms with the same signs in the exponent seem problematic because the time-dependence doesn't cancel out. It turns out however that these kind of terms cancel out between the electric field and magnetic field terms in the integral. The final result is
 
 $$E_\mathrm{EM} = \epsilon_0 \sum_{\mathbf{k}, s} \omega(k)^2 \left( c^\star_{\mathbf{k},s} c_{\mathbf{k},s} + c_{\mathbf{k},s}c^\star_{\mathbf{k},s}\right).$$
 

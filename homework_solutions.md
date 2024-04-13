@@ -108,6 +108,24 @@ the same order of magnitude as the previous estimate.
 ```
 ```{dropdown} Townsend 13.7: Born approximation example
 
+Start with the scattering amplitude for a spherically-symmetric potential, 
+
+$$f = -{2\mu\over\hbar^2q} \int_0^\infty dr\, r V(r) \sin(qr).$$
+
+With $V(r) = V_0 e^{-r/a}$, this becomes
+
+$$f = -{2\mu V_0\over\hbar^2q} \int_0^\infty dr\, r e^{-r/a} \sin(qr) = -{2\mu V_0\over\hbar^2q} {2a^3 q\over (1+(qa)^2)^2}.$$
+
+Therefore
+
+$${d\sigma\over d\Omega} = |f|^2 = \left({4\mu a^2 V_0\over \hbar^2}\right)^2 {a^2\over (1+ (qa)^2)^4}$$
+
+or in terms of the scattering angle 
+
+$${d\sigma\over d\Omega} =  \left({4\mu a^2 V_0\over \hbar^2}\right)^2 {a^2\over (1+ 4(ka)^2\sin^2(\theta/2))^4}.$$
+
+Notice that this has the correct units which we can see from the $a^2$ factor. The first term on the right hand side is dimensionless.
+
 
 ```
 
