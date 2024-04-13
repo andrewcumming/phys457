@@ -485,7 +485,7 @@ document.write(`
 \[\int^1_{-1} P_\ell(\mu) P_{\ell^\prime}(\mu) d\mu = {2\over 2\ell+1}\delta_{\ell,\ell^\prime}.\]</div>
 <p><strong>General strategy</strong>. This gives us a way to determine cross-sections. The general strategy is:</p>
 <ul class="simple">
-<li><p>solve the Schrödinger equation for a given <span class="math notranslate nohighlight">\(\ell\)</span> to obtain <span class="math notranslate nohighlight">\(u(r) = rR(r)\)</span> given <span class="math notranslate nohighlight">\(V(r)\)</span></p></li>
+<li><p>solve the Schrödinger equation (eq. <a class="reference internal" href="lecture21.html#equation-radialschr">(4)</a>) for a given <span class="math notranslate nohighlight">\(\ell\)</span> to obtain <span class="math notranslate nohighlight">\(u(r) = rR(r)\)</span> given <span class="math notranslate nohighlight">\(V(r)\)</span></p></li>
 <li><p>match the asymptotic form <span class="math notranslate nohighlight">\(u\propto \sin(kr -\ell \pi /2 + \delta_\ell)\)</span> to obtain <span class="math notranslate nohighlight">\(\delta_\ell\)</span></p></li>
 <li><p>do this for different <span class="math notranslate nohighlight">\(\ell\)</span>’s and then sum over the <span class="math notranslate nohighlight">\(\ell\)</span> components to obtain the total cross-section</p></li>
 </ul>
@@ -494,7 +494,7 @@ document.write(`
 \[\begin{split}V(r) = \begin{cases} \infty &amp; \text{$r&lt;a$} \\
 0 &amp; \text{$r&gt;a$}
 \end{cases}\end{split}\]</div>
-<p>At low energies, <span class="math notranslate nohighlight">\(\ell=0\)</span> dominates, so we write the solution at <span class="math notranslate nohighlight">\(r&gt;a\)</span> as  <span class="math notranslate nohighlight">\(u=C\sin(kr+\delta_0)\)</span>. Applying the boundary condition <span class="math notranslate nohighlight">\(u=0\)</span> at <span class="math notranslate nohighlight">\(r=a\)</span> gives</p>
+<p>At low energies, <span class="math notranslate nohighlight">\(\ell=0\)</span> dominates. In that case, the Schrödinger equation (eq. <a class="reference internal" href="lecture21.html#equation-radialschr">(4)</a>) has a solution that is already of the form we are looking for as <span class="math notranslate nohighlight">\(r\rightarrow\infty\)</span>: we can write the solution at <span class="math notranslate nohighlight">\(r&gt;a\)</span> as <span class="math notranslate nohighlight">\(u=C\sin(kr+\delta_0)\)</span>. We just have to apply the boundary condition to get the phase shift. Setting <span class="math notranslate nohighlight">\(u=0\)</span> at <span class="math notranslate nohighlight">\(r=a\)</span> gives</p>
 <div class="math notranslate nohighlight">
 \[\delta_0 = -ka.\]</div>
 <p>Therefore</p>

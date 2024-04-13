@@ -505,6 +505,19 @@ Townsend 13.7: Born approximation example<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Start with the scattering amplitude for a spherically-symmetric potential,</p>
+<div class="math notranslate nohighlight">
+\[f = -{2\mu\over\hbar^2q} \int_0^\infty dr\, r V(r) \sin(qr).\]</div>
+<p class="sd-card-text">With <span class="math notranslate nohighlight">\(V(r) = V_0 e^{-r/a}\)</span>, this becomes</p>
+<div class="math notranslate nohighlight">
+\[f = -{2\mu V_0\over\hbar^2q} \int_0^\infty dr\, r e^{-r/a} \sin(qr) = -{2\mu V_0\over\hbar^2q} {2a^3 q\over (1+(qa)^2)^2}.\]</div>
+<p class="sd-card-text">Therefore</p>
+<div class="math notranslate nohighlight">
+\[{d\sigma\over d\Omega} = |f|^2 = \left({4\mu a^2 V_0\over \hbar^2}\right)^2 {a^2\over (1+ (qa)^2)^4}\]</div>
+<p class="sd-card-text">or in terms of the scattering angle</p>
+<div class="math notranslate nohighlight">
+\[{d\sigma\over d\Omega} =  \left({4\mu a^2 V_0\over \hbar^2}\right)^2 {a^2\over (1+ 4(ka)^2\sin^2(\theta/2))^4}.\]</div>
+<p class="sd-card-text">Notice that this has the correct units which we can see from the <span class="math notranslate nohighlight">\(a^2\)</span> factor. The first term on the right hand side is dimensionless.</p>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">

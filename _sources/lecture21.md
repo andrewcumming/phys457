@@ -8,7 +8,7 @@ The approach we're going to take is to treat the scattering by finding the stati
 
 The incoming beam of particles is represented by a plane wave $A e^{ikz}$.  When the plane wave interacts with the potential, it will generate an outgoing scattered wave. You could think of a plane-parallel surface wave on water that encounters an obstacle, creating a series of circular ripples that spread outwards. If we go to large enough distance from the potential, the scattered wave will be an outgoing radial wave $\propto e^{ikr}/r$. You can see that this is an outgoing wave solution by going back to the radial Schrödinger equation, 
 
-$$\left[-{\hbar^2\over 2\mu}{d^2\over d\mu^2} + {\ell(\ell+1)\hbar^2\over 2\mu r^2}+V\right]u = Eu$$
+$$\left[-{\hbar^2\over 2\mu}{d^2\over d\mu^2} + {\ell(\ell+1)\hbar^2\over 2\mu r^2}+V\right]u = Eu$$ (radialSchr)
 
 where recall that $R(r) = u(r)/r$. Setting $V=0$ for a free particle and $\ell=0$ (no angular momentum, radial orbit), gives an outgoing wave solution of the form $R(r)\propto e^{ikr}/r$. 
 
