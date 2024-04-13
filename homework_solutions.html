@@ -384,6 +384,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework-9">Homework 9</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework-10">Homework 10</a></li>
 </ul>
             </nav>
         </div>
@@ -487,6 +488,70 @@ Question 3: spin-spin interaction between electrons<div class="sd-summary-down d
 <p class="sd-card-text">the same order of magnitude as the previous estimate.</p>
 </div>
 </details></section>
+<section id="homework-10">
+<h2>Homework 10<a class="headerlink" href="#homework-10" title="Permalink to this heading">#</a></h2>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Townsend 13.3: Validity of the Born approximation<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Townsend 13.7: Born approximation example<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Townsend 13.10: p-wave scattering from a hard sphere<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">In the region <span class="math notranslate nohighlight">\(r&gt;a\)</span> where <span class="math notranslate nohighlight">\(V=0\)</span>, the general solution for <span class="math notranslate nohighlight">\(\ell=1\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[R(r) = A j_1(kr) + B \eta_1(kr),\]</div>
+<p class="sd-card-text">where <span class="math notranslate nohighlight">\(\hbar^2k^2/2\mu=E\)</span> (e.g. see section 10.4 of Townsend). We include the Neumann function here because we exclude the origin so there’s no problem with it blowing up.
+The boundary condition at <span class="math notranslate nohighlight">\(r=a\)</span>, <span class="math notranslate nohighlight">\(R(a)=0\)</span> can be used to determine one of the coefficients:</p>
+<div class="math notranslate nohighlight">
+\[ A j_1(ka) + B \eta_1(ka)= 0 \Rightarrow B = -A {j_1(ka)\over \eta_1(ka)},\]</div>
+<p class="sd-card-text">so therefore</p>
+<div class="math notranslate nohighlight">
+\[R(r) = A \left[j_1(kr) - {j_1(ka)\over \eta_1(ka)} \eta_1(kr)\right].\]</div>
+<p class="sd-card-text">At large distance <span class="math notranslate nohighlight">\(kr\rightarrow\infty\)</span>, this becomes</p>
+<div class="math notranslate nohighlight">
+\[R(r) \xrightarrow[kr\rightarrow\infty]{} {A\over kr} \left[\sin(kr-\pi/2) + {j_1(ka)\over \eta_1(ka)} \cos(kr-\pi/2)\right]\]</div>
+<p class="sd-card-text">(using Townsend 13.63).</p>
+<p class="sd-card-text">We are looking for the asymptotic form</p>
+<div class="math notranslate nohighlight">
+\[R(r) \xrightarrow[kr\rightarrow\infty]{} {A\over kr} \sin(kr - \pi/2 + \delta_1)\]</div>
+<p class="sd-card-text">where <span class="math notranslate nohighlight">\(\delta_1\)</span> is the phase shift. For <span class="math notranslate nohighlight">\(\delta_1\ll 1\)</span>, this is</p>
+<div class="math notranslate nohighlight">
+\[R(r) \xrightarrow[kr\rightarrow\infty]{} {A\over kr} \left[\sin(kr - \pi/2) + \delta_1\cos(kr - \pi/2)\right],\]</div>
+<p class="sd-card-text">where we assume <span class="math notranslate nohighlight">\(\cos\delta_1\approx 1\)</span> and <span class="math notranslate nohighlight">\(\sin\delta_1\approx \delta_1\)</span>.</p>
+<p class="sd-card-text">Therefore we identify</p>
+<div class="math notranslate nohighlight">
+\[\delta_1 \approx {j_1(ka)\over \eta_1(ka)} \approx -{(ka)^3\over 3}\]</div>
+<p class="sd-card-text">where in the last step we expand for <span class="math notranslate nohighlight">\(ka\ll 1\)</span> using Townsend (10.69) to get the forms of <span class="math notranslate nohighlight">\(j_1\)</span> and <span class="math notranslate nohighlight">\(\eta_1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[j_1(x) = {\sin x\over x^2} - {\cos x\over x}\approx {x-x^3/6\over x^2} - {1-x^2/2\over x}\approx {x\over 3}\]</div>
+<div class="math notranslate nohighlight">
+\[\eta_1(x) = -{\cos x\over x^2} - {\sin x\over x} \approx -{1-x^2/2\over x^2} - {x-x^3/6\over x}\approx -{1\over x^2}.\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Townsend 13.11: comparing Born approximation and partial wave expansion<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+</div>
+</details></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -548,6 +613,7 @@ Question 3: spin-spin interaction between electrons<div class="sd-summary-down d
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework-9">Homework 9</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework-10">Homework 10</a></li>
 </ul>
   </nav></div>
 

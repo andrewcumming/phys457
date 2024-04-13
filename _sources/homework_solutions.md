@@ -99,4 +99,70 @@ the same order of magnitude as the previous estimate.
 
 ```
 
+### Homework 10
+
+
+```{dropdown} Townsend 13.3: Validity of the Born approximation
+
+
+```
+```{dropdown} Townsend 13.7: Born approximation example
+
+
+```
+
+```{dropdown} Townsend 13.10: p-wave scattering from a hard sphere
+
+In the region $r>a$ where $V=0$, the general solution for $\ell=1$ is
+
+$$R(r) = A j_1(kr) + B \eta_1(kr),$$
+
+where $\hbar^2k^2/2\mu=E$ (e.g. see section 10.4 of Townsend). We include the Neumann function here because we exclude the origin so there's no problem with it blowing up.
+The boundary condition at $r=a$, $R(a)=0$ can be used to determine one of the coefficients:
+
+$$ A j_1(ka) + B \eta_1(ka)= 0 \Rightarrow B = -A {j_1(ka)\over \eta_1(ka)},$$
+
+so therefore 
+
+$$R(r) = A \left[j_1(kr) - {j_1(ka)\over \eta_1(ka)} \eta_1(kr)\right].$$
+
+At large distance $kr\rightarrow\infty$, this becomes
+
+$$R(r) \xrightarrow[kr\rightarrow\infty]{} {A\over kr} \left[\sin(kr-\pi/2) + {j_1(ka)\over \eta_1(ka)} \cos(kr-\pi/2)\right]$$
+
+(using Townsend 13.63). 
+
+We are looking for the asymptotic form
+
+$$R(r) \xrightarrow[kr\rightarrow\infty]{} {A\over kr} \sin(kr - \pi/2 + \delta_1)$$
+
+where $\delta_1$ is the phase shift. For $\delta_1\ll 1$, this is
+
+$$R(r) \xrightarrow[kr\rightarrow\infty]{} {A\over kr} \left[\sin(kr - \pi/2) + \delta_1\cos(kr - \pi/2)\right],$$
+
+where we assume $\cos\delta_1\approx 1$ and $\sin\delta_1\approx \delta_1$. 
+
+Therefore we identify 
+
+$$\delta_1 \approx {j_1(ka)\over \eta_1(ka)} \approx -{(ka)^3\over 3}$$
+
+where in the last step we expand for $ka\ll 1$ using Townsend (10.69) to get the forms of $j_1$ and $\eta_1$:
+
+$$j_1(x) = {\sin x\over x^2} - {\cos x\over x}\approx {x-x^3/6\over x^2} - {1-x^2/2\over x}\approx {x\over 3}$$
+
+$$\eta_1(x) = -{\cos x\over x^2} - {\sin x\over x} \approx -{1-x^2/2\over x^2} - {x-x^3/6\over x}\approx -{1\over x^2}.$$
+
+
+
+```
+
+
+```{dropdown} Townsend 13.11: comparing Born approximation and partial wave expansion
+
+
+```
+
+
+
+
 

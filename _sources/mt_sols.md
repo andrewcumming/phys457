@@ -152,3 +152,28 @@ $${1\over \sqrt{2}}\left(\ket{3,1,1}\pm \ket{3,2,1}\right),  {1\over \sqrt{2}}\l
 $${1\over\sqrt{3}}\ket{3,0,0} \pm {1\over \sqrt{2}}\ket{3,1,0} + {1\over \sqrt{6}}\ket{3,2,0}\hspace{1cm}\Delta E = \mp 9 eEa_0\ (\mathrm{2\ states})$$
 
 ````
+
+
+**Formula sheet**
+
+$$\hat{p}_r\rightarrow {\hbar\over i}\left({\partial\over\partial r} + {1\over r}\right)$$
+
+$$\int_0^\infty dx\ x^n e^{-ax^2} = {a^{-(n+1)/2}\over 2} \Gamma\left({n+1\over 2}\right)$$
+
+$${1\over n\pi}\int_0^{n\pi} d\theta\, \sin^2\theta = {1\over 2}$$
+
+$$\int_0^\pi d\theta\ \sin\theta \sin^2\left(n\theta\right) = {8n^2\over 8n^2-2}$$
+
+$$\int_0^\pi d\theta\ \sin^2\theta \sin\left(n\theta\right) = {-2 + 2(-1)^n\over -4n+n^3}$$
+
+$$\int_0^\infty dr\, r^3\, R_{3,2} R_{3,1} = -{9\sqrt{5}\over 2} a_0$$
+
+$$\int_0^\infty dr\, r^3\, R_{3,1} R_{3,0} = -9\sqrt{2} a_0$$
+
+$$\int d\Omega\, Y^\star_{1,0} Y_{0,0} \cos\theta = {1\over \sqrt{3}}$$
+
+$$\int d\Omega\, Y^\star_{2,0} Y_{1,0} \cos\theta = {2\over \sqrt{15}}$$
+
+$$\int d\Omega\, Y^\star_{2,1} Y_{1,1} \cos\theta = \int d\Omega\, Y^\star_{2,-1} Y_{1,-1} \cos\theta = {1\over \sqrt{5}}$$
+
+
