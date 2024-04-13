@@ -49,6 +49,7 @@ parts:
         - file: hw8
         - file: hw9
         - file: hw10
+        - file: extra
         - file: mt_sols
         - file: homework_solutions
         
