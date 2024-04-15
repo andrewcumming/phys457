@@ -362,6 +362,6 @@ $$d\Gamma = {2\pi\over\hbar} {V\over (2\pi)^3\hbar^3}m_e p\, d\Omega {e^2 \hbar\
 
 Now use the hint in the question to divide by $c/V$ for the incident photon flux, to convert to a differential cross-section. Then simplifying factors and using $\alpha = e^2/4\pi\epsilon_0\hbar c$, I find
 
-$${d\sigma\over d\Omega} = 32\alpha {\hbar\over m_e\omega} {k_f(\epsilon\cdot\mathbf{k}_f)^2\over a_0^5} {1\over ((1/a_0)^2+q^2)^4}$$
+$${d\sigma\over d\Omega} = {V\over c}{d\Gamma\over d\Omega} = 32\alpha {\hbar\over m_e\omega} {k_f(\epsilon\cdot\mathbf{k}_f)^2\over a_0^5} {1\over ((1/a_0)^2+q^2)^4}$$
 
 which agrees with the answer given in the question. 
