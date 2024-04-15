@@ -498,6 +498,26 @@ Townsend 13.3: Validity of the Born approximation<div class="sd-summary-down doc
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Start with Townsend (13.48) which is the condition that the Born approximation is valid:</p>
+<div class="math notranslate nohighlight">
+\[\left|{\psi_\mathrm{sc}(0)\over \psi_\mathrm{inc}(0)}\right| = \left|{2\mu\over \hbar^2k}\int_0^\infty dr\, e^{ikr} V(r) \sin kr\right|\ll 1\]</div>
+<p class="sd-card-text">(ie. the wavefunction near the origin is dominated by the incident plane wave, so our approximation for solving the integral equation <a class="reference internal" href="lecture21.html#equation-sc-integ-eqn">(5)</a> is a good one).</p>
+<p class="sd-card-text">Now assume the potential has some range <span class="math notranslate nohighlight">\(a\)</span>, so we only have to consider values of <span class="math notranslate nohighlight">\(r\)</span> in the in the integral up to <span class="math notranslate nohighlight">\(r\approx a\)</span>. At low energy where <span class="math notranslate nohighlight">\(ka\ll 1\)</span>, we can approximate <span class="math notranslate nohighlight">\(e^{ikr}\approx 1\)</span> and <span class="math notranslate nohighlight">\(\sin kr\approx kr\)</span>, giving</p>
+<div class="math notranslate nohighlight">
+\[\left|{2\mu\over \hbar^2k}\int_0^\infty dr\, e^{ikr} V(r) \sin kr\right|\approx 
+\left|{2\mu\over \hbar^2k}\int_0^\infty dr\, V(r) kr\right|\]</div>
+<p class="sd-card-text">Then treating <span class="math notranslate nohighlight">\(V(r)\approx V_0\approx \)</span> constant for <span class="math notranslate nohighlight">\(r&lt;a\)</span>, we can do the integral to get</p>
+<div class="math notranslate nohighlight">
+\[\left|{2\mu\over \hbar^2k}\int_0^\infty dr\, e^{ikr} V(r) \sin kr\right|\approx 
+\left|{2\mu\over \hbar^2k}\int_0^\infty dr\, V(r) kr\right| \approx {\mu V_0a^2\over \hbar^2}.\]</div>
+<p class="sd-card-text">So we have a condition for the Born approximation to be valid at low energies <span class="math notranslate nohighlight">\(ka\ll 1\)</span></p>
+<div class="math notranslate nohighlight">
+\[{\mu V_0a^2\over \hbar^2} \ll 1.\]</div>
+<p class="sd-card-text">The condition for the Born approximation to be valid at high energies <span class="math notranslate nohighlight">\(ka\gg 1\)</span> is (Townsend 13.49),</p>
+<div class="math notranslate nohighlight">
+\[{\mu V_0\over \hbar^2k^2} \ll 1\Rightarrow {\mu V_0a^2\over \hbar^2} {1\over (ka)^2} \ll 1\]</div>
+<p class="sd-card-text">so we see that if the low energy condition is already satisfied then at high energies we’re dividing by the large number <span class="math notranslate nohighlight">\((ka)^2\)</span> and so the high energy condition will automatically be satisfied as well.</p>
+<p class="sd-card-text">Note the physical interpretations of these criteria: the high energy condition is that the particle energy should be much larger than the magnitude of the scattering potential <span class="math notranslate nohighlight">\(V_0\)</span>; the low energy condition is that the potential should be small enough that there are no bound states.</p>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">

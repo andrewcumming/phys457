@@ -74,7 +74,7 @@ $$\left(\nabla^2 + k^2\right)\psi(\mathbf{r}) = {2\mu\over \hbar^2} V(\mathbf{r}
 
 has an integral solution
 
-$$\psi(\mathbf{r}) = Ae^{ikz} + \int d^3\mathbf{r}^\prime \,G(\mathbf{r},\mathbf{r}^\prime) {2\mu\over \hbar^2} V(\mathbf{r}^\prime)\psi(\mathbf{r}^\prime),$$
+$$\psi(\mathbf{r}) = Ae^{ikz} + \int d^3\mathbf{r}^\prime \,G(\mathbf{r},\mathbf{r}^\prime) {2\mu\over \hbar^2} V(\mathbf{r}^\prime)\psi(\mathbf{r}^\prime),$$ (sc_integ_eqn)
 
 where 
 

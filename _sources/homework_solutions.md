@@ -104,6 +104,35 @@ the same order of magnitude as the previous estimate.
 
 ```{dropdown} Townsend 13.3: Validity of the Born approximation
 
+Start with Townsend (13.48) which is the condition that the Born approximation is valid:
+
+$$\left|{\psi_\mathrm{sc}(0)\over \psi_\mathrm{inc}(0)}\right| = \left|{2\mu\over \hbar^2k}\int_0^\infty dr\, e^{ikr} V(r) \sin kr\right|\ll 1$$
+
+(ie. the wavefunction near the origin is dominated by the incident plane wave, so our approximation for solving the integral equation {eq}`sc_integ_eqn` is a good one).
+
+Now assume the potential has some range $a$, so we only have to consider values of $r$ in the in the integral up to $r\approx a$. At low energy where $ka\ll 1$, we can approximate $e^{ikr}\approx 1$ and $\sin kr\approx kr$, giving
+
+$$\left|{2\mu\over \hbar^2k}\int_0^\infty dr\, e^{ikr} V(r) \sin kr\right|\approx 
+\left|{2\mu\over \hbar^2k}\int_0^\infty dr\, V(r) kr\right|$$
+
+Then treating $V(r)\approx V_0\approx $ constant for $r<a$, we can do the integral to get 
+
+$$\left|{2\mu\over \hbar^2k}\int_0^\infty dr\, e^{ikr} V(r) \sin kr\right|\approx 
+\left|{2\mu\over \hbar^2k}\int_0^\infty dr\, V(r) kr\right| \approx {\mu V_0a^2\over \hbar^2}.$$
+
+So we have a condition for the Born approximation to be valid at low energies $ka\ll 1$ 
+
+$${\mu V_0a^2\over \hbar^2} \ll 1.$$
+
+The condition for the Born approximation to be valid at high energies $ka\gg 1$ is (Townsend 13.49),
+
+$${\mu V_0\over \hbar^2k^2} \ll 1\Rightarrow {\mu V_0a^2\over \hbar^2} {1\over (ka)^2} \ll 1$$
+
+so we see that if the low energy condition is already satisfied then at high energies we're dividing by the large number $(ka)^2$ and so the high energy condition will automatically be satisfied as well.
+
+Note the physical interpretations of these criteria: the high energy condition is that the particle energy should be much larger than the magnitude of the scattering potential $V_0$; the low energy condition is that the potential should be small enough that there are no bound states. 
+
+
 
 ```
 ```{dropdown} Townsend 13.7: Born approximation example
