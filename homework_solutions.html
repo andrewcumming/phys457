@@ -671,9 +671,57 @@ Townsend 14.11: a time-dependent electric field applied to the hydrogen atom<div
 <p class="sd-card-text">(using the integrals given in lecture 25) (we need <span class="math notranslate nohighlight">\(m=0\)</span> on the left-hand side to get a non-vanishing matrix element).</p>
 <p class="sd-card-text">Therefore</p>
 <div class="math notranslate nohighlight">
-\[|c_1|^2 = {e^2E_0^2\over \hbar^2} {2^{15}\over 3^{10}} a_0^2 \left|\int_0^\infty dt,e^{i\omega_{21}t}e^{-t/\tau}\right|^2\]</div>
+\[|c_1|^2 = {e^2E_0^2\over \hbar^2} {2^{15}\over 3^{10}} a_0^2 \left|\int_0^\infty dt\,e^{i\omega_{21}t}e^{-t/\tau}\right|^2\]</div>
 <div class="math notranslate nohighlight">
-\[={e^2E_0^2\over \hbar^2} {2^{15}\over 3^{10}} a_0^2 {\tau^2\over 1 + (\omega_{21} \tau)^2}\]</div>
+\[={e^2E_0^2\over \hbar^2} {2^{15}\over 3^{10}} a_0^2 {\tau^2\over 1 + (\omega_{21} \tau)^2}.\]</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Townsend 14.13: density of states for an electron<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Start with the phase space density in momentum space and transform into energy:</p>
+<div class="math notranslate nohighlight">
+\[{Vd^3\mathbf{p}\over h^3} = {Vp^2dpd\Omega\over h^3} = {Vp^2d\Omega\over h^3}{dp\over dE} dE\]</div>
+<p class="sd-card-text">and with <span class="math notranslate nohighlight">\(E = p^2/2m\)</span>, <span class="math notranslate nohighlight">\(dE = p dp/m\)</span> we get the answer</p>
+<div class="math notranslate nohighlight">
+\[{V\over (2\pi)^3\hbar^3}m_e p\, d\Omega\, dE.\]</div>
+<p class="sd-card-text">Including spin would give an extra factor of 2 for the two spin states.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Townsend 14.14: Photoelectric effect<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">In the photoelectric effect, we go from the electron being in the ground state of hydrogen with an incoming photon, write this initial state as <span class="math notranslate nohighlight">\(\ket{i} = \ket{1s}\ket{1}\)</span>, to the electron in an outgoing plane wave state and no photon, final state <span class="math notranslate nohighlight">\(\ket{f}=\ket{\mathbf{k}}\ket{0}\)</span>.  The perturbing Hamiltonian that couples the electron and photon states is (lecture 25)</p>
+<div class="math notranslate nohighlight">
+\[\hat{H}_1 = {e\over m_e} \hat{p}\cdot\hat{A}\]</div>
+<p class="sd-card-text">(assume the proton is infinitely heavy and use <span class="math notranslate nohighlight">\(\mu=m_e\)</span>).</p>
+<p class="sd-card-text">The matrix element to plug into Fermi’s Golden Rule is therefore</p>
+<div class="math notranslate nohighlight">
+\[\braket{f|\hat{H}_1|i} = \left({\hbar\over 2\epsilon_0\omega}\right)^{1/2} {e \over m_e}\int d^3\mathbf{r}\, {e^{i\mathbf{p}_e\cdot\mathbf{r}/\hbar}\over\sqrt{V}}\epsilon\cdot\hat{\mathbf{p}}{e^{i\mathbf{k}\cdot\mathbf{r}}\over \sqrt{V}}\psi_{1s},\]</div>
+<p class="sd-card-text">where <span class="math notranslate nohighlight">\(\epsilon\)</span> is the photon polarization direction. The  momentum operator is easiest if we operate to the left and convert it to the electron momentum in the final state <span class="math notranslate nohighlight">\(\mathbf{p}_e\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\braket{f|\hat{H}_1|i} = \left({\hbar\over 2\epsilon_0\omega}\right)^{1/2} {e \over m_e} (\mathbf{p}_e\cdot\epsilon) {1\over V} \int d^3\mathbf{r}\, e^{-i\mathbf{k}_f\cdot\mathbf{r}} e^{i\mathbf{k}\cdot\mathbf{r}}\psi_{1s},\]</div>
+<p class="sd-card-text">where <span class="math notranslate nohighlight">\(k_f=p_e/\hbar\)</span>.</p>
+<p class="sd-card-text">Finally, putting in <span class="math notranslate nohighlight">\(\psi_{1s}\)</span> gives</p>
+<div class="math notranslate nohighlight">
+\[\braket{f|\hat{H}_1|i} = \left({\hbar\over 2\epsilon_0\omega}\right)^{1/2} {e \over m_e} (\mathbf{p}_e\cdot\epsilon) {1\over V} {1\over \sqrt{\pi}a_0^{3/2}} \int d^3\mathbf{r}\, e^{i\mathbf{q}\cdot\mathbf{r}}e^{-r/a_0}.\]</div>
+<p class="sd-card-text">where <span class="math notranslate nohighlight">\(\mathbf{q}=\mathbf{k}-\mathbf{k}_f\)</span> is the momentum transfer.</p>
+<p class="sd-card-text">We can use the same trick as in the Born approximation (lecture 22, see derivation of equation <a class="reference internal" href="lecture22.html#equation-spherical-born">(8)</a>) to write the integral</p>
+<div class="math notranslate nohighlight">
+\[\int d^3\mathbf{r}\, e^{i\mathbf{q}\cdot\mathbf{r}}e^{-r/a_0} = {4\pi\over q} \int_0^\infty dr\, r e^{-r/a_0} \sin qr  = {8\pi\over a_0} {1\over ((1/a_0)^2+q^2)^2}.\]</div>
+<p class="sd-card-text">Now using Fermi’s Golden Rule we can assemble an expression for the rate</p>
+<div class="math notranslate nohighlight">
+\[d\Gamma = {2\pi\over\hbar} {V\over (2\pi)^3\hbar^3}m_e p\, d\Omega {e^2 \hbar\over 2\epsilon_0 \omega m_e^2}(\mathbf{p}_e\cdot\epsilon)^2 {1\over V^2\pi a_0^3}{64\pi^2\over a_0^2}{1\over ((1/a_0)^2+q^2)^4}.\]</div>
+<p class="sd-card-text">Now use the hint in the question to divide by <span class="math notranslate nohighlight">\(c/V\)</span> for the incident photon flux, to convert to a differential cross-section. Then simplifying factors and using <span class="math notranslate nohighlight">\(\alpha = e^2/4\pi\epsilon_0\hbar c\)</span>, I find</p>
+<div class="math notranslate nohighlight">
+\[{d\sigma\over d\Omega} = 32\alpha {\hbar\over m_e\omega} {k_f(\epsilon\cdot\mathbf{k}_f)^2\over a_0^5} {1\over ((1/a_0)^2+q^2)^4}\]</div>
+<p class="sd-card-text">which agrees with the answer given in the question.</p>
 </div>
 </details></section>
 </section>
