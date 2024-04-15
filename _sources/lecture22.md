@@ -24,7 +24,7 @@ $$f = -{\mu\over 2\pi\hbar^2}\int dr^\prime r^{\prime 2} V(r^\prime) \int_{-1}^1
 
 or
 
-$$\boxed{f = -{2\mu\over \hbar^2} \int dr^\prime r^{\prime 2} V(r^\prime) {\sin qr^\prime\over q r^\prime}}$$
+$$\boxed{f = -{2\mu\over \hbar^2} \int dr^\prime r^{\prime 2} V(r^\prime) {\sin qr^\prime\over q r^\prime}}$$ (spherical_Born)
 
 
 **Yukawa potential and Rutherford scattering**. As an example, we can try a screened Coulomb potential (Yukawa potential)

@@ -206,6 +206,34 @@ $$\eta_1(x) = -{\cos x\over x^2} - {\sin x\over x} \approx -{1-x^2/2\over x^2} -
 
 ```{dropdown} Townsend 13.11: comparing Born approximation and partial wave expansion
 
+The potential we are considering is the finite well $V=-V_0$ for $r<a$ and $V=0$ for $r>a$. The s-wave cross-section is given by equation (13.93) of Townsend:
+
+$$\sigma_{\ell=0} = {4\pi a^2} \left({\tan k_0a\over k_0a} -1\right)^2,$$
+
+where $(k_0a)^2 = (2\mu a^2/\hbar^2)(V_0+E)$ (Townsend 13.88a). We're going to be doing a comparison at low energy, so let's take $E\ll V_0$, and let's also take $k_0a\ll 1$ which is the condition from Townsend problem 13.3 for the validity of the Born approximation:
+
+$$\sigma_{\ell=0}\approx 4\pi a^2 \left( {(k_0a)^2\over 3} \right)^2 = 4\pi a^2 \left( {2\mu a^2V_0\over 3\hbar^2} \right)^2.$$
+
+Now we can compute the Born approximation cross-section and compare the answers. Use equation {eq}`spherical_Born` for the scattering amplitude given a spherically-symmetric potential. This gives
+
+$$\sigma_\mathrm{Born} = \int d\Omega |f|^2 = \int d\Omega \left({2\mu V_0\over \hbar^2q}\right)^2\left|\int_0^a dr\, r \sin(qr)\right|^2$$
+
+$$ = \int d\Omega \left({2\mu V_0\over \hbar^2q}\right)^2\left({1\over q^2}\left[\sin qa - qa \cos qa\right]   \right)^2$$
+
+$$ = a^2 \left({2\mu V_0a^2\over \hbar^2}\right)^2  \int d\Omega\left({1\over (qa)^3}\left[\sin qa - qa \cos qa\right]   \right)^2.$$
+
+To compute the angular integral exactly, we would need to express $q$ in terms of the scattering angle $\theta$. But we are interested here in low energy, so let's first expand the integrand for $qa\ll 1$:
+
+$${\sin qa - qa \cos qa\over (qa)^3}\approx {qa - (qa)^3/6 - (qa)(1-(qa)^2/2) \over (qa)^3 } \approx {1\over 3},
+$$
+
+which has no $q$-dependence. As we would expect at low energy the cross-section is isotropic ($\ell=0$ dominates).
+
+This gives
+
+$$\sigma_\mathrm{Born} \approx 4\pi a^2 \left({2\mu V_0a^2\over 3\hbar^2}\right)^2.$$
+
+Both approaches indeed give the same expression for the cross-section in this limit $k_0a\ll 1$ where the Born approximation should be valid.
 
 ```
 
