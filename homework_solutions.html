@@ -386,6 +386,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework-9">Homework 9</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework-10">Homework 10</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-14-practise-problems">Chapter 14 practise problems</a></li>
 </ul>
             </nav>
         </div>
@@ -608,6 +609,50 @@ Townsend 13.11: comparing Born approximation and partial wave expansion<div clas
 <p class="sd-card-text">Both approaches indeed give the same expression for the cross-section in this limit <span class="math notranslate nohighlight">\(k_0a\ll 1\)</span> where the Born approximation should be valid.</p>
 </div>
 </details></section>
+<section id="chapter-14-practise-problems">
+<h2>Chapter 14 practise problems<a class="headerlink" href="#chapter-14-practise-problems" title="Permalink to this heading">#</a></h2>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Townsend 14.10: exciting a charged particle in a 1D harmonic oscillator<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">In this question, an oscillating electric field is applied to a charged particle in a 1D harmonic oscillator.
+The perturbation to the Hamiltonian is</p>
+<div class="math notranslate nohighlight">
+\[\hat{H}_1 = eE(t)\hat{x} = \hat{x}\, e E_0 \cos\omega t.\]</div>
+<p class="sd-card-text">We start off in the ground state and we need to use time-dependent perturbation theory to calculate the probability that the particle is found in state <span class="math notranslate nohighlight">\(\ket{n}\)</span> after a time <span class="math notranslate nohighlight">\(t\)</span>.  Apply equation <a class="reference internal" href="lecture23.html#equation-dckdt">(9)</a></p>
+<div class="math notranslate nohighlight">
+\[{dc_n\over dt} \approx -{i\over \hbar} e^{-i n\omega_0 t}\braket{n|\hat{H}_1|0}\]</div>
+<div class="math notranslate nohighlight">
+\[\Rightarrow c_n = -{ieE_0\over \hbar} \braket{n|\hat{x}|0} \int_0^t dt\, e^{-i n\omega_0 t} \cos \omega t\]</div>
+<p class="sd-card-text">and therefore</p>
+<div class="math notranslate nohighlight">
+\[|c_n|^2 = \left({eE_0\over \hbar}\right)^2 \left|\braket{n|\hat{x}|0}\right|^2 \left|\int_0^t dt\, e^{-i n\omega_0 t} \cos \omega t\right|^2.\]</div>
+<p class="sd-card-text">By now you will have seen this kind of matrix element before: use the ladder operators to evaluate it <span class="math notranslate nohighlight">\(\hat{x} = (\hbar/2 m\omega_0)^{1/2}(\hat{a}+\hat{a}^\dagger)\)</span> which implies that the only possible <span class="math notranslate nohighlight">\(\ket{n}\)</span> is the first excited state <span class="math notranslate nohighlight">\(\ket{1}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\left|\braket{n|\hat{x}|0}\right|^2 = {\hbar\over 2m\omega_0} \left|\braket{1|\hat{a}^\dagger|0}\right|^2 = {\hbar\over 2m\omega_0}.\]</div>
+<p class="sd-card-text">Using Mathematica to evaluate the time integral (setting <span class="math notranslate nohighlight">\(n=1\)</span> since we know now that <span class="math notranslate nohighlight">\(n=1\)</span> is the only option), I get</p>
+<div class="math notranslate nohighlight">
+\[\int_0^t dt\, e^{-i \omega_0 t} \cos \omega t = {e^{-i\omega_0t}\over \omega^2-\omega_0^2}\left(\omega \sin \omega t -i\omega_0(\cos\omega t - e^{i\omega_0 t})\right)\]</div>
+<div class="math notranslate nohighlight">
+\[= {e^{-i\omega_0t}\over \omega^2-\omega_0^2}\left(\omega \sin \omega t -\omega_0\sin\omega_0t-i\omega_0(\cos\omega t - \cos\omega_0t)\right)\]</div>
+<p class="sd-card-text">Therefore</p>
+<div class="math notranslate nohighlight">
+\[|c_n|^2 = {e^2E_0^2\over 2m\hbar\omega_0}{(\omega \sin \omega t -\omega_0\sin\omega_0t)^2 + \omega_0^2(\cos\omega t - \cos\omega_0t)^2 \over (\omega^2-\omega_0^2)^2}.\]</div>
+<p class="sd-card-text">(If you check you’ll see this does have the correct dimensions).</p>
+<p class="sd-card-text">We can evaluate it for the case <span class="math notranslate nohighlight">\(\Delta\omega = \omega-\omega_0\rightarrow 0\)</span>, just have to be careful with the limit. The numerator is</p>
+<div class="math notranslate nohighlight">
+\[2\omega_0^2 t^2 (\Delta\omega)^2 (1+\cos\omega_0 t)\]</div>
+<p class="sd-card-text">and the denominator is</p>
+<div class="math notranslate nohighlight">
+\[(\omega^2-\omega_0^2)^2 = (\Delta\omega)^2(\omega+\omega_0)^2 \approx \omega_0^2(\Delta\omega)^2.\]</div>
+<p class="sd-card-text">Therefore</p>
+<div class="math notranslate nohighlight">
+\[|c_n|^2 = {e^2E_0^2\over m\hbar\omega_0} {t^2(1+\cos\omega_0 t)}.\]</div>
+</div>
+</details></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -670,6 +715,7 @@ Townsend 13.11: comparing Born approximation and partial wave expansion<div clas
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework-9">Homework 9</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework-10">Homework 10</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-14-practise-problems">Chapter 14 practise problems</a></li>
 </ul>
   </nav></div>
 

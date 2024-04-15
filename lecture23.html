@@ -419,16 +419,16 @@ Then we can expand</p>
 \[\Rightarrow \boxed{\dot{c}_k = -{i\over\hbar}\sum_n c_n e^{-i(E_n-E_k)t/\hbar}\braket{k|\hat{H}_1|n}}.\]</div>
 <p>This is a set of coupled ODEs that we could solve to determine the evolution of any initial state under the action of the full Hamiltonian <span class="math notranslate nohighlight">\(\hat{H}\)</span>.</p>
 <p>Now we want to consider the case that we are initially in an eigenstate of <span class="math notranslate nohighlight">\(\hat{H}_0\)</span>, e.g. <span class="math notranslate nohighlight">\(\ket{\Psi(0)}=\ket{N}\)</span>, in which case <span class="math notranslate nohighlight">\(c_N=1\)</span> initially and all the other <span class="math notranslate nohighlight">\(c_n\)</span>’s are zero initially. If the perturbation <span class="math notranslate nohighlight">\(\hat{H}_1\)</span> couples <span class="math notranslate nohighlight">\(\ket{N}\)</span> to other states, their coefficients will become non-zero, in other words the perturbation will mix the initial state and the other stationary states. As long as the perturbation is small and we evolve for only a short time, the term with <span class="math notranslate nohighlight">\(n=N\)</span> will dominate the right hand side and we can set <span class="math notranslate nohighlight">\(c_N\approx 1\)</span>, giving</p>
-<div class="math notranslate nohighlight">
-\[{dc_k\over dt} \approx -{i\over \hbar} e^{-i(E_N-E_k)t/\hbar}\braket{k|\hat{H}_1|N}.\]</div>
+<div class="math notranslate nohighlight" id="equation-dckdt">
+<span class="eqno">(9)<a class="headerlink" href="#equation-dckdt" title="Permalink to this equation">#</a></span>\[\boxed{{dc_k\over dt} \approx -{i\over \hbar} e^{-i(E_N-E_k)t/\hbar}\braket{k|\hat{H}_1|N}}\]</div>
 <p>In general, <span class="math notranslate nohighlight">\(\hat{H}_1\)</span> will have some time-dependence. We can consider one Fourier-mode by writing <span class="math notranslate nohighlight">\(\hat{H}_1 = \hat{V} e^{-i\omega t}\)</span>. Using this and integrating in time gives</p>
 <div class="math notranslate nohighlight">
-\[c_k(t) = {\braket{k|\hat{V}|n}\over E_N-E_k+\hbar\omega}\left[e^{-i(E_N-E_k+\hbar\omega)t/\hbar}-1\right].\]</div>
+\[c_k(t) = {\braket{k|\hat{V}|N}\over E_N-E_k+\hbar\omega}\left[e^{-i(E_N-E_k+\hbar\omega)t/\hbar}-1\right].\]</div>
 <p>This means that after a time <span class="math notranslate nohighlight">\(t\)</span> the probability that the system will be found in the state <span class="math notranslate nohighlight">\(\ket{k}\)</span> is</p>
 <div class="math notranslate nohighlight">
-\[P_k(t) = |c_k|^2 = {|\braket{k|\hat{V}|n}|^2\over (E_N-E_k+\hbar\omega)^2}\left[2 - 2\cos\left({(E_N-E_k+\hbar\omega)t\over \hbar}\right)\right]\]</div>
+\[P_k(t) = |c_k|^2 = {|\braket{k|\hat{V}|N}|^2\over (E_N-E_k+\hbar\omega)^2}\left[2 - 2\cos\left({(E_N-E_k+\hbar\omega)t\over \hbar}\right)\right]\]</div>
 <div class="math notranslate nohighlight">
-\[=4|\braket{k|\hat{V}|n}|^2 {\sin^2\left({(E_N-E_k+\hbar\omega)t\over 2\hbar}\right)\over (E_N-E_k+\hbar\omega)^2}.\]</div>
+\[=4|\braket{k|\hat{V}|N}|^2 {\sin^2\left({(E_N-E_k+\hbar\omega)t\over 2\hbar}\right)\over (E_N-E_k+\hbar\omega)^2}.\]</div>
 <p>At very small times this grows <span class="math notranslate nohighlight">\(\propto t^2\)</span>, but then oscillates.</p>
 <p><strong>Fermi’s Golden Rule</strong>. In general we will be in a situation in which there are many possible end states. In the scattering problem we were looking at for example, there are many outgoing states depending on the scattering angle. We can sum over these possible end states using the density of states <span class="math notranslate nohighlight">\(g(E)\)</span>, where there are <span class="math notranslate nohighlight">\(g(E)dE\)</span> possible states with energy between <span class="math notranslate nohighlight">\(E\)</span> and <span class="math notranslate nohighlight">\(E+dE\)</span>. The transition probability is</p>
 <div class="math notranslate nohighlight">
