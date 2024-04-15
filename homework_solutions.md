@@ -306,6 +306,62 @@ $$\braket{2,1,0|\hat{z}|1,0,0} =  {1\over \sqrt{3}} \sqrt{3\over 2}{2^8\over 3^5
 
 Therefore
 
-$$|c_1|^2 = {e^2E_0^2\over \hbar^2} {2^{15}\over 3^{10}} a_0^2 \left|\int_0^\infty dt,e^{i\omega_{21}t}e^{-t/\tau}\right|^2$$
+$$|c_1|^2 = {e^2E_0^2\over \hbar^2} {2^{15}\over 3^{10}} a_0^2 \left|\int_0^\infty dt\,e^{i\omega_{21}t}e^{-t/\tau}\right|^2$$
 
 $$={e^2E_0^2\over \hbar^2} {2^{15}\over 3^{10}} a_0^2 {\tau^2\over 1 + (\omega_{21} \tau)^2}.$$
+
+```
+
+
+```{dropdown} Townsend 14.13: density of states for an electron
+
+Start with the phase space density in momentum space and transform into energy:
+
+$${Vd^3\mathbf{p}\over h^3} = {Vp^2dpd\Omega\over h^3} = {Vp^2d\Omega\over h^3}{dp\over dE} dE$$
+
+and with $E = p^2/2m$, $dE = p dp/m$ we get the answer
+
+$${V\over (2\pi)^3\hbar^3}m_e p\, d\Omega\, dE.$$
+
+Including spin would give an extra factor of 2 for the two spin states.
+
+```
+
+
+```{dropdown} Townsend 14.14: Photoelectric effect
+
+In the photoelectric effect, we go from the electron being in the ground state of hydrogen with an incoming photon, write this initial state as $\ket{i} = \ket{1s}\ket{1}$, to the electron in an outgoing plane wave state and no photon, final state $\ket{f}=\ket{\mathbf{k}}\ket{0}$.  The perturbing Hamiltonian that couples the electron and photon states is (lecture 25)
+
+$$\hat{H}_1 = {e\over m_e} \hat{p}\cdot\hat{A}$$
+
+(assume the proton is infinitely heavy and use $\mu=m_e$). 
+
+The matrix element to plug into Fermi's Golden Rule is therefore
+
+$$\braket{f|\hat{H}_1|i} = \left({\hbar\over 2\epsilon_0\omega}\right)^{1/2} {e \over m_e}\int d^3\mathbf{r}\, {e^{i\mathbf{p}_e\cdot\mathbf{r}/\hbar}\over\sqrt{V}}\epsilon\cdot\hat{\mathbf{p}}{e^{i\mathbf{k}\cdot\mathbf{r}}\over \sqrt{V}}\psi_{1s},$$ 
+
+where $\epsilon$ is the photon polarization direction. The  momentum operator is easiest if we operate to the left and convert it to the electron momentum in the final state $\mathbf{p}_e$:
+
+$$\braket{f|\hat{H}_1|i} = \left({\hbar\over 2\epsilon_0\omega}\right)^{1/2} {e \over m_e} (\mathbf{p}_e\cdot\epsilon) {1\over V} \int d^3\mathbf{r}\, e^{-i\mathbf{k}_f\cdot\mathbf{r}} e^{i\mathbf{k}\cdot\mathbf{r}}\psi_{1s},$$ 
+
+where $k_f=p_e/\hbar$. 
+
+Finally, putting in $\psi_{1s}$ gives
+
+$$\braket{f|\hat{H}_1|i} = \left({\hbar\over 2\epsilon_0\omega}\right)^{1/2} {e \over m_e} (\mathbf{p}_e\cdot\epsilon) {1\over V} {1\over \sqrt{\pi}a_0^{3/2}} \int d^3\mathbf{r}\, e^{i\mathbf{q}\cdot\mathbf{r}}e^{-r/a_0}.$$ 
+
+where $\mathbf{q}=\mathbf{k}-\mathbf{k}_f$ is the momentum transfer.
+
+We can use the same trick as in the Born approximation (lecture 22, see derivation of equation {eq}`spherical_Born`) to write the integral
+
+$$\int d^3\mathbf{r}\, e^{i\mathbf{q}\cdot\mathbf{r}}e^{-r/a_0} = {4\pi\over q} \int_0^\infty dr\, r e^{-r/a_0} \sin qr  = {8\pi\over a_0} {1\over ((1/a_0)^2+q^2)^2}.$$
+
+Now using Fermi's Golden Rule we can assemble an expression for the rate 
+
+$$d\Gamma = {2\pi\over\hbar} {V\over (2\pi)^3\hbar^3}m_e p\, d\Omega {e^2 \hbar\over 2\epsilon_0 \omega m_e^2}(\mathbf{p}_e\cdot\epsilon)^2 {1\over V^2\pi a_0^3}{64\pi^2\over a_0^2}{1\over ((1/a_0)^2+q^2)^4}.$$
+
+Now use the hint in the question to divide by $c/V$ for the incident photon flux, to convert to a differential cross-section. Then simplifying factors and using $\alpha = e^2/4\pi\epsilon_0\hbar c$, I find
+
+$${d\sigma\over d\Omega} = 32\alpha {\hbar\over m_e\omega} {k_f(\epsilon\cdot\mathbf{k}_f)^2\over a_0^5} {1\over ((1/a_0)^2+q^2)^4}$$
+
+which agrees with the answer given in the question. 
