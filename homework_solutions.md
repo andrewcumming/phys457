@@ -238,6 +238,59 @@ Both approaches indeed give the same expression for the cross-section in this li
 ```
 
 
+### Chapter 14 practise problems
 
+```{dropdown} Townsend 14.10: exciting a charged particle in a 1D harmonic oscillator
+
+In this question, an oscillating electric field is applied to a charged particle in a 1D harmonic oscillator. 
+The perturbation to the Hamiltonian is 
+
+$$\hat{H}_1 = eE(t)\hat{x} = \hat{x}\, e E_0 \cos\omega t.$$
+
+We start off in the ground state and we need to use time-dependent perturbation theory to calculate the probability that the particle is found in state $\ket{n}$ after a time $t$.  Apply equation {eq}`dckdt`
+
+$${dc_n\over dt} \approx -{i\over \hbar} e^{-i n\omega_0 t}\braket{n|\hat{H}_1|0}$$
+
+$$\Rightarrow c_n = -{ieE_0\over \hbar} \braket{n|\hat{x}|0} \int_0^t dt\, e^{-i n\omega_0 t} \cos \omega t$$
+
+and therefore
+
+$$|c_n|^2 = \left({eE_0\over \hbar}\right)^2 \left|\braket{n|\hat{x}|0}\right|^2 \left|\int_0^t dt\, e^{-i n\omega_0 t} \cos \omega t\right|^2.$$
+
+By now you will have seen this kind of matrix element before: use the ladder operators to evaluate it $\hat{x} = (\hbar/2 m\omega_0)^{1/2}(\hat{a}+\hat{a}^\dagger)$ which implies that the only possible $\ket{n}$ is the first excited state $\ket{1}$:
+
+$$\left|\braket{n|\hat{x}|0}\right|^2 = {\hbar\over 2m\omega_0} \left|\braket{1|\hat{a}^\dagger|0}\right|^2 = {\hbar\over 2m\omega_0}.$$
+
+Using Mathematica to evaluate the time integral (setting $n=1$ since we know now that $n=1$ is the only option), I get
+
+$$\int_0^t dt\, e^{-i \omega_0 t} \cos \omega t = {e^{-i\omega_0t}\over \omega^2-\omega_0^2}\left(\omega \sin \omega t -i\omega_0(\cos\omega t - e^{i\omega_0 t})\right)$$
+
+$$= {e^{-i\omega_0t}\over \omega^2-\omega_0^2}\left(\omega \sin \omega t -\omega_0\sin\omega_0t-i\omega_0(\cos\omega t - \cos\omega_0t)\right)$$
+
+Therefore
+
+$$|c_n|^2 = {e^2E_0^2\over 2m\hbar\omega_0}{(\omega \sin \omega t -\omega_0\sin\omega_0t)^2 + \omega_0^2(\cos\omega t - \cos\omega_0t)^2 \over (\omega^2-\omega_0^2)^2}.$$
+
+(If you check you'll see this does have the correct dimensions).
+
+We can evaluate it for the case $\Delta\omega = \omega-\omega_0\rightarrow 0$, just have to be careful with the limit. The numerator is
+
+$$2\omega_0^2 t^2 (\Delta\omega)^2 (1+\cos\omega_0 t)$$
+
+and the denominator is
+
+$$(\omega^2-\omega_0^2)^2 = (\Delta\omega)^2(\omega+\omega_0)^2 \approx \omega_0^2(\Delta\omega)^2.$$
+
+Therefore
+
+$$|c_n|^2 = {e^2E_0^2\over m\hbar\omega_0} {t^2(1+\cos\omega_0 t)}.$$
+
+
+
+
+
+
+
+```
 
 

@@ -25,17 +25,17 @@ This is a set of coupled ODEs that we could solve to determine the evolution of 
 
 Now we want to consider the case that we are initially in an eigenstate of $\hat{H}_0$, e.g. $\ket{\Psi(0)}=\ket{N}$, in which case $c_N=1$ initially and all the other $c_n$'s are zero initially. If the perturbation $\hat{H}_1$ couples $\ket{N}$ to other states, their coefficients will become non-zero, in other words the perturbation will mix the initial state and the other stationary states. As long as the perturbation is small and we evolve for only a short time, the term with $n=N$ will dominate the right hand side and we can set $c_N\approx 1$, giving
 
-$${dc_k\over dt} \approx -{i\over \hbar} e^{-i(E_N-E_k)t/\hbar}\braket{k|\hat{H}_1|N}.$$
+$$\boxed{{dc_k\over dt} \approx -{i\over \hbar} e^{-i(E_N-E_k)t/\hbar}\braket{k|\hat{H}_1|N}}$$ (dckdt)
 
 In general, $\hat{H}_1$ will have some time-dependence. We can consider one Fourier-mode by writing $\hat{H}_1 = \hat{V} e^{-i\omega t}$. Using this and integrating in time gives
 
-$$c_k(t) = {\braket{k|\hat{V}|n}\over E_N-E_k+\hbar\omega}\left[e^{-i(E_N-E_k+\hbar\omega)t/\hbar}-1\right].$$
+$$c_k(t) = {\braket{k|\hat{V}|N}\over E_N-E_k+\hbar\omega}\left[e^{-i(E_N-E_k+\hbar\omega)t/\hbar}-1\right].$$
 
 This means that after a time $t$ the probability that the system will be found in the state $\ket{k}$ is
 
-$$P_k(t) = |c_k|^2 = {|\braket{k|\hat{V}|n}|^2\over (E_N-E_k+\hbar\omega)^2}\left[2 - 2\cos\left({(E_N-E_k+\hbar\omega)t\over \hbar}\right)\right]$$
+$$P_k(t) = |c_k|^2 = {|\braket{k|\hat{V}|N}|^2\over (E_N-E_k+\hbar\omega)^2}\left[2 - 2\cos\left({(E_N-E_k+\hbar\omega)t\over \hbar}\right)\right]$$
 
-$$=4|\braket{k|\hat{V}|n}|^2 {\sin^2\left({(E_N-E_k+\hbar\omega)t\over 2\hbar}\right)\over (E_N-E_k+\hbar\omega)^2}.$$
+$$=4|\braket{k|\hat{V}|N}|^2 {\sin^2\left({(E_N-E_k+\hbar\omega)t\over 2\hbar}\right)\over (E_N-E_k+\hbar\omega)^2}.$$
 
 At very small times this grows $\propto t^2$, but then oscillates.
 
