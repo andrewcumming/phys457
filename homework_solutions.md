@@ -285,12 +285,27 @@ Therefore
 
 $$|c_n|^2 = {e^2E_0^2\over m\hbar\omega_0} {t^2(1+\cos\omega_0 t)}.$$
 
-
-
-
-
-
-
 ```
 
 
+```{dropdown} Townsend 14.11: a time-dependent electric field applied to the hydrogen atom
+
+Aligning our $z$-axis with the applied electric field, the perturbation to the Hamiltonian is 
+
+$$\hat{H}_1 = -eE(t)\hat{z} = -\hat{z}\, e E_0 e^{-t/\tau}.$$
+
+We start off in the ground state and we need to use time-dependent perturbation theory to calculate the probability that the particle will be found in a 2p state as $t\rightarrow\infty$.  Apply equation {eq}`dckdt`:
+
+$${dc_1\over dt} = -{i\over\hbar} e^{-i(E_0-E_1)t/\hbar}\braket{2p|\hat{H}_1|0} = {ieE_0\over\hbar} e^{i\omega_{21}t} e^{-t/\tau}\braket{2p|\hat{z}|1s}$$
+
+where $\omega_{21} = |E_0-E_1|/\hbar$ is the photon frequency involved in the transition. The matrix element is
+
+$$\braket{2,1,0|\hat{z}|1,0,0} =  {1\over \sqrt{3}} \sqrt{3\over 2}{2^8\over 3^5}a_0 = {1\over \sqrt{2}}{2^8\over 3^5}a_0$$
+
+(using the integrals given in lecture 25) (we need $m=0$ on the left-hand side to get a non-vanishing matrix element). 
+
+Therefore
+
+$$|c_1|^2 = {e^2E_0^2\over \hbar^2} {2^{15}\over 3^{10}} a_0^2 \left|\int_0^\infty dt,e^{i\omega_{21}t}e^{-t/\tau}\right|^2$$
+
+$$={e^2E_0^2\over \hbar^2} {2^{15}\over 3^{10}} a_0^2 {\tau^2\over 1 + (\omega_{21} \tau)^2}.$$
