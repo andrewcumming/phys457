@@ -652,6 +652,29 @@ The perturbation to the Hamiltonian is</p>
 <div class="math notranslate nohighlight">
 \[|c_n|^2 = {e^2E_0^2\over m\hbar\omega_0} {t^2(1+\cos\omega_0 t)}.\]</div>
 </div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Townsend 14.11: a time-dependent electric field applied to the hydrogen atom<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Aligning our <span class="math notranslate nohighlight">\(z\)</span>-axis with the applied electric field, the perturbation to the Hamiltonian is</p>
+<div class="math notranslate nohighlight">
+\[\hat{H}_1 = -eE(t)\hat{z} = -\hat{z}\, e E_0 e^{-t/\tau}.\]</div>
+<p class="sd-card-text">We start off in the ground state and we need to use time-dependent perturbation theory to calculate the probability that the particle will be found in a 2p state as <span class="math notranslate nohighlight">\(t\rightarrow\infty\)</span>.  Apply equation <a class="reference internal" href="lecture23.html#equation-dckdt">(9)</a>:</p>
+<div class="math notranslate nohighlight">
+\[{dc_1\over dt} = -{i\over\hbar} e^{-i(E_0-E_1)t/\hbar}\braket{2p|\hat{H}_1|0} = {ieE_0\over\hbar} e^{i\omega_{21}t} e^{-t/\tau}\braket{2p|\hat{z}|1s}\]</div>
+<p class="sd-card-text">where <span class="math notranslate nohighlight">\(\omega_{21} = |E_0-E_1|/\hbar\)</span> is the photon frequency involved in the transition. The matrix element is</p>
+<div class="math notranslate nohighlight">
+\[\braket{2,1,0|\hat{z}|1,0,0} =  {1\over \sqrt{3}} \sqrt{3\over 2}{2^8\over 3^5}a_0 = {1\over \sqrt{2}}{2^8\over 3^5}a_0\]</div>
+<p class="sd-card-text">(using the integrals given in lecture 25) (we need <span class="math notranslate nohighlight">\(m=0\)</span> on the left-hand side to get a non-vanishing matrix element).</p>
+<p class="sd-card-text">Therefore</p>
+<div class="math notranslate nohighlight">
+\[|c_1|^2 = {e^2E_0^2\over \hbar^2} {2^{15}\over 3^{10}} a_0^2 \left|\int_0^\infty dt,e^{i\omega_{21}t}e^{-t/\tau}\right|^2\]</div>
+<div class="math notranslate nohighlight">
+\[={e^2E_0^2\over \hbar^2} {2^{15}\over 3^{10}} a_0^2 {\tau^2\over 1 + (\omega_{21} \tau)^2}\]</div>
+</div>
 </details></section>
 </section>
 
