@@ -313,7 +313,7 @@ $$={e^2E_0^2\over \hbar^2} {2^{15}\over 3^{10}} a_0^2 {\tau^2\over 1 + (\omega_{
 ```
 
 
-```{dropdown} Townsend 14.13: density of states for an electron
+```{dropdown} Townsend 14.16: density of states for an electron
 
 Start with the phase space density in momentum space and transform into energy:
 
@@ -328,7 +328,7 @@ Including spin would give an extra factor of 2 for the two spin states.
 ```
 
 
-```{dropdown} Townsend 14.14: Photoelectric effect
+```{dropdown} Townsend 14.17: Photoelectric effect
 
 In the photoelectric effect, we go from the electron being in the ground state of hydrogen with an incoming photon, write this initial state as $\ket{i} = \ket{1s}\ket{1}$, to the electron in an outgoing plane wave state and no photon, final state $\ket{f}=\ket{\mathbf{k}}\ket{0}$.  The perturbing Hamiltonian that couples the electron and photon states is (lecture 25)
 
