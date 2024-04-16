@@ -95,7 +95,7 @@ $$\mathbf{\epsilon}\cdot\braket{2p|\hat{\mathbf{p}}|1s} = \mu \mathbf{\epsilon}\
 
 $$= i\mu\omega\braket{2p|\mathbf{\epsilon}\cdot\hat{\mathbf{r}}|1s}.$$
 
-So we see that we are dealing with a similar dipole matrix element that we had in the Stark effect! We know that for these integrals to be non-zero we need $\Delta m=0$ and $\Delta\ell=\pm 1$, which is why we have been looking at 2p as the initial state rather than 2s. 
+So we see that we are dealing with a similar dipole matrix element to the one that we had in the Stark effect! We know that for these integrals to be non-zero certain selection rules need to be satisfied, in particular $\Delta\ell=\pm 1$, which is why we have been looking at 2p as the initial state rather than 2s.
 
 Simplifying all the prefactors (including using our favourite formula $e^2/4\pi\epsilon_0 = \alpha \hbar c$), we have therefore
 
