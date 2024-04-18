@@ -313,6 +313,59 @@ $$={e^2E_0^2\over \hbar^2} {2^{15}\over 3^{10}} a_0^2 {\tau^2\over 1 + (\omega_{
 ```
 
 
+
+
+```{dropdown} Townsend 14.14: radiative transition in the harmonic oscillator
+
+We're going from the initial state $\ket{i} = \ket{n=1}\ket{0}$ (first excited state of the oscillator, no photon) to final state $\ket{i} = \ket{n=0}\ket{1}$ (ground state of the oscillator, one photon). The calculation is similar to the decay of the hydrogen atom from 2p to 1s (lecture 25), but with different spatial integrals. The perturbing Hamiltonian is 
+
+$$\hat{H}_1 = {e\over \mu} \hat{\mathbf{p}}\cdot\hat{\mathbf{A}}$$
+
+The density of states we need for the outgoing photon is
+
+$$g(E_f) = {V\omega^2d\Omega\over 8\pi^3 c^3\hbar}$$
+
+Then applying Fermi's Golden rule gives
+
+$$d\Gamma = {2\pi\over\hbar} {V\omega^2d\Omega\over 8\pi^3 c^3\hbar} {e^2\over\mu^2}{\hbar\over 2\epsilon_0\omega V} \left|\braket{n=0|\epsilon\cdot\hat{\mathbf{p}}|n=1}\right|^2$$
+
+where similarly to lecture 25 we've assumed $e^{ikr}\approx 1}$ (photon wavelength $\gg$ size of the oscillator). 
+
+Simplifying the prefactor gives
+
+$${d\Gamma\over d\Omega} = {\alpha\omega\over 2\pi\mu^2c^2} \left|\braket{n=0|\epsilon\cdot\hat{\mathbf{p}}|n=1}\right|^2.$$
+
+Notice that this has the correct units ($\mathrm{s}^{-1}$).
+
+We actually have three different choices for the $\ket{n=1}$ state. In Cartesian coordinates, this corresponds to one of the three choices $\ket{n_x,n_y,n_z}=\ket{1,0,0}$, $\ket{0,1,0}$, or $\ket{0,0,1}$. Or in spherical coordinates we have the three states $\ket{\ell, m} = \ket{1,1}$, $\ket{1,0}$ or $\ket{1,-1}$. As with the hydrogen atom, the different states couple to different directions for the polarization vector $\epsilon$. 
+
+The simplest way to evaluate the matrix element is to use Cartesian coordinates, i.e. write 
+
+$$\epsilon\cdot\hat{\mathbf{p}} = \epsilon_x\hat{p}_x +  \epsilon_y\hat{p}_y +  \epsilon_z\hat{p}_z.$$ 
+
+Then we can write the momentum operator in terms of the ladder operators. For example, if we pick the starting state in Cartesian coordinates $\ket{1,0,0}$ (so $n_x=1$), then the only operator that couples this to the ground state $\ket{0,0,0}$ will involve the ladder operator in the $x$-direction, or the $\hat{p}_x$ term:
+
+$$\braket{0,0,0|\epsilon\cdot\hat{\mathbf{p}}|1,0,0} = \braket{0,0,0|\epsilon_x\hat{p}_x|1,0,0} = -i\sqrt{\mu\omega\hbar\over 2}\epsilon_x \braket{0,0,0|(\hat{a}_x - \hat{a}^\dagger_x)|1,0,0} = -i\sqrt{\mu\omega\hbar\over 2}\epsilon_x$$
+
+(using Townsend eq 7.13). The rate of decay for this state is then
+
+$${d\Gamma\over d\Omega} = {\alpha\omega\over 2\pi\mu^2c^2} {\mu\omega\hbar\over 2} \epsilon_x^2.$$
+
+We would get a similar answer for the other two states $n_y=1$ or $n_z=1$ but with the $\epsilon_x$ replaced by the other components of the polarization vector, $\epsilon_y$ or $\epsilon_z$ respectively. If we add up these three rates and divide by 3 we can get the average decay rate assuming there is no preferred initial state:
+
+$${d\Gamma\over d\Omega} = {1\over 3}{\alpha\omega\over 2\pi\mu^2c^2} {\mu\omega\hbar\over 2} (\epsilon_x^2+\epsilon_y^2+\epsilon_z^2) = {1\over 3}{\alpha\omega^2\hbar\over 4\pi\mu c^2}.$$
+
+We used the fact that the polarization vector is a unit vector (has unit length).
+This doesn't depend on the outgoing photon direction, so we can do the integral $\int d\Omega\rightarrow 4\pi$ to get the total decay rate
+
+$$\Gamma = {\alpha\omega^2\hbar\over 3\mu c^2}.$$
+
+The other way to do this would be to use spherical coordinates instead and look at the $\ket{\ell,m}$ states. Then you need to convert the $\hat{p}$ in the matrix element to $\hat{r}$ (lecture 25), expand $x$, $y$ and $z$ in terms of $Y_{\ell,m}$'s and do the angular and radial integrals. This is done in section 14.7 of Townsend (equations 14.157 to 14.166). In spherical coordinates, the decay of the $m=1$, $m=0$ or $m=-1$ states involves the polarization components $\epsilon_x+i\epsilon_y$, $\epsilon_z$ and $\epsilon_x-i\epsilon_y$ respectively, i.e. if you start in a state with $m\neq 0$, then the non-zero angular momentum in the initial state is carried away by a circularly-polarized photon. In the Cartesian treatment, we just have motion in one Cartesian direction so the states connect to linear-polarization in that direction.
+
+
+```
+
+
 ```{dropdown} Townsend 14.16: density of states for an electron
 
 Start with the phase space density in momentum space and transform into energy:
