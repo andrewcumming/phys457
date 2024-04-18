@@ -677,6 +677,46 @@ Townsend 14.11: a time-dependent electric field applied to the hydrogen atom<div
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
+Townsend 14.14: radiative transition in the harmonic oscillator<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">We’re going from the initial state <span class="math notranslate nohighlight">\(\ket{i} = \ket{n=1}\ket{0}\)</span> (first excited state of the oscillator, no photon) to final state <span class="math notranslate nohighlight">\(\ket{i} = \ket{n=0}\ket{1}\)</span> (ground state of the oscillator, one photon). The calculation is similar to the decay of the hydrogen atom from 2p to 1s (lecture 25), but with different spatial integrals. The perturbing Hamiltonian is</p>
+<div class="math notranslate nohighlight">
+\[\hat{H}_1 = {e\over \mu} \hat{\mathbf{p}}\cdot\hat{\mathbf{A}}\]</div>
+<p class="sd-card-text">The density of states we need for the outgoing photon is</p>
+<div class="math notranslate nohighlight">
+\[g(E_f) = {V\omega^2d\Omega\over 8\pi^3 c^3\hbar}\]</div>
+<p class="sd-card-text">Then applying Fermi’s Golden rule gives</p>
+<div class="math notranslate nohighlight">
+\[d\Gamma = {2\pi\over\hbar} {V\omega^2d\Omega\over 8\pi^3 c^3\hbar} {e^2\over\mu^2}{\hbar\over 2\epsilon_0\omega V} \left|\braket{n=0|\epsilon\cdot\hat{\mathbf{p}}|n=1}\right|^2\]</div>
+<p class="sd-card-text">where similarly to lecture 25 we’ve assumed <span class="math notranslate nohighlight">\(e^{ikr}\approx 1}\)</span> (photon wavelength <span class="math notranslate nohighlight">\(\gg\)</span> size of the oscillator).</p>
+<p class="sd-card-text">Simplifying the prefactor gives</p>
+<div class="math notranslate nohighlight">
+\[{d\Gamma\over d\Omega} = {\alpha\omega\over 2\pi\mu^2c^2} \left|\braket{n=0|\epsilon\cdot\hat{\mathbf{p}}|n=1}\right|^2.\]</div>
+<p class="sd-card-text">Notice that this has the correct units (<span class="math notranslate nohighlight">\(\mathrm{s}^{-1}\)</span>).</p>
+<p class="sd-card-text">We actually have three different choices for the <span class="math notranslate nohighlight">\(\ket{n=1}\)</span> state. In Cartesian coordinates, this corresponds to one of the three choices <span class="math notranslate nohighlight">\(\ket{n_x,n_y,n_z}=\ket{1,0,0}\)</span>, <span class="math notranslate nohighlight">\(\ket{0,1,0}\)</span>, or <span class="math notranslate nohighlight">\(\ket{0,0,1}\)</span>. Or in spherical coordinates we have the three states <span class="math notranslate nohighlight">\(\ket{\ell, m} = \ket{1,1}\)</span>, <span class="math notranslate nohighlight">\(\ket{1,0}\)</span> or <span class="math notranslate nohighlight">\(\ket{1,-1}\)</span>. As with the hydrogen atom, the different states couple to different directions for the polarization vector <span class="math notranslate nohighlight">\(\epsilon\)</span>.</p>
+<p class="sd-card-text">The simplest way to evaluate the matrix element is to use Cartesian coordinates, i.e. write</p>
+<div class="math notranslate nohighlight">
+\[\epsilon\cdot\hat{\mathbf{p}} = \epsilon_x\hat{p}_x +  \epsilon_y\hat{p}_y +  \epsilon_z\hat{p}_z.\]</div>
+<p class="sd-card-text">Then we can write the momentum operator in terms of the ladder operators. For example, if we pick the starting state in Cartesian coordinates <span class="math notranslate nohighlight">\(\ket{1,0,0}\)</span> (so <span class="math notranslate nohighlight">\(n_x=1\)</span>), then the only operator that couples this to the ground state <span class="math notranslate nohighlight">\(\ket{0,0,0}\)</span> will involve the ladder operator in the <span class="math notranslate nohighlight">\(x\)</span>-direction, or the <span class="math notranslate nohighlight">\(\hat{p}_x\)</span> term:</p>
+<div class="math notranslate nohighlight">
+\[\braket{0,0,0|\epsilon\cdot\hat{\mathbf{p}}|1,0,0} = \braket{0,0,0|\epsilon_x\hat{p}_x|1,0,0} = -i\sqrt{\mu\omega\hbar\over 2}\epsilon_x \braket{0,0,0|(\hat{a}_x - \hat{a}^\dagger_x)|1,0,0} = -i\sqrt{\mu\omega\hbar\over 2}\epsilon_x\]</div>
+<p class="sd-card-text">(using Townsend eq 7.13). The rate of decay for this state is then</p>
+<div class="math notranslate nohighlight">
+\[{d\Gamma\over d\Omega} = {\alpha\omega\over 2\pi\mu^2c^2} {\mu\omega\hbar\over 2} \epsilon_x^2.\]</div>
+<p class="sd-card-text">We would get a similar answer for the other two states <span class="math notranslate nohighlight">\(n_y=1\)</span> or <span class="math notranslate nohighlight">\(n_z=1\)</span> but with the <span class="math notranslate nohighlight">\(\epsilon_x\)</span> replaced by the other components of the polarization vector, <span class="math notranslate nohighlight">\(\epsilon_y\)</span> or <span class="math notranslate nohighlight">\(\epsilon_z\)</span> respectively. If we add up these three rates and divide by 3 we can get the average decay rate assuming there is no preferred initial state:</p>
+<div class="math notranslate nohighlight">
+\[{d\Gamma\over d\Omega} = {1\over 3}{\alpha\omega\over 2\pi\mu^2c^2} {\mu\omega\hbar\over 2} (\epsilon_x^2+\epsilon_y^2+\epsilon_z^2) = {1\over 3}{\alpha\omega^2\hbar\over 4\pi\mu c^2}.\]</div>
+<p class="sd-card-text">We used the fact that the polarization vector is a unit vector (has unit length).
+This doesn’t depend on the outgoing photon direction, so we can do the integral <span class="math notranslate nohighlight">\(\int d\Omega\rightarrow 4\pi\)</span> to get the total decay rate</p>
+<div class="math notranslate nohighlight">
+\[\Gamma = {\alpha\omega^2\hbar\over 3\mu c^2}.\]</div>
+<p class="sd-card-text">The other way to do this would be to use spherical coordinates instead and look at the <span class="math notranslate nohighlight">\(\ket{\ell,m}\)</span> states. Then you need to convert the <span class="math notranslate nohighlight">\(\hat{p}\)</span> in the matrix element to <span class="math notranslate nohighlight">\(\hat{r}\)</span> (lecture 25), expand <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(z\)</span> in terms of <span class="math notranslate nohighlight">\(Y_{\ell,m}\)</span>’s and do the angular and radial integrals. This is done in section 14.7 of Townsend (equations 14.157 to 14.166). In spherical coordinates, the decay of the <span class="math notranslate nohighlight">\(m=1\)</span>, <span class="math notranslate nohighlight">\(m=0\)</span> or <span class="math notranslate nohighlight">\(m=-1\)</span> states involves the polarization components <span class="math notranslate nohighlight">\(\epsilon_x+i\epsilon_y\)</span>, <span class="math notranslate nohighlight">\(\epsilon_z\)</span> and <span class="math notranslate nohighlight">\(\epsilon_x-i\epsilon_y\)</span> respectively, i.e. if you start in a state with <span class="math notranslate nohighlight">\(m\neq 0\)</span>, then the non-zero angular momentum in the initial state is carried away by a circularly-polarized photon. In the Cartesian treatment, we just have motion in one Cartesian direction so the states connect to linear-polarization in that direction.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
 Townsend 14.16: density of states for an electron<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
