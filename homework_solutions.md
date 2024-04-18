@@ -356,9 +356,9 @@ We would get a similar answer for the other two states $n_y=1$ or $n_z=1$ but wi
 $${d\Gamma\over d\Omega} = {1\over 3}{\alpha\omega\over 2\pi\mu^2c^2} {\mu\omega\hbar\over 2} (\epsilon_x^2+\epsilon_y^2+\epsilon_z^2) = {1\over 3}{\alpha\omega^2\hbar\over 4\pi\mu c^2}.$$
 
 We used the fact that the polarization vector is a unit vector (has unit length).
-This doesn't depend on the outgoing photon direction, so we can do the integral $\int d\Omega\rightarrow 4\pi$ to get the total decay rate
+This doesn't depend on the outgoing photon direction, so we can do the integral $\int d\Omega\rightarrow 4\pi$, and also multiply by 2 because each outgoing direction has two photon polarizations, to get the total decay rate
 
-$$\Gamma = {\alpha\omega^2\hbar\over 3\mu c^2}.$$
+$$\Gamma = {2\alpha\omega^2\hbar\over 3\mu c^2}.$$
 
 The other way to do this would be to use spherical coordinates instead and look at the $\ket{\ell,m}$ states. Then you need to convert the $\hat{p}$ in the matrix element to $\hat{r}$ (lecture 25), expand $x$, $y$ and $z$ in terms of $Y_{\ell,m}$'s and do the angular and radial integrals. This is done in section 14.7 of Townsend (equations 14.157 to 14.166). In spherical coordinates, the decay of the $m=1$, $m=0$ or $m=-1$ states involves the polarization components $\epsilon_x+i\epsilon_y$, $\epsilon_z$ and $\epsilon_x-i\epsilon_y$ respectively, i.e. if you start in a state with $m\neq 0$, then the non-zero angular momentum in the initial state is carried away by a circularly-polarized photon. In the Cartesian treatment, we just have motion in one Cartesian direction so the states connect to linear-polarization in that direction.
 
