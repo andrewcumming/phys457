@@ -81,7 +81,7 @@ The initial and final states are
 
 $$\ket{i} = \ket{2p}\ket{0};\hspace{1cm} \ket{f} = \ket{1s}\ket{1}.$$
 
-Here we use the notation $\ket{0}$ to represent the electromagnetic field vacuum (no photons) and $\ket{1}$ to represent the state with 1 photon with $k$ corresponding to the photon released in the 2p$\rightarrow$1s transition. The states $\ket{2p}$ and $\ket{1s}$ are the hydrogen atom states that are stationary states of the unperturbed hydrogen Hamiltonian $\hat{H}_0$; the states $\ket{0}$ and $\ket{1}$ are the stationary states of the electromagnetic Hamiltonian $\hat{H}_\mathrm{EM}$. Both $\ket{i}$ and $\ket{f}$ are therefore stationary states of the unperturbed Hamiltonian $\hat{H}_0+\hat{H}_\mathrm{EM}$.
+Here we use the notation $\ket{0}$ to represent the electromagnetic field vacuum (no photons) and $\ket{1}$ to represent the state with 1 photon with $k$ corresponding to the photon released in the 2p$\rightarrow$1s transition. The photon that we create also has associated with it a propagation direction and a polarization. The states $\ket{2p}$ and $\ket{1s}$ are the hydrogen atom states that are stationary states of the unperturbed hydrogen Hamiltonian $\hat{H}_0$; the states $\ket{0}$ and $\ket{1}$ are the stationary states of the electromagnetic Hamiltonian $\hat{H}_\mathrm{EM}$. Both $\ket{i}$ and $\ket{f}$ are therefore stationary states of the unperturbed Hamiltonian $\hat{H}_0+\hat{H}_\mathrm{EM}$.
 
 Putting this together gives the following expression for the rate:
 
@@ -101,7 +101,7 @@ Simplifying all the prefactors (including using our favourite formula $e^2/4\pi\
 
 $$d\Gamma = {\alpha \omega^3 d\Omega\over 2\pi c^2} \left|\braket{2p|\mathbf{\epsilon}\cdot\hat{\mathbf{r}}|1s}\right|^2.$$
 
-If we choose the polarization direction to be the $z$-direction, we can do the integrals just like we did for the Stark effect:
+As an example, assume that the polarization we are looking at is in the $z$-direction (since the polarization is perpendicular to the propagation direction, this means we are considering photons propagating outwards in the equatorial plane). Then we can do the integrals just like we did for the Stark effect:
 
 $$\int dr\ r^2 R^\star_{2,1} r R_{1,0} = \sqrt{3\over 2} {2^8\over 3^5} a_0$$
 
@@ -113,7 +113,7 @@ $$\int d\Omega\, Y^\star_{2,0} Y_{1,0} \cos\theta = {1\over \sqrt{3}}$$
 
 $$\Rightarrow \left|\braket{2p|\mathbf{\epsilon}\cdot\hat{\mathbf{r}}|1s}\right|^2 = {2^{15}\over 3^{10}} a_0^2$$
 
-In this case we need to start in the $m=0$ 2p state, otherwise the angular integration will vanish. Townsend discusses the other polarizations (see section 14.7): $m=-1$ or $m=+1$ correspond to choosing polarizations which are linear combinations of $x$ and $y$ (circular polarizations). We are out of time to go through the details, but averaging over all polarizations gives an extra factor of $1/3$. Finally, we can integrate over the different outgoing directions to get the total decay rate 
+In this case we need to start in the $m=0$ 2p state, otherwise the angular integration will vanish. Townsend discusses the other polarization components (see section 14.7): $m=-1$ or $m=+1$ correspond to polarization components that are linear combinations of $x$ and $y$ (circular polarizations). We are out of time to go through the details, but averaging over all polarizations gives an extra factor of $1/3$ and angular-dependences cancel (so on average there is no preferred direction for the outgoing photon). Finally, we can integrate over the different outgoing directions to get the total decay rate 
 
 $$\Gamma = \int d\Omega {\alpha \omega^3 d\Omega\over 2\pi c^2} {2^{15}\over 3^{11}}a_0^2 = \alpha {2^{16}\over 3^{11}} \left({a_0\over\lambda}\right)^2 \omega.$$ 
 
