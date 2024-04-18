@@ -337,7 +337,7 @@ $${d\Gamma\over d\Omega} = {\alpha\omega\over 2\pi\mu^2c^2} \left|\braket{n=0|\e
 
 Notice that this has the correct units ($\mathrm{s}^{-1}$).
 
-We actually have three different choices for the $\ket{n=1}$ state. In Cartesian coordinates, this corresponds to one of the three choices $\ket{n_x,n_y,n_z}=\ket{1,0,0}$, $\ket{0,1,0}$, or $\ket{0,0,1}$. Or in spherical coordinates we have the three states $\ket{\ell, m} = \ket{1,1}$, $\ket{1,0}$ or $\ket{1,-1}$. As with the hydrogen atom, the different states couple to different directions for the polarization vector $\epsilon$. 
+We actually have three different choices for the $\ket{n=1}$ state. In Cartesian coordinates, this corresponds to one of the three choices $\ket{n_x,n_y,n_z}=\ket{1,0,0}$, $\ket{0,1,0}$, or $\ket{0,0,1}$. Or in spherical coordinates we have the three states $\ket{\ell, m} = \ket{1,1}$, $\ket{1,0}$ or $\ket{1,-1}$. As with the hydrogen atom, the different states couple to different components of the polarization vector $\epsilon$ of the outgoing photon.
 
 The simplest way to evaluate the matrix element is to use Cartesian coordinates, i.e. write 
 
