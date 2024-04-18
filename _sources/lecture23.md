@@ -27,7 +27,9 @@ Now we want to consider the case that we are initially in an eigenstate of $\hat
 
 $$\boxed{{dc_k\over dt} \approx -{i\over \hbar} e^{-i(E_N-E_k)t/\hbar}\braket{k|\hat{H}_1|N}}$$ (dckdt)
 
-In general, $\hat{H}_1$ will have some time-dependence. We can consider one Fourier-mode by writing $\hat{H}_1 = \hat{V} e^{-i\omega t}$. Using this and integrating in time gives
+In general, $\hat{H}_1$ will have some time-dependence, and we can integrate in time to obtain $c_k(t)$ and the probability $|c_k(t)|^2$.
+
+We can consider one Fourier-mode by writing $\hat{H}_1 = \hat{V} e^{-i\omega t}$. Using this and integrating in time gives
 
 $$c_k(t) = {\braket{k|\hat{V}|N}\over E_N-E_k+\hbar\omega}\left[e^{-i(E_N-E_k+\hbar\omega)t/\hbar}-1\right].$$
 
