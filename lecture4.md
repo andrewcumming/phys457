@@ -36,7 +36,7 @@ where the first term is the (positive) kinetic energy and the second term is the
 
 A useful quantity is 
 
-$$\alpha = {e^2\over 4\pi\epsilon_0} = {1\over 137}$$
+$$\alpha = {e^2\over 4\pi\epsilon_0 \hbar c} = {1\over 137}$$
 
 which is the [fine structure constant](https://en.wikipedia.org/wiki/Fine-structure_constant). We can rewrite the second term using $\alpha$, giving
 
